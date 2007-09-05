@@ -1,0 +1,1835 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "file:///usr/share/sgml/docbook/xml-dtd-4.2/docbookx.dtd">
+<article id="airbus-technical">
+  <title>Airbus Technical Notes</title>
+    <sect1 id="aircraft-general">
+      <title>Aircraft general</title>
+      <sect2>
+        <title>Dimensions</title>
+        <table>
+          <title>Aircraft dimensions</title>
+          <tgroup cols="2">
+            <colspec colwidth="1.5in" align="center"/>
+            <colspec colwidth="1.5in" align="center"/>
+            <tbody>
+              <row><entry>Wingspan</entry><entry>34.1m</entry></row>
+              <row><entry>Length</entry><entry>33.84m</entry></row>
+              <row><entry>MTOW</entry><entry>75.5t</entry></row>
+              <row><entry>Max range</entry><entry>3000nm</entry></row>
+              <row><entry>Min pavement width for 180° turn</entry><entry>20.5m</entry></row>
+              <row><entry>Turn extremity</entry><entry>Wing tip</entry></row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect2>
+      <sect2 id="overview-unpressurised-areas">
+        <title>Unpressurised areas</title>
+        <para>The radome, air conditioning compartment, main gear bay, nose gear bay and tail cone are
+        unpressurised</para>
+      </sect2>
+      <sect2>
+        <title>Misc</title>
+        <para>3 cargo compartments - forward, aft and bulk.</para>
+      </sect2>
+      <sect2>
+        <title>Lighting</title>
+        <para>The dome light is the only cockpit lighting with battery protection. The dim position is therefore
+        recommended for takeoff.</para>
+        <para>The sliding potentiometers under the FCU control FCU lighting. The left controls integral lighting of
+        labels, knobs and switches. The right controls the FCU display
+        brightness.</para>
+        <para>If the strobe lights are set to AUTO, they will come on automatically at lift off. There are two sets of
+        navigation lights, and the NAV light switch has a seperate position for each.</para>
+        <para>The AUTO position of the NO SMOKING sign puts the no smoking and exit signs on when the gear is extended
+        and off when it is retracted. No smoking signs are always on on easyJet aircraft.</para>
+        <para>The "No Smoking", "Fasten Seat Belt", "Return to seat" and "Exit" lights automatically come on with
+        excessive cabin altitude.</para>
+        <para>The EMER EXIT LT switch has OFF, ON and ARM positions. In the ARM position (the normal setting), the
+        escape path lighting, EXIT signs and overhead emergency lighting come on automatically when normal electric
+        supply is lost.</para>
+        <para>Taxi lights, takeoff lights and runway turnoff lights extinguish automatically when the landing gear is
+        retracted.</para>
+        <para>Extension of the landing lights gives a LDG LT memo on the E/WD.</para>
+      </sect2>
+    </sect1>
+    <sect1>
+      <title>Auto flight</title>
+      <sect2>
+        <title>Overview</title>
+        
+        <para>Main processing is carried out by two identical Flight Management Guidance Computers (FMGC) which
+        normally work in tandem. Together they are known as the flight management guidance system (FMGS). The pilots
+        provide inputs to the FMGS using two Multipurpose Control and Display Units (MCDUs) on the center pedestal and a
+        flight control unit (FCU) on the glare shield.</para>
+
+        <para>The flight management part of the FMGS controls navigation, flight planning, performance optimization,
+        predictions and display management. The flight guidance part provides flight director, autopilot and
+        auto-thrust commands. The flight augmentation part provides flight envelope computation, maneuvring speed
+        computation, windshear detection, &alpha;-floor protection and various yaw functions.</para>
+
+        <para>The FMGCs normally receive information from "on-side" sensors, and communicate between themselves to
+        validate data. The FCU feeds both FMGCs.</para>
+
+        <para>The master FMGC is determined by autopilot and/or flight director engagement. FMGC1 is master if AP 1 is
+        on, both autopilots are on or both flight directors are on. The autothrust is driven by the master FMGC. The
+        flight directors are always driven from their on side FMGC.</para>
+
+        <para>If the cross talk between the two FMGCs is lost, the FMGCs can operate independently. This mode of
+        operation is indicated by an amber IND light at the top of each MCDU. In independent mode, the same information
+        must be entered into both MCDUs to receive the same guidance.</para>
+
+        <para>In the event of loss of an FMGC, the remaining FMGC continues to operate normally. If the lost FMGC was
+        master, the A/P and A/THR will disengage. The AP of the healthy FMGC can be engaged, and subsequently the A/THR
+        can be engaged. This situation, known as single mode, is indicated by an amber FM1 light at the top of the MCDU
+        on the failed side. The MCDU will now be copy of the MCDU driven by the healthy FMGC. The FMA will annunciate
+        e.g. 2FD2 to indicate that both flight directors are being driven from one FMGC. The healthy FMGC also tunes the
+        offside navaids. To restore the ND on the failed side, the range and mode must be set identically to that set on
+        the healthy side.</para>
+
+        <para>If an FMGC has a software problem, the FMGS will temporarily revert to single mode while the affected FMGC
+        auto resets. This may result in autopilot and autothrottle disconnect and reversion to selected modes. MAP NOT
+        AVAIL is shown on the ND of the affected side and the status page with a "PLEASE WAIT" message appears on both
+        MCDUs. Use of the MCDUs should be avoided during the reset as it will increase the reset time. Reset usually
+        takes a few seconds.</para>
+
+        <para>The FCU display is driven by two redundant FCU controllers. A single failure will have very little
+        effect. A double FCU failure will lead to the loss of both autopilots, both flight directors and the
+        autothrust. The autothrust will revert to thrust locked until the thrust levers are manually moved. All targets
+        are lost on the PFD. The EFIS control panels are lost, leading to a reversion to STD, rose NAV 80nm on the
+        NDs and a reversion needle selection of VOR1 and ADF2. Weather radar image is also lost.</para>
+
+        <para>A locked MCDU may be recovered by turning it off, then back on after five seconds. This failure is not
+        automatically detected. An amber FAIL on the MCDU requires the same procedure.</para>
+      </sect2>
+      <sect2>
+        <title>FCU</title>
+        <para>{TODO: Add picture of FCU}</para>
+        <para>The FCU has two channels, each able to drive the entire FCU.</para>
+        <para>In general, turning a knob will select a guidance target and pulling it will then engage a mode to guide
+        the aircraft to that target. Pushing a knob, on the other hand, engages a mode managed by the FMGS. When pushed,
+        dashes and a white dot appear in the associated window.</para>
+        <para>Change over between speed and mach occurs automatically at approximately FL300, although this can be
+        overridden with the SPD MACH button.</para>
+        <para>The HDG-VS/TRK-FPA button toggles the lateral mode between heading and track and toggles the vertical mode
+        between vertical speed and flight path angle. It also toggles the display of the flight path vector (FPV) (or
+        "bird") and Flight Path Director (FPD) on the PFDs. FMA lateral mode annunciation are HDG and TRACK
+        respectively. The FCU displays HDG and V/S legends when in attitude mode and TRK and FPA legends when in flight
+        path mode.</para>
+        <para>The altitude window contains the next applicable clearance altitude selected by the crew with the target
+        altitude knob and is never dashed. Pushing the knob engages a managed mode which guides the aircraft to the
+        target altitude while adhering to altitude constraints set in the FMGS. Pulling the knob gives a selected mode
+        that disregards these FMGS altitude constraints.</para>
+        <para>The VS/FPA knob differs from the other three in that there is no associated managed mode. Pulling this
+        knob commands an immediate level off. Negative indications on the FPA/VS display on the FCU indicate
+        descent.</para>
+        <para>The "EXPED" button temporarily sets speed to best climb or best descent speed in order to expedite towards
+        the target altitude.</para>
+        <para>The AP buttons engage one or both autopilots. The A/THR button engages or arms the
+        autothrust. Disengagement of autopilot or autothrottle may be acheived by pressing a lit button, but this is not
+        a recommended procedure.</para>
+      </sect2>
+      <sect2>
+        <title>FMA</title>
+      <para>The Flight Mode Annunciator (FMA) is displayed at the top of the PFD. It is split into 5 columns:
+      <itemizedlist>
+        <listitem><para>Thrust</para></listitem>
+        <listitem><para>Vertical</para></listitem>
+        <listitem><para>Lateral</para></listitem>
+        <listitem><para>Approach capability and DA/MDA</para></listitem>
+        <listitem><para>FMGS engagement status</para></listitem>
+      </itemizedlist>
+      In certain modes the vertical and lateral columns combine to display "common modes" where the lateral and vertical
+      modes are closely linked.</para>
+      <para>Each column has three lines. In the first three columns, the first line shows engaged mode, the second line
+      shows armed modes and the third line shows reminders or messages.</para>
+      <para>When a mode changes, the mode is boxed on the FMA. A star next to a mode indicates a capture phase.</para>
+      </sect2>
+      <sect2>
+        <title>Flight director/ Autopilot</title>
+        <para>The flight directors come on automatically when the aircraft is first powered.</para>
+        <para>The AP can be used from just after lift off until the end of the landing roll-out. In most cases only one
+        autopilot may be engaged at a time. The exception if on a coupled ILS approach, where the second autopilot may
+        be engaged after arming approach.</para>
+        <para>Autopilots are disconnected by pushing the red pushbutton on either sidestick. Disconnection triggers a
+        single aural alert and a temporary master warning with AP OFF message on the E/WD. A second push on the button
+        cancels these warnings. Autopilots may also be disconnected by significant movement of the sidestick or rudder
+        pedals, or by pushing a lit AP button on the FCU. This is treated as an involuntary disconnection and leads to a
+        repeating aural warning and permanent master warning and message.</para>
+        <para>When flying manually with reference to the FD, the symbols for each PFD are driven by their on-side
+        FGMC.</para>
+        <para>When taking off or landing on an ILS equipped runway, the flight director bars are replaced by a vertical
+        green yaw bar to assist centerline tracking in LVOs.</para>
+        <para>When the bird is displayed, FD indications change to give FPA commands. The objective becomes to centre
+        and align the bird with the green triangles at the wing tips. If TRK/VPA is selected when the basic modes are in
+        force (HDG/VS), these modes automatically change to TRK and FPA.</para>
+      </sect2>
+      <sect2>
+        <title>Autothrust</title>
+        <para>Autothrust modes are automatically linked to AP/FD vertical modes. Autothrust speed mode, where the
+        autothrust adjusts thrust to maintain a speed, is linked to trajectory type AP/FD vertical modes. Autothrust
+        fixed mode is linked to AP/FD vertical modes where the speed is controlled by adjusting the aircraft
+        attitude.</para>
+        <para>There are four detents on the throttle quadrant:
+        <variablelist>
+          <varlistentry><term>IDLE</term>
+          <listitem><para></para></listitem></varlistentry>
+          <varlistentry><term>CL</term>
+          <listitem><para>Gives max climb thrust</para></listitem></varlistentry>
+          <varlistentry><term>FLEX/MCT</term>
+          <listitem><para>Gives FLEX thrust for takeoff or max continuous thrust</para></listitem></varlistentry>
+          <varlistentry><term>TOGA</term>
+          <listitem><para>Give max takeoff or go around thrust.</para></listitem></varlistentry>
+        </variablelist></para>
+        <para>The thrust levers do not move when autothrust adjustments are made. Instead, the thrust lever position
+        controls the maximum thrust available to the autothrust system. It therefore does not operate when the thrust
+        levers are at IDLE or in the reverse range.</para>
+        <para>The autothrust automatically arms when TOGA or FLEX/MCT is set for takeoff. At this point the thrust is
+        still under manual control, indicated my a MAN indication in the FMA thrust segment. The autothrottle engages
+        when the thrust levers are set to CL. Engagement is indicated by THR CLB appearing in green in the FMA thrust
+        segment and A/THR appearing in the FMA engagement segment. In normal ops, the thrust levers are left at CL until
+        retarded in the flare. Increased thrust may, however, be manually selected at any time by advancing the thrust
+        levers beyond the CL detent. If an engine failure occurs, the autothrottle range is automatically extended to
+        include the range between CL and MCT.</para>
+        <para>If autothrust disconnection is desired in flight, retard the thrust levers until the thrust lever position
+        symbol roughly matches the present N1, then push the disconnect button on the side of the thrust
+        lever. Autothrust may be completely inhibited for the remainder of the flight by holding one of these buttons
+        down for more than 15 seconds.</para>
+      </sect2>
+      <sect2>
+        <title>Flight management</title>
+
+        <para>Each FMGC independantly calculates the aircraft position based on data from the ADIRS, the radio
+        navigation aids and the GPS receivers. In normal ops, each FMGC uses the average position of the three
+        IRSs. This is called Mix IRS. If an IRS fails, each FMGC uses a single IRS, either on-side or IRS3 as
+        available. Each IRS also calculates a GPIRS position based on its own position and the average position
+        indicated by the two GPS receivers. The FMGC uses only one of the three GPIRS positions which is automatically
+        selected according to merit. The GPIRS data is subjected to integrity criteria, and if it fails, the GPS mode is
+        rejected and the system falls back on radio position updating based on on-side auto-tuned radio navigation aids
+        (DME,VOR and ILS). If this occurs, an amber GPS PRIMARY LOST message appears in the ND and the MCDU
+        scratchpad.</para>
+
+        <para>The FMGC continually calculates a vector, known as BIAS, which represents the offset of the GPIRS or radio
+        position (as available) from Mix IRS. The last known value of this vector is used to calculate the aircraft
+        position if GPS and radio data become unavailable.</para>
+
+        <para>The FMGC also calculates an estimated position error (EPE) for RNP navigation purposes. EPE and FMGS
+        database derived RNP are displayed on the MDCU. An ACCUR value is also provided. This is usually HIGH, but
+        indicates LOW if EPE&gt;RNP. If ACCUR is LOW, a RNPA NAV ACCUR DOWNGRAD warning is shown on the ND. If this
+        occurs, or if GPS PRIMARY is lost, FM position should be manually cross checked with raw data. If the position
+        is within 3nm, the FM position may continue to be used, but hourly raw data checks should be made.</para>
+
+        <para>The FMGS allows both a primary and a secondary flight plan to be entered. The secondary flight plan can be
+        quickly activated when required.</para>
+
+        <para>When flying in NAV mode the aircraft is guided on a leg defined by a from and to waypoint. The to waypoint
+        is shown in white on the MCDU and in the top right corner of the ND.</para>
+
+        <para>The flight plan is entered using the INIT page on the MCDU. It may be entered using a company route, a
+        departure detination pair and manual entry of route or by sending a request for an active F-PLN
+        initialization.</para>
+      </sect2>
+      <sect2>
+        <title>Rules for use of autoflight systems</title>
+        <sect3>
+          <title>Rules regarding FM navigation and flight planning</title>
+          <orderedlist>
+            <listitem><para>Crosscheck FM navigation accuracy periodically if GPS is not primary and whenever GPS PRIMARY
+            LOST or NAV ACCUR DOWNGRADE messages occur. This is done by comparing the FMS bearing and distance to a beacon
+            against raw data.</para></listitem>
+            <listitem><para>Ensure proper waypoint sequencing by monitoring the TO waypoint. If in heading mode with a
+            large cross track error, waypoints will not be sequenced and will therefore require clearing
+            manually. </para></listitem>
+            <listitem><para>Keep a flight plan discontinuity only when desired.</para></listitem>
+            <listitem><para>Anticipate your actions on the MCDU.</para></listitem>
+          </orderedlist>
+        </sect3>
+        <sect3>
+          <title>Rules regarding predictions</title>
+          <orderedlist>
+            <listitem><para>Predictions are based on the assumption that the F-PLN route is flown in managed modes. If the
+            aircraft is off flight plan, a realistic trajectory for recapture is assumed.</para></listitem>
+            <listitem><para>Vertical deviation is shown on the altimeter as a round symbol (yoyo) in descent and
+            against a scale as a brick in approach. In the latter case, 1 dot indicates 100ft
+            deviation.</para></listitem>
+          </orderedlist>
+        </sect3>
+        <sect3>
+          <title>Rules regarding guidance</title>
+          <orderedlist>
+            <listitem><para>Engagement of the managed vertical modes (CLB and DES) is not possible in non managed lateral
+            modes (HDG or TRK). If the lateral mode is changed to a non managed mode, the vertical mode will revert to a
+            non managed mode (OP CLIMB in climb, V/S or FPA in descent).</para></listitem>
+            <listitem><para>NAV mode may be armed when HDG or TRK mode is used for F-PLN interception if the track crosses
+            the active leg before the TO waypoint.</para></listitem>
+          </orderedlist>
+        </sect3>
+        <sect3>
+          <title>Rules regarding the displays</title>
+          <orderedlist>
+            <listitem><para>If GPS is not primary and the FM accuracy check is failed, raw data must be displayed on the
+            ND.</para></listitem>
+            <listitem><para>Monitor FMS in managed modes. When NAV mode is used, monitor status on the FMA and adherence
+            to required trajectory on ND. When CLB or DES modes are used, monitor altitude targets, speed targets and
+            VDEV indications on PFD and pseudo waypoints on ND.</para></listitem>
+          </orderedlist>
+        </sect3>
+      </sect2>
+      <sect2>
+        <title>Guidance principals</title>
+        <para>A star after a mode on the FMA indicates a transitive capture mode, e.g. LOC* is displayed during the
+        localiser capture maneuvre.</para>
+        <para>CLB is always associated to ALT mode. ALT will appear in the armed line in magenta if climb restrictions
+        are associated with waypoints in the flight plan, otherwise it will appear in blue.</para>
+        <para>In DES mode, if the aircraft becomes high, the FMS prediction for regaining the profile assumes that half
+        speed brakes will be extended.</para>
+        <para>When the aircraft reaches the cruise altitude set in the MCDU, ALT CRZ is displayed in the FMA. If the
+        aircraft levels off prior to reaching this level, ALT is displayed.</para>
+        <para>RWY lateral mode provides lateral guidance from the start of the takeoff roll up to 30ft if a suitable LOC
+        signal is available.</para>
+        <para>SRS (speed reference system) vertical mode provides vertical guidance up to acceleration altitude. As long
+        as slats are extended and V<subscript>2</subscript> is available to the FMS, SRS engages automatically when
+        power is applied for takeoff. It commands a speed of V<subscript>2</subscript>+10 during normal operations. If
+        an engine fails, V<subscript>2</subscript> is commanded. SRS also maintains a minimum rate of climb without
+        regard to speed control to provide windshear protection.  At acceleration altitude SRS is automatically replaced
+        by CLB mode, which accelerates the aircraft to initial climb speed.</para>
+        <para>NAV mode engages automatically at 30ft provided a RWY and SID have been inserted in the flight
+        plan.</para>
+        <para>Thrust reduction is indicated by a flashing LVR CLB message in the message area of the FMA thrust
+        segment. Thrust levers must be manually moved to the CLB detent, wherupon the autothrottle will engage.</para>
+        <para>The localiser may be intercepted in NAV mode providing that accuracy is HIGH (i.e. epe&gt;rnp) or GPS is
+        primary.</para>
+        <para>In order to arm approach, the ILS and RA must be serviceable, both ILS receivers must be tuned to the same
+        frequency and have the same course and the aircraft must be above 400ft. G/S* will generally not engage unless
+        LOC* or LOC modes are active.</para>
+        <para>If the ILS ground transmitter becomes unserviceable during an approach, the deviation bars are removed,
+        and the FD bars flash. The AP does, however, remain engaged in G/S and LOC modes.</para>
+        <para>If the aircraft suffers a dual ILS receiver failure, the deviation bars are replaced by failure flags, the
+        guidance reverts to basic modes and the autopilot trips out.</para>
+        <para>LAND mode engages below 400ft when LOC and G/S modes are engaged. When LAND mode is engaged, inputs on the
+        FCU are disregarded. It can only be disengaged by a go-around.</para>
+        <para>FLARE mode engages at 40ft. The FD bars are replaced by the yaw bar and the AP/FD commands a suitable
+        pitch angle for the flare. If A/THR is active, an automatic RETARD call is made at 10ft.</para>
+        <para>Below 200ft, a red AUTOLAND warning will be triggered if:
+        <itemizedlist>
+          <listitem><para>both autopilots trip off</para></listitem>
+          <listitem><para>there is a loss of or excessive deviations in LOC (inhibited below 15ft)</para></listitem>
+          <listitem><para>there is a loss of or excessive deviations in G/S (inhibited below 100ft)</para></listitem>
+          <listitem><para>there is a disagreement in RA indications</para></listitem>
+        </itemizedlist></para>
+        <para>The FMGS allows non precision approaches to be flown in managed mode as long as the approach is available
+        in the nav database and the required aids and courses are manually set in the MCDU RADIO NAV page. Unless GPS
+        PRIMARY is displayed, accuracy must be checked against raw data. Also, selected modes must be used if accuracy
+        is LOW. The managed mode approach is armed with the APPR pb. If the lateral mode at this time is NAV, APP NAV
+        will immediately engage. Otherwise it will arm, and will engage following the standard rules of NAV
+        engagement. The vertical mode will arm FINAL and the FINAL APPR combined mode will engage when the preplanned
+        decent path is intercepted. A V/DEV scale to the right of the attitude indicator then shows deviations from this
+        path. The FINAL APPR mode disengages at MDA-50ft or 400ft AGL if MDA was not entered.</para>
+      </sect2>
+      <sect2>
+        <title>Protections</title>
+        <sect3>
+          <title>Engine failure compensation</title>
+          <para>If an engine fails with the AP on, the FMGC provides automatic yaw compensation. This is acheived using
+          the yaw damper during take-off and go-around and the automatic rudder trim in all modes.</para>
+          <para>SRS pitch mode automatically adjusts the target speed if an engine fails during take-off or
+          go-around.</para>
+        </sect3>
+        <sect3>
+          <title>Low speed protection</title>
+          <para>The A/THR will not fly speeds below V<subscript>ls</subscript>, even if selected by the pilot.</para>
+          <para>When between 100ft and 2000ft and in configuration 2,3 or FULL, a drop in speed that is significantly
+          below V<subscript>ls</subscript>, taking into account deceleration rate and flight path angle, will trigger a
+          repetetive "SPEED, SPEED, SPEED aural warning.</para>
+          <para>If angle of attack increases above a given threshold known as the alpha floor and the aircraft is above
+          100ft, the A/THR engages in A FLOOR mode and commands TOGA thrust. This occurs even if the A/THR is turned
+          off. Alpha floor protection is usually available from lift off until 100ft RA on approach, but may be lost in
+          cases of multiple failures and when an engine-out occurs above CONF 1. When A FLOOR mode exits, TOGA LK mode
+          engages which locks the thrust at TOGA without regard to thrust lever position. To regain control of the
+          thrust, the auto-throttle must be disengaged.</para>
+        </sect3>
+        <sect3>
+          <title>Windshear</title>
+          <para>Reactive windshear warnings are available from lift off to 1300ft at take off and from 1300ft down to
+          50ft on landing, provided at least CONF 1 is selected. It triggers an aural "WINDSHEAR, WINDSHEAR, WINDSHEAR"
+          alert and a red WINDSHEAR message is displayed on the attitude indicator.</para>
+          <para>When SRS mode is engaged a minimum rate of climb is commanded regardless of speed. If the angle of
+          attack gets too great, the autopilot disengages, but pilot assistance is still provided by the fly by wire
+          maximum angle of attack protection.</para>
+          <para>In approach, the GS mini function adjusts speed with wind variation, ensuring that ground speed does not
+          drop below a minimum value.</para>
+        </sect3>
+        <sect3>
+          <title>Mode reversions</title>
+          <para>When an altitude that is lower than the current altitude is selected during climb or an altitude higher
+          than the current altitude is selected during descent, the vertical mode reverts to VS at the current rate of
+          climb or descent.</para>
+          <para>If the lateral mode is changed from a managed to an unmanaged mode when the vertical mode is CLB, it
+          will revert to OP CLB. The aircraft attitude will not change, but altitude constraints will be lost. Similarly
+          a change to unmanaged lateral mode in descent leads to DES changing to VS with the current rate of
+          descent. Again, aircraft attitude is unchanged.</para>
+          <para>With FDs engaged and AP disengaged, if failure to follow flight director commands with the A/THR in THR
+          IDLE mode results in speed dropping to V<subscript>ls</subscript>-2kt (V<subscript>ls</subscript>-17kt with
+          speedbrakes extended), the flight director bars are removed. This causes the A/THR mode to revert to SPEED and
+          the target speed to be recaptured. Similarly, if the aircraft speed reaches V<subscript>max</subscript>+4kt
+          with the A/THR in THR CLB mode, the A/THR will revert to SPEED to recapture the target speed.</para>
+        </sect3>
+      </sect2>
+    </sect1>
+    <sect1 id="air-con">
+      <title>Air conditioning</title>
+      <sect2>
+        <title>Cockpit and cabin</title>
+        <figure id="air-conditioning-controls">
+          <title>Air conditioning controls</title>
+          <mediaobject>
+            <imageobject role="dblatex">
+              <imagedata width="4.5in" fileref="images/air-con-controls.png"/>
+            </imageobject>
+            <imageobject role="html">
+              <imagedata format="PNG" fileref="../images/air-con-controls-lowres.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <figure>
+          <title>Simplified air conditioning schematic</title>
+          <mediaobject>
+            <imageobject role="dblatex">
+              <imagedata fileref="images/air-con.eps"/>
+            </imageobject>
+            <imageobject role="html">
+              <imagedata format="PNG" fileref="../images/air-con.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para>The air conditioning system is controlled by two dual lane air conditioning system controllers. They
+        provide inputs to the pack flow control valves, the packs, the hot air pressure regulating valve (controller 1),
+        the cockpit trim air valve (controller 1) and the cabin trim air valve (controller 2). There is no effect from a
+        single lane failure, as the backup lane takes over all duties.</para>
+
+        <para>The pack flow control valves regulate flow of warm pre-conditioned air (originating from the pneumatic
+        system) to the packs. They are pneumatically operated, electrically controlled and spring loaded to the closed
+        position. They automatically close when a pack overheats, during starting or when either the fire or ditching
+        push buttons are pressed. They can also be manually closed by pushing the related PACK button (<xref
+        linkend="air-conditioning-controls"/> (3)). The amber light in this button indicates valve position disagreement
+        or pack overheat (monitored at compressor outlet and pack outlet).</para>
+
+        <para>The PACK FLOW selector (<xref linkend="air-conditioning-controls"/> (4)) allows the selection of flow rate
+        from 80% to 120%. If only one pack is in use or the APU is supplying bleed air, the system will deliver high
+        flow regardless of this selection.</para>
+
+        <para>Each pack consist of an air cycle machine and a ram air duct for the heat exchangers. The air cycle
+        machine turbine also drives a cooling fan that draws cool air over the heat exchangers. Temperature in the pack
+        is regulated by bypassing air around the air cycle machine via a turbine by-pass valve and by modulating the ram
+        air intake flaps. These flaps are closed during take-off (take-off power set, main gear struts compressed) and
+        landing (main gear struts compressed, speed above 70kt until speed less than 70kt for 20 seconds) to avoid FOD
+        ingestion. In the event of failure of the air cycle machine the pack may still be operated with reduced flow
+        using the heat exchanger only.</para>
+
+        <para>The cooled air from the packs is then fed into a mixer unit where it is mixed with recirculated air from
+        the cabin.  The mixer then supplies air to three independent zones, the cockpit, the forward cabin and the aft
+        cabin.</para>
+
+        <para>Temperature requirements of between 18°C and 30°C are set on the air conditioning panel (<xref
+        linkend="air-conditioning-controls"/> (1)), and cabin zones may be trimmed ±2.5°C by controls on the forward
+        attendants panel. The output temperature for each zone is a function of actual temperature (measured by sensors
+        in the cockpit and in the lavatory extraction circuit and galley ventilation systems) and demanded
+        temperature. Controller 1 regulates cockpit temperature and controller 2 regulates cabin temperature. The packs
+        are controlled to provide air at the lowest temperature required, then the temperature of the other zones is
+        trimmed by mixing in hot air that has bypassed the packs via the hot air pressure regulating valve and trim air
+        valves. If temperature requirements cannot be met the system will attempt to increase flow. If LO flow is
+        selected, the system will override to NORM flow. The system can also increase flow by increasing bleed pressure
+        by requesting increases in engine minimum idle or APU flow output as required.</para>
+
+        <para>The hot air pressure regulating valve is pneumatically operated, electrically controlled and spring loaded
+        to the closed position. It closes automatically in the case of a duct overheat (which also closes the trim
+        valves), if either the cockpit trim valve fails or <emphasis>both</emphasis> cabin trim valves fail, or if both
+        lanes of a system controller fail. It can be closed manually with the HOT AIR button (<xref linkend=
+        "air-conditioning-controls"/> (2)). If the hot air pressure regulating valve fails open, there is no effect as
+        the trim valves take over its duties. If it fails closed, optimized regulation is lost and the packs are used
+        for all regulation (pack 2 controls to the mean of FWD and AFT temperatures). The amber FAULT light in the HOT
+        AIR button indicates duct temperatures in excess of 88°C. It will extinguish once temperature drops below 70°C
+        and OFF is selected.</para>
+
+        <para>Control of zone temperature is provided by a Zone Control Computer. This computer controls the trim valves
+        and provides data to the pack controllers. It is dual channel. Failure of a single channel gives a ALTN MODE
+        indication on the ECAM COND page. If a dual channel failure occurs, there is no trimming and zone temperature is
+        purely a function of pack outlet temperature. A dual channel failure produces a PACK REG legend on the ECAM COND
+        page, with amber crosses shown for the trim system and zone temperatures.</para>
+
+        <para>The mixer may also be supplied with ram air. This is controlled with the RAM AIR push button (<xref
+        linkend="air-conditioning-controls"/> (5)) and is used in the case of double pack failure or smoke removal. A
+        check valve located in the ram air duct opens only when cabin differential is less than 1 psi, thus preventing
+        backflow if the cabin is pressurised. The RAM AIR push button also opens the outflow valve to approx. 50% if the
+        outflow valve is under automatic control and differential pressure is less than 1 psi.  Since operation of the
+        ram air valve leads to aircraft depressurisation, itg should not normaly be operated above FL100/MORA. Opening
+        of the ram air duct is inhibited if the DITCHING button has been pressed. When parked, low pressure conditioned
+        air may be fed into the ram air duct to allow ground conditioning.</para>
+      </sect2>
+      <sect2>
+        <title>Cargo compartments</title>
+        <figure id="cargo-conditioning-schematic">
+          <title>Simplified schematic of cargo bay air conditioning</title>
+          <mediaobject>
+            <imageobject role="dblatex">
+              <imagedata fileref="images/cargo-conditioning-schematic.eps"/>
+            </imageobject>
+            <imageobject role="html">
+              <imagedata format="PNG" fileref="../images/cargo-conditioning-schematic.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para>Cargo compartment air conditioning is fully automatic. Ambient cabin air enters the compartment via an
+        inlet isolation valve. An extractor fan or differential pressure is used to exhaust the air overboard via an
+        outlet isolation valve. Operation of the two valves and the extractor fan is controlled automatically by a cargo
+        ventilation controller.</para>
+        <para>Cargo compartment heating is provided by hot bleed air that enters via a trim air valve. This valve is
+        controlled by a cargo heating controller. The bleed air source for trimming the forward hold is the same duct
+        that is used for trimming the cockpit and cabin and thus uses the same hot air valve. The rear compartment has
+        its own independent hot air valve.</para>
+        <para>The cargo heat panel is on the right hand side of the overhead panel. Two rotary selectors set temperature
+        in the compartments, with the normal 12 o'clock position being approx. 16°C.</para>
+      </sect2>
+    </sect1>
+    <sect1 id="pressurisation">
+      <title>Pressurisation</title>
+      
+      <figure id="pressurisation-controls">
+        <title>Pressurisation controls</title>
+        <mediaobject>
+          <imageobject role="dblatex">
+            <imagedata width="4in" fileref="images/press-controls.png"/>
+          </imageobject>
+          <imageobject role="html">
+            <imagedata format="PNG" fileref="../images/press-controls-lowres.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      
+
+      <para>Pressurisation control is provided by an outflow valve and two safety valves, one to prevent
+      over-pressurisation (&gt;8.6 psi), the other to prevent under-pressurisation (&gt;1 psi below ambient).</para>
+
+      <para>Two identical cabin pressure controllers, one acting as master, the other as a reserve, provide automated
+      control of pressurisation. Each controller has an associated motor with which to modulate the outflow valve. A
+      third motor provides for manual control. The pressure controllers exchange roles 70 seconds after each
+      landing.</para>
+
+      <para>The LDG ELEV selector (<xref linkend="pressurisation-controls"/> (1)) can be set to AUTO or to an
+      altitude. In AUTO the controller uses the landing elevation from the FMGC. If using a manually selected landing
+      elevation, the CAB ALT on the ECAM PRESS page should be used rather than the coarse scale.</para>
+
+      <para>The landing QNH is usually sourced from the FMGC. If this is not available, the captain's baro reference
+      from the ADIRS is used.</para>
+
+      <para>The automatic pressurisation control operates in 6 modes:
+      <variablelist>
+        <varlistentry>
+          <term>Ground(GN)</term>
+          <listitem>
+            <para>Before takeoff and 55 seconds after landing, the outflow valve is fully opened. At touchdown any
+            residual cabin pressure is released at a cabin vertical speed of 500 fpm.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Takeoff(TO)</term>
+          <listitem>
+            <para>The aircraft is pre-pressurised to 0.1 psi diff at a rate of 400 fpm.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Climb(CL)</term>
+          <listitem>
+            <para>Cabin altitude if a function of actual rate of climb.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Cruise(CR)</term>
+          <listitem>
+            <para>The higher of cabin altitude at level-off or landing field elevation is maintained.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Descent(DE)</term>
+          <listitem>
+            <para>Cabin rate of descent maintained so that cabin pressure equals landing field pressure, with a maximum
+            R.O.D. of 750fpm. </para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>Abort(AB)</term>
+          <listitem>
+            <para>Cabin pressure set to take-off altitude + 0.1 psi.</para>
+          </listitem>
+        </varlistentry>
+        </variablelist>
+      </para>
+
+      <para>If a single pressure controller fails, the other automatically takes over. If both pressure controllers
+      fail, an amber FAULT light appears on the MODE SEL push button (<xref linkend="pressurisation-controls"/>
+      (2)). Pressing this button puts the pressurisation in manual mode, and the spring loaded MAN V/S CTL toggle switch
+      (<xref linkend="pressurisation-controls"/> (3)) must be used to control the pressurisation. When in MAN mode, the
+      CAB V/S display on the ECAM CRUISE page changes to a gauge format to assist with manual control. Changing to
+      manual mode for 10 seconds and then back to auto mode will cause the pressure controllers to swap roles.</para>
+
+      <para>The outflow valve is below the ditching water line. Pressing the ditching button (<xref
+      linkend="pressurisation-controls"/> (4)) closes the outflow valve unless it is under manual control. Note that use
+      of the ditching button and low pressure ground air will cause a build up of differential pressure.</para>
+    </sect1>
+    <sect1 id="avionics-ventilation">
+      <title>Avionics ventilation</title>
+      <figure id="avionics-ventilation-schematic">
+        <title>Simplified avionics cooling schematic</title>
+        <mediaobject>
+          <imageobject role="dblatex">
+            <imagedata fileref="images/avionics-cooling.eps"/>
+          </imageobject>
+          <imageobject role="html">
+            <imagedata format="PNG" fileref="../images/avionics-cooling.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>Ventilation of the avionics is primarily provided by two fans, one acting as a blower, the other as an
+      extractor. Control is provided by the Avionics Equipment Ventilation Computer (AEVC). The system's normal modes
+      are:
+      
+      <variablelist>
+        <varlistentry><term>Close-circuit</term>
+        <listitem><para>Used when skin temperature is low. The skin exchange outlet bypass, inlet bypass and isolation
+        valves (shown in blue in <xref linkend="avionics-ventilation-schematic"/>) are open and all other valves are
+        closed. This leads to air being drawn from the avionics bay and exhausted into the underfloor of the cargo bay,
+        with a return loop via the skin heat exchanger.</para></listitem></varlistentry>
+
+        <varlistentry><term>Intermediate</term>
+        <listitem><para>Used in flight when skin temperature is high. This is similar to close-circuit except the skin
+        air extract valve is partially opened to allow some air to exhaust overboard.</para></listitem></varlistentry>
+
+        <varlistentry><term>Open-circuit</term>
+        <listitem><para>Used for ground operations (oleo compressed, thrust below TO) with a high skin temperature. In
+        this mode only the skin air inlet and extract valves (shown in red in <xref
+        linkend="avionics-ventilation-schematic"/>) are open, meaning air from outside the aircraft is moved across the
+        avionics equipment and then exhausted externally.</para></listitem></varlistentry>
+      </variablelist></para>
+
+      <para>The skin temperature thresholds are different for flight and ground cases and incorporate a dead band to
+      prevent rapid mode switching. The bands are 9°C to 12°C on the ground and 32°C to 35°C in flight.</para>
+
+      <para>Cooling of the cockpit panels is provided by drawing air conditioned air from the cockpit over the
+      panels in all modes.</para>
+
+      <figure id="avionics-ventilation-controls">
+        <title>Avionics ventilation controls</title>
+        <mediaobject>
+          <imageobject role="dblatex">
+            <imagedata width="3in" fileref="images/ventilation-controls.png"/>
+          </imageobject>
+          <imageobject role="html">
+            <imagedata format="PNG" fileref="../images/ventilation-controls-lowres.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>If a fault occurs with one of the fans, a FAULT light will illuminate on the associated button (<xref
+      linkend="avionics-ventilation-controls"/> (1)). The BLOWER FAULT light is also used to indicate a duct
+      overheat. Selecting OVRD puts the system in closed-circuit configuration and opens the air conditioning inlet
+      valve so that air conditioned air assists with the cooling. If the BLOWER button is in OVRD, the blower fan is
+      stopped. If the EXTRACT button is in OVRD, the extract fan is controlled directly from the pushbutton and both
+      fans continue to run. {TODO: There appears to be a conflict between the text and the diagram with regards to the
+      action of the skin exchange inlet bypass valve when EXTRACT is in OVRD. The diagram essentially indicates air con
+      as sole intake and no exhaust!}</para>
+
+      <para>A smoke detector is situated immediately upstream of the extract fan. If smoke is detected both FAULT lights
+      come on. Selecting OVRD on both buttons puts the system in smoke removal mode. This is similar to open-circuit
+      except the intake air is provided by the air-conditioning rather than from outside the aircraft and the blower fan
+      is stopped.</para>
+
+      <para>{TODO: Controller failure - manual is very unclear what happens here.}</para>
+
+    </sect1>
+    <sect1 id="electrics">
+      <title>Electrics</title>
+      <figure id="electrical-schematic">
+        <title>Simplified schematic of electrical system</title>
+        <mediaobject>
+          <imageobject role="dblatex">
+            <imagedata fileref="images/electrical-schematic.eps"/>
+          </imageobject>
+          <imageobject role="html">
+            <imagedata format="PNG" fileref="../images/electrical-schematic.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>The electrical system consists of a three phase 115/200V 400Hz AC system and a 28V DC system.</para>
+      
+      <para>Primary AC supply is from two 90 KVA engine driven integrated drive generators (IDGs). Each IDG has an
+      associated generator control unit (GCU) which provides frequency, voltage and generator line contactor (GLC)
+      control. An third 90 KVA generator is driven by the APU. This generator, along with ground power, is controlled by
+      the Ground and Auxiliary Power Control Unit (GAPCU). Each of the three main generators is capable of supplying the
+      power requirements of the entire system. The generators cannot be connected in parallel, and are automatically
+      brought on line according to priority rules. The IDGs are highest priority, followed by EXT PWR when connected,
+      followed by the APU generator.</para>
+
+      <para>A 5KVA hydraulically powered (blue system) constant speed emergency AC generator and associated GCU provide
+      power in the event of failure of normal sources. In addition a 1KVA static inverter supplies emergency power to
+      part of the AC essential bus if the batteries are the only remaining power source.</para>
+
+      <para>Primary DC power is provided by two 200A transformer rectifier units with automatic protection circuits that
+      disconnect the TR in the event of overheat or minimum current. A third identical TR, the "essential"
+      TR provides power for the DC Essential bus in the event of loss of all normal AC generators (the Ess Tr is capable
+      of drawing power from the emergency AC generator) or in the event of loss of one of both of the main TRs.</para>
+
+      <para>Two 23Ah batteries are also provided for emergency DC power. Each has an associated battery charger limiter
+      (BCL) to monitor charging and control its battery contactor. The minimum required offline battery voltage is
+      25.5V. If the battery voltage is below minimum, they can be recharged by connecting the batteries to the battery
+      bus and applying external power for approximately 20 minutes. In the event of failure of all other power sources,
+      the batteries can provide emergency power for approximately 30 minutes.</para>
+
+      <para>Two types of CB are fitted. Monitored CBs are green and trigger ECAM warning messages when out for more
+      than one minute. Non-monitored CBs are black and do not cause ECAM warnings. The Wing Tip Brakes (WTB) CBs have
+      red caps to prevent them being reset.</para>
+
+      <para>In normal flight, the AC Busses are supplied via a their associated generator and the AC Ess Bus is supplied
+      from AC Bus 1 (i.e. AC Ess feed 2 is open). TR1 supplies DC Bus 1, the battery bus and the DC essential bus, and
+      TR2 supplies DC Bus 2 (i.e. DC Tie Cont 2 is open). When battery charging is required the BCL closes the required
+      battery contactor to connect the battery to the DC Bat Bus.</para>
+
+      <para>If a single engine driven generator is lost, the system will automatically replace it with the APU generator
+      if available, or else it will shed part of the galley load and route power from the other engine driven
+      generator. If all main generators are lost, AC Bus 1 and AC Bus 2 are lost. If aircraft speed is sufficiently high
+      (&gt; 100kt) a ram air turbine (RAT) automatically deploys. This powers the blue hydraulic system which, in turn,
+      powers the emergency AC generator. Once this generator is online (approx 8 seconds for RAT deployment and
+      generator coupling), it powers the AC Ess bus, the Ess TR and hence the DC Ess bus. If the RAT stalls or the
+      aircraft speed is below 100kt, the AC Shed ESS and DC shed ESS buses are shed and the remains of the essential
+      system are powered via the batteries and static inverter. Once on the ground, the DC bus is automatically
+      connected to the batteries below 100kt and the AC Ess Bus is shed below 50kt.</para>
+
+      <para>A "smoke configuration" is provided that sheds 75% of electrical equipment, the remaining 25% being
+      controlled by easily accessible CBs on the overhead panel (with the exception of equipment attached to the hot
+      busses). It is essentially the same as for the loss of all main generators, except the fuel pumps are connected
+      upstream of the Gen 1 line connector.</para>
+
+      <para>If AC bus 1 fails, the power for the AC Ess bus is routed from AC bus 2 by pressing the AC Ess feed
+      pushbutton. TR1 is lost causing the Ess TR to supply the DC Ess bus and, after a 5 second delay, DC bus 2 to
+      provide power to DC bus 1.</para>
+      
+      <para>If both main TRs are lost, DC Bus 1, DC Bus 2 and the DC Bat bus are lost. The DC Ess bus is powered by the
+      Ess TR.</para>
+
+      <para>With the engines shut down on the ground, either the APU or external power may be used to supply the entire
+      system. In addition, external power can supply the AC and DC GND/FLT buses directly without supplying the entire
+      system using the MAINT BUS switch in the forward entrance area.</para>
+
+      <figure id="electrical-controls-overhead">
+        <title>Electrical controls on overhead panel</title>
+        <mediaobject>
+          <imageobject role="dblatex">
+            <imagedata width="5in" fileref="images/electrical-controls-overhead.png"/>
+          </imageobject>
+          <imageobject role="html">
+            <imagedata format="PNG" fileref="../images/electrical-controls-overhead-lowres.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para>When an IDG must be disengaged, the IDG button whould be pressed and held until the Gen 1 FAULT light comes
+      on, but should not be held for more than 3 seconds.</para>
+
+      <para>In the event of a generator having out of limit load but continuing to power its AC bus, the amber
+      FAULT light in the GEN button will not illuminate.</para>
+
+      <para>The BUS TIE switch causes the two halves of the electrical system to be fully segregated. This may be used
+      to isolate a short circuit that has affected both halves.</para>
+    </sect1>
+    <sect1>
+      <title>Pneumatics</title>
+      <para>The pneumatic system provides high pressure air for:
+      <itemizedlist>
+        <listitem><para>Air conditioning</para></listitem>
+        <listitem><para>Wing anti icing</para></listitem>
+        <listitem><para>Water pressurisation</para></listitem>
+        <listitem><para>Hydraulic resevoir pressurisation</para></listitem>
+        <listitem><para>Engine starting</para></listitem>
+      </itemizedlist>
+      </para>
+      <figure id="pneumatic-system-schematic">
+        <title>Simplified schematic of pneumatic system</title>
+        <mediaobject>
+          <imageobject role="dblatex">
+            <imagedata fileref="images/pneumatic-system-schematic.eps"/>
+          </imageobject>
+          <imageobject role="html">
+            <imagedata format="PNG" fileref="../images/pneumatic-system-schematic.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para>The sources of air are:
+      <itemizedlist>
+        <listitem><para>The engines</para></listitem>
+        <listitem><para>The APU</para></listitem>
+        <listitem><para>High pressure gound air</para></listitem>
+      </itemizedlist>
+      </para>
+      <para>Two Bleed Monitoring Computers, one per engine, control and monitor the pneumatic system. They are partially
+      redundant, so in the event of a failed BMC, the other BMC can take over most of its functions.</para>
+      <para>Sensors in the vicinity of the hot air ducts detect leakage. If leakage is detected, the BMCs are signalled
+      and they automatically shut down the affected area.</para>
+      <para>Engine bleed air is tapped at two compressor ports known as the Intermediate Pressure (IP) port and the High
+      Pressure (HP) port. The HP port only provides air when the IP pressure is insufficient. The system automatically
+      controls the delivery of air from the HP port using an HP valve.</para>
+      <para>The pre-cooler uses cold air from the engine to cool the bleed air.</para>
+      <para>The APU bleed air has priority over the engine bleed air. The engine bleeds valves will therefore remain
+      closed whenever the APU bleen is ON.</para>
+      <para>The GND indication on the ECAM bleed page is always displayed on the ground, even if no ground HP unit is
+      connected. Its purpose is solely as an indication as to where ground HP air would enter the system. The presence
+      of ground HP air can be determined by examining the bleed pressures relative to attached sources. APU bleed air
+      should not be connected when HP ground air is in use.</para>
+      <para>A single engine bleed can supply both packs. It can only supply one pack, however, when supplying the wing
+      anti ice system.</para>
+    </sect1>
+    <sect1>
+      <title>Communications</title>
+      <para>Three radio management panels (RMP), two on the center pedestal and one on the overhead panel, and three
+      audio control panels (ACP), each located next to an RMP, control radio communications. The RMPs also provide a
+      backup for radio nav aid tuning.</para>
+      <para>Each RMP can tune any communication radio. Usually, however, RMP1 is dedicated to VHF1, RMP2 to VHF2 and
+      RMP3 to VHF3 or HF. A white SEL light illuminates when a radio that is not dedicated to an RMP is selected. Note
+      that the standby frequency is specific to the RMP, not the radio currently being tuned.</para>
+      <para>The ACPs incorporate SELCAL and interphone call alerts. When any of these calls occurs, a buzzer sounds and
+      the relevant transmit button flashes amber. The RESET button is used to silence these alerts. The VOICE key
+      supresses a nav aid's ident so that voice transmissions can be heard more clearly.</para>
+      <para>A CALLS panel situated in the left lower corner of the overhead panel.The MECH button illuminates a light on
+      the external power panel and sounds an external horn. Pressing either the FWD or AFT buttons causes a high/low
+      chime in the cabin and a "CAPTAIN CALL" message to appear at the selected cabin station. The ALL button does the
+      same, except the message appears at all cabin stations. Activation of the emergency call system, either initiated
+      by the flight crew by pressing the EMER button or initiated by the cabin crew, causes the CALL light in the EMER
+      button to flash amber and the ON light to flash white. If the call is to the cabin, three high/low chimes sound in
+      the cabin. If it is from the cabin, three long buzzers sound on the flight deck.</para>
+      <para>The CVR, when activated, records the last two hours of communications and aural warnings from the
+      cockpit. It is controlled from the RCDR panel. In AUTO mode, it runs for five minutes after power is applied to
+      the aircraft, then automatically shuts down. It then restarts after first engine start and continues running until
+      five minutes after the last engine has been shut down. Pushing the GND CTL pushbutton manually powers the CVR on
+      the ground. The CVR ERASE and CVR TEST buttons are inhibited unless GND CTL is ON, the aircraft is on the ground
+      and the parking brake is set. Pushing the CVR ERASE button for two seconds erases the CVR recording. Pushing the
+      CVR TEST button sounds a tone through the loudspeakers if the CVR is serviceable.</para>
+      <para>The system monitors the communication radios and will produce an ECAM warning if there is continuous
+      transmission.</para>
+      <para>A switch on the overhead panel allows for deselection of a failed ACP and its replacement by ACP3.</para>
+    </sect1>
+    <sect1>
+      <title>APU</title>
+      <para>The APU may be started with DC from the batteries or with AC. The APU panel is located at
+      the bottom centre of the overhead panel. External APU controls are located on the external power panel in the nose
+      gear bay.</para>
+      <para>To start the APU, first press the master switch button, then the start button. The start sequence begins
+      when the APU inlet flap is fully open.</para>
+      <para>To shut down the APU, turn off the master switch. If the APU bleed has been used, the shutdown sequence
+      incorporates a delay of between 60 and 120 seconds before shutting down. As long as the AVAIL light is still
+      displayed, the shut down sequence can be cancelled by turning the master switch back on. If APU bleed has not been
+      used, the shutdown is immediate.</para>
+      <para>The APU control is completely automatic. Auto-shutdown is available whenever the APU is running. Automatic
+      deployment of the APU extinguisher is also available on the ground. APU emergency shutdown is initiated by
+      pressing the APU fire button or by pressing the APU SHUT OFF button on the external panel. An APU fire in flight
+      will show the APU FIRE procedure on the ECAM, followed by the APU EMER SHUT procedure. On the ground, a fire will
+      cause the APU AUTO SHUT DOWN procedure to be shown after the APU fire procedure.</para>
+      <para>The LOW OIL LEVEL on the ECAM indicates that the APU can only be used for a further 10 hours before
+      maintenance is required. The amber FUEL LOW PR indication occurs during start if fuel pressure is low. It is only
+      an advisory.</para>
+      <sect2>
+        <title>Limitations</title>
+        <table id="apu-limitations">
+          <title>APU limitations</title>
+          <tgroup cols="2">
+            <colspec colwidth="3in"/>
+            <colspec colwidth="1in" align="center"/>
+            <tbody>
+              <row><entry>APU bleed air with 2 packs</entry><entry>15,000ft</entry></row>
+              <row><entry>APU bleed air with 1 pack</entry><entry>20,000ft</entry></row>
+              <row><entry>Battery restart limit</entry><entry>25,000ft</entry></row>
+              <row><entry>Operation and restart ceiling</entry><entry>39,000ft</entry></row>
+              <row><entry>APU elec power</entry><entry>39,000ft</entry></row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect2>
+      </sect1>
+    <sect1>
+      <title>Cabin</title>
+      <para>The Cabin Intercommunication Data System (CIDS) consists of two directors, one active and one hot
+      standby. The CIDS communicates with cabin, passengers and crew via Decoder Encoder Units (DEUs) and is programmed
+      and tested via a Programming and Test Panel (PTP).</para>
+      <para>The Forward Attendant Panel (FAP) is located at the purser station and consists of:
+      <itemizedlist>
+        <listitem><para>An optional air conditioning panel</para></listitem>
+        <listitem><para>A lighting panel</para></listitem>
+        <listitem><para>An audio panel</para></listitem>
+        <listitem><para>A water and miscellaneous panel</para></listitem>
+      </itemizedlist>
+      </para>
+      <para>The PTP is located behind a hinged access door to the left of the FAP. It is equipped with a Cabin
+      Assignment Module (CAM) containing airline specific data. It is the PTP communicates system status to the
+      crew.</para>
+      <para>The Aft Attendant Panel (AAP) is located at the rear left crew station. It allows control of a subset of
+      cabin systems.</para>
+      <para>An Attendant Indication Panel (AIP) is located near each main cabin crew station. It displays communication
+      and system related messages.</para>
+      <para>Area Call Panels (ACP) are located in the ceiling at either end of the cabin. Their indications are:
+      <variablelist>
+        <varlistentry><term>Pink steady or pink flashing</term>
+        <listitem><para>Crew communication</para></listitem></varlistentry>
+        <varlistentry><term>Blue steady</term>
+        <listitem><para>Passenger call</para></listitem></varlistentry>
+        <varlistentry><term>Amber steady</term>
+        <listitem><para>Lavatory call</para></listitem></varlistentry>
+        <varlistentry><term>Amber flashing</term>
+        <listitem><para>Lavatory smoke detection</para></listitem></varlistentry>
+      </variablelist>
+      </para>
+      <para>The controls on the main doors consist of an opening handle with an associated mechanical door status
+      indicator located towards the top of the door and a slide arming lever with associated status indicator just above
+      the lever. An emergency opening cylinder and assocated pressure gauge are situated in the door support and a white
+      gust lock button is located on top of the door support. Each door has an observation window, and two indicators
+      are fitted at the bottom of this window. The first is a cabin pressure indicator which flashes red if the cabin is
+      still pressurised when the engines are shut down and the slide is disarmed. A white indicator illuminates as the
+      opening handle is first moved if the slide is armed.</para>
+      <para>The overwing exits have a single opening handle with a protective cover. If the cover is removed, a white
+      "SLIDE ARMED" light will illuminate.</para>
+      <para>The slides deploy automatically if the doors are opened when the slide is armed. A red manual inflation
+      handle is provided on the right side of the girt bar for the main doors and in the exit frame for the
+      overwings. The main door slides are single lane, and the overwing slides are dual lane. All slides are fitted with
+      integral lighting and emergency lights are fitted to the aircraft below the overwing exits to illuminate the route
+      to the slide. Red handles are fitted to the sides of the slide near the bottom to allow the slide to be used as a
+      rag slide in case of pressure loss. The main door slides have a white handle under the girt bar cover that allows
+      the slide to be quickly detached from the aircraft. It will remain attached to the aircraft by a tether, and a knife
+      is provided to cut this tether. In case of ditching, it is possible to transport a slide from an inoperative door
+      and deploy it from an operative door once that door's slide has been detached.</para>
+      <para>Emergency oxygen generators are fitted above each row of passenger seats, above each cabin crew station and
+      in the lavatories. The generators start automatically when any of the masks attached to it are pulled down.</para>
+      <para>An emergency evacuation system is fitted, with contols on the FAP, AAP and cockpit. An EVAC panel is
+      situated on the left of the overhead panel. The CAPT &amp; PURS/ CAPT switch determines which stations can
+      initiate an evacuation alert.</para>
+    </sect1>
+    <sect1>
+      <title>Navigation</title>
+      <sect2>
+        <title>Air Data and Inertial Reference System (ADIRS)</title>
+        <para>There are three identical Air Data Intertial Reference Units (ADIRU). In general ADIRU 1 and ADIRU 2
+        supply on-side systems and ADIRU 3 is a hot spare. Each ADIRU combines an Air Data Reference (ADR) computer and
+        a laser gyro based Inertial Reference (IR) system. The two sub-units are completely independent. The ADR part
+        gathers data from aircraft probes and sensors, and provides the following data to other systems:
+        <itemizedlist>
+          <listitem><para>Airspeed and Mach number</para></listitem>
+          <listitem><para>Temperature</para></listitem>
+          <listitem><para>Barometric altitude</para></listitem>
+          <listitem><para>Angle of attack</para></listitem>
+          <listitem><para>Overspeed warnings</para></listitem>
+        </itemizedlist>
+        </para>
+        <para>The IR part provides the following data:
+        <itemizedlist>
+          <listitem><para>Attitude</para></listitem>
+          <listitem><para>Heading</para></listitem>
+          <listitem><para>Aircraft position</para></listitem>
+          <listitem><para>Track</para></listitem>
+          <listitem><para>Acceleration</para></listitem>
+          <listitem><para>Ground speed</para></listitem>
+          <listitem><para>Flight Path Vector</para></listitem>
+        </itemizedlist>
+        </para>
+        <para>The ADIRS control panel is located at the top left of the overhead panel. ADR controls are at the bottom
+        of the panel and IR controls are at the top, with the rotary selectors affecting both sub-systems. The ON BAT
+        light indicates that the IRs are being powered by the aircraft batteries. This light will illuminate for a short
+        time during the self-test at the start of the alignment sequence. The ALIGN lights are illuminated steady during
+        the alignment sequence, and should extinguish after approximately ten minutes when the sequence is complete. The
+        lights will flash white under the following conditions:
+        <itemizedlist>
+          <listitem><para>IRU alignment fault</para></listitem>
+          <listitem><para>No present position entered on the INIT page of the MCDU after 10 minutes from the start of
+          alignment sequence.</para></listitem>
+          <listitem><para>The entered position differs from the shutdown position differs by more than
+          1°.</para></listitem>
+        </itemizedlist>
+        </para>
+        <para>A display, keypad and selectors are provided for viewing IR information directly on the ADIRS panel. The
+        TEST position tests the lights on the keypad and provides a test pattern on the display. If HDG is selected on
+        the display during alignment, a time to navigation (TTN) readout is shown.</para> <para>IR realignment is
+        usually uneccessary on turn arounds. If an IR has a residual ground speed &gt;5kt (shown on one of the NDs for
+        IR1 and 2 and on the ADIRS panel for IR3) a quick align should be carried out. This is acheived by selecting the
+        OFF position on the IRS selectors then reselecting NAV within 5 seconds.</para>
+        <para>The ADIRS have a comparator feature and will alert the crew to differences in the attitudes displayed on
+        the PFDs. The faulty data can be determined by cross checking with the standby attitude indicator and the third
+        ADIRU can then be selected as required.</para>
+      </sect2>
+      <sect2>
+        <title>Radio navigation</title>
+        <para>FMGCs auto-tune VORs, ILSs and DMEs for position updating. The ADFs are only auto tuned under specific
+        circumstances. Manual tuning of the aids is via the RAD NAV MCDU page. When aids are manually tuned, FMGC auto
+        tuning continues in the background. If an ILS approach is selected the PFDs show the on-side ILS and the NDs
+        show the off-side ILS.</para>
+        <para>If both FMGCs fail, radio aids may be tuned using the nav mode of RMP1 and RMP2. The RMPs tune their
+        on-side VORs, DMEs and ADFs. The ILS frequency tuned on either RMP is sent to both ILSs. When a NAV key is
+        pressed on an RMP, the RADIO NAV page blanks, showing only the titles. DME information will ot be displayed on
+        the PFD for an ILS/DME tuned on an RMP.</para>
+        <para>Standby display of radio data is provided on the DDRMI. This combines a traditional RMI presentation with
+        raw DME data for any selected VORs. The compass card displays the bearing supplied by ADIRU 1.</para>
+      </sect2>
+      <sect2>
+        <title>Standby instruments</title>
+        <para>A standby ASI, altimeter and attitude indicator are provided to the right of the captain's ND and a pull
+        down standby compass is fitted on top of the windshield centre post. The standby attitude indicator is the only
+        standby instrument requiring electrical power. It will operate for approximately five minutes after a total
+        electrical failure.</para>
+      </sect2>
+      <sect2>
+        <title>EGPWS</title>
+        <para>The EPGWS normal inputs are:
+        <itemizedlist>
+          <listitem><para>RA1</para></listitem>
+          <listitem><para>ADIRS1</para></listitem>
+          <listitem><para>ILS1</para></listitem>
+          <listitem><para>FMGC1</para></listitem>
+          <listitem><para>LGCIU1</para></listitem>
+        </itemizedlist>
+        </para>
+        <para>The basic GPWS has no forward looking capability - it mainly monitors RA1 for potentially hazerdous
+        values or trends. The warnigs and alerts provided are:
+        <informaltable>
+          <tgroup cols="3">
+            <colspec colwidth="2in"/>
+            <colspec colwidth="1.5in"/>
+            <colspec colwidth="1.5in"/>
+            <thead>
+              <row><entry>Condition</entry><entry>Alert</entry><entry>Warning</entry></row>
+            </thead>
+            <tbody>
+              <row><entry>High descent rate at low level</entry>
+              <entry>"Sink rate"</entry><entry>"Whoop whoop pull up"</entry></row>
+              <row><entry>Rising ground</entry>
+              <entry>"Terrain, Terrain"</entry><entry>"Whoop whoop pull up"</entry></row>
+              <row><entry>Rate of descent during initial climb or go around</entry>
+              <entry>"Don't sink"</entry><entry>None</entry></row>
+              <row><entry>Gear and/or flaps retracted close to ground</entry>
+              <entry>"Too low terrain", then "Too low gear" or if gear is down "Too low, flaps"</entry><entry>None</entry></row>
+              <row><entry>Significantly below ILS glideslope</entry><entry>"Glideslope"</entry><entry>"Glideslope" (louder)</entry></row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        </para>
+        <para>The "Glideslope" alert and warning are accompanied by an amber G/S light on the GPWS warning light. All
+        other alerts and warnings give a red GPWS warning.</para>
+        <para>Some basic GPWS warnings may be supressed using the GPWS panel on the left side of the overhead panel. The
+        most common supression is GPWS FLAP 3, used for flap 3 landings. FLAP MODE OFF is used for landings below flap
+        3. G/S MODE inhibits glideslope warnings. The system can be completely deactivated by pressing the SYS
+        button.</para>
+
+        <para>The EGPWS system provides a look ahead capability by comparing caution and warning terrain envelopes
+        generated from a terrain database to FMGS position data and baro data from the Captain's altimeter. Both
+        en-route terrain and runway clearance floor envelopes are provided. The extended functions are inhibited when
+        navigation performance is LOW.</para>
+        
+        <para>The terrain is displayed on the ND when the TERR ON ND putton on the center panel is pressed. Areas not
+        included in the database are color coded magenta. Dotted red areas are more than 2000ft above the aircraft,
+        dotted orange areas more than 1000ft above the aircraft and amber areas are between 1000ft above and 500ft below
+        (250ft below with gear down) the aircraft.</para>
+
+        <para>The EGPWS derived en-route <emphasis>caution</emphasis> generates a "Terrain Ahead" aural alert combined
+        with an GPWS red light, a TERR AHEAD amber message and conflicting terrain displayed solid yellow on the ND. The
+        en-route <emphasis>warning</emphasis> generates "Terrain ahead, pull up" and the message and terrain are
+        displayed in red in the ND. The clearance floor alert generates a "Too low terrain" aural alert. The terrain
+        display is automatically shown in all cases {TODO: check true for CF case}.</para>
+
+        <para>The enhanced functions may be inhibited with the TERR button on the GPWS panel. A failure in the extended
+        functions will cause an amber FAULT light on the SYS button, but this will not affect basic GPWS
+        functions.</para>
+
+        <para>EPGWS warnings are overridden by stall or windshear warnings.</para>
+        <para>The system can be tested by pushing the GPWS/GP warning light.</para>
+      </sect2>
+      <sect2>
+        <title>Radio altimeter</title>
+        <para>There are no cockpit controls for the radio altimeters. They self test when AC power is first applied to
+        the aircraft, then enter a standby mode. They become active at lift off and operate continuously until
+        touchdown.</para>
+        <para>Rad alt data is displayed whenever below 2500ft radio height. This consists of color coded digits at the
+        bottom of the attitude indicator, a red ground bar on the altimeter scale and a white ground bar on the attitude
+        indicator. The ground bar merges with the horizon at touch down. Radio heights are also announced by a synthetic
+        voice during approach.</para>
+        <para>If a single radio altimeter fails, data from the remaining one will be displayed on both screens.</para>
+      </sect2>
+    </sect1>
+    <sect1>
+      <title>Fire protection</title>
+      <sect2>
+        <title>Engine and APU</title>
+        <para>Each engine has an identical fire detection system, comprising two parallel detection loops monitored by a
+        fire detection unit (FDU). Normally, both loops must indicate a fire to produce a warning. The loops are
+        monitored and automatically disabled if they malfunction. Loss of a single loop produces a level 1 ECAM
+        warning. Loss of both loops, or loss of an FDU, leads to a level 2 ECAM warning indicating loss of fire
+        detection capability on that engine. If both loops break within 5 seconds, a fire warning is triggered. Each
+        engine has a guarded fire button on the overhead fire panel.  This lights up to provide fire indications. When
+        pushed, the fire button pops out as a physical indication of activation. Pushing the fire button arms the squibs
+        and closes the following on the affected engine:
+        <itemizedlist>
+          <listitem><para>Pneumatic bleed valves</para></listitem>
+          <listitem><para>Pack valves</para></listitem>
+          <listitem><para>Fuel valves</para></listitem>
+          <listitem><para>Hydraulic valves</para></listitem>
+          </itemizedlist>
+        </para>
+        <para>The APU has an identical fire detection to the engine. When pushed, the APU button ... {TODO}</para>
+        <para>Each engine has two fire bottles and the apu has a single fire bottle. These are discharged by pressing
+        one of the AGENT buttons situated near their respective fire buttons. The APU fire extinguisher may also be
+        discharged automatically in the case of an APU fire on the ground.  Secondary engine fire indications are
+        provided by fire lights on the pedestal ENG panel, and a secondary external APU fire indication, together with a
+        guarded APU SHUT OFF button, is provided on the EXTERNAL POWER panel.  Once a fire is extinguished, the light in
+        the fire button will extinguish.</para>
+        <para>Test buttons for each system are situated near their respective fire button.</para>
+      </sect2>
+      <sect2>
+        <title>Cargo</title>
+        <para>There are two detector loops for the cargo compartments. Each loop has two detectors in the aft cargo
+        compartment and one in the forward. A Smoke Detection Control Unit (SDCU) receives indications from these
+        detectors and forwards them to the FWC which displays warnings on the CARGO SMOKE panel. If smoke is detected,
+        the inlet and exhaust valves for the affected cargo bay are automatically closed. A single fire bottle is
+        provided for both compartments. The aft compartment has two nozzles, and the forward compartment only one. When
+        a DISCH button is pushed on the CARGO SMOKE panel, the bottle is completely emptied into the selected
+        compartment. Smoke warnings will not extinguish once a fire is extinguished as the smoke will remain isolated in
+        the cargo compartment and the smoke detectors are sensitive to the extinguishing agent.</para>
+      </sect2>
+      <sect2>
+        <title>Other</title>
+        <para>A smoke detector is provided for the avionics in the air extraction duct. Its operation is detailed in
+        <xref linkend="avionics-ventilation"/>.</para>
+        <para>Each lavatory has a smoke detector. These are conected to another SDCU which transmits data to the flight
+        warning computer (FWC) and cabin intercommunication data system (CIDS). Each lavatory waste bin has an automatic
+        fire extinguishing system.</para>
+      </sect2>
+    </sect1>
+    <sect1>
+      <title>Ice &amp; rain protection</title>
+      <para>The three outboard slats of each wing are anti iced using hot bleed air. This is controlled by the WING
+      button on the anti-ice panel.</para>
+      <para>The engine air intakes are anti iced using an independent air bleed, routing hot air from the high pressure
+      compressor via an engine anti-ice valve to the intake. These are controlled by the ENG1 and ENG2 buttons on the
+      anti-ice panel. The anti-ice valve fails open if electrical power is removed. When switched on, the FAULT light
+      illuminates during valve transit, then extinguishes. When switched on, the ignitors are automatically switched on
+      and idle N1 will increase. The memos IGNITION and ENG A.ICE will appear on the E/WD.</para>
+      <para>The fan blades are not anti-iced. If significant engine vibrations occur due to icing, the fan ice can be
+      shed by running the engines up to 70% N2 for approximately 15 seconds.</para>
+      <para>Wing anti-ice is controlled by a single WING button controlling anti ice for both wings. APU bleed air must
+      not be used for wing anti-icing. During valve transit, the amber FAULT light in the button will illuminate. Wing
+      anti-icing also increases idle N1. A WING A.ICE memo on the E/WD and two ANTI ICE legends (with green triangles
+      indicating valve open) on the ECAM bleed page indicate wing anti-ice is on. If the green triangle is present
+      without an accompanying ANTI ICE legend, it means that the valve has stuck open. When armed on the ground, the
+      wing anti-ice will activate for 30 seconds as a self test, then change to an armed mode where the valves are
+      closed but will automatically open when airborne (indications as above with green triangles removed).</para>
+      <para>If ice detection is installed, the ICE NOT DET memo indicates that no ice has been detected for three
+      minutes.</para>
+      <para>The windshield and side windows are heated electrically. This is controlled by the PROBE/WINDOW HEAT button
+      on the anti-ice panel.</para>
+      <para>The AOA probes, the TAT probes, the pitot probes and the static ports are elecrically heated. This is
+      controlled by the same button as the window heat.</para>
+      <para>On the ground, the probes (TAT excepted) and windows are heated automatically after starting the first
+      engine when the PROBE/WINDOW HEAT button is set to AUTO. The windshield heating operates at low power on the
+      ground. Pressing the button allows for manual defog/ de-ice of the windows.</para>
+      <para>The water drain masts are electrically heated. This heat is reduced when on the ground.</para>
+      <para>The optional ice detection system consists of two ice detectors on the lower fuselage and a visual ice
+      indicator with integral light fitted between the two windshields.</para>
+      <para>Electric wipers are fitted. They are controlled using the WIPER selectors on the wiper panels in the bottom
+      corners of the overhead panel. The maximum speed for wiper use is 230kt. The RAIN RPLNT buttons, also on these
+      panels, allows rain repellant to be sprayed on the windshields.</para>
+    </sect1>
+    <sect1>
+      <title>Hydraulics</title>
+      <figure id="hydraulic-system-schematic">
+        <title>Simplified schematic of hrdraulic system</title>
+        <mediaobject>
+          <imageobject role="dblatex">
+            <imagedata fileref="images/hydraulic-system-schematic.eps"/>
+          </imageobject>
+          <imageobject role="html">
+            <imagedata format="PNG" fileref="../images/hydraulic-system-schematic.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para>There are three independent hydraulic systems, designated green, yellow and blue. Each hydraulic system
+      provides a constant 3000 psi to the users.</para>
+      <para>The hydraulic system is fully automatic during normal operations.</para>
+      <para>The PTU allows cross pressurisation without transfer of fluid between yellow and green systems. It is tested
+      at the start of the second engine start sequence and is available thereafter. This is indicated on the E/WD
+      display by the HYD PTU memo appearing briefly.</para>
+      <para>The yellow hydraulic pump runs automatically when a cargo door handle is operated. In this case, the yellow
+      system does not fully pressurise (indicated by the word YELLOW on the ECAM HYD page remaining amber) and the PTU
+      does not operate. The pump stops when the door is fully open. The process is the same during door closure.</para>
+      <para>The blue electric pump starts automatically at the end of the first engine start sequence.</para>
+      <para>If the PTU indication is in amber on the HYD ECAM page, it has been switched off.</para>
+      <para>Extension of the RAT is indicated on the ECAM page by the hollow white RAT symbol turning solid green.</para>
+    </sect1>
+    <sect1>
+      <title>Landing gear</title>
+      <para>The main gear are dual wheel and retract inboard. The nose gear is also dual wheel, and retracts
+      forward.</para>
+      <para>The main gear are equipped with:
+      <itemizedlist>
+        <listitem><para>Carbon brakes</para></listitem>
+        <listitem><para>An anti-skid system (A/SKID)</para></listitem>
+        <listitem><para>An automatic braking system (AUTO/BRK)</para></listitem>
+        <listitem><para>A brake fan</para></listitem>
+        <listitem><para>A Tyre Pressure Indicating System (TPIS)</para></listitem>
+      </itemizedlist>
+      </para>
+      <para>The nose gear is equipped with a nose wheel steering system</para>
+      <para>All the gear and gear doors are hydraulically operated. They are controlled electrically by two Landing Gear
+      Control and Interface Units (LGCIU), which also supply monitoring information.</para>
+      <para>The landing gear can be manually extended using the landing gear gravity extension handle located on the
+      center pedestal.</para>
+      <para>There are four braking modes:
+      <itemizedlist>
+        <listitem><para>Normal braking</para></listitem>
+        <listitem><para>Alternate braking with anti-skid</para></listitem>
+        <listitem><para>Alternate braking without anti-skid</para></listitem>
+        <listitem><para>Parking brake</para></listitem>
+      </itemizedlist>
+      </para>
+      <para>Normal braking is powered by the green hydraulic system. The other modes are powered by the yellow hydraulic
+      system.</para>
+      <para>The parking brake (and alternate brake system) is supplied by the yellow hydraulic system, backed up by an
+      accumulator. The green arc on the accumulator gauge indicates that parking brake pressure will be maintained for
+      at least 12 hours. If accumulator pressure is low, the yellow electric hydraulic pump can be used to charge
+      it. Note that due to PTU operation, this will power up both the yellow and green hydraulic systems.</para>
+      <para>Brake wear indicators must be checked with the parking brake on.</para>
+      <para>The steering handwheels provide 75° of nose wheel deflection. If inputs are made on both handwheels, they
+      are summed. The rudder pedals provide up to 6° deflection at low speeds, progressively decreasing to zero as speed
+      increases to 130kt. The rudder pedal disconnect switch disconnects the nose wheel steering from the rudder so that
+      the rudder pedals can be checked.</para>
+      <para>During gear retraction, the main gear is automatically braked. The nose gear is braked by a brake
+      band.</para>
+      
+      <para>The L/G CTL message on the ECAM wheels page indicates a discrepancy between demanded landing gear position
+      and actual position.</para>
+      <para>The gear is monitored by two Landing Gear Control and Interface Units (LGCIU). Indications are displayed on
+      the ECAM WHEEL page and the LDG GEAR indicator. On the ECAM page, each gear is represented by two triangles, one
+      per LGCIU. When down and locked, the triangles are green. When unlocked, the triangles are red. When fully
+      retracted, the triangles are not shown. A green indication on either triangle is sufficient to determine that the
+      gear is down and locked. The lights on the LDG GEAR indicator panel are controlled by LGCIU1. An UPLOCK message on
+      the ECAM WHEEL page indicates that the landing gear is down and locked with an uplock engaged.</para>
+
+      <para>The auto brake is automatically disengaged when the landing gear reaches the fully retracted
+      position.</para>
+      <para>Gravity extension of the landing gear is possible by turning the GEAR EXTN hand crank clockwise
+      approximately three times. This procedure is detailed in the QRH. After gravity extension, the gear doors remain
+      open. This also has the effect of disabling nosewheel stearing.</para>
+      <para>When the landing gear is extended in flight, green dashes appear on the ECAM wheel page to indicate
+      anti-skid available. These will indicate anti-skid commands on landing.</para>
+      <para>The AUTO BRK message on the ECAM WHEEL page indicates autobrakes armed. This only appears below 800ft
+      AGL. When aircraft deceleration is at least 80% of the selected rate, the DECEL light in the AUTO/BRK selector
+      illuminates. MAX mode is only used for takeoff. Autobrake may be deselected by pushing the corresponding button or
+      by manual braking.</para>
+      <para>After landing, if the brake temperatures on one gear differ by more than 150°C or the difference in the mean
+      temperature of each gear exceeds 200°C, maintenance action is required.</para>
+
+      <para>If any brake is &gt;100°C, a green arc appears on the ECAM page. This indicates that the brake fan must be
+      switched on. If the temperature exceeds 300°C, an amber arc appears, indicating that takeoff must be delayed to
+      let the brakes cool.</para>
+
+    </sect1>
+    <sect1>
+      <title>Flight controls</title>
+      <sect2>
+        <title>Overview</title>
+        <para>The primary flight controls consist of:
+        <itemizedlist>
+          <listitem><para>Ailerons</para></listitem>
+          <listitem><para>Elevators</para></listitem>
+          <listitem><para>Trimmable Horizontal Stabilizer (THS)</para></listitem>
+          <listitem><para>Rudder</para></listitem>
+          <listitem><para>Ground spoilers/ Speed brakes</para></listitem>
+        </itemizedlist>
+        </para>
+        <para>The ten spoilers (five each side) have several functions, each using different surfaces:
+        <variablelist>
+          <varlistentry><term>Speed brakes</term>
+          <listitem><para>Use the 3 central surfaces to increase drag.</para></listitem></varlistentry>
+          <varlistentry><term>Roll control</term>
+          <listitem><para>Use the four outer spoilers to assist in rolling the aircraft.</para></listitem></varlistentry>
+          <varlistentry><term>Ground spoilers</term>
+          <listitem><para>Deploy all spoilers to dump lift to get weight on the wheels.</para></listitem></varlistentry>
+        </variablelist>
+        </para>
+        <para>Seven flight control computers take input from the sidestick, analyse it to ensure it is a safe command, then
+        use it to manage the control surface servos. There are:
+        <itemizedlist>
+          <listitem><para>Two Elevator and Aileron Computers (ELAC)</para></listitem>
+          <listitem><para>Three Spoiler and Elevator Computers (SEC)</para></listitem>
+          <listitem><para>Two Flight Augmentation Computer (FAC)</para></listitem>
+        </itemizedlist>
+        </para>
+        <para>Two Flight Control Data Concentrator computers (FCDC) process data from the ELACs and SECs for use by the
+        EIS. The FACs send their data directly. The FCDCs are redundant. Failure of both FCDCs will lead to flight
+        control data not being available to the EIS.</para>
+        <para>Two FLT CTL panels, one on either side of the overhead panel, are used to control the flight control
+        computers.</para>
+        <para>Each pair of flight control computers is redundant. The SEC3 is only used for spoiler control, and
+        does not participate in flight control system reconfiguration.</para>
+        <para>The ailerons, elevators and pitch trim are powered by two independent actuators, each powered by a
+        seperate hydraulic source. The rudder is powered by three independent actuators. Each actuator is controlled by
+        a different computer. At any one time, one actuator will be in active mode, and the other will be in damping
+        mode. In the event of a flight control computer failure, the actuators controlled by that computer will
+        automatically be switched to damping mode, and those controlled by the other computer will become active.</para>
+        <para>If both ELACs fail, active control of the ailerons is lost and they revert to damping mode. SEC2 takes
+        over control of the elevators and the stabilizer. Roll function is provided by the spoilers. If SEC2 also fails,
+        it will be replaced by SEC1.</para>
+        <para>With an elevator fault, the remaining elevator remains operative, but its deflection limits are reduced to
+        prevent excessive torsional loads on the tail. Normal flight is possible in this configuration. If the elevators
+        are lost entirely, they are automatically set to the neutral position.</para>
+        <para>Providing suitable hydraulic power is available, mechanical control of the stabiliser and rudder is always
+        available.</para>
+        <para>Each spoiler is fitted with a single actuator. If a hydraulic system fails, its associated spoiler will
+        remain in its last position unless pushed down by aerodynamic forces. Spoiler control is shared by the three
+        SECs. Failures are shown on the ECAM F/CTL page by an amber number above the failed spoiler. An amber triangle
+        above the number indicates a failure in the extended position. If possible, the spoiler will be automatically
+        retracted by its controlling SEC and then it and its symmetrical pair on the opposite wing will be
+        inhibited.</para>
+        <para>Under certain conditions, speed brake extension is inhibited and spoilers are automatically
+        retracted. This may lead to a SPD BRK DISAGREE ECAM caution.</para>
+
+        <para>Auto ground spoilers are armed by pulling the spoiler lever up to expose a white collar. A memo on the
+        E/WS confirms arming.</para>
+        <para>Rudder trim is isolated in flight when the autopilot is engaged. Its position is shown by a blue line on
+        the ECAM F/CTL page.</para>
+        <para>When the autopilot is engaged, speed brakes will not deploy past approximately half, even if the speed
+        brake lever is moved to full.</para>
+        <para>The "SPEED BRK" memo on the E/WD will flash amber if speed brakes are extended and any engine is above
+        idle.</para>
+        <para>Auto ground spoilers deploy automatically when both main gear are compressed and thrust levers are at idle
+        or behind. If only one main gear is compressed, the spoilers only partially deploy. They will automatically
+        retract if power is applied for a go-around.</para>
+        <para>Lift augmentation devices consist of:
+        <itemizedlist>
+          <listitem><para>Five slats on each leading edge</para></listitem>
+          <listitem><para>Two flaps on each trailing edge</para></listitem>
+        </itemizedlist>
+        </para>
+        <para>The lift augmentation devices are hydraulically actuated. They are electrically controlled by two Slat
+        Flap Control Computers (SFCC). Each SFCC has two channels, one for the slats and one for the flaps. The SFCCs
+        are redundant, but a system associated with a failed channel will move at half speed.</para>
+        <para>When flaps are selected, both ailerons are dropped by about 5°. This is indicated on the ECAM F/CTL page
+        by the aileron position indicatord pointing to a boxed position on the scale rather than there normal double
+        dashed position.</para>
+
+        <para>The flaps have an auto retract function. In configuration 1+F, the flaps will automatically retract when
+        airspeed reaches 210kt. There is no corresponding automatic slat retraction, so this is known as configuration
+        1.</para>
+
+        <para>When deploying flaps when airborne, selecting 1 on the flap lever only moves the slats -
+        i.e. configuration 1 is acheived rather than 1+F.</para>
+
+        <para>Flap and slat faults are indicated in amber on the flap/ slat display on the E/WD. Locked flaps or slats
+        may be caused by the Wing Tip Brakes (WTB) locking the affected surface movement if assymmetry, overspeed,
+        symmetrical runaway or uncommanded movement are detected. WTBs cannot be released in flight. The slats and flaps
+        have independant WTBs, so locked flaps will not cause locked slats, and vice versa. An ALIGNMENT FAULT indicates
+        flap attachment failure.</para>
+
+        <para>A-LOCK pulsing blue on the E/WD indicates that the slats have been locked due to high angle of attack
+        and/or low speed.</para>
+
+        <para>The rudder deflection is limited depending on speed by the rudder travel limiter. The current rudder
+        travel limit is shown on the F/CTL ECAM page by white ticks below the rudder scale.</para>
+        
+      </sect2>
+      <sect2>
+        <title>Side sticks</title>
+        <para>The side sticks are spring loaded to neutral and do not provide feedback. They are not interconnected. If
+        both side sticks are operated at the same time, their inputs are added algebraically. If this happens, a "DUAL
+        INPUT" aural warning is activated and green lights show on the SIDE STICK PRIORITY warning lights. Dual inputs
+        are not recommended.</para>
+        <para>When the autopilots are engaged, the side sticks are locked in neutral. If the lock is overcome, the
+        autopilot is disconnected.</para>
+        <para>The button on the side stick is dual function. If an autopilot is engaged, pushing the button will
+        disconnect the autopilot and pushing it a second time will silence the associated warning. If no autopilot is
+        engaged, pressing and holding the button prioritises the side stick. This results in a "PRIORITY LEFT/RIGHT"
+        message and a red arrow indication on the opposite side stick priority warning light. Moving the low priority
+        sidestick now just results in a green light in the side stick priority light on the prioritised side. If both
+        priority buttons are pushed, the last pressed will give priority. The opposite sidestick can be permanently
+        deactivated by pressing and holding the button for 40 seconds. In this case, a momentary push on either button
+        will reactivate the deactivated side stick.</para>
+        <para>On the ground, a combined side stick deflection indicator is shown as a white cross on the attitude
+        indicator. This only indicates side stick positions, not control surface positions. Control surface positions
+        are shown on the ECAM F/CTL page, which is automatically called if either the sidesticks or the rudder pedals
+        are moved on the ground. The side sticks become operable on the ground as soon as hydraulic power becomes
+        available (i.e. after first engine start).</para>
+      </sect2>
+      <sect2>
+        <title>Normal Law &amp; protections</title>
+        <para>Normal law operates in three modes:
+        <variablelist>
+          <varlistentry><term>Ground mode</term>
+          <listitem><para>Conventional controls when the aircraft is on the ground and electrically and hydraulically
+          powered.</para></listitem></varlistentry>
+          <varlistentry><term>Flight mode</term>
+          <listitem><para>Operates in the air after a gradual transition from ground mode, commencing at lift
+          off.</para></listitem></varlistentry>
+          <varlistentry><term>Flare mode</term>
+          <listitem><para>Introduces conventional feel to the landing phase. This is acheived by memorizing the aircraft
+          attitude at 50ft, then progressively reducing this attitude, meaning the pilots must perform a gentle
+          flare.</para></listitem></varlistentry>
+        </variablelist>
+        </para>
+        <para>In flight mode, control surface deflection is not directly proportional to side stick deflection. Instead,
+        side stick input is a rate of roll demand in roll and a load factor demand in pitch. Control surface movement
+        will occur with no input on the side stick. An attitude is set with the sidestick and the sidestick is then
+        allowed to return to its neutral position. As pitch and roll rate demands are now zero, the flight control
+        computer holds the attitude until further inputs are made with the sidestick. Yaw control is
+        conventional, but turn co-ordination and dutch roll protection are provided, meaning rudder inputs are not
+        generally required.</para>
+        <para>Normal law provides the following protections:
+        <variablelist>
+          <varlistentry><term>Load factor limitation</term>
+          <listitem><para>Structural load is limited to:
+          <itemizedlist>
+            <listitem><para>+2.5g to -1g in clean configuration</para></listitem>
+            <listitem><para>+2g to 0g in flaps extended configuration</para></listitem>
+          </itemizedlist></para></listitem></varlistentry>
+          <varlistentry><term>Pitch attitude protection</term>
+          <listitem><para>Pitch is restricted to a maximum of between 20° and 30° nose up (depending on configuration
+          and speed) and a maximum of 15° nose down. The current limits are indicated by green dashes on the attitude
+          indicator.</para></listitem></varlistentry>
+          <varlistentry><term>High angle of attack protection</term>
+          <listitem><para>Prevents the aircraft stalling and ensures optimum performance during extreme maneuvres. It
+          takes priority over all other protections. V<subscript>&alpha;-prot</subscript> is displayed as the top of an
+          amber barber pole on the speed scale. This is the lowest speed that the aircraft is allowed to reach with the
+          stick neutral. The pilot can override V<subscript>&alpha;-prot</subscript> using the side stick and reduce
+          to V<subscript>&alpha;-max</subscript>, which is represented by the top of the solid red bar on the speed
+          scale. In the protection range, normal law demand is modified to be an angle of attack demand rather than a
+          load factor demand. If the sidestick is released at V<subscript>&alpha;-max</subscript> the speed will
+          increase to V<subscript>&alpha;-prot</subscript>.</para></listitem></varlistentry>
+          <varlistentry><term>High speed protection</term>
+          <listitem><para>Prevents exceedance of V<subscript>MO</subscript>/M<subscript>MO</subscript>. This is shown on
+          the speed scale as the bottom of the red barber pole. Green dashes indicate the speed at which protection
+          activates. Momentary exceedance of V<subscript>MO</subscript>/M<subscript>MO</subscript> is allowed for
+          maneuvring, but the speed will then return to protection speed. With stick released, the speed returns to
+          V<subscript>MO</subscript>/M<subscript>MO</subscript>. When high speed protection is active, roll stability is
+          augmented so that the aircraft will roll wings level if the sidestick is released.</para>
+          </listitem></varlistentry>
+          <varlistentry><term>Bank angle protection</term>
+          <listitem><para>Bank angle is limited to 67°, shown by green dashes on the bank angle scale on the PFD. The FD
+          bars will disappear if bank angle exceeds 45°. If the side stick is released and the bank angle is &gt;33°,
+          the bank angle will return to 33°. Autotrim is inhibited above 33°. If the angle of attack or the high speed
+          protection is active, bank angle is limited to 45°.</para></listitem></varlistentry>
+        </variablelist>
+        </para>
+      </sect2>
+      <sect2>
+        <title>Reconfiguration laws</title>
+        <sect3>
+          <title>Overview</title>
+          <para>Whilst a single failure will not result in degradation of normal law, it is possible that multiple
+          failures may.</para>
+        </sect3>
+        <sect3>
+          <title>Alternate law</title>
+          <para>Degradation to alternate law is annunciated on the E/WD as F/CTL ALTN LAW (PROT LOST). The effects are:
+          <variablelist>
+            <varlistentry><term>Ground mode</term>
+            <listitem><para>As in normal law,</para></listitem></varlistentry>
+            <varlistentry><term>Flight mode</term>
+            <listitem><para>Pitch as in normal law. Conventional roll control, i.e surface deflection proportional to
+            side stick deflection. In yaw, turn coordination is lost and damping has limited authority.</para>
+            </listitem></varlistentry>
+            <varlistentry><term>Landing mode</term>
+            <listitem><para>Direct law when landing gear is selected down.</para></listitem></varlistentry>
+          </variablelist>
+          </para>
+          <para>Load factor limitation is provided similarly to normal law. Pitch attitude protection is lost, indicated
+          by the green pitch limit dashes on the attitude indicator being replaced by amber crosses. Bank angle
+          protection is lost. Again, this is indicated by the green dashes on the bank angle scale being replaced by
+          amber crosses.</para>
+
+          <para>The high angle of attack protection is replaced by low speed stability. Stall warning speed,
+          V<subscript>SW</subscript> indicated by a red baber pole on the speed indicator replaces the
+          V<subscript>&alpha;</subscript> indications. As speed approaches V<subscript>SW</subscript> a progressive nose
+          down pitch input is introduced. This can be overridden with side stick inputs. A "STALL,STALL" aural warning
+          sounds at V<subscript>SW</subscript>, and the aircraft will stall if the warning is ignored. Alpha floor
+          protection is also inoperative in alternate law.</para>
+
+          <para>High speed stability replaces high speed protection. A nose up input is added when speed is above
+          V<subscript>MO</subscript>/M<subscript>MO</subscript>. This can be overridden with sidestick inputs. As in
+          normal law, an aural over speed warning is triggerred when
+          V<subscript>MO</subscript>/M<subscript>MO</subscript> is exceeded.</para>
+          
+          <para>According to the failures, it is possible that the stabilities will also be lost. In this case only load
+          factor limitation and the stall and overspeed warnings remain.</para>
+        </sect3>
+        <sect3>
+          <title>Direct law</title>
+          <para>Direct law is indicated by the ECAM message FCTL DIRECT LAW (PROT LOST). In direct law, there is a
+          direct relationship between side stick and control surface positions. There are no protections available,
+          although stall and over speed warnings are still available. Auto-trim is not available. A "USE MAN PITCH TRIM"
+          message appears on the FMA. Auto turn coordination and dutch roll damping are also lost.</para>
+        </sect3>
+        <sect3>
+          <title>Mechanical backup mode</title>
+          <para>Pitch is controlled solely through the use of manual pitch trim. "MAN PITCH TRIM ONLY" appears on the
+          FMA. Lateral control is solely through the use of the rudder pedals. In most cases, action can be taken to
+          recover to either alternate law or direct law.</para>
+        </sect3>
+        <sect3>
+          <title>Abnormal attitude laws</title>
+          <para>In the event the aircraft attitude leaving the protected envelope, the flight controls revert to
+          alternate law without the stability enhancements. Once the aircraft is recovered, it stays in alternate law.
+          It will not, however, revert to direct law when the gear is deployed.</para>
+        </sect3>
+        
+      </sect2>
+    </sect1>
+    <sect1>
+      <title>Fuel</title>
+      <figure id="fuel-system-schematic">
+        <title>Simplified schematic of the fuel system</title>
+        <mediaobject>
+          <imageobject role="dblatex">
+            <imagedata fileref="images/fuel-system-schematic.eps"/>
+          </imageobject>
+          <imageobject role="html">
+            <imagedata format="PNG" fileref="../images/fuel-system-schematic.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para>When the centre tank pumps are in AUTO, they turn off when slats are selected. The centre tank pumps also
+      shut off automatically when the wing tanks have been filled by fuel returning from the IDG cooling circuits. In
+      this case, they automatically restart when approx 500kg of fuel fas been burnt from the wing tanks. The centre
+      tank pumps produce slightly higher pressure than the wing pumps, so that centre tank fuel will be used first.</para>
+      <para>When either inner tank reaches a low level, both transfer valves open automatically, and fuel is transferred
+      to the inner tanks. This is indicated by the E/WD memo "OUTER TK FUEL XFRD". The transfer valves, once open,
+      remain open until the next refuelling operation.</para>
+      <para>The external refuel panel is situated on the fuselage below the right wing. A single refuelling point is
+      installed on the right wing outboard of the engine. A REFUELG memo on the E/WD indicates that this panel is
+      open.</para>
+      <para>There is a surge tank fitted in each wingtip to protect against overpressure and thermal expansion. There
+      are no cockpit indications. The surge tank vent is situated underneath the wing near the tip.</para>
+      <para>A shroud drain mast is situated under the fuselage. This drains any fuel that leaks from the system.</para>
+      <para>Each tank has a magnetic fuel level indicator to allow fuel to be measured manually. These should normally
+      be flush with the aircraft surface. Each tank also has a water drain valve. These should be checked for
+      leaks.</para>
+      <para>On the ECAM fuel page, if the fuel pump is shown as an amber boxed LO, the pump is on but it is not
+      producing adequate pressure. An amber box with a cross line indicates that a pump has been switched off
+      manually.</para>
+      <para>Failure of a single wing pump will not trigger a master caution, since there is a backup pump
+      available. Failure of both pumps in one wing tank will mean that the fuel in the tank must be gravity fed,
+      potentially reducing the service ceiling of the aircraft.</para>
+      <para>Degradation of a fuel quantity sensor is indicated by two amber dashes across the last two digits of the FOB
+      value. On the ECAM FUEL page, the affected tank also shows the dashes on its quantity value.</para>
+      <para>Fuel temperature exceeding a limitation results in a master caution and the fuel temperature of the affected
+      tank being shown in amber on the ECAM FUEL page.</para>
+      <para>A transfer valve shown in amber indicates the failure of the affected transfer valve. The fuel in the tank
+      is unusable in this configuration.</para>
+      <sect2>
+        <title>Limitations</title>
+        <informaltable>
+          <tgroup cols="2">
+            <colspec colwidth="3in"/>
+            <colspec colwidth="1in"/>
+            <tbody>
+              <row><entry>Min TO Fuel Qty</entry><entry>1500kg</entry></row>
+              <row><entry></entry><entry></entry></row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+    </sect1>
+    <sect1>
+      <title>Oxygen</title>
+      <para>Both crew and passenger oxygen systems are pretty much identical to the Boeing. They are contolled by the
+      OXYGEN panel located on the overhead panel. The system is monitored on the ECAM DOOR page.</para>
+      <para>Passenger oxygen automatically deploys when cabin altitude&gt;14,000ft. It can also be manually released by
+      the gaurded button on the OXYGEN panel. The PASSENGER SYS ON light illuminates when masks are deployed. There are
+      approximately 13 minutes of passenger oxygen available.</para>
+      <para>The OXY legend on this page is amber until the crew oxygen supply is turned on. A half amber box is
+      displayed underneath the unregulated oxygen pressure on this page when it is below 1500psi. This indicates that
+      the MIN FLT CREW OXY CHART should be checked before flight.</para>
+      <para>If the amber REGUL LO PR is displayed, the oxygen pressure at the regulator is low, and maintenance should
+      be called.</para>
+      <para>The mask microphone is automatically energised when oxygen is flowing, either when being worn or when the
+      test and emergency buttons are pushed together.{TODO: This is only inferred - check it is true}</para>
+    </sect1>
+    <sect1>
+      <title>Power plant</title>
+      <para>The engines are designated CFM56-5B. It comprises:
+      <itemizedlist>
+        <listitem><para>a front fan</para></listitem>
+        <listitem><para>a Low Pressure (LP) compressor stage</para></listitem>
+        <listitem><para>a High Pressure (HP) compressor stage</para></listitem>
+        <listitem><para>a combustion chamber</para></listitem>
+        <listitem><para>a High pressure turbine stage</para></listitem>
+        <listitem><para>a Low  pressure turbine stage</para></listitem>
+      </itemizedlist>
+      </para>
+      <para>The LP turbine drives the LP compressor and the front fan. This is N1. The HP turbine drives the HP
+      compressor. This is N2. The HP rotor also drives the accessory gearbox located at the bottom of the fan
+      case.</para>
+      <para>The combustion chamber is equipped with two ignitors, designated A and B.</para>
+      <para>Each engine is equipped with a two channel Full Authority Digital Engine Control System (FADEC). One channel
+      is active, the other is a standby. After power is first applied to the aircraft the FADECs are automatically
+      powered for 5 minutes. After this, the FADECs shut down and engine indications on the E/WD change to amber
+      crosses. They are repowered when IGN/START is selected on the ENG MODE switch. The FADEC prevents thrust exceeding
+      the thrust lever position in both manual and automatic modes.</para>
+      <para>The amber light on the ENG MASTER panel indicates that the automatic start sequence has aborted.</para>
+      <para>In the event of a wet start, the FADEC automatically shuts off the fuel, turns off the ignitors and performs
+      a dry crank cycle. The FADEC will then attempt a second start with both ignitors powered.</para>
+      <sect2>
+        <title>Engine instruments</title>
+        <para>On the N1 guages, the amber mark represents maximum (i.e. TOGA) N1. The red arc represents maximum
+        permissable N1. The white circle represents demanded N1 at the current thrust lever position. If the autothrust
+        is adjusting the thrust, a blue arc appears to indicate the final thrust level that is being set. If both
+        engines are at idle in flight, an IDLE indication flashes for ten seconds, then remains steady green. N1 in the
+        caution range is indicated by a flashing amber needle (digits remain green). In the warning range, the needle
+        and the digits turn red. A red line indicates the maximum exceedance in the warning range.</para>
+        <para>The current thrust limit mode and N1 rating limit are displayed to the right of the N1 gauges. If a FLX
+        takeoff is selected, the FLX temperature will also appear here.</para>
+        <para> When reversers are deployed, an amber REV indication appears on the N1 gauge to indicate that the
+        reversers are unlocked. This indication changes to green once the reversers are fully deployed.</para>
+        <para>On the EGT, the amber tick represents MAX EGT. This value is variable according to operational phase, and
+        the tick will therefore move. It is not displayed during takeoff. The EGT exceedance indications are similar
+        to the N1 exceedance indications. </para>
+        <para>N2 exceedances are indicated by the digital value turning red and a red cross appearing next to the
+        value.</para>
+        <para>On the ECAM ENG page, fuel used is frozen when the engine is shut down and automatically reset when the
+        engine is started. </para>
+        <para>Start valve position and available pressure are only displayed during engine start on the ground.</para>
+        <para>A CHECK message on an engine instrument indicates that a discrepancy has been detected between the value
+        displayed on ECAM and the real one.</para>
+        <para>If N1 or N2 parameters are downgraded due to a sensor fault, the last digit will be displayed dashed
+        amber.</para>
+      </sect2>
+      <sect2>
+        <title>Engine starting</title>
+        <para>An igniter is powered at 16% N2. The ignitors automatically alternate on successive engine starts. The
+        current ignitor is displayed on the ECAM ENG page as a letter above the start valve indications during
+        starting.</para>
+        <para>Fuel flow starts at 22% N2. EGT and N1 increase 15 seconds after fuel flow starts.</para>
+        <para>At 50% N2 the start valve closes and the ignitor is switched off.</para>
+        <para>The completion of the start sequence is indicated by the grey background on the N2 indicator
+        disappearing. This stable N2 value is approximately 58%.</para>
+        <para>It is recommended that the engines are operated at or near idle for at least two minutes after
+        start.</para>
+
+        <para>Starts are usually carried out automatically by the FADEC. It is, however, possible to start the engine
+        manually, with the pilots controlling fuel and ignition. In this case the FADEC only provides passive
+        monitoring. When carrying out a manual start, the ENG MAN START buttons control the start valves and the ENG
+        MASTER switch activates both ignitors and open the HP fuel cock. The ENG MASTER switch should be turned on at
+        max motoring, providing this is &gt;20%. The start valve closure and ignition cutoff still occurs automatically
+        at N2 50%.</para>
+
+      </sect2>
+      <sect2>
+        <title>Engine handling</title>
+        <para>Takeoff thrust is applied in two stages. The thrust is first set to approximately 50%, and the engines are
+        allowed to stabilise. Either FLX or TOGA is then set.</para>
+        <para>At thrust reduction altitude, thrust is set to CL, and the autothrust becomes active.</para>
+        <para>If heavy rain or turbulence is expected after take off or during initial approach, the ignitors can be
+        switched on by selecting the END MODE selector to IGN START. The E/WD memo area will display
+        IGNITION. Continuous ignition is automatically selected when engine ant-ice is turned on.</para>
+        <para>REV IDLE should be selected on landing when speed reaches 70kt.</para>
+        <para>A three minute cooling period is recommended following the use of maximum reverse thrust.</para>
+      </sect2>
+    </sect1>
+    <sect1>
+      <title>EIS</title>
+      <sect2 id="eis-efis">
+        <title>EFIS</title>
+        <sect3>
+          <title>Overview</title>
+          <para>Data from the ADIRS and FMGC is fed directly into three display management computers (DMCs). Normally
+          DMC1 supplies the Captain's EFIS and DMC2 supplies the FO's EFIS, with DMC3 being used as a backup.</para>
+        </sect3>
+        <sect3>
+          <title>PFD</title>
+          <para>Do not fly with only one flight director selected on.</para>
+          <para>Rad alt displayed below 2500ft</para>
+          <para>On the PFD, items colour coded magenta indicate that the FMGS is managing the item and blue items
+          indicate that an item has been manually selected on the FCU.</para>
+          <para>Airspeed index is yellow line and triangle. A speed trend arrow, also yellow, gives the speed in 10
+          seconds time.</para>
+          <para>During take-off, V<subscript>1</subscript> is shown in blue and V<subscript>2</subscript> is shown in
+          magenta. They are shown as numbers when they are above the displayed scale, and appear on the scale as a blue
+          "1" and a magenta triangle respectively. Immediately after take-off, the flight director commands
+          V<subscript>2</subscript>+10 kt, so the aircraft speed will be greater than the magenta triangle. Minimum flap
+          retraction speed (F speed) is shown as a green F. Flap limit speed is shown by a barber's pole. As flaps are
+          retracted to flap 1, minimum slat retraction speed (S speed) is indicated by a green S.</para>
+          <para>Once flaps are retracted the barber's pole indicates V<subscript>mo</subscript> of 350kt when below
+          approximately 25,000ft and M<subscript>mo</subscript> of M0.82 when above. A MACH indicator appears once M0.5
+          is achieved.</para>
+          <para>When clean, a green circle indicates "green dot speed. This is the best lift:drag.</para>
+          <para>During FMGS managed decent, the magenta managed speed indicator splits to indicate that a range of
+          speeds may be used to maintain correct path.</para>
+          <para>When below 15,000ft ?in a descent?, two amber bars indicate "V<subscript>fe</subscript> next", the
+          maximum speed for deployment of the next stage of flap.</para>
+          <para>Protection speeds are displayed as a solid red bar and two amber hollow boxes (see {TODO: get
+          reference}).</para>
+          <para>On the altimeter scale, the red ribbon indicates a ground reference derived from the rad alt. In the
+          final stages of approach, this is augmented with an FMGS database landing elevation indicated by a blue line
+          across the altimeter. When outside the displayed scale, the target altitude is shown either above or below the
+          altimeter as applicable. It will show in feet when QNH is selected and as a flight level (e.g. "FL330" when
+          STD is selected). When within the displayed scale, it is shown on the altimeter with a target box to the
+          left. It will be magenta if the restriction originates from the FMGS and blue if selected on the FCU. The baro
+          setting is shown in blue below the altimeter. Standard pressure setting is indicated by "STD" when the baro
+          reference selector is pulled.</para>
+          <para>The vertical speed is displayed in amber when high.</para>
+          <para>On the compass display, a green diamond indicates track and a yellow line indicates heading. Selected
+          heading appears as a blue triangle or a figure on the appropriate side if outside the displayed scale.</para>
+          <para>When an ILS is selected, the frequency and ident appear in magenta in the bottom left corner, along with
+          DME range if available. The front course appears on the compass display in magenta, either as a figure when
+          outside the compass scale or as a dagger when within. Localiser and glideslope deviation is shown by a hollow
+          magenta diamond on deviation bars.</para>
+        </sect3>
+        <sect3>
+          <title>ND</title>
+          <para>Ground speed, air speed and wind data are displayed in the top left of the ND in all modes. Magnetic
+          heading is a fixed yellow line. Selected heading or track is displayed as a blue triangle when within
+          displayed scale or blue digits when not. Actual track is shown by a green track diamond.</para>
+          <para>Rose ILS mode shows standard magenta course bar incorporating localiser deviation and white glideslope
+          deviation scale with a magenta diamond indicator. Frequency course and ident are shown in the top right
+          corner.</para>
+          <para>Rose VOR mode gives a blue course deviation bar. Course must be set in the MCDU RAD NAV page. VOR data
+          is shown in the top right of the ND.</para>
+          <para>Bearing pointers are selected on the EFIS control panel and are shown in white for VOR and green for
+          ADF. #1 pointers are single lined and #2 pointers are double lined. Ident and range information are shown in
+          the bottom corners of the ND. A small white M next to this information indicates manual selection of the
+          aid.</para>
+          <para>Rose NAV mode dispalys a map oriented to the aircraft. The range selector sets the diameter of the
+          map. Planned track is shown in green and waypoints are shown in blue. Id, range and ETA for the next waypoint
+          are shown in the top right corner.</para>
+          <para>Arc mode is the normal mode, displaying the forward 90° of the map shown by rose NAV mode. The range
+          selector now sets the distance from the aircraft to the edge of the map.</para>
+          <para>Additional data points for airports, NDBs, VORs and Waypoints can be shown in map modes by selecting
+          pushbuttons on the EFIS control panel. These data points show in magenta.</para>
+        </sect3>
+      </sect2>
+      <sect2>
+        <title>ECAM</title>
+        <sect3>
+          <title>Overview</title>
+          <para>Data from certain aircraft system sensors is routed directly to the ECAM channel in the three DMCs. The
+          majority of the data, however, is routed to the two System Data Acquisition Concentrators (SDACs), for
+          processing. The SDACs then provide system page data to the DMCs. Normally, DMC1 supplies the E/WD, DMC2
+          supplies the SD and DMC3 is available as a backup. Two Flight Warning Computers (FWCs) receive data directly
+          from aircraft sensors to generate red warnings and receive data from the SDACs to generate amber warnings. The
+          FWCs control the attention getters and aural alerts and send data to the DMCs for display of alert
+          messages.</para>
+          <para>Failure of a single FWC generates a Level 1 caution, since there is a redundant system available. This
+          will, however, downgrade the aicraft to Cat III single. It will also lead to only one half of the Master
+          Caution and Master Warning lights illuminating. The loss of both FWCs will remove all automatic monitoring of
+          the aircraft systems. The ECAM system pages and overhead panels must be monitored for local failure
+          indications.</para>
+          <para>The EMER CANC button can be used to supress the caution associated with an intermittant nuisance
+          warning. Pressing and holding the RCL key for 3 seconds will unsupress the caution.</para>
+          <para>Information on the ECAM displays is colour coded:
+          <variablelist>
+            <varlistentry><term>Green</term>
+            <listitem><para>A normal condition</para></listitem></varlistentry>
+            <varlistentry><term>Amber</term>
+            <listitem><para>Abnormal indication requiring crew awareness but <emphasis>not</emphasis> immediate
+            action.</para></listitem></varlistentry>
+            <varlistentry><term>Red</term>
+            <listitem><para>Serious parameter exceedance or warnings that requires immediate crew
+            action.</para></listitem></varlistentry>
+          </variablelist>
+          </para>
+          <para>The ECAM system divides the flight into various stages. If a warning occuring in the take-off or landing
+          phase can be delayed, it is inhibited until a less critical stage of flight is reached.</para>
+          <para>ECAM warnings are presented in various ways depending on severity:
+          <variablelist>
+            <varlistentry><term>ECAM advisory</term>
+            <listitem><para>If a parameter approaches its limit, the relevant SD page is brought up and the parameter
+            pulses, but remains green to indicate that no exceedance has yet taken place.</para></listitem></varlistentry>
+            <varlistentry><term>Level 1</term>
+            <listitem><para>A loss of redundancy or a loss of a system that does not affect the safety of the flight has
+            occured. An amber message is displayed on the E/WD. As the fault only requires crew awareness, the handling of
+            the fault can be delayed if required. Pressing the CLR key on the ECAM control panel will move the message to
+            the status page, which will be brought up. The status page is then reviewed and subsequently removed by
+            pressing either a CLR key or the STS key.</para></listitem></varlistentry>
+            <varlistentry><term>Level 2</term>
+            <listitem><para>A failure that hasn't any direct consequence on flight safety. This is similar to a level 1
+            alert, except the crew is alerted by illumination of the master caution light and an aural warning. Pressing
+            the master caution light extinguishes it.</para></listitem></varlistentry>
+            <varlistentry><term>Level 3</term>
+            <listitem><para>A failure that requires immediate crew action. The red master warning illuminates and a
+            continuous chime sounds. Pressing the master warning light extinguishes it, stops the chimes and resets the
+            alerting system. In this case, the messages shown on the E/WD are in red.</para></listitem></varlistentry>
+          </variablelist>
+          </para>
+          <para>ECAM displays the failure message on the E/WD in order of priority, so that high priority failures are
+          dealt with before low priority failures. It is possible that a high priority failure will be placed above a
+          failure that you are currently running the actions for.</para>
+          <para>A white MAINTENANCE message on the ECAM status page does not mean that the aircraft is unserviceable,
+          only that a particular procedure is required at the next programmed servicing.</para>
+          <para>A boxed failure indication is a primary failure that has associated secondary failures. The secondary
+          failures are indicated in the right hand column by starred items.</para>
+        </sect3>
+        <sect3>
+          <title>E/WD</title>
+          <para>The upper area of the E/WD display is used for main engine parameters, fuel on board (FOB) and slat/flap
+          positions. The lower part of the E/WD display is normally used to show memos. If a failure occurs, the memos
+          are replaced by warning/ caution messages and a series of blue action items. Boxed failures indicate a primary
+          failure that will affect other systems. Starred failures on the right of the memo area are secondary
+          failures.</para>
+          <para>Approximately two minutes after engine start, a takeoff memo appears. The items on this memo put the
+          aircraft into a suitable configuration for takeoff.</para>
+          <para>During the takeoff phase, a magenta T.O. INHIBIT message appears. This indicates that some warnings and
+          cautions are now inhibited. T.O. INHIBIT is in effect from application of T.O. thrust up to 1500ft AAL or 2
+          minutes after lift off.</para>
+          <para>On passing 1500ft in the descent, a landing memo is displayed.</para>
+          <para>At approximately 800ft, a LDG INHIBIT message appears. This indicates that the vast majority of warnings
+          and cautions have been inhibited for the landing phase.</para>
+        </sect3>
+        <sect3>
+          <title>SD</title>
+          <para>There is a permanent area at the bottom of the SD. This always displays TAT, SAT, time and gross
+          weight.</para>
+          <para>The SD page automatically provides pilots with information on a "need to know basis".</para>
+          <para>An aircraft STATUS page may be displayed to check the state of the aircraft. The content of this page
+          varies depending on what failures are present, but may contain limitations, approach procedures, information
+          and inoperative systems. If the status page is not clear, a white boxed STS legend appears at the bottom of
+          the E/WD display, and, if there are any messages affecting approach and landing, the status page will
+          automatically be displayed when the slats are extended. If the status page has a green overflow arrow at the
+          bottom, pressing a CLR key will display the next page.</para>
+        </sect3>
+        <sect3>
+          <title>Controls</title>
+          <para>The pilot interface for the ECAM display is the ECAM Control Panel on the pedestal. The middle two lines
+          of buttons manually bring up their associated ECAM page. When manually selected, the button lights up, and
+          pushing it again will remove the page and allow the automatic sequencing of pages.</para>
+          <para>The RCL button, when pressed for at least three seconds, recalls any warnings or cautions that have been
+          cleared since the last power up. If there is nothing to recall, a NORMAL message will be displayed on the
+          E/WD.</para>
+          <para>The T.O. CONFIG key is used to carry out a takeoff configuration check prior to takeoff. This simulates
+          setting of takeoff power, and generates a warning if the aircraft is not in a proper takeoff
+          configuration.</para>
+        </sect3>
+      </sect2>
+      <sect2>
+        <title>Reconfiguration</title>
+        <para>In general, the PFD has priority over the ND and the E/WD has priority over the SD.</para>
+        <para>Normally, DMC1 supplies the Captain's PFD and ND, and the E/WD. DMC2 supplies the FO's PFD and ND, and the
+        SD. DMC3 is a backup.</para>
+        <para>If a DMC fails, all information is removed from the displays it controls and replaced by a white diagonal
+        line to indicate a working display with a failed source. ECAM will detect the failure and provide a sequence of
+        alerts.  Due to the priority rules, the E/WD display will move to the lower DU if it was DMC1 that failed. The
+        EIS DMC switch is used to replace the failed DMC with DMC3.</para>
+        <para>In the event display failures, there will be no white diagonal. The displays have priority rules so that
+        the remaining displays are utilised most effectively. The PFDs have priority over the NDs unless a PFD/ND switch
+        on the misc panels is pushed. The E/WD has priority over the SD. The ECAM screens can be given priority over an
+        ND with the ECAM/ND XFER switch.</para>
+
+        <para>A single screen ECAM mode is available. This displays the E/WD, but can be made to display an SD page for
+        a maximum of 30 seconds by pushing and holding the relevant page button on the ECP. If an advisory condition
+        occurs, the page is not automatically displayed. Instead the page button lights up and a boxed ADV message is
+        shown on the E/WD. If an ECAM warning or caution is triggered, again there is no automatic page display. The
+        normal aural and visual indications are given. The underlined word in the warning indicates which SD page needs
+        to be viewed. The page should be checked both before and after running the ECAM actions, and the status page
+        will have to be called manually. The status page can be displayed for a maximum of three minutes. On the approach,
+        the STS message pulses to indicate that the crew should manually call and review the status page.</para>
+
+      </sect2>
+    </sect1>
+</article>
+

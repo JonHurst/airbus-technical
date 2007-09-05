@@ -1,0 +1,10 @@
+body {font-family:Verdana;background-color:white;margin:auto;padding-left:2em;padding-right:2em;max-width:60em;}
+h1,h2,h3,h4 {color:darkblue;}
+div.sect4 {margin-left:3em;}
+table {margin:auto; padding 0 2em; border-collapse: collapse;}
+div.mediaobject {text-align:center;}
+div.variablelist {margin-left:2em;}
+td {padding: 1em;}
+table.simplelist {margin-left:3em;}
+table.simplelist td {padding:0.5em;}
+dt {font-weight:bold;}
