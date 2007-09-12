@@ -1,3 +1,7 @@
 html
 notes.pdf
 *~
+*.aux
+*.log
+*.dvi
+
