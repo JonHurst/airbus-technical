@@ -1831,5 +1831,27 @@
 
       </sect2>
     </sect1>
+    <sect1>
+      <title>LVO</title>
+      <para>The approach may be broken down into phases, with the response to a failure determined by the phase. The
+      phases are:
+      <variablelist>
+        <varlistentry><term>Above 1000ft</term>
+        <listitem><para>A reversion to a lower category of approach can be made as long as the required minimas are
+        available, all ECAM actions are completed by 1000ft and the reversion is briefed.</para></listitem></varlistentry>
+        <varlistentry><term>Between Alert Height and 1000ft</term>
+        <listitem><para>Go around for any master caution, master warning, mode reversion or instrument flag. A new
+        approach to higher minimas may be attempted once rebriefed.</para></listitem></varlistentry>
+        <varlistentry><term>Below 200ft</term>
+        <listitem><para>Go around in the event of an AUTOLAND light.</para></listitem></varlistentry>
+        <varlistentry><term>By 350ft</term>
+        <listitem><para>LAND should be displayed at 400ft RA. If it is not displayed at 350ft, go around. In addition,
+        ILS course should be checked by 350ft. If it is incorrect, a reversion to Cat II minimas followed by autopilot
+        disconnect by 80ft and a manual landing is permissable.</para></listitem></varlistentry>
+        <varlistentry><term></term>
+        <listitem><para></para></listitem></varlistentry>
+      </variablelist>
+      </para>
+    </sect1>
 </article>
 
