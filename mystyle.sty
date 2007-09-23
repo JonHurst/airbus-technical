@@ -1,0 +1,30 @@
+%%
+%% This style is derivated from the docbook one
+%%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mystyle}[2007/09/10 My DocBook Style]
+%% Just use the original package and pass the options
+\RequirePackageWithOptions{docbook}
+%% Override page layout
+\setlength{\paperwidth}{21cm}
+\setlength{\paperheight}{29.7cm}
+\setlength{\topmargin}{1.5cm}
+\setlength{\headheight}{12pt}
+\setlength{\headsep}{1cm}
+\setlength{\footskip}{\headheight+\headsep}
+\dimen0=\topmargin
+\advance\dimen0 by \footskip
+\multiply\dimen0 by -2
+\advance\dimen0 by \paperheight
+\setlength{\textheight}{\dimen0}
+
+\setlength{\textwidth}{15cm}
+\setlength{\oddsidemargin}{3cm}
+
+\setlength{\parindent}{1em}
+%% Simplify and resize headers
+\setlength{\headwidth}{\textwidth}
+\lhead{\textsf{\DBKtitle{}}} \chead{} \rhead{\textsf{\arabic{page} / \getpagerefnumber{LastPage}}}
+\def\DBKcheadbody{}
+%% Domitete doesn't fit narrower page - for the moment just replace it with a blank page
+\def\DBKdomitete{\mbox{}\newpage}
