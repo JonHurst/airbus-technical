@@ -1523,6 +1523,7 @@
       tank being shown in amber on the ECAM FUEL page.</para>
       <para>A transfer valve shown in amber indicates the failure of the affected transfer valve. The fuel in the tank
       is unusable in this configuration.</para>
+      <para>The center tank must be emptied before the wing tanks. Takeoff on center tank is prohibited.</para>
       <sect2>
         <title>Limitations</title>
         <informaltable>
