@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage[latin1]{inputenc}
+\usepackage{txfonts}
 \usepackage[paper=a4paper,twocolumn=true,lmargin=1cm,tmargin=1cm]{geometry}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
@@ -9,15 +10,24 @@
 \setcounter{secnumdepth}{0}
 
 \begin{document}
+
 \section{Weights}
-TODO: Get weight limitations for A319
+Max TOW\dotfill 68000kg\\
+Max TOW (as certified)\dotfill 66000kg,64000kg,62000kg\\
+Max taxi weight\dotfill MTOW+400kg\\
+Max landing weight\dotfill 61000kg\\
+Max ZFW\dotfill 57000kg\\
+Min Weight\dotfill 35400kg
+
+\section{Dimensions}
+Wingspan\dotfill 34.1m
 
 \section{Wind}
 Max xwind, takeoff\dotfill 29G38kt\\
 Max xwind, landing\dotfill 33G38kt\\
 Max tailwind\dotfill 10kt\\
 Passenger door operation\dotfill 65kt\\
-Cargo door operation\dotfill 40kt\\
+Cargo door operation\dotfill 40kt (50kt w/caveats)\\
 Cargo door open\dotfill 40kt
 
 \section{Airport}
@@ -29,7 +39,21 @@ V$_{MO}$\dotfill 350kt\\
 M$_{MO}$\dotfill 0.82M\\
 Max Tire speed\dotfill 195kt\\
 Max speed for wipers\dotfill 230kt\\
-Max speed cockpit window open\dotfill 200kt
+Max speed cockpit window open\dotfill 200kt\\
+V$_{MCA}$\dotfill 108kt$-\sim$1kt/1000ft\\
+V$_{MCG}$\dotfill 104.5kt@0ft,102.5kt@2000ft
+
+\subsection{Flaps/slats limit speeds}
+Conf 1\dotfill 230kt\\
+Conf 1+F\dotfill 215kt\\
+Conf 2\dotfill 200kt\\
+Conf 3\dotfill 185kt\\
+Conf Full\dotfill 177kt
+
+\subsection{Gear limit speeds}
+Extended\dotfill 280kt/M.67\\
+Extend\dotfill 250kt\\
+Retract\dotfill 220kt
 
 \section{Automatic approaches}
 Cat II min DH\dotfill 100ft\\
@@ -53,4 +77,47 @@ App speed deviation limtits\dotfill -5kt,+10kt\\
 App attitude limits\dotfill -2.5°,+10°\\
 App bank limit\dotfill 7°\\
 App V/S limit\dotfill 1000fpm
+
+\section{Pressurisation}
+Max norm diff\dotfill 8.06psi\\
+Max diff\dotfill 8.6psi\\
+Max overpressure\dotfill 9.0psi\\
+Max neg diff\dotfill -1psi\\
+Max norm cabin alt\dotfill 8000ft\\
+Cab alt warning\dotfill 9550ft$\pm$350ft\\
+Ram air max diff\dotfill 1psi
+
+\section{Autopilot}
+Engagement after TO\dotfill $>$100ft,$>$5 secs\\
+Cat I min disengage\dotfill 160ft agl\\
+NPA min disengage\dotfill MDA\\
+Circling min disengage\dotfill MDA$-$100ft
+
+\section{Electrical}
+Max generator continuous load\dotfill 100\%(90 KVA)\\
+Max TR continuous load\dotfill 200A
+
+\section{Fuel}
+Outer tank capacity\dotfill 691kg (880l)\\
+Inner tank capacity\dotfill 5435kg (6924l)\\
+Center tank capacity\dotfill 6476kg (8250l)\\
+Total capacity\dotfill 18728kg (23858l)
+
+Min temperature (Jet A1)\dotfill -43°C\\
+Max temperature (Jet A1)\dotfill 54°C
+
+Max inner tank imbalance\dotfill 1500kg (more with caveats)\\
+Max outer tank imbalance\dotfill 530kg (more with caveats)
+
+Min qty for takeoff\dotfill 1500kg
+
+\section{Hydraulics}
+Normal pressure\dotfill 3000$\pm$200psi
+
+\section{Miscellaneous}
+Max gear extension altitude\dotfill 25,000ft\\
+Slat/ flap max operating altitude\dotfill 20,000ft\\
+Max OAT for norm avionics ventilation\dotfill 55°C
+
+
 \end{document}
