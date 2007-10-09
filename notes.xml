@@ -461,9 +461,10 @@
         check valve located in the ram air duct opens only when cabin differential is less than 1 psi, thus preventing
         backflow if the cabin is pressurised. The RAM AIR push button also opens the outflow valve to approx. 50% if the
         outflow valve is under automatic control and differential pressure is less than 1 psi.  Since operation of the
-        ram air valve leads to aircraft depressurisation, itg should not normaly be operated above FL100/MORA. Opening
+        ram air valve leads to aircraft depressurisation, it should not normaly be operated above FL100/MORA. Opening
         of the ram air duct is inhibited if the DITCHING button has been pressed. When parked, low pressure conditioned
-        air may be fed into the ram air duct to allow ground conditioning.</para>
+        air may be fed into the ram air duct to allow ground conditioning. The packs must be turned off when LP ground
+        air is used.</para>
       </sect2>
       <sect2>
         <title>Cargo compartments</title>
