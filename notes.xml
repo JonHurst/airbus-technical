@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "file:///usr/share/sgml/docbook/xml-dtd-4.2/docbookx.dtd">
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "file:///usr/share/sgml/docbook/xml-dtd-4.4/docbookx.dtd">
 <article id="airbus-technical">
   <title>Airbus Technical Notes</title>
     <sect1 id="aircraft-general">
@@ -385,6 +385,9 @@
             <imageobject role="dblatex">
               <imagedata width="4.5in" fileref="images/air-con-controls.png"/>
             </imageobject>
+            <imageobject role="fo">
+              <imagedata width="100%" fileref="images/air-con-controls.png"/>
+            </imageobject>
             <imageobject role="html">
               <imagedata format="PNG" fileref="../images/air-con-controls-lowres.png"/>
             </imageobject>
@@ -395,6 +398,9 @@
           <mediaobject>
             <imageobject role="dblatex">
               <imagedata fileref="images/air-con.eps"/>
+            </imageobject>
+            <imageobject role="fo">
+              <imagedata width="100%" fileref="images/air-con.svg"/>
             </imageobject>
             <imageobject role="html">
               <imagedata format="PNG" fileref="../images/air-con.png"/>
@@ -474,6 +480,9 @@
             <imageobject role="dblatex">
               <imagedata fileref="images/cargo-conditioning-schematic.eps"/>
             </imageobject>
+            <imageobject role="fo">
+              <imagedata align="center" fileref="images/cargo-conditioning-schematic.svg"/>
+            </imageobject>
             <imageobject role="html">
               <imagedata format="PNG" fileref="../images/cargo-conditioning-schematic.png"/>
             </imageobject>
@@ -499,6 +508,9 @@
         <mediaobject>
           <imageobject role="dblatex">
             <imagedata width="4in" fileref="images/press-controls.png"/>
+          </imageobject>
+          <imageobject role="fo">
+            <imagedata width="4in" align="center" fileref="images/press-controls.png"/>
           </imageobject>
           <imageobject role="html">
             <imagedata format="PNG" fileref="../images/press-controls-lowres.png"/>
@@ -584,6 +596,9 @@
           <imageobject role="dblatex">
             <imagedata fileref="images/avionics-cooling.eps"/>
           </imageobject>
+          <imageobject role="fo">
+            <imagedata width="100%" fileref="images/avionics-cooling.svg"/>
+          </imageobject>
           <imageobject role="html">
             <imagedata format="PNG" fileref="../images/avionics-cooling.png"/>
           </imageobject>
@@ -624,6 +639,9 @@
           <imageobject role="dblatex">
             <imagedata width="3in" fileref="images/ventilation-controls.png"/>
           </imageobject>
+          <imageobject role="fo">
+            <imagedata width="3in" align="center" fileref="images/ventilation-controls.png"/>
+          </imageobject>
           <imageobject role="html">
             <imagedata format="PNG" fileref="../images/ventilation-controls-lowres.png"/>
           </imageobject>
@@ -654,6 +672,9 @@
         <mediaobject>
           <imageobject role="dblatex">
             <imagedata fileref="images/electrical-schematic.eps"/>
+          </imageobject>
+          <imageobject role="fo">
+            <imagedata align="center" fileref="images/electrical-schematic.svg"/>
           </imageobject>
           <imageobject role="html">
             <imagedata format="PNG" fileref="../images/electrical-schematic.png"/>
@@ -727,6 +748,9 @@
           <imageobject role="dblatex">
             <imagedata width="5in" fileref="images/electrical-controls-overhead.png"/>
           </imageobject>
+          <imageobject role="fo">
+            <imagedata width="5in" align="center" fileref="images/electrical-controls-overhead.png"/>
+          </imageobject>
           <imageobject role="html">
             <imagedata format="PNG" fileref="../images/electrical-controls-overhead-lowres.png"/>
           </imageobject>
@@ -757,6 +781,9 @@
         <mediaobject>
           <imageobject role="dblatex">
             <imagedata fileref="images/pneumatic-system-schematic.eps"/>
+          </imageobject>
+          <imageobject role="fo">
+            <imagedata align="center" fileref="images/pneumatic-system-schematic.svg"/>
           </imageobject>
           <imageobject role="html">
             <imagedata format="PNG" fileref="../images/pneumatic-system-schematic.png"/>
@@ -1147,6 +1174,9 @@
           <imageobject role="dblatex">
             <imagedata fileref="images/hydraulic-system-schematic.eps"/>
           </imageobject>
+          <imageobject role="fo">
+            <imagedata align="center" width="100%" fileref="images/hydraulic-system-schematic.svg"/>
+          </imageobject>
           <imageobject role="html">
             <imagedata format="PNG" fileref="../images/hydraulic-system-schematic.png"/>
           </imageobject>
@@ -1490,6 +1520,9 @@
           <imageobject role="dblatex">
             <imagedata fileref="images/fuel-system-schematic.eps"/>
           </imageobject>
+          <imageobject role="fo">
+            <imagedata align="center" fileref="images/fuel-system-schematic.svg"/>
+          </imageobject>
           <imageobject role="html">
             <imagedata format="PNG" fileref="../images/fuel-system-schematic.png"/>
           </imageobject>
@@ -1532,7 +1565,6 @@
             <colspec colwidth="1in"/>
             <tbody>
               <row><entry>Min TO Fuel Qty</entry><entry>1500kg</entry></row>
-              <row><entry></entry><entry></entry></row>
             </tbody>
           </tgroup>
         </informaltable>
