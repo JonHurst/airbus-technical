@@ -119,5 +119,43 @@ Max gear extension altitude\dotfill 25,000ft\\
 Slat/ flap max operating altitude\dotfill 20,000ft\\
 Max OAT for norm avionics ventilation\dotfill 55°C
 
+\section{ACARS}
+\subsection{Fuel uplift}
+Freetext/Airline ops.\\
+Line 1: FUP\\
+Line 2: \textit{code space ammount}
+\begin{flushleft}
+Codes:\mbox{AGIP=AG}, \mbox{Air BP=BP}, \mbox{Air Total=AT},
+\mbox{Chevron Texaco=CH}, \mbox{Conoco=CO}, \mbox{Esso=ES}, \mbox{Exxon
+  Mobil=Ex}, \mbox{Kuwait=Q8}, \mbox{Petrogal=PG} ... to complete
+\end{flushleft}
 
+\subsection{Punctuality}
+Journey log/ Punctuality/ Ops/NMC:\\ 1R:\textit{total\_delay}\\ line 1:
+DL/\textit{code/code/../delay/delay/..}\\ Codes are two digit, delays
+are 4 digits as HHMM.
+
+\subsection{Handling}
+Freetext. Line 1: SVG MSG \textit{airport}\\
+Other lines: \textit{messages}
+
+\section{Approaches}
+\subsection{Circling}
+\begin{list}{$\bullet$}{\setlength\parsep{0pt}\setlength\itemsep{0pt}}
+\item Landing runway in secondary flight plan
+\item Initial approach: Conf 3, gear down, F speed
+\item Push V/S at MDA
+\item Turn 45°
+\item 30 secs from wings level
+\item Descent point 3 secs per 100ft past abeam threshold
+\item Full flap when turning finals
+\end{list}
+
+\subsection{Non-precision - Selected vertical}
+\begin{list}{$\bullet$}{\setlength\parsep{0pt}\setlength\itemsep{0pt}}
+\item Insert V$_{APP}$ as a speed constraint at FAF
+\item TRK/FPA when on final track
+\item Conf 3,gear down by D-1nm
+\item At D-0.2nm, select Conf full set and pull FPA
+\end{list}
 \end{document}
