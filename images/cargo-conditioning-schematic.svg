@@ -1,288 +1,200 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448"
-   height="1052.3622"
-   id="svg2"
-   sodipodi:version="0.32"
-   inkscape:version="0.45.1"
    version="1.0"
-   sodipodi:docbase="/home/jon/proj/airbus-technical/images"
-   sodipodi:docname="cargo-conditioning-schematic.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="/home/jon/proj/airbus-technical/images/cargo-conditioning-schematic.png"
-   inkscape:export-xdpi="110"
-   inkscape:export-ydpi="110">
+   width="348.63962"
+   height="238.24707"
+   id="svg2">
   <defs
      id="defs4">
     <marker
-       inkscape:stockid="Arrow2Mend"
+       refX="0"
+       refY="0"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
-       id="Arrow2Mend"
-       style="overflow:visible;">
+       style="overflow:visible"
+       id="Arrow2Mend">
       <path
-         id="path3222"
-         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(0.6) rotate(180) translate(0,0)" />
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.97309,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(-0.6,-0.6)"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path3222" />
     </marker>
     <marker
-       inkscape:stockid="Arrow2Send"
+       refX="0"
+       refY="0"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
-       id="Arrow2Send"
-       style="overflow:visible;">
+       style="overflow:visible"
+       id="Arrow2Send">
       <path
-         id="path3228"
-         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(0.3) rotate(180) translate(-2.3,0)" />
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.97309,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path3228" />
     </marker>
     <marker
-       inkscape:stockid="Arrow2Lend"
+       refX="0"
+       refY="0"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
-       id="Arrow2Lend"
-       style="overflow:visible;">
+       style="overflow:visible"
+       id="Arrow2Lend">
       <path
-         id="path3216"
-         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(1.1) rotate(180) translate(1,0)" />
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.97309,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path3216" />
     </marker>
   </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     gridtolerance="10000"
-     guidetolerance="10"
-     objecttolerance="10"
-     inkscape:pageopacity="1"
-     inkscape:pageshadow="2"
-     inkscape:zoom="2.1323457"
-     inkscape:cx="207.2323"
-     inkscape:cy="845.22516"
-     inkscape:document-units="pt"
-     inkscape:current-layer="layer1"
-     width="744.09449px"
-     height="1052.3622px"
-     showgrid="true"
-     gridspacingx="1pt"
-     gridspacingy="1pt"
-     gridanglex="24pt"
-     gridanglez="24pt"
-     grid_units="pt"
-     inkscape:grid-points="true"
-     inkscape:window-width="1018"
-     inkscape:window-height="744"
-     inkscape:window-x="0"
-     inkscape:window-y="0" />
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
+     transform="translate(-74.375,-76.737183)"
      id="layer1">
     <path
-       style="opacity:1;color:#000000;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="M 275,296.11218 L 187.5,296.11218 L 187.5,258.61218 L 143.75,258.61218"
+       style="opacity:1;color:#000000;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="path3394" />
     <g
        id="g3138">
       <rect
-         y="77.362183"
-         x="75"
-         height="89.285713"
          width="247.85715"
-         id="rect2160"
-         style="opacity:1;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+         height="89.285713"
+         x="75"
+         y="77.362183"
+         style="opacity:1;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect2160" />
       <text
-         id="text3134"
-         y="124.59293"
          x="154.47545"
+         y="124.59293"
          style="font-size:10px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+         id="text3134"
          xml:space="preserve"><tspan
-           y="124.59293"
            x="154.47545"
-           id="tspan3136"
-           sodipodi:role="line">Cargo compartment</tspan></text>
+           y="124.59293"
+           id="tspan3136">Cargo compartment</tspan></text>
     </g>
     <path
-       style="opacity:1;color:#000000;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="M 143.75,258.61218 L 143.75,302.36218"
-       id="path3188"
-       sodipodi:nodetypes="cc" />
+       style="opacity:1;color:#000000;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3188" />
     <path
-       style="opacity:1;color:#000000;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff7f2a;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:url(#Arrow2Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="M 143.75,258.61218 L 143.75,146.11218"
-       id="path3190"
-       sodipodi:nodetypes="cc" />
+       style="opacity:1;color:#000000;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff7f2a;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:url(#Arrow2Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3190" />
     <g
-       id="g2845"
-       transform="matrix(0.3086443,0,0,0.3086443,9.4897008,101.6322)">
+       transform="matrix(0.3086443,0,0,0.3086443,9.4897008,101.6322)"
+       id="g2845">
       <path
-         sodipodi:type="arc"
-         style="opacity:1;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.20076919;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
-         id="path2839"
-         sodipodi:cx="273.5"
-         sodipodi:cy="406.86218"
-         sodipodi:rx="43.5"
-         sodipodi:ry="43.5"
          d="M 317 406.86218 A 43.5 43.5 0 1 1  230,406.86218 A 43.5 43.5 0 1 1  317 406.86218 z"
-         transform="matrix(0.908057,0,0,0.908057,186.6465,37.90804)" />
+         transform="matrix(0.908057,0,0,0.908057,186.6465,37.90804)"
+         style="opacity:1;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.20076919;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
+         id="path2839" />
       <path
-         sodipodi:nodetypes="cc"
-         id="path2841"
          d="M 425,369.11218 L 425,445.48718"
-         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path2841" />
       <path
-         sodipodi:nodetypes="cc"
-         id="path2843"
          d="M 445,368.98718 L 445,445.36218"
-         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path2843" />
     </g>
     <use
-       x="0"
-       y="0"
-       xlink:href="#g2845"
-       id="use3396"
        transform="translate(43.75,49.999994)"
-       width="744.09448"
-       height="1052.3622" />
-    <path
-       style="opacity:1;color:#000000;fill:#ff7f2a;fill-opacity:1;fill-rule:evenodd;stroke:#ff7f2a;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:url(#Arrow2Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="M 250,121.11218 L 387.5,121.11218"
-       id="path3398"
-       sodipodi:nodetypes="cc" />
-    <use
+       id="use3396"
        x="0"
        y="0"
-       xlink:href="#g2845"
-       id="use3400"
-       transform="matrix(0,1,-1,0,550.36219,-22.637811)"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       xlink:href="#g2845" />
+    <path
+       d="M 250,121.11218 L 387.5,121.11218"
+       style="opacity:1;color:#000000;fill:#ff7f2a;fill-opacity:1;fill-rule:evenodd;stroke:#ff7f2a;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:url(#Arrow2Mend);stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3398" />
+    <use
+       transform="matrix(0,1,-1,0,550.36219,-22.637811)"
+       id="use3400"
+       x="0"
+       y="0"
+       width="744.09448"
+       height="1052.3622"
+       xlink:href="#g2845" />
     <g
-       id="g2833"
-       transform="matrix(0.3856934,0,0,0.3856934,169.30958,-35.273444)">
+       transform="matrix(0.3856934,0,0,0.3856934,169.30958,-35.273444)"
+       id="g2833">
       <path
-         transform="matrix(0.908057,0,0,0.908057,21.64633,37.40783)"
          d="M 317 406.86218 A 43.5 43.5 0 1 1  230,406.86218 A 43.5 43.5 0 1 1  317 406.86218 z"
-         sodipodi:ry="43.5"
-         sodipodi:rx="43.5"
-         sodipodi:cy="406.86218"
-         sodipodi:cx="273.5"
-         id="path1904"
+         transform="matrix(0.908057,0,0,0.908057,21.64633,37.40783)"
          style="opacity:1;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.20076919;stroke-linecap:round;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
-         sodipodi:type="arc" />
+         id="path1904" />
       <path
-         inkscape:transform-center-x="-11.218474"
-         inkscape:transform-center-y="-17.175729"
-         sodipodi:nodetypes="ccc"
-         id="path2809"
          d="M 270,407.36218 C 270,407.36218 285.49673,404.99816 290,397.36218 C 295.32704,388.32937 290.23161,373.05701 290.23161,373.05701"
-         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
          style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 269.97411,407.39352 C 269.97411,407.39352 260.17844,395.15497 251.31385,395.07301 C 240.82769,394.97606 230.4767,406.86125 230.4767,406.86125"
-         id="path2811"
-         sodipodi:nodetypes="ccc"
-         inkscape:transform-center-y="-6.15235"
-         inkscape:transform-center-x="19.934471" />
+         id="path2809" />
       <path
-         inkscape:transform-center-x="-8.3233616"
-         inkscape:transform-center-y="17.351786"
-         sodipodi:nodetypes="ccc"
-         id="path2813"
+         d="M 269.97411,407.39352 C 269.97411,407.39352 260.17844,395.15497 251.31385,395.07301 C 240.82769,394.97606 230.4767,406.86125 230.4767,406.86125"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path2811" />
+      <path
          d="M 270.01419,407.40027 C 270.01419,407.40027 264.31313,422.00284 268.67445,429.72079 C 273.83357,438.85054 288.46113,441.58263 288.46113,441.58263"
-         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path2813" />
     </g>
     <text
-       xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
        x="281.38025"
        y="294.98032"
-       id="text5404"><tspan
-         sodipodi:role="line"
-         id="tspan5406"
-         x="281.38025"
-         y="294.98032">Hot bleed air</tspan></text>
-    <text
-       xml:space="preserve"
        style="font-size:10px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       id="text5404"
+       xml:space="preserve"><tspan
+         x="281.38025"
+         y="294.98032"
+         id="tspan5406">Hot bleed air</tspan></text>
+    <text
        x="106.25"
        y="314.86218"
-       id="text5408"><tspan
-         sodipodi:role="line"
-         id="tspan5410"
+       style="font-size:10px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       id="text5408"
+       xml:space="preserve"><tspan
          x="106.25"
-         y="314.86218">Cabin ambient air</tspan><tspan
-         sodipodi:role="line"
+         y="314.86218"
+         id="tspan5410">Cabin ambient air</tspan><tspan
          x="106.25"
          y="327.36218"
          id="tspan5412" /></text>
     <text
-       xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
        x="161.79366"
        y="227.44904"
-       id="text5414"><tspan
-         sodipodi:role="line"
-         id="tspan5416"
-         x="161.79366"
-         y="227.44904">Inlet isolation valve</tspan></text>
-    <text
-       xml:space="preserve"
        style="font-size:10px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       id="text5414"
+       xml:space="preserve"><tspan
+         x="161.79366"
+         y="227.44904"
+         id="tspan5416">Inlet isolation valve</tspan></text>
+    <text
        x="331.09079"
        y="145.37981"
-       id="text5418"><tspan
-         sodipodi:role="line"
-         id="tspan5420"
-         x="331.09079"
-         y="145.37981">Outlet isolation valve</tspan></text>
-    <text
-       xml:space="preserve"
        style="font-size:10px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       id="text5418"
+       xml:space="preserve"><tspan
+         x="331.09079"
+         y="145.37981"
+         id="tspan5420">Outlet isolation valve</tspan></text>
+    <text
        x="242.95898"
        y="145.995"
-       id="text5422"><tspan
-         sodipodi:role="line"
+       style="font-size:10px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       id="text5422"
+       xml:space="preserve"><tspan
          x="242.95898"
          y="145.995"
          id="tspan5426">Extractor fan</tspan></text>
     <text
-       xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
        x="201.87656"
        y="277.53195"
-       id="text5430"><tspan
-         sodipodi:role="line"
-         id="tspan5432"
+       style="font-size:10px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial"
+       id="text5430"
+       xml:space="preserve"><tspan
          x="201.87656"
-         y="277.53195">Trim air valve</tspan></text>
+         y="277.53195"
+         id="tspan5432">Trim air valve</tspan></text>
   </g>
 </svg>
