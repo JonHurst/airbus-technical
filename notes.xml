@@ -1169,7 +1169,7 @@
     <sect1>
       <title>Hydraulics</title>
       <figure id="hydraulic-system-schematic">
-        <title>Simplified schematic of hrdraulic system</title>
+        <title>Simplified schematic of hydraulic system</title>
         <mediaobject>
           <imageobject role="dblatex">
             <imagedata fileref="images/hydraulic-system-schematic.eps"/>
@@ -1182,85 +1182,224 @@
           </imageobject>
         </mediaobject>
       </figure>
-      <para>There are three independent hydraulic systems, designated green, yellow and blue. Each hydraulic system
-      provides a constant 3000 psi to the users.</para>
-      <para>The hydraulic system is fully automatic during normal operations.</para>
-      <para>The PTU allows cross pressurisation without transfer of fluid between yellow and green systems. It is tested
-      at the start of the second engine start sequence and is available thereafter. This is indicated on the E/WD
-      display by the HYD PTU memo appearing briefly.</para>
-      <para>The yellow hydraulic pump runs automatically when a cargo door handle is operated. In this case, the yellow
-      system does not fully pressurise (indicated by the word YELLOW on the ECAM HYD page remaining amber) and the PTU
-      does not operate. The pump stops when the door is fully open. The process is the same during door closure.</para>
-      <para>The blue electric pump starts automatically at the end of the first engine start sequence.</para>
-      <para>If the PTU indication is in amber on the HYD ECAM page, it has been switched off.</para>
-      <para>Extension of the RAT is indicated on the ECAM page by the hollow white RAT symbol turning solid green.</para>
+
+      <para>There are three continuously operating hydraulic systems, designated green, yellow and blue.</para>
+
+      <para>Each hydraulic system has its own reservoir. The reservoirs are pressurized by bleed air to prevent
+      cavitation. The normal source is engine 1, but if pressure becomes low bleed air is taken from the cross-bleed
+      duct. The reservoirs are monitored for low fluid level, low air pressure and overheat.</para>
+
+      <para>The green and yellow systems are normally pressurized by engine driven hydraulic pumps. These pumps have a
+      upstream shutoff valve that cuts off the flow of hydraulic fluid when the associated engine fire button is
+      pushed. The yellow hydraulic system may also be pressurized by an electric pump. This pump may be powered by
+      either AC2 or external power. It operates automatically to partially pressurize the yellow system when the cargo
+      doors are moved. It may be selected on manually using a switch on the hydraulics panel, in which case it fully
+      pressurizes the yellow system. Operation is signified on the ECAM HYD page by the hollow white triangle next to
+      the word ELEC becoming solid green. A hand pump is provided to partially pressurize the yellow system and enable the
+      cargo doors to be opened in the absence of electrical power.</para>
+
+      <para>The blue system is normally pressurized by an electric pump powered by AC1. This pump operates whenever AC
+      power is available unless the aircraft is on the ground with both engines shut down. In this case it may be
+      operated using the BLUE PUMP OVRD pushbutton on the maintenance panel.</para>
+
+      <para>In an emergency situation, the blue system may also be pressurized by a Ram Air Turbine (RAT). The RAT
+      deploys automatically if both AC BUS 1 and AC BUS 2 are lost. It may also be deployed manually using the RAT MAN
+      ON button on the hydraulics panel. The RAT cannot be restowed in flight. Deployment of the RAT is indicated on the
+      ECAM HYD page by the hollow white triangle next to the word RAT turning solid green.</para>
+
+      <para>The engine driven pumps and the electric pumps supply 3000psi. The RAT supplies 2500psi. The pumps are all
+      monitored for low output pressure. The electric pumps are also monitored for overheat.</para>
+
+      <para>A Power Transfer Unit (PTU) allows cross pressurization between yellow and green systems without transfer of
+      fluid. It activates automatically when differential pressure between the two systems is greater than 500psi. The
+      PTU is inhibited during the first engine start and self tests during the second engine start sequence. The PTU is
+      also inhibited during, and for 40 seconds after, automatic operation of the yellow electric pump. Operation of the
+      PTU is indicated by a HYD PTU memo appearing on the E/WD.</para>
+
+      <para>An accumulator is provided for each system to help maintain constant pressure during transient demands. Each
+      system also has a priority valve to cut off heavy users (flaps, slats, gear, emergency generator) if system
+      pressure gets too low to operate the flight controls.</para>
+
+      <para>Each system has a leak measurement valve upstream of the primary flight controls. These can be closed by
+      operation of switches on the maintenance panel. The effect of closing these valves is to shut off hydraulic supply
+      to the primary flight controls.</para>
+
+      <para>The flight controls all receive hydraulic power from at least two sources. This is detailed in {TODO: add
+      flight controls xref here once its done}. The other hydraulic systems are powered as follows:</para>
+
+      <table>
+        <title>Hydraulic power source of systems (excluding flight controls)</title>
+        <tgroup cols="3">
+          <colspec align="left" colwidth="1.5in"/>
+          <colspec align="left" colwidth="1.5in"/>
+          <colspec align="left" colwidth="1.5in"/>
+          <thead>
+            <row><entry align="center">Green</entry><entry align="center">Yellow</entry><entry align="center">Blue</entry></row>
+          </thead>
+          <tbody>
+            <row valign="top">
+              <entry>
+                <itemizedlist>
+                  <listitem><para>Landing gear</para></listitem>
+                  <listitem><para>Normal brakes</para></listitem>
+                  <listitem><para>Eng 1 reverser</para></listitem>
+                  <listitem><para>Yaw damper 1</para></listitem>
+                </itemizedlist>
+              </entry>
+              <entry>
+                <itemizedlist>
+                  <listitem><para>Nose wheel steering</para></listitem>
+                  <listitem><para>Alternate and  parking brakes</para></listitem>
+                  <listitem><para>Eng 2 Reverser</para></listitem>
+                  <listitem><para>Yaw damper 2</para></listitem>
+                  <listitem><para>Cargo doors</para></listitem>
+                </itemizedlist>
+              </entry>
+              <entry>
+                <itemizedlist>
+                  <listitem><para>Emergency generator</para></listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
     </sect1>
     <sect1>
       <title>Landing gear</title>
+
       <para>The main gear are dual wheel and retract inboard. The nose gear is also dual wheel, and retracts
       forward.</para>
+
       <para>The main gear are equipped with:
       <itemizedlist>
         <listitem><para>Carbon brakes</para></listitem>
-        <listitem><para>An anti-skid system (A/SKID)</para></listitem>
-        <listitem><para>An automatic braking system (AUTO/BRK)</para></listitem>
+        <listitem><para>An anti-skid system</para></listitem>
+        <listitem><para>An automatic braking system</para></listitem>
         <listitem><para>A brake fan</para></listitem>
-        <listitem><para>A Tyre Pressure Indicating System (TPIS)</para></listitem>
+        <listitem><para>A Tyre Pressure Indicating System</para></listitem>
       </itemizedlist>
       </para>
-      <para>The nose gear is equipped with a nose wheel steering system</para>
-      <para>All the gear and gear doors are hydraulically operated. They are controlled electrically by two Landing Gear
-      Control and Interface Units (LGCIU), which also supply monitoring information.</para>
-      <para>The landing gear can be manually extended using the landing gear gravity extension handle located on the
-      center pedestal.</para>
-      <para>There are four braking modes:
+
+      <para>The nose gear is equipped with a nose wheel steering system.</para>
+
+      <para>The gear and gear doors are controlled by two Landing Gear Control and Interface Units (LGCIUs). Gear
+      sequencing is electrical and actuation is hydraulic (green system). A complete gear cycle is controlled by a
+      single LGCIU, with an automatic toggle to the other LGCIU at the end of each retraction. There is also an
+      automatic switchover if a failure is detected. A seperate safety valve is also incorporated. This shuts off
+      hydraulic pressure to the actuators when the aircraft exceeds 260kt, and restores pressure only when the gear
+      lever is selected down with the aircraft below 260kt.</para>
+
+      <para>Emergency extension of the gear is possible. This is acheived through a cut off valve that isolates the
+      landing gear from the hydraulics and by manually removing gear and door uplocks. The gear extends via a
+      combination of gravity, aerodynamic forces and locking springs. The gear doors will remain open after
+      extension. Emergency extension is controlled by a crank located at the rear of the center pedestal. Reset is
+      possible in flight.</para>
+
+      <para>The LGCIUs also gather and processes data from proximity detectors on:
       <itemizedlist>
-        <listitem><para>Normal braking</para></listitem>
-        <listitem><para>Alternate braking with anti-skid</para></listitem>
-        <listitem><para>Alternate braking without anti-skid</para></listitem>
-        <listitem><para>Parking brake</para></listitem>
+        <listitem><para>Gear locks</para></listitem>
+        <listitem><para>Shock absorber struts</para></listitem>
+        <listitem><para>Gear doors</para></listitem>
+        <listitem><para>Cargo doors</para></listitem>
+        <listitem><para>Flaps (flap disconnect only)</para></listitem>
       </itemizedlist>
       </para>
-      <para>Normal braking is powered by the green hydraulic system. The other modes are powered by the yellow hydraulic
-      system.</para>
-      <para>The parking brake (and alternate brake system) is supplied by the yellow hydraulic system, backed up by an
-      accumulator. The green arc on the accumulator gauge indicates that parking brake pressure will be maintained for
-      at least 12 hours. If accumulator pressure is low, the yellow electric hydraulic pump can be used to charge
-      it. Note that due to PTU operation, this will power up both the yellow and green hydraulic systems.</para>
-      <para>Brake wear indicators must be checked with the parking brake on.</para>
-      <para>The steering handwheels provide 75° of nose wheel deflection. If inputs are made on both handwheels, they
-      are summed. The rudder pedals provide up to 6° deflection at low speeds, progressively decreasing to zero as speed
-      increases to 130kt. The rudder pedal disconnect switch disconnects the nose wheel steering from the rudder so that
-      the rudder pedals can be checked.</para>
+
+      <para>Gear lock position and gear door position are presented on the ECAM WHEEL page and on the LDG GEAR
+      indicator. On the ECAM page, each gear is represented by two triangles, one per LGCIU. When down and locked, the
+      triangles are green. When unlocked, the triangles are red. When fully retracted, the triangles are not shown. A
+      green indication on either triangle is sufficient to determine that the gear is down and locked. The lights on the
+      LDG GEAR indicator are controlled by LGCIU 1 only, and have their standard meanings.</para>
+
+      <para>The LGCIUs uses the shock absorber position to supply air/ground data to various client systems.</para>
+
+      <para>The gear, gear door and shock absorber proximity detectors are monitored for electrical failure. If a
+      proximity detector suffers an electrical failure, flight condition is assumed for the detector (i.e. shock
+      absorber extended, landing gear uplocked), and the unaffected LGCIU takes over landing gear operation. Mechanical
+      failure of proximity detectors is not monitored. In the event of electrical failure of an LGCIU some client
+      systems may receive incorrect air/ground data.</para>
+
+      <para>A subset of the cargo door proximity detectors are monitored for electrical failure. When these fail, a non
+      locked condition is assumed.</para>
+
+      <para>Data from the flap disconnect proximity switches is forwarded to the SFCCs. SFCCs are not monitored by the
+      LGCIUs.</para>
+
+      <para>The nosewheel steering is controlled electrically by a dual channel Brake and Steering Control Unit (BSCU)
+      and actuated hydraulically (yellow system). The BSCU receives steering requests from the steering handwheels, the
+      rudder pedals and the autopilot. The steering handwheels have authority for 75° of nose wheel deflection up to
+      20kt, reducing linearly to 0 at 80kt. If inputs are made on both handwheels, the request generated is the sum of
+      the deflections requested. The rudder pedals have authority for 6° of deflection up to 40kt, reducing linearly to
+      0 at 130kt. The steering servo valve is electrically inhibited when the aircraft is on the ground and when neither
+      engine is running. It may also be inhibited with the ASKID NWSTRG switch or with the towing contol lever. When the
+      steering is deactivated with the towing control lever "NW STRG DISC" is displayed on the memo display and the
+      nosewheel can be moved through 95°.</para>
+
+      <para>A switch is provided on the steering handwheel to electrically disconnect the rudder pedals from the BSCU in
+      order that rudder control checks may be carried out.</para>
+
+      <para>The nosewheel is centered after takeoff by an internal cam mechanism.</para>
+
+      <para>Two braking systems are provided. The normal system utilises green system hydraulics, and the alternate system
+      uses the yellow system. The alternate system also has a backup hydraulic accumulator designed to supply at least
+      seven full brake applications or provide parking brake pressure for a minimum of 12 hours.</para>
+
+      <para>Braking requests may be initiated by rudder pedal deflection, by the autobrake system or automatically
+      during gear retraction. When the normal system is active, these requests are processed by the BSCU. When the
+      alternate system is active, they are processed by the Alternate Braking Control Unit (ABCU). The alternate system
+      is activated automatically when green system pressure is insufficient or manually using the ASKID NW STRG
+      switch.</para>
+
+      <para>The BSCU also provides:
+      <itemizedlist>
+        <listitem><para>Antiskid (available with both systems via seperate servo valves)</para></listitem>
+        <listitem><para>Residual pressure checking</para></listitem>
+        <listitem><para>Brake temperature monitoring</para></listitem>
+        <listitem><para>Wheel speed monitoring</para></listitem>
+      </itemizedlist></para>
+
+      <para>The master BSCU channel automatically toggles at each DOWN selection of the landing gear lever, or when a
+      fault is detected.</para>
+
+      <para>The anti-skid system determines wheel slip ratio by comparing aircraft speed from the ADIRUs with tyre speed
+      from tachometers on the wheel. When tyre speed resuces to 0.87 of aircraft speed, a servo valve is actuated to
+      release the brakes. If all ADIRUs have failed, the maximum main gear speed may be used to approximate aircraft
+      speed. The anti-skid will be unavailable with complete BSCU failure or when yellow and green hydraulic sytems are
+      both lost. It may also be turned off with the ASKID &amp; NW STRG switch. If the anti-skid system is not
+      available, brake pressure is automatically limited to 1000psi.</para>
+
+      <para>The autobrake system allows braking to be applied on a deceleration schedule. It is only available with the
+      normal braking system. It is armed by selecting the LO, MED or MAX autobrake pushbutton switches (MAX is for RTO
+      and can only be selected on the ground). Activation is linked to ground spoiler extension. The autobrake system
+      will therefore not activate on an RTO where speed remains less than 72kt since the ground spoilers will not
+      automatically deploy below this speed. LO mode applies the brakes 4 seconds after ground spoilers deploy and
+      decelerates the aircraft at 1.7m/s². MED mode applies the brakes 2 seconds after ground spoilers deploy and
+      delerates the aircraft at 3m/s². MAX mode applies maximum brake pressure as soon as the ground spoilers
+      deploy. The green DECEL light on the AUTOBRK selector indicates that at least 80% of the required deceleration
+      rate has been acheived. The system is deactivated when the ground spoilers retract, or when it is
+      disarmed. Disarming occurs automatically when the landing gear is fully retracted. The system may also be disarmed
+      by manually braking or by deselecting the armed autobrake pushbutton.</para>
+
+      <para>The parking brake applies full pressure from either the yellow hydraulic system or accumulator via the
+      parking brake control valve. If no pressure is available from these sources, the normal braking system is enabled
+      and the brake pedals may be used.</para>
+
+      <para>THE BSCU also sends brake temperature data to the ECAM WHEEL page. If any brake is &gt;100°C, a green arc
+      appears on the ECAM page. If the temperature exceeds 300°C, an amber arc appears, indicating that takeoff must be
+      delayed to let the brakes cool. If the brake fans are on, the brake temperature sensors are not accurate. Takeoff
+      must be delayed if brake temperatures are over 150°C with the brake fans on. After landing, if the brake
+      temperatures on one gear differ by more than 150°C or the difference in the mean temperature of each gear exceeds
+      200°C, maintenance action is required.</para>
+
+      <para>Brake wear indicators are provided on the brakes. They must be checked with the parking brake on. If any of
+      the brake wear indicator is showing, the brake unit is serviceable.</para>
       <para>During gear retraction, the main gear is automatically braked. The nose gear is braked by a brake
       band.</para>
-      
-      <para>The L/G CTL message on the ECAM wheels page indicates a discrepancy between demanded landing gear position
-      and actual position.</para>
-      <para>The gear is monitored by two Landing Gear Control and Interface Units (LGCIU). Indications are displayed on
-      the ECAM WHEEL page and the LDG GEAR indicator. On the ECAM page, each gear is represented by two triangles, one
-      per LGCIU. When down and locked, the triangles are green. When unlocked, the triangles are red. When fully
-      retracted, the triangles are not shown. A green indication on either triangle is sufficient to determine that the
-      gear is down and locked. The lights on the LDG GEAR indicator panel are controlled by LGCIU1. An UPLOCK message on
-      the ECAM WHEEL page indicates that the landing gear is down and locked with an uplock engaged.</para>
 
-      <para>The auto brake is automatically disengaged when the landing gear reaches the fully retracted
-      position.</para>
-      <para>Gravity extension of the landing gear is possible by turning the GEAR EXTN hand crank clockwise
-      approximately three times. This procedure is detailed in the QRH. After gravity extension, the gear doors remain
-      open. This also has the effect of disabling nosewheel stearing.</para>
-      <para>When the landing gear is extended in flight, green dashes appear on the ECAM wheel page to indicate
-      anti-skid available. These will indicate anti-skid commands on landing.</para>
-      <para>The AUTO BRK message on the ECAM WHEEL page indicates autobrakes armed. This only appears below 800ft
-      AGL. When aircraft deceleration is at least 80% of the selected rate, the DECEL light in the AUTO/BRK selector
-      illuminates. MAX mode is only used for takeoff. Autobrake may be deselected by pushing the corresponding button or
-      by manual braking.</para>
-      <para>After landing, if the brake temperatures on one gear differ by more than 150°C or the difference in the mean
-      temperature of each gear exceeds 200°C, maintenance action is required.</para>
-
-      <para>If any brake is &gt;100°C, a green arc appears on the ECAM page. This indicates that the brake fan must be
-      switched on. If the temperature exceeds 300°C, an amber arc appears, indicating that takeoff must be delayed to
-      let the brakes cool.</para>
+      <para>Various messages may be displayed on the ECAM WHEEL page. The UPLOCK message on the ECAM WHEEL page
+      indicates that the landing gear is down and locked with an uplock engaged. The L/G CTL message on the ECAM
+      wheels page indicates a discrepancy between demanded landing gear position and actual position.</para>
 
     </sect1>
     <sect1>
