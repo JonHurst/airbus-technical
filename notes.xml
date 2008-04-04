@@ -1726,29 +1726,111 @@
     </sect1>
     <sect1>
       <title>Power plant</title>
-      <para>The engines are designated CFM56-5B. It comprises:
-      <itemizedlist>
-        <listitem><para>a front fan</para></listitem>
-        <listitem><para>a Low Pressure (LP) compressor stage</para></listitem>
-        <listitem><para>a High Pressure (HP) compressor stage</para></listitem>
-        <listitem><para>a combustion chamber</para></listitem>
-        <listitem><para>a High pressure turbine stage</para></listitem>
-        <listitem><para>a Low  pressure turbine stage</para></listitem>
-      </itemizedlist>
-      </para>
-      <para>The LP turbine drives the LP compressor and the front fan. This is N1. The HP turbine drives the HP
-      compressor. This is N2. The HP rotor also drives the accessory gearbox located at the bottom of the fan
-      case.</para>
-      <para>The combustion chamber is equipped with two ignitors, designated A and B.</para>
-      <para>Each engine is equipped with a two channel Full Authority Digital Engine Control System (FADEC). One channel
-      is active, the other is a standby. After power is first applied to the aircraft the FADECs are automatically
-      powered for 5 minutes. After this, the FADECs shut down and engine indications on the E/WD change to amber
-      crosses. They are repowered when IGN/START is selected on the ENG MODE switch. The FADEC prevents thrust exceeding
-      the thrust lever position in both manual and automatic modes.</para>
-      <para>The amber light on the ENG MASTER panel indicates that the automatic start sequence has aborted.</para>
-      <para>In the event of a wet start, the FADEC automatically shuts off the fuel, turns off the ignitors and performs
-      a dry crank cycle. The FADEC will then attempt a second start with both ignitors powered.</para>
       <sect2>
+        <title>General description</title>
+        <figure id="cfm56-5b-schematic">
+          <title>Simplified schematic of CFM56-5B</title>
+          <mediaobject>
+            <imageobject role="fo">
+              <imagedata align="center" width="100%" fileref="images/cfm565b-300dpi.png"/>
+            </imageobject>
+            <imageobject role="html">
+              <imagedata format="PNG" fileref="../images/cfm565b-90dpi.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para>The engines are designated CFM56-5B. Each engine has two rotors. The low speed N1 rotor consists of a
+        front fan, a four stage compressor and a four stage turbine. The high speed N2 rotor consists of a nine stage
+        compressor and a single stage turbine. The N2 rotor also drives an accessory gearbox located at the bottom of
+        the fan case. The combustion chamber has 20 fuel nozzles and two igniters.</para>
+
+      </sect2>
+      <sect2>
+        <title>FADECS</title>
+        <para>Each engine is controlled by a two channel Full Authority Digital Engine Control System (FADEC), also
+        known as the Engine Control Unit (ECU). One channel is active, the other is a standby with automatic
+        failover. The active channel toggles after each flight {TODO: this is an assumption - check it}.</para>
+
+        <para>The FADECS are self powered by an internal magnetic alternator when N2&gt;58%. Channel A may also be
+        powered by DC ESS. Channel B may also be powered by BAT BUS for engine 1 and DC BUS 2 for engine 2. Pushing the
+        FIRE button for an engine disconnects the FADECs from their external power sources. After power is first applied
+        to the aircraft the FADECs power up for 5 minutes to allow self testing {TODO: again an assumption - to check},
+        then power down until IGN/START is selected on the ENG MODE switch. They continue to be powered for 5 minutes
+        after their respective engine master switch is turned off.</para>
+
+        <para>Data for the FADECs is directly sourced from the ADIRS, engine sensors and thrust levers. All other
+        required data is amalgamated and supplied by an Engine Interface Unit (EIU).</para>
+
+        <para>The primary function of the FADECs is responding to thrust demands from the thrust levers or autothrust
+        system whilst respecting thrust rating, idle settings and N1 and N2 limitations. This is acheived by controlling
+        flow of fuel both to the engine and back through the recirculation system to the tanks. Engine performance is
+        further optimised through control of variable bleed valves, variable stator vanes and turbine and rotor
+        clearances.</para>
+
+        <para>During a start sequence, the FADEC also controls the start valve, HP fuel valve and ignition. For
+        automatic starts N1, N2, fuel flow and EGT are actively monitored, and automated abort and recycle is
+        provided. Passive monitoring of these parameters is provided for manual starts.</para>
+
+        <para>When reverse thrust is selected, the FADECs control the blocker doors.</para>
+
+      </sect2>
+      <sect2>
+        <title>Thrust control system</title>
+        <para>The thrust levers can only be moved manually. There are 2 detents and 3 stops on the thrust
+        quadrant. These are the TOGA stop, MCT/FLX detent, CL detent, Idle stop and Max reverse stop.</para>
+
+        <para>In normal operation, autothrust is available when the thrust levers are in the range between the idle stop
+        and CLB detent. When an engine out condition is detected, autothrust is available between the idle stop and
+        MCT/FLX detent. When the autothrust is not engaged, either because it is not armed or because the thrust lever
+        is set outside the autothrust range, the Thrust Lever Angle (TLA) maps directly to an N1 demand. Each of the
+        detents/stops maps to its given limit, and there is a straight line relationship between. The N1 limit for the
+        MCT/FLX detent will be MCT except when on the ground with a FLEX temperature set, in which case it will be the
+        FLEX limit. The detent reverts to MCT when the thrust levers are either moved to the TOGA stop or moved to or
+        through the CL detent when airborne.</para>
+
+        <para>When the autothrust is engaged, the N1 demand given by the TLA becomes the maximum N1 that the autothrust
+        can command.</para>
+
+        <para>A special case is alpha floor protection. If a very high angle of attack is detected, TOGA thrust is set
+        regardless of TLA. See {TODO: cross reference once done}.</para>
+
+
+      </sect2>
+      <sect2>
+        <title>Engine fuel system</title>
+        <figure id="engine-fuel-system-schematic">
+          <title>Simplified schematic of engine fuel system</title>
+          <mediaobject>
+            <imageobject role="fo">
+              <imagedata align="center" width="100%" fileref="images/engine-fuel-system-schematic.svg"/>
+            </imageobject>
+            <imageobject role="html">
+              <imagedata format="PNG" fileref="../images/engine-fuel-system-schematic.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        <para>The engine fuel system is pressurised by two engine driven pumps {TODO: engine driven is inferred from the
+        diagram in 1.70.40.1000- check its true}, a low pressure (LP) pump and a high pressure (HP) pump. These provide
+        a supply of high pressure fuel to the inlet of a Fuel Metering Valve (FMV). The FADEC controls this valve to
+        provide the fuel flow required to satisfy the N1 demand and keep all other engine parameters within their
+        defined limits. A bypass valve located immediately before the FMV modulates to maintain a constant pressure drop
+        across the FMV in order to maintain a linear relationship between FMV position and fuel flow acheived. This
+        bypass valve is also used by an independent overspeed governor that limits N2 to 107.2% in the event of FADEC
+        malfunction.</para>
+
+        <para>The FMV, along with other actuators under the control of the FADEC (variable stator veins, variable bleed
+        valves etc) are operated hydro-mechanically using high pressure fuel tapped from the fuel lines after the HP
+        pump.</para>
+
+        <para>Two shut off valves are incorporated into the fuel line, a low pressure shut off valve located before the
+        LP pump, and a high pressure shut off valve located after the FMV. Both these valves are closed when the engine
+        master switch is selected off, but only the low pressure shut off valve is closed by the fire button.</para>
+
+        
+      </sect2>
+
+      <sect2>
+
         <title>Engine instruments</title>
         <para>On the N1 guages, the amber mark represents maximum (i.e. TOGA) N1. The red arc represents maximum
         permissable N1. The white circle represents demanded N1 at the current thrust lever position. If the autothrust
