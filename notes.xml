@@ -765,7 +765,7 @@
       <para>The BUS TIE switch causes the two halves of the electrical system to be fully segregated. This may be used
       to isolate a short circuit that has affected both halves.</para>
     </sect1>
-    <sect1>
+    <sect1 id="pneumatics">
       <title>Pneumatics</title>
       <para>The pneumatic system provides high pressure air for:
       <itemizedlist>
@@ -1777,23 +1777,32 @@
       <sect2>
         <title>Thrust control system</title>
         <para>The thrust levers can only be moved manually. There are 2 detents and 3 stops on the thrust
-        quadrant. These are the TOGA stop, MCT/FLX detent, CL detent, Idle stop and Max reverse stop.</para>
+        quadrant. These are the TOGA stop, MCT/FLX detent, CL detent, Idle stop and Max reverse stop. In addition there
+        is a notional (i.e. non-phyiscal) reverse idle detent acheived by pulling up the reverse levers and selecting a
+        position slightly behind the idle stop.</para>
 
         <para>In normal operation, autothrust is available when the thrust levers are in the range between the idle stop
         and CLB detent. When an engine out condition is detected, autothrust is available between the idle stop and
         MCT/FLX detent. When the autothrust is not engaged, either because it is not armed or because the thrust lever
         is set outside the autothrust range, the Thrust Lever Angle (TLA) maps directly to an N1 demand. Each of the
-        detents/stops maps to its given limit, and there is a straight line relationship between. The N1 limit for the
-        MCT/FLX detent will be MCT except when on the ground with a FLEX temperature set, in which case it will be the
-        FLEX limit. The detent reverts to MCT when the thrust levers are either moved to the TOGA stop or moved to or
-        through the CL detent when airborne.</para>
+        detents/stops maps to its given limit, and there is a straight line TLA to N1 relationship between these
+        positions.</para>
 
-        <para>When the autothrust is engaged, the N1 demand given by the TLA becomes the maximum N1 that the autothrust
-        can command.</para>
+        <para>The N1 for the MCT/FLX detent will be MCT except when on the ground with a FLEX temperature set, in which
+        case it will be the computed FLEX N1. Once airborne the detent reverts to MCT when the thrust levers are either
+        moved to the TOGA stop or moved to or through the CL detent.</para>
+
+        <para>The N1 for the idle detent is normally "modulated idle", a value regulated according to bleed system
+        demand. When in flight with the flap lever not at zero position, the idle detent is "approach idle". This is an
+        idle setting designed to allow rapid acceleration to TOGA thrust and it is regulated according to aircraft
+        altitude without regard to bleed configuration. The N1 for the notional reverse idle detent is "reverse idle", a
+        value slightly higher than forward idle thrust.</para>
+
+        <para>When the autothrust is engaged, the N1 it can command is limited to between the N1 for the TLA set and the
+        N1 at the idle detent.</para>
 
         <para>A special case is alpha floor protection. If a very high angle of attack is detected, TOGA thrust is set
         regardless of TLA. See {TODO: cross reference once done}.</para>
-
 
       </sect2>
       <sect2>
@@ -1826,8 +1835,56 @@
         LP pump, and a high pressure shut off valve located after the FMV. Both these valves are closed when the engine
         master switch is selected off, but only the low pressure shut off valve is closed by the fire button.</para>
 
-        
+        <para>Fuel is also used to provide IDG cooling. The FADEC modulates the bypass valve and fuel return valve to
+        control flow of fuel through the IDG oil cooler to acheive the required cooling.</para>
       </sect2>
+      <sect2>
+        <title>Engine oil system</title>
+
+        <para>The supply side of the engine oil system consists of an oil supply pump that draws oil from the oil tank and
+        passes it through an oil filter to the bearings and gearbox. The oil filter incorporates a by-pass valve in case
+        of clogging. Oil pressure and temperature are monitored downstream of the filter.</para>
+        
+        <para>The scavenge side consists of four scavenge pumps {TODO: inferred from diagram 1.70.50}, through a
+        scavenge filter then back to the oil tank via the servo fuel heater and fuel/oil heat exchanger. The scavenge
+        filter incorporates a bypass valve in case of clogging.</para>
+
+      </sect2>
+      <sect2>
+        <title>Engine bleed air system</title>
+        <para>Bleed air is tapped at the 5th and 9th stages of the HP compressor and from the fan. It is used to supply
+        the pneumatic system (see <xref linkend="pneumatics"/>) and to provide cooling air to the active clearance
+        control systems. The active control clearance systems are a function of the FADEC which uses fuel pressure to
+        modulate bleed air control valves in order to control the temperature, and hence size, of the turbine casings
+        and the HP compressor casing. The LP Turbine Clearance Control (LPTCC) system uses fan air to cool the LP
+        turbine case. The Rotor Active Clearance Control (RACC) system uses 5th stage bleed air to cool the HP
+        compressor case. The HP Turbine Clearance Control (HPTCC) system uses both 5th and 9th stage bleed air to cool
+        the HP turbine case.</para>
+      </sect2>
+      <sect2>
+        <title>Reverse thrust system</title>
+
+        <para>Reverse thrust is acheived using four pivoting blocker doors per engine which are used to deflect the
+        airstream from the fan forward. Each blocker door has a hydraulic actuator, a latch and a position switch. The
+        FADEC moves the doors using a Hydraulic Control Unit (HCU) consisting of a pressurizing solenoid valve and a
+        directional solenoid valve. An independent hydraulic shut off valve controlled by the spoiler elevator
+        computers (SECs) controls inlet pressure to the HCU.</para>
+
+        <para>Actuation required input from a number of systems. Firstly the SECs must receive a signal from the thrust
+        levers to open the shut off valve and allow pressure to the HCU. Secondally, the EIU must receive a signal from
+        the thrust levers to enable the directional solenoid valve, which will otherwise be inhibited.  Finally, at
+        least one channel of the FADEC must receive the correct signals from the thrust levers, N2 sensor and LGCIU (via
+        the EIU). If it detects the TLA is in the reverse segment, N2&gt;50% and both main gear compressed, the FADEC
+        signals the HCU to open the blocker doors.</para>
+
+        <para>When on the ground with the engine running and N1&lt;70%, an auto restow function is available. This
+        stows any door that is detected unstowed with reverse thrust not selected.</para>
+
+        <para>Idle protection is available in all flight phases when reverse thrust is not selected. This selects idle
+        thrust if pressure is detected in the HCU and any door is detected unstowed or with an indefinite position. It
+        also selects idle thrust regardless of HCU pressure if all four blocker doors are detected unstowed.</para>
+      </sect2>
+
 
       <sect2>
 
