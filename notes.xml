@@ -1885,16 +1885,88 @@
         also selects idle thrust regardless of HCU pressure if all four blocker doors are detected unstowed.</para>
       </sect2>
 
+      <sect2>
+        <title>Ignition and start</title>
 
+        <para>The FADEC start module receives input from the engine master switches, the engine mode selector, the
+        manual start buttons and the LGCIU, all via the EIU. It controls the start valve, the igniters and the HP fuel
+        valve. The engine master switch also independenly inhibits the opening of the HP fuel valve when selected
+        off.</para>
+
+        <para>Each engine has two identical independent igniter systems. Normally, each FADEC channel controls a single
+        igniter system, but in failure cases both igniter systems can be controlled by a single FADEC channel.</para>
+
+        <para>For automatic starts on the ground, a single igniter is used. It is energised at 16% N2 and de-energised
+        at 50% N2. The FADEC toggles between the four channel/igniter system permutations after each start.</para>
+
+        <para>For manual starts and in flight starts, both igniters are energised when the master switch is turned
+        on. De-energisation at 50% remains automatic.</para>
+
+        <para>Automatic continuous ignition is provided if a flame out is detected. It is also provided if the EIU fails
+        whilst the engine is running.{TODO: There is a third case: Engine running and ignition delay during start - this
+        doesn't seem to make much sense} Continuous ignition can also be selected manually using the engine mode
+        selector.</para>
+
+        <para>Engine spin up is provided by an air turbine starter that is powered by the pneumatic system. Supply of
+        air to the turbine is controlled by a start valve which is controlled electrically by the FADEC. There is also a
+        handle on the engine to allow the start valve to be operated manually if electrical control fails. In an
+        automatic start sequence, if the starter is required (i.e. on the ground or insufficient windmilling speed), the
+        FADEC opens the start valve at the start of the sequence and closes it at 50% N2. In a manual start sequence the
+        FADEC still closes the start valve at 50% N2, but opening of the valve is acheived by pressing the manual start
+        push-button. All manual start sequences are starter assisted.</para>
+
+        <para>For automatic starts, the FADEC opens the HP fuel valve at 22% N2 on the ground and 15% N2 in flight. For
+        manual starts, the HP fuel valve opens when the engine master switch is turned on.</para>
+
+        <para>The FADEC also provides start monitoring. It will detect hot starts, hung starts, stalls and wet starts
+        and provide an appropriate ECAM message. If these conditions are detected during an automatic start, the FADEC
+        will automatically run an abort sequence including dry cranking and then attempt further starts. An automatic
+        start can be aborted at any time by turning the engine master switch off. This closes both fuel valves and
+        signals the FADEC to close the start valve and de-energise the ignition. Dry cranking, if required must then be
+        done manually using the crank position of the engine mode selector and the manual start button. For manual
+        starts, the FADEC has very limited authority to abort a start. The sole case is when on the ground and a start
+        EGT exceedance occurs before 50% N2. In all other cases, it is the pilot's responsibility to interrupt the start
+        sequence by either deselecting the manual start button or turning the engine master switch off as
+        appropriate.</para>
+
+        <para>The completion of the start sequence is indicated by the grey background on the N2 indicator
+        disappearing. The stable N2 value is approximately 58%. It is recommended that the engines are operated at or
+        near idle for at least two minutes after start.</para>
+
+      </sect2>
       <sect2>
 
-        <title>Engine instruments</title>
-        <para>On the N1 guages, the amber mark represents maximum (i.e. TOGA) N1. The red arc represents maximum
-        permissable N1. The white circle represents demanded N1 at the current thrust lever position. If the autothrust
-        is adjusting the thrust, a blue arc appears to indicate the final thrust level that is being set. If both
-        engines are at idle in flight, an IDLE indication flashes for ten seconds, then remains steady green. N1 in the
-        caution range is indicated by a flashing amber needle (digits remain green). In the warning range, the needle
-        and the digits turn red. A red line indicates the maximum exceedance in the warning range.</para>
+        <title>Engine indications</title>
+
+        <para>The warning lights below the engine master switches have two segments, a red FIRE segment and an amber
+        FAULT segment. The FIRE segment aids the crew in selecting the correct master switch during an engine fire
+        drill. The amber segment indicates an aborted automatic start or an HP fuel valve position disagreement.</para>
+
+        <para>The N1 gauges display a caution range by an amber line representing TOGA N1 and a warning range by a red
+        arc, the lower end of which represents max N1 (104%). If N1 enters the caution range, the N1 needle and digital
+        indication, which are normally steady green, pulse amber. If N1 enters the warning range, they pulse red, and a
+        red tell tale is left at the maximum acheived N1. A blue circle above the index indicates the N1 corresponding
+        to the current TLA. If the autothrust is active, trend indications are displayed as green triangles next to the
+        needle. The longer of the two triangles represents the difference between the demanded and actual N1. The
+        smaller of the two triangles shows the direction and rate of current N1 changes. If the last digit of the
+        digital display is a dash, it indicates that N1 data is degraded due to failure of both N1 sensors.</para>
+
+        <para>The status of the reverses is also indicated on the N1 gauge. An amber REV indicates that at least one
+        door is unstowed or unlocked. In flight this indication will initially flash for 9 seconds. The REV becomes
+        green when all the reverser doors are fully deployed.</para>
+
+        <para>The EGT, like the N1 gauge, has a caution range indicated by an amber line and a warning range indicated
+        by a red arc. The bottom of the red arc is at max permissable EGT (950°C). If EGT exceeds this value, the needle
+        and digital display pulse red, and a red tell tale is left behind at maximum acheived EGT. The amber line is the
+        start limit (725°C) during the start sequence. Otherwise, except when operating at high power, it is 915°C. If
+        actual EGT is above the amber line value, the needle and digital display pulse amber.</para>
+
+        <para>N2 is represented as a digital value only. This is normally green, but turns red with a red cross next to
+        it if N2 exceeds 105%. Similarly to the N1 gauge, if the N2 signal is degraded the last digit is replaced by an
+        amber dash.</para>
+
+        <para>============================================================</para>
+
         <para>The current thrust limit mode and N1 rating limit are displayed to the right of the N1 gauges. If a FLX
         takeoff is selected, the FLX temperature will also appear here.</para>
         <para> When reversers are deployed, an amber REV indication appears on the N1 gauge to indicate that the
@@ -1912,26 +1984,7 @@
         <para>If N1 or N2 parameters are downgraded due to a sensor fault, the last digit will be displayed dashed
         amber.</para>
       </sect2>
-      <sect2>
-        <title>Engine starting</title>
-        <para>An igniter is powered at 16% N2. The ignitors automatically alternate on successive engine starts. The
-        current ignitor is displayed on the ECAM ENG page as a letter above the start valve indications during
-        starting.</para>
-        <para>Fuel flow starts at 22% N2. EGT and N1 increase 15 seconds after fuel flow starts.</para>
-        <para>At 50% N2 the start valve closes and the ignitor is switched off.</para>
-        <para>The completion of the start sequence is indicated by the grey background on the N2 indicator
-        disappearing. This stable N2 value is approximately 58%.</para>
-        <para>It is recommended that the engines are operated at or near idle for at least two minutes after
-        start.</para>
 
-        <para>Starts are usually carried out automatically by the FADEC. It is, however, possible to start the engine
-        manually, with the pilots controlling fuel and ignition. In this case the FADEC only provides passive
-        monitoring. When carrying out a manual start, the ENG MAN START buttons control the start valves and the ENG
-        MASTER switch activates both ignitors and open the HP fuel cock. The ENG MASTER switch should be turned on at
-        max motoring, providing this is &gt;20%. The start valve closure and ignition cutoff still occurs automatically
-        at N2 50%.</para>
-
-      </sect2>
       <sect2>
         <title>Engine handling</title>
         <para>Takeoff thrust is applied in two stages. The thrust is first set to approximately 50%, and the engines are
