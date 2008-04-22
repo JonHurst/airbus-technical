@@ -1943,17 +1943,21 @@
         drill. The amber segment indicates an aborted automatic start or an HP fuel valve position disagreement.</para>
 
         <para>The N1 gauges display a caution range by an amber line representing TOGA N1 and a warning range by a red
-        arc, the lower end of which represents max N1 (104%). If N1 enters the caution range, the N1 needle and digital
-        indication, which are normally steady green, pulse amber. If N1 enters the warning range, they pulse red, and a
-        red tell tale is left at the maximum acheived N1. A blue circle above the index indicates the N1 corresponding
-        to the current TLA. If the autothrust is active, trend indications are displayed as green triangles next to the
-        needle. The longer of the two triangles represents the difference between the demanded and actual N1. The
-        smaller of the two triangles shows the direction and rate of current N1 changes. If the last digit of the
-        digital display is a dash, it indicates that N1 data is degraded due to failure of both N1 sensors.</para>
+        arc. The lower end of the red arc represents max N1 (104%). If N1 enters the caution range, the N1 needle and
+        digital indication, which are normally steady green, pulse amber. If N1 enters the warning range, they pulse
+        red, and a red tell tale is left at the maximum acheived N1. A blue circle above the index indicates the N1
+        corresponding to the current TLA. If the autothrust is active, trend indications are displayed as green
+        triangles next to the needle. The longer of the two triangles represents the difference between the demanded and
+        actual N1. The smaller of the two triangles shows the direction and rate of current N1 changes. If the last
+        digit of the digital display is a dash, it indicates that N1 data is degraded due to failure of both N1
+        sensors.</para>
 
         <para>The status of the reverses is also indicated on the N1 gauge. An amber REV indicates that at least one
         door is unstowed or unlocked. In flight this indication will initially flash for 9 seconds. The REV becomes
         green when all the reverser doors are fully deployed.</para>
+
+        <para>The current thrust limit mode and N1 rating limit are displayed to the right of the N1 gauges. If a FLX
+        takeoff is selected, the FLX temperature will also appear here.</para>
 
         <para>The EGT, like the N1 gauge, has a caution range indicated by an amber line and a warning range indicated
         by a red arc. The bottom of the red arc is at max permissable EGT (950°C). If EGT exceeds this value, the needle
@@ -1962,38 +1966,63 @@
         actual EGT is above the amber line value, the needle and digital display pulse amber.</para>
 
         <para>N2 is represented as a digital value only. This is normally green, but turns red with a red cross next to
-        it if N2 exceeds 105%. Similarly to the N1 gauge, if the N2 signal is degraded the last digit is replaced by an
-        amber dash.</para>
+        it if N2 exceeds 105%. If both N2 sensors fail the last digit is replaced by an amber dash. The numbers have a
+        grey background during the start sequence. The removal of this grey background indicates completion of the
+        sequence.</para>
 
-        <para>============================================================</para>
+        <para>Fuel flow is also indicated as a digital value only.</para>
 
-        <para>The current thrust limit mode and N1 rating limit are displayed to the right of the N1 gauges. If a FLX
-        takeoff is selected, the FLX temperature will also appear here.</para>
-        <para> When reversers are deployed, an amber REV indication appears on the N1 gauge to indicate that the
-        reversers are unlocked. This indication changes to green once the reversers are fully deployed.</para>
-        <para>On the EGT, the amber tick represents MAX EGT. This value is variable according to operational phase, and
-        the tick will therefore move. It is not displayed during takeoff. The EGT exceedance indications are similar
-        to the N1 exceedance indications. </para>
-        <para>N2 exceedances are indicated by the digital value turning red and a red cross appearing next to the
-        value.</para>
-        <para>On the ECAM ENG page, fuel used is frozen when the engine is shut down and automatically reset when the
-        engine is started. </para>
-        <para>Start valve position and available pressure are only displayed during engine start on the ground.</para>
-        <para>A CHECK message on an engine instrument indicates that a discrepancy has been detected between the value
-        displayed on ECAM and the real one.</para>
-        <para>If N1 or N2 parameters are downgraded due to a sensor fault, the last digit will be displayed dashed
-        amber.</para>
+        <para>An amber CHECK indication below the N1, N2, EGT or fuel flow values indicates a discrepancy between the
+        values on the FADEC-DMC bus and those displayed. {TODO - how does this occur?}.</para>
+
+        <para>Fuel used, oil quantity, oil pressure, oil temperature, N1 vibration, N2 vibration and nacelle temperature
+        are displayed on the ECAM Engine page. During the start sequence the nacelle temperature is replaced by
+        indications of start valve position, available bleed pressure and ignitor status.</para>
+
+        <para>The fuel used indication is reset when the master switch for the engine is selected on. If fuel flow data
+        is lost for more than one minute, the last two digits are dashed. An amber CLOG indication below the figures
+        indicates clogging of the fuel filter.</para>
+
+        <para>The oil quantity gauge will pulse when oil quantity falls below 3 qt, with a dead band up to 5 qt.</para>
+
+        <para>The oil pressure gauge will pulse when oil pressure exceeds 90 psi, with a dead band down to 85 psi, or
+        when the oil pressure is below 16 psi, with a dead band up to 20 psi. The indication turns red when pressure
+        falls below 13 psi. An amber CLOG below the gauge indicates clogging of the main scavenge filter. {TODO - is
+        there monitoring of the filter on the supply side of the oil system?}</para>
+
+        <para>The oil temperature numbers will pulse when temperature exceeds 140°C, with a dead band down to
+        135°C. They turns amber (with accompanying ECAM message) when temperature reaches 155°C or if temperature is
+        &gt;140°C for more than 15 minutes.</para>
+
+        <para>The vibration numbers pulse when above 6 units for N1 and above 4.3 units for N2, although these
+        thresholds may be reduced to the maximum vibration experienced during the last flight by an MCDU
+        procedure.</para>
+
+        <para>The nacelle temperature gauge pulses when temperature exceeds 240°C (indicated by a white dash).</para>
+
+        <para>During the start sequence, IGN in white and the letters A,B or AB indicate energisation of the indicated
+        ignitor. Start valve position is indicated in the standard way. The bleed pressure reading is the bleed pressure
+        upstream of the precooler. If it drops below 21 psi with N2 &gt;= 10%, or if there is an overpressure, it will
+        turn amber.</para>
+
       </sect2>
 
       <sect2>
         <title>Engine handling</title>
-        <para>Takeoff thrust is applied in two stages. The thrust is first set to approximately 50%, and the engines are
-        allowed to stabilise. Either FLX or TOGA is then set.</para>
+
+        <para>Takeoff thrust is normally applied in two stages. The thrust is first set to approximately 50%, and the
+        engines are allowed to stabilise. Either FLX or TOGA is then set. This is modified to three stages in strong
+        crosswinds. </para>
+
         <para>At thrust reduction altitude, thrust is set to CL, and the autothrust becomes active.</para>
+
         <para>If heavy rain or turbulence is expected after take off or during initial approach, the ignitors can be
         switched on by selecting the END MODE selector to IGN START. The E/WD memo area will display
-        IGNITION. Continuous ignition is automatically selected when engine ant-ice is turned on.</para>
+        IGNITION. Continuous ignition is automatically selected when engine anti-ice is turned on. {TODO: This is from
+        CBT and I'm not sure that it is correct}</para>
+
         <para>REV IDLE should be selected on landing when speed reaches 70kt.</para>
+
         <para>A three minute cooling period is recommended following the use of maximum reverse thrust.</para>
       </sect2>
     </sect1>
