@@ -9,30 +9,35 @@
 \author{Jon Hurst}
 \setcounter{secnumdepth}{0}
 
+\def\ref#1{[#1]}
+
 \begin{document}
 
 \section{Weights}
-Max TOW\dotfill 68000kg\\
-Max TOW (as certified)\dotfill 66000kg,64000kg,62000kg\\
-Max taxi weight\dotfill MTOW+400kg\\
-Max landing weight\dotfill 61000kg\\
-Max ZFW\dotfill 57000kg\\
-Min Weight\dotfill 35400kg
+Max TOW \ref{3.1.20}\dotfill 68000kg\\
+Max taxi weight \ref{3.1.20}\dotfill 68400kg\\
+Max landing weight \ref{3.1.20}\dotfill 61000kg\\
+Max ZFW \ref{3.1.20}\dotfill 57000kg\\
+Min Weight \ref{3.1.20}\dotfill 35400kg
 
 \section{Dimensions}
-Wingspan\dotfill 34.1m
+Wingspan \ref{1.20.20}\dotfill 34.1m\\
+Length \ref{1.20.20}\dotfill 33.84m\\
+Min pavement for 180° turn \ref{1.20.20}\dotfill 20.64m
 
 \section{Wind}
-Max xwind, takeoff\dotfill 29G38kt\\
-Max xwind, landing\dotfill 33G38kt\\
-Max tailwind\dotfill 10kt\\
-Passenger door operation\dotfill 65kt\\
-Cargo door operation\dotfill 40kt (50kt w/caveats)\\
-Cargo door open\dotfill 40kt
+Max xwind, takeoff \ref{3.1.20}\dotfill 29G38kt\\
+Max xwind, landing \ref{3.1.20}\dotfill 33G38kt\\
+Max tailwind \ref{3.1.20}\dotfill 10kt\\
+Passenger door operation \ref{3.1.20}\dotfill 65kt\\
+Cargo door operation \ref{3.1.20}\dotfill 40kt (50kt w/caveats)\\
+Cargo door closed before \ref{3.1.20}\dotfill 65kt
 
 \section{Airport}
-Max slope\dotfill $\pm$2\%\\
-Max runway altitude\dotfill 9200ft
+Max slope \ref{3.1.20}\dotfill $\pm$2\%\\
+Max runway altitude \ref{3.1.20}\dotfill 9200ft\\
+Nominal runway width \ref{3.1.20}\dotfill 45m\\
+Min runway width \ref{2.4.60}\dotfill 30m (w/caveats)
 
 \section{Speeds}
 V$_{MO}$\dotfill 350kt\\
@@ -114,30 +119,13 @@ Min qty for takeoff\dotfill 1500kg
 \section{Hydraulics}
 Normal pressure\dotfill 3000$\pm$200psi
 
+\section{Loading}
+
+
 \section{Miscellaneous}
 Max gear extension altitude\dotfill 25,000ft\\
 Slat/ flap max operating altitude\dotfill 20,000ft\\
 Max OAT for norm avionics ventilation\dotfill 55°C
-
-\section{ACARS}
-\subsection{Fuel uplift}
-Freetext/Airline ops.\\
-Line 1: FUP\\
-Line 2: \textit{code space ammount}
-\begin{flushleft}
-Codes:\mbox{AGIP=AG}, \mbox{Air BP=BP}, \mbox{Air Total=AT},
-\mbox{Chevron Texaco=CH}, \mbox{Conoco=CO}, \mbox{Esso=ES}, \mbox{Exxon
-  Mobil=Ex}, \mbox{Kuwait=Q8}, \mbox{Petrogal=PG} ... to complete
-\end{flushleft}
-
-\subsection{Punctuality}
-Journey log/ Punctuality/ Ops/NMC:\\ 1R:\textit{total\_delay}\\ line 1:
-DL/\textit{code/code/../delay/delay/..}\\ Codes are two digit, delays
-are 4 digits as HHMM.
-
-\subsection{Handling}
-Freetext. Line 1: SVG MSG \textit{airport}\\
-Other lines: \textit{messages}
 
 \section{Approaches}
 \subsection{Circling}
