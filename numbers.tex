@@ -4,131 +4,152 @@
 \usepackage[paper=a4paper,twocolumn=true,lmargin=1cm,tmargin=1cm]{geometry}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0.5em}
+\setlength{\parskip}{0em}
 \title{Airbus numbers}
 \author{Jon Hurst}
 \setcounter{secnumdepth}{0}
 
-\def\ref#1{[#1]}
+\renewcommand{\ref}[1]{[#1]}
+
+\newcommand{\mysec}[2]{
+  \vbox{
+    \section{#1}
+    \begin{list}{}{\setlength\parsep{0pt}\setlength\itemsep{0pt}}
+    #2
+    \end{list}}}
+
 
 \begin{document}
 
-\section{Weights}
-Max TOW \ref{3.1.20}\dotfill 68000kg\\
-Max taxi weight \ref{3.1.20}\dotfill 68400kg\\
-Max landing weight \ref{3.1.20}\dotfill 61000kg\\
-Max ZFW \ref{3.1.20}\dotfill 57000kg\\
-Min Weight \ref{3.1.20}\dotfill 35400kg
+\mysec{Weights}{
+\item Max TOW \ref{3.1.20}\dotfill 68000kg
+\item Max taxi weight \ref{3.1.20}\dotfill 68400kg
+\item Max landing weight \ref{3.1.20}\dotfill 61000kg
+\item Max ZFW \ref{3.1.20}\dotfill 57000kg
+\item Min Weight \ref{3.1.20}\dotfill 35400kg
+}
 
-\section{Dimensions}
-Wingspan \ref{1.20.20}\dotfill 34.1m\\
-Length \ref{1.20.20}\dotfill 33.84m\\
-Min pavement for 180° turn \ref{1.20.20}\dotfill 20.64m
+\mysec{Dimensions}{
+\item Wingspan \ref{1.20.20}\dotfill 34.1m
+\item Length \ref{1.20.20}\dotfill 33.84m
+\item Min pavement for 180° turn \ref{1.20.20}\dotfill 20.64m
+}
 
-\section{Wind}
-Max xwind, takeoff \ref{3.1.20}\dotfill 29G38kt\\
-Max xwind, landing \ref{3.1.20}\dotfill 33G38kt\\
-Max tailwind \ref{3.1.20}\dotfill 10kt\\
-Passenger door operation \ref{3.1.20}\dotfill 65kt\\
-Cargo door operation \ref{3.1.20}\dotfill 40kt (50kt w/caveats)\\
-Cargo door closed before \ref{3.1.20}\dotfill 65kt
+\mysec{Wind}{
+\item Max xwind, takeoff \ref{3.1.20}\dotfill 29G38kt
+\item Max xwind, landing \ref{3.1.20}\dotfill 33G38kt
+\item Max tailwind \ref{3.1.20}\dotfill 10kt
+\item Passenger door operation \ref{3.1.20}\dotfill 65kt
+\item Cargo door operation \ref{3.1.20}\dotfill 40kt (50kt w/caveats)
+\item Cargo door closed before \ref{3.1.20}\dotfill 65kt
+}
 
-\section{Airport}
-Max slope \ref{3.1.20}\dotfill $\pm$2\%\\
-Max runway altitude \ref{3.1.20}\dotfill 9200ft\\
-Nominal runway width \ref{3.1.20}\dotfill 45m\\
-Min runway width \ref{2.4.60}\dotfill 30m (w/caveats)
+\mysec{Airport}{
+\item Max slope \ref{3.1.20}\dotfill $\pm$2\%
+\item Max runway altitude \ref{3.1.20}\dotfill 9200ft
+\item Nominal runway width \ref{3.1.20}\dotfill 45m
+\item Min runway width \ref{2.4.60}\dotfill 30m (w/caveats)
+}
 
-\section{Speeds}
-V$_{MO}$ \ref{3.1.20}\dotfill 350kt\\
-M$_{MO}$ \ref{3.1.20}\dotfill 0.82M\\
-Max Tire speed \ref{3.1.20}\dotfill 195kt\\
-Max speed for wipers \ref{3.1.20}\dotfill 230kt\\
-Max speed cockpit window open \ref{3.1.20}\dotfill 200kt\\
-V$_{MCA}$ \ref{3.1.20}\dotfill 108kt$-\sim$1kt/1000ft\\
-V$_{MCG}$ \ref{3.1.20}\dotfill 104.5kt@0ft,102.5kt@2000ft
+\mysec{General speeds}{
+\item V$_{MO}$ \ref{3.1.20}\dotfill 350kt
+\item M$_{MO}$ \ref{3.1.20}\dotfill 0.82M
+\item Max Tire speed \ref{3.1.20}\dotfill 195kt
+\item Max speed for wipers \ref{3.1.20}\dotfill 230kt
+\item Max speed cockpit window open \ref{3.1.20}\dotfill 200kt
+\item V$_{MCA}$ \ref{3.1.20}\dotfill 108kt$-\sim$1kt/1000ft
+\item V$_{MCG}$ \ref{3.1.20}\dotfill 104.5kt@0ft,102.5kt@2000ft
+}
 
-\subsection{Flaps/slats limits}
-Conf 1 \ref{3.1.20}\dotfill 230kt\\
-Conf 1+F \ref{3.1.20}\dotfill 215kt\\
-Conf 2 \ref{3.1.20}\dotfill 200kt\\
-Conf 3 \ref{3.1.20}\dotfill 185kt\\
-Conf Full \ref{3.1.20}\dotfill 177kt\\
-Max flaps/slats altitude \ref{3.1.27}\dotfill 20000ft
+\mysec{Flaps/slats}{
+\item Conf 1 \ref{3.1.20}\dotfill 230kt
+\item Conf 1+F \ref{3.1.20}\dotfill 215kt
+\item Conf 2 \ref{3.1.20}\dotfill 200kt
+\item Conf 3 \ref{3.1.20}\dotfill 185kt
+\item Conf Full \ref{3.1.20}\dotfill 177kt
+\item Max flaps/slats altitude \ref{3.1.27}\dotfill 20000ft
+}
 
-\subsection{Gear limits}
-Extend \ref{3.1.20}\dotfill 250kt\\
-Retract \ref{3.1.20}\dotfill 220kt\\
-Extended \ref{3.1.20}\dotfill 280kt/M.67\\
-Max gear altitutde \ref{3.1.20}\dotfill 25000ft
+\mysec{Gear}{
+\item Extend \ref{3.1.20}\dotfill 250kt
+\item Retract \ref{3.1.20}\dotfill 220kt
+\item Extended \ref{3.1.20}\dotfill 280kt/M.67
+\item Max gear altitutde \ref{3.1.20}\dotfill 25000ft
+}
 
-\section{Automatic approaches}
-Cat II min DH \ref{3.1.22}\dotfill 100ft\\
-Cat III single min DH \ref{3.1.22}\dotfill 50ft\\
-Cat III w/DH min DH\dotfill 20ft\\
-Cat III wo/DH min RVR \ref{3.1.22}\dotfill 75m\\
-Alert height \ref{3.1.22}\dotfill 100ft\\
-Man landing min AP disengage\dotfill 80ft
+\mysec{Automatic approaches}{
+\item Cat II min DH \ref{3.1.22}\dotfill 100ft
+\item Cat III single min DH \ref{3.1.22}\dotfill 50ft
+\item Cat III w/DH min DH\dotfill 20ft
+\item Cat III wo/DH min RVR \ref{3.1.22}\dotfill 75m
+\item Alert height \ref{3.1.22}\dotfill 100ft
+\item Man landing min AP disengage\dotfill 80ft
+\item 
+\item Max headwind \ref{3.1.22}\dotfill 30kt
+\item Max crosswind \ref{3.1.22}\dotfill 20kt
+\item Max tailwind \ref{3.1.22}\dotfill 10kt
+\item 
+\item Approved configurations \ref{3.1.22}\dotfill CONF 3, CONF Full
+\item Approved rwy conditions \ref{3.1.22}\dotfill Dry,Wet
+\item 
+\item GS capture attitude limits\dotfill -2.5°,+10°
+\item GS capture V/S limits\dotfill +500fpm,-1250fpm
+\item 
+\item App speed deviation limtits\dotfill -5kt,+10kt
+\item App attitude limits\dotfill -2.5°,+10°
+\item App bank limit\dotfill 7°
+\item App V/S limit\dotfill 1000fpm}
 
-Max headwind \ref{3.1.22}\dotfill 30kt\\
-Max crosswind \ref{3.1.22}\dotfill 20kt\\
-Max tailwind \ref{3.1.22}\dotfill 10kt
 
-Approved configurations \ref{3.1.22}\dotfill CONF 3, CONF Full\\
-Approved rwy conditions \ref{3.1.22}\dotfill Dry,Wet
+\mysec{Pressurisation}{
+\item Max norm diff\dotfill 8.06psi
+\item Max diff \ref{3.1.21}\dotfill 8.6psi
+\item Max overpressure\dotfill 9.0psi
+\item Max neg diff \ref{3.1.21}\dotfill -1psi
+\item Max norm cabin alt \ref{3.1.21}\dotfill 8000ft
+\item Cab alt warning \ref{3.1.21}\dotfill 9550ft$\pm$350ft
+\item Ram air max diff\dotfill 1psi
+}
 
-GS capture attitude limits\dotfill -2.5°,+10°\\
-GS capture V/S limits\dotfill +500fpm,-1250fpm
+\mysec{Autopilot}{
+\item Engagement after TO \ref{3.1.22}\dotfill $>$100ft,$>$5 secs
+\item Cat I min disengage \ref{3.1.22}\dotfill 160ft agl
+\item NPA min disengage \ref{3.1.22}\dotfill MDA
+\item Circling min disengage  \ref{3.1.22}\dotfill MDA$-$100ft
+}
 
-App speed deviation limtits\dotfill -5kt,+10kt\\
-App attitude limits\dotfill -2.5°,+10°\\
-App bank limit\dotfill 7°\\
-App V/S limit\dotfill 1000fpm
+\mysec{Electrical}{
+\item Max generator continuous load \ref{3.1.24}\dotfill 100\%(90 KVA)
+\item Max TR continuous load \ref{3.1.24}\dotfill 200A
+}
 
-\section{Pressurisation}
-Max norm diff\dotfill 8.06psi\\
-Max diff \ref{3.1.21}\dotfill 8.6psi\\
-Max overpressure\dotfill 9.0psi\\
-Max neg diff \ref{3.1.21}\dotfill -1psi\\
-Max norm cabin alt\dotfill 8000ft\\
-Cab alt warning\dotfill 9550ft$\pm$350ft\\
-Ram air max diff\dotfill 1psi\\
-Max ground temp for cont avionics \ref{3.1.21}\dotfill 49°C
+\mysec{Fuel}{
+\item Outer tank capacity\dotfill 691kg (880l)
+\item Inner tank capacity\dotfill 5435kg (6924l)
+\item Center tank capacity\dotfill 6476kg (8250l)
+\item Total capacity\dotfill 18728kg (23858l)
+\item 
+\item Min temperature (Jet A1) \ref{3.1.28}\dotfill -43°C
+\item Max temperature (Jet A1) \ref{3.1.28}\dotfill 54°C
+\item 
+\item Max inner tank imbalance \ref{3.1.28}\dotfill 1500kg (more with caveats)
+\item Max outer tank imbalance \ref{3.1.28}\dotfill 530kg (more with caveats)
+\item 
+\item Min qty for takeoff \ref{3.1.28}\dotfill 1500kg
+}
 
-\section{Autopilot}
-Engagement after TO \ref{3.1.22}\dotfill $>$100ft,$>$5 secs\\
-Cat I min disengage \ref{3.1.22}\dotfill 160ft agl\\
-NPA min disengage \ref{3.1.22}\dotfill MDA\\
-Circling min disengage  \ref{3.1.22}\dotfill MDA$-$100ft
-
-\section{Electrical}
-Max generator continuous load \ref{3.1.24}\dotfill 100\%(90 KVA)\\
-Max TR continuous load \ref{3.1.24}\dotfill 200A
-
-\section{Fuel}
-Outer tank capacity\dotfill 691kg (880l)\\
-Inner tank capacity\dotfill 5435kg (6924l)\\
-Center tank capacity\dotfill 6476kg (8250l)\\
-Total capacity\dotfill 18728kg (23858l)
-
-Min temperature (Jet A1)\dotfill -43°C\\
-Max temperature (Jet A1)\dotfill 54°C
-
-Max inner tank imbalance\dotfill 1500kg (more with caveats)\\
-Max outer tank imbalance\dotfill 530kg (more with caveats)
-
-Min qty for takeoff\dotfill 1500kg
-
-\section{Hydraulics}
-Normal pressure\dotfill 3000$\pm$200psi
+\mysec{Hydraulics}{
+\item Normal pressure \ref{3.1.29}\dotfill 3000$\pm$200psi
+}
 
 \section{Loading}
 
 
-\section{Miscellaneous}
-Max gear extension altitude\dotfill 25,000ft\\
-Slat/ flap max operating altitude\dotfill 20,000ft\\
-Max OAT for norm avionics ventilation\dotfill 55°C
+\mysec{Miscellaneous}{
+\item Max OAT for norm avionics ventilation \ref{3.1.21}\dotfill 49°C
+\item \hfill(higher with time limits)
+}
+
 
 \section{Approaches}
 \subsection{Circling}
