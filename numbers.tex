@@ -13,7 +13,7 @@
 \renewcommand{\ref}[1]{[#1]}
 
 \newcommand{\mysec}[2]{
-  \vfill\vbox{
+  \vfil\vbox{
     \subsection{#1}
     \begin{list}{}{\setlength\parsep{0pt}\setlength\itemsep{0pt}}
     #2
@@ -209,7 +209,7 @@
 \item Accreted ice, wing anti-ice inop \dotfill see FCOM 3.4.30.2000
 }
 
- \mysec{Automatic approaches}{
+\mysec{Automatic approach and landing}{
 \item Cat II min DH \ref{3.1.22}\dotfill 100ft
 \item Cat III single min DH \ref{3.1.22}\dotfill 50ft
 \item Cat III w/DH min DH\dotfill 20ft
@@ -234,6 +234,43 @@
 \item No contamination, windshear or autoland \ref{EOMB-2.1}
 }
 
+\mysec{Wake Turbulence}{
+\item Final Approach\ref{EOMA 8.3.9}
+\iitem Small/medium\dotfill 3nm
+\iitem B757\dotfill 4nm
+\iitem Heavy\dotfill 5nm
+\item Departure, same pos \ref{EOMA 8.3.9}
+\iitem Heavy\dotfill 2 mins
+\item Departure, intermediate pos \ref{EOMA 8.3.9}
+\iitem Heavy\dotfill 3 mins
+\item Displaced landing threshold \ref{EOMA 8.3.9}
+\iitem Heavy\dotfill 2 mins
+\item Crossing/ diverging/ parallel runways, flight paths cross\\
+  \ref{EOMA 8.3.9}
+\iitem Heavy\dotfill 3mins/5nm
+\iitem Medium/small \dotfill 2mins/3nm
+}
+
+\mysec{Noise Abatement \ref{NTC-146, Jepp ATC}}{
+\item None \dotfill +1000/+1000
+\item NADP 1\dotfill +1000/+3000
+\item NADP 2/ NADP B\dotfill +1000/+1000; Vzf+5 to +3000
+\item NADP A\dotfill +1500/+3000
+\item France\dotfill None
+\item Germany\dotfill +1500/+1500
+\item Italy (most)\dotfill +1500/+3000
+\item Portugal\dotfill NADP B
+\item Spain\dotfill None
+\item Switzerland\dotfill None
+\item UK\dotfill None
+}  
+
+\mysec{Single Engine operations}{
+\item Landing capability\ref{3.1.22}\dotfill Cat III single
+\item Available NPA AP modes\ref{3.1.22}\dotfill HDG/VS;HDG/FPA
+\item\hfill(All modes permitted FD only)
+}
+
 \section{Approaches}
 \subsection{Circling}
 \begin{list}{$\bullet$}{\setlength\parsep{0pt}\setlength\itemsep{0pt}}
@@ -253,4 +290,7 @@
 \item Conf 3,gear down by D-1nm
 \item At D-0.2nm, select Conf full set and pull FPA
 \end{list}
+
+\vfill
+
 \end{document}
