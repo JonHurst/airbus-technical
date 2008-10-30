@@ -1660,54 +1660,104 @@
             <imagedata fileref="images/fuel-system-schematic.eps"/>
           </imageobject>
           <imageobject role="fo">
-            <imagedata align="center" fileref="images/fuel-system-schematic.svg"/>
+            <imagedata width="14cm" align="center" fileref="images/fuel-system-schematic.svg"/>
           </imageobject>
           <imageobject role="html">
             <imagedata format="PNG" fileref="../images/fuel-system-schematic.png"/>
           </imageobject>
         </mediaobject>
       </figure>
-      <para>When the centre tank pumps are in AUTO, they turn off when slats are selected. The centre tank pumps also
-      shut off automatically when the wing tanks have been filled by fuel returning from the IDG cooling circuits. In
-      this case, they automatically restart when approx 500kg of fuel fas been burnt from the wing tanks. The centre
-      tank pumps produce slightly higher pressure than the wing pumps, so that centre tank fuel will be used first.</para>
-      <para>When either inner tank reaches a low level, both transfer valves open automatically, and fuel is transferred
-      to the inner tanks. This is indicated by the E/WD memo "OUTER TK FUEL XFRD". The transfer valves, once open,
-      remain open until the next refuelling operation.</para>
-      <para>The external refuel panel is situated on the fuselage below the right wing. A single refuelling point is
-      installed on the right wing outboard of the engine. A REFUELG memo on the E/WD indicates that this panel is
-      open.</para>
-      <para>There is a surge tank fitted in each wingtip to protect against overpressure and thermal expansion. There
-      are no cockpit indications. The surge tank vent is situated underneath the wing near the tip.</para>
+      <para>Each wing incorporates an inner tank, an outer tank and a vent surge tank. A center tank is incorporated
+      into the fuselage.</para>
+      
+      <para>The outer tanks are used for wing bending and flutter relief. There are two electrical transfer valves
+      connecting each outer tank to its associated inner tank. These are controlled by level sensors in the inner
+      tanks. Each inner tank has two sensors, and each of these sensors controls a symmetrical pair of transfer
+      valves. When any sensor detects the fuel level in an inner tank falling below approximately 750kg, it opens its
+      pair of transfer valves, allowing the outer tank fuel to transfer simultaneously to the inner tanks. This event is
+      indicated by the E/WD memo "OUTER TK FUEL XFRD" and green triangles appearing in the outer tanks on the ECAM FUEL
+      page. The transfer valves, once open, remain open until the next refueling operation.</para>
+
+      <para>The outer tanks are also connected to the inner tanks by a spill pipe. This allows fuel returned to the
+      outer tanks by the fuel recirculation system (see below) to flow to the inner tanks if the outer tanks are already
+      full. It is also used during refueling, since fuel destined for the inner tanks is routed via the outer
+      tanks.</para>
+
+      <para>The vent surge tanks protect against thermal expansion of fuel. Fuel may expand by at least 2% (equivalent
+      to ∆20°C) without spilling. There are no cockpit indications for these tanks.</para>
+
+      <para>The inner, outer and vent tanks each have overpressure protectors. The center tank has an overpressure
+      protector connected to the left inner tank.</para>
+
+      <para>There are six electrical fuel pumps, two in the center tank and two in each inner tank. Under normal
+      conditions the fuel system is split, with one center tank pump and the two same side wing tank pumps supplying
+      each engine. A double motor cross feed valve, controlled by the X FEED button, allows the fuel system to be
+      unified. A green OPEN light in this button indicates that the valve is in the fully open position.</para>
+
+      <para>The inner tanks incorporate suction valves that allow for gravity feeding of fuel in the event of loss of
+      both pumps. The service ceiling of tha aircraft may be affected if the fuel has not had time and altitude to
+      deaerate. Gravity feeding is not available from the center tank.</para>
+
+      <para>The wing tank pumps operate continuously unless switched off with their associated TK PUMPS button. The #1
+      pump in each tank is powered by AC1 and controlled by DC1, and the #2 pump is powered by AC2 and controlled by
+      DC2. The #1 pump in each tank also has an alternate power feed directly from its associated IDG, and an alternate
+      control feed from DC ESS. The pumps incorporate pressure relief sequence valves in order that fuel is delivered
+      preferentially from the center tank if the associated center tank pump is producing normal output pressure. An
+      amber FAULT on their associated button indicates low delivery pressure with the button in the "On" position.</para>
+
+      <para>The center tank pumps have automatic and manual modes, controlled by a single MODE SEL button. The FAULT
+      light in this button indicates that fuel is being burnt out of sequence, inferred from &gt;250kg in the center
+      tank with &lt;5000kg in one of the wing tanks. In general, when in automatic mode a pump is inhibited whenever
+      slats are extended, whenever its associated wing tank is full (with a latch until 500kg has been burnt from the
+      tank) or once 5 minutes have elapsed since the center tank reached low fuel level. The exception is that for two
+      minutes after its associated engine has been started, the pump is only inhibited by the center tank low fuel
+      condition. This allows the center tank fuel lines to be pressurized if center tank fuel is going to be used. In
+      manual mode, all "auto stop" logic is inhibited and the crew must provide the logic directly using the CTR TK PUMP
+      buttons. The FAULT light in each of these buttons indicates low delivery pressure with the associated pump
+      operating. The #1 pump is powered by AC1 and controlled by DC1, and the #2 pump is powered by AC2 and controlled
+      by DC2. Note that takeoff with the center tank pumps operating is prohibited.</para>
+
+      <para>On the ECAM FUEL page, if a fuel pump is shown as an amber boxed LO, the pump is on but it is not producing
+      adequate pressure. An amber box with a cross line indicates that a pump has been switched off manually.</para>
+
+      <para>Fuel pressure for APU startup is normally provided by the left hand side of the fuel system. If pressure is
+      unavailable due to loss of tank pumps or loss of normal AC supply, an APU fuel pump can be used. This is normally
+      powered by the AC ESS SHED BUS, but has an alternate feed directly from the AC STAT INV BUS.</para>
+
+      <para>The design of the engine fuel system (see <xref linkend="engine-fuel-system"/>) and the requirement for IDG
+      cooling leads to some fuel being returned to the tanks. This is routed to the outer tanks and from there to the
+      inner tanks via the spill pipe or transfer valves depending on the configuration of the fuel system. Overfilling
+      is prevented by controlling the center tank pumps. Overfilling (and hence venting) is possible with the center
+      tank pumps in manual mode.</para>
+
+      <para>The refuel coupling is situated under the wing outboard of the #2 engine, near the leading edge. The refuel
+      panel is situated on the fuselage below the right wing. Fueling is usually automatic, controlled by setting the
+      required quantity with the preselector rocker switch and selecting the MODE SELECT switch to REFUEL. Manual
+      control is available by selecting the REFUEL VALVES switches to OPEN and SHUT as required. Fueling with battery
+      power is available by momentarily selecting the BATT POWER switch to ON. Gravity fueling is also possible.  The
+      REFUELG memo on the E/WD only indicates that the refuel panel door is open.</para>
+
+      <para>A de-fuel/ transfer valve connects the right hand side of the fuel system to the refueling/ de-fueling
+      gallery. It is opened by selecting the MODE SELECT switch to DEFUEL. An amber light illuminates next to the switch
+      to indicate that the valve is open.</para>
+
+      <para>A Fuel Quantity Indication (FQI) system provides fuel mass, quantity and temperature data to the ECAM and
+      controls automatic refueling. This system comprises an FQI computer, a set of capacitance probes to measure fuel
+      level and temperature, a densitometer and a Capacitance Index Compensator (CIC) (used in case of densitometer
+      failure).</para>
+
+      <para>Degradation of a fuel quantity sensor is indicated by two amber dashes across the last two digits of the FOB
+      value. On the ECAM FUEL page, the affected tank also shows the dashes on its quantity value.</para>
+      
+      <para>Fuel temperature exceeding a limitation results in a master caution and the fuel temperature of the affected
+      tank being shown in amber on the ECAM FUEL page.</para>
+
       <para>A shroud drain mast is situated under the fuselage. This drains any fuel that leaks from the system.</para>
+
       <para>Each tank has a magnetic fuel level indicator to allow fuel to be measured manually. These should normally
       be flush with the aircraft surface. Each tank also has a water drain valve. These should be checked for
       leaks.</para>
-      <para>On the ECAM fuel page, if the fuel pump is shown as an amber boxed LO, the pump is on but it is not
-      producing adequate pressure. An amber box with a cross line indicates that a pump has been switched off
-      manually.</para>
-      <para>Failure of a single wing pump will not trigger a master caution, since there is a backup pump
-      available. Failure of both pumps in one wing tank will mean that the fuel in the tank must be gravity fed,
-      potentially reducing the service ceiling of the aircraft.</para>
-      <para>Degradation of a fuel quantity sensor is indicated by two amber dashes across the last two digits of the FOB
-      value. On the ECAM FUEL page, the affected tank also shows the dashes on its quantity value.</para>
-      <para>Fuel temperature exceeding a limitation results in a master caution and the fuel temperature of the affected
-      tank being shown in amber on the ECAM FUEL page.</para>
-      <para>A transfer valve shown in amber indicates the failure of the affected transfer valve. The fuel in the tank
-      is unusable in this configuration.</para>
-      <para>The center tank must be emptied before the wing tanks. Takeoff on center tank is prohibited.</para>
-      <sect2>
-        <title>Limitations</title>
-        <informaltable>
-          <tgroup cols="2">
-            <colspec colwidth="3in"/>
-            <colspec colwidth="1in"/>
-            <tbody>
-              <row><entry>Min TO Fuel Qty</entry><entry>1500kg</entry></row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </sect2>
+
     </sect1>
     <sect1>
       <title>Oxygen</title>
@@ -1805,7 +1855,7 @@
         regardless of TLA. See {TODO: cross reference once done}.</para>
 
       </sect2>
-      <sect2>
+      <sect2 id="engine-fuel-system">
         <title>Engine fuel system</title>
         <figure id="engine-fuel-system-schematic">
           <title>Simplified schematic of engine fuel system</title>
