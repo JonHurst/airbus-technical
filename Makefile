@@ -16,7 +16,7 @@ html : notes.xml myxhtml.xsl
 pdf: notes.pdf
 
 notes.pdf: notes.fo
-	/opt/fop-0.94/fop -c /home/jon/proj/fop-fonts/fop.xconf -fo notes.fo -pdf notes.pdf
+	/opt/fop-0.95/fop -c fop.xconf -fo notes.fo -pdf notes.pdf
 notes.fo: notes.xml myfo.xsl
 	xsltproc myfo.xsl notes.xml >notes.fo
 
