@@ -731,9 +731,10 @@
       busses). It is essentially the same as for the loss of all main generators, except the fuel pumps are connected
       upstream of the Gen 1 line connector.</para>
 
-      <para>If AC bus 1 fails, the power for the AC Ess bus is routed from AC bus 2 by pressing the AC Ess feed
-      pushbutton. TR1 is lost causing the Ess TR to supply the DC Ess bus and, after a 5 second delay, DC bus 2 to
-      provide power to DC bus 1.</para>
+      <para>If AC bus 1 fails, power for the AC Ess bus must be re-routed from AC bus 2. Automatic re-routing is
+      available on some aircraft. Manual re-routing is achieved by pressing the AC Ess feed pushbutton. TR1 is lost
+      causing the Ess TR to supply the DC Ess bus and, after a 5 second delay, DC bus 2 to provide power to DC bus
+      1.</para>
       
       <para>If both main TRs are lost, DC Bus 1, DC Bus 2 and the DC Bat bus are lost. The DC Ess bus is powered by the
       Ess TR.</para>
