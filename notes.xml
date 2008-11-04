@@ -763,8 +763,9 @@
       <para>In the event of a generator having out of limit load but continuing to power its AC bus, the amber
       FAULT light in the GEN button will not illuminate.</para>
 
-      <para>The BUS TIE switch causes the two halves of the electrical system to be fully segregated. This may be used
-      to isolate a short circuit that has affected both halves.</para>
+      <para>Pressing the BUS TIE button (OFF position) manually opens the bus tie contactors (BTCs). In this case, only
+      IDG 1 can supply AC 1 and only IDG 2 can supply AC 2. This may be used to isolate a short circuit that has
+      affected both halves.</para>
     </sect1>
     <sect1 id="pneumatics">
       <title>Pneumatics</title>
