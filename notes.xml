@@ -686,7 +686,7 @@
       
       <para>Primary AC supply is from two 90 KVA engine driven integrated drive generators (IDGs). Each IDG has an
       associated generator control unit (GCU) which provides frequency, voltage and generator line contactor (GLC)
-      control. An third 90 KVA generator is driven by the APU. This generator, along with ground power, is controlled by
+      control. A third 90 KVA generator is driven by the APU. This generator, along with ground power, is controlled by
       the Ground and Auxiliary Power Control Unit (GAPCU). Each of the three main generators is capable of supplying the
       power requirements of the entire system. The generators cannot be connected in parallel, and are automatically
       brought on line according to priority rules. The IDGs are highest priority, followed by EXT PWR when connected,
@@ -699,7 +699,7 @@
       <para>Primary DC power is provided by two 200A transformer rectifier units with automatic protection circuits that
       disconnect the TR in the event of overheat or minimum current. A third identical TR, the "essential"
       TR provides power for the DC Essential bus in the event of loss of all normal AC generators (the Ess Tr is capable
-      of drawing power from the emergency AC generator) or in the event of loss of one of both of the main TRs.</para>
+      of drawing power from the emergency AC generator) or in the event of loss of one or both of the main TRs.</para>
 
       <para>Two 23Ah batteries are also provided for emergency DC power. Each has an associated battery charger limiter
       (BCL) to monitor charging and control its battery contactor. The minimum required offline battery voltage is
