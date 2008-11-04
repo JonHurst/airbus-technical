@@ -674,7 +674,7 @@
             <imagedata fileref="images/electrical-schematic.eps"/>
           </imageobject>
           <imageobject role="fo">
-            <imagedata align="center" fileref="images/electrical-schematic.svg"/>
+            <imagedata depth="5in" align="center" fileref="images/electrical-schematic.svg"/>
           </imageobject>
           <imageobject role="html">
             <imagedata format="PNG" fileref="../images/electrical-schematic.png"/>
@@ -757,7 +757,7 @@
           </imageobject>
         </mediaobject>
       </figure>
-      <para>When an IDG must be disengaged, the IDG button whould be pressed and held until the Gen 1 FAULT light comes
+      <para>When an IDG must be disengaged, the IDG button whould be pressed and held until the Gen FAULT light comes
       on, but should not be held for more than 3 seconds.</para>
 
       <para>In the event of a generator having out of limit load but continuing to power its AC bus, the amber
