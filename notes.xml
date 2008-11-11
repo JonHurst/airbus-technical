@@ -1136,37 +1136,84 @@
     </sect1>
     <sect1>
       <title>Ice &amp; rain protection</title>
-      <para>The three outboard slats of each wing are anti iced using hot bleed air. This is controlled by the WING
-      button on the anti-ice panel.</para>
-      <para>The engine air intakes are anti iced using an independent air bleed, routing hot air from the high pressure
-      compressor via an engine anti-ice valve to the intake. These are controlled by the ENG1 and ENG2 buttons on the
-      anti-ice panel. The anti-ice valve fails open if electrical power is removed. When switched on, the FAULT light
-      illuminates during valve transit, then extinguishes. When switched on, the ignitors are automatically switched on
-      and idle N1 will increase. The memos IGNITION and ENG A.ICE will appear on the E/WD.</para>
-      <para>The fan blades are not anti-iced. If significant engine vibrations occur due to icing, the fan ice can be
-      shed by running the engines up to 70% N2 for approximately 15 seconds.</para>
-      <para>Wing anti-ice is controlled by a single WING button controlling anti ice for both wings. APU bleed air must
-      not be used for wing anti-icing. During valve transit, the amber FAULT light in the button will illuminate. Wing
-      anti-icing also increases idle N1. A WING A.ICE memo on the E/WD and two ANTI ICE legends (with green triangles
-      indicating valve open) on the ECAM bleed page indicate wing anti-ice is on. If the green triangle is present
-      without an accompanying ANTI ICE legend, it means that the valve has stuck open. When armed on the ground, the
-      wing anti-ice will activate for 30 seconds as a self test, then change to an armed mode where the valves are
-      closed but will automatically open when airborne (indications as above with green triangles removed).</para>
-      <para>If ice detection is installed, the ICE NOT DET memo indicates that no ice has been detected for three
-      minutes.</para>
-      <para>The windshield and side windows are heated electrically. This is controlled by the PROBE/WINDOW HEAT button
-      on the anti-ice panel.</para>
-      <para>The AOA probes, the TAT probes, the pitot probes and the static ports are elecrically heated. This is
-      controlled by the same button as the window heat.</para>
-      <para>On the ground, the probes (TAT excepted) and windows are heated automatically after starting the first
-      engine when the PROBE/WINDOW HEAT button is set to AUTO. The windshield heating operates at low power on the
-      ground. Pressing the button allows for manual defog/ de-ice of the windows.</para>
-      <para>The water drain masts are electrically heated. This heat is reduced when on the ground.</para>
-      <para>The optional ice detection system consists of two ice detectors on the lower fuselage and a visual ice
-      indicator with integral light fitted between the two windshields.</para>
-      <para>Electric wipers are fitted. They are controlled using the WIPER selectors on the wiper panels in the bottom
-      corners of the overhead panel. The maximum speed for wiper use is 230kt. The RAIN RPLNT buttons, also on these
-      panels, allows rain repellant to be sprayed on the windshields.</para>
+      <sect2>
+        <title>Wing anti-ice</title>
+        
+        <para>The three outboard slats of each wing are anti-iced using hot bleed air from the
+        pneumatic system. APU bleed air must not be used for wing anti-icing. Each wing has a single
+        electrically (DC ESS SHED) operated valve that controls flow of air to the slats. Both
+        valves are controlled by a single WING button on the anti-ice panel. The valves fail closed
+        in the event electrical power is lost.</para>
+
+        <para>Selecting wing anti-ice causes the FADECS to decrease N1 limit and increase idle
+        N1.</para>
+
+        <para>If a hot air leak is detected, the wing anti-ice valve on the affected side
+        automatically closes.</para>
+
+        <para>If the WING button is pushed on the ground, a 30 second self test of the wing anti-ice
+        system is initiated. If left on, the valves will open automatically once airborne.</para>
+        
+      </sect2>
+      <sect2>
+        <title>Engine anti-ice</title>
+
+        <para>The engine air intakes are anti iced using an independent air bleed from the HP
+        compressor. For each engine, hot air is routed via an electrically controlled (DC1 and DC2),
+        pneumatically operated engine anti-ice valve to the intake. These are controlled by the ENG1
+        and ENG2 buttons on the anti-ice panel. The valves close if no air is available, but fail
+        open if electrical power is lost.</para>
+
+        <para>The fan blades are not anti-iced. If icing conditions last longer than 30 minutes or
+        significant icing induced engine vibrations occur, the fan ice can be shed by running the
+        engines up to 70% N2 for 30 seconds [FCOM 3.3.9.1000] (n.b. parking brake limitation of 75%
+        N1 [FCOM 3.1.32.1000]). This run up should also be carried out just prior to takeoff if
+        conditions require it. In freezing rain, freezing fog or heavy snow, ice shedding can be
+        enhanced by momentary run ups to 70% at intervals of less than 10 minutes.</para>
+
+      </sect2>
+      <sect2>
+        <title>Window heat</title>
+
+        <para>The windshield and side windows are heated electrically. Each side has an independent
+        Window Heat Computer (WHC) that automatically regulates the system and provides overheat
+        protection and fault detection. The window heat operates whenever at least one engine is
+        running. On the ground, the windshield heat operates in a low power mode, with an automatic
+        changeover to normal power once airborne. The windows only have one heating level. If window
+        heat is required before engine start it can be switched on manually with the PROBE/WINDOW
+        HEAT button on the anti-ice panel.</para>
+      </sect2>
+      <sect2>
+        <title>Probe heat</title>
+
+        <para>The pitot heads, static ports, AOA probes and TAT probes are elecrically heated. The
+        Captain's probes, F/O's probes and standby probes each have an independent Probe Heat
+        Computer (PHC). These provide automatic regulation, overheat protection and fault
+        detection. The probes are heated whenever at least one engine is running. On the ground, the
+        pitot heating operates at low level and the TAT probes are not heated. Changeover to normal
+        heating is automatic once airborne. If probe heat is required before engine start it can be
+        switched on manually with the PROBE/WINDOW HEAT button on the anti-ice panel.</para>
+      </sect2>
+
+      <sect2>
+        <title>Other</title>
+
+        <para>Each front windshield has a two-speed electric wiper controlled by a rotary
+        selector. The maximum speed for wiper use is 230kt [FCOM 3.1.20].</para>
+
+        <para>In moderate to heavy rain only [FCOM 3.4.30.4000], rain repellent can be applied to
+        the windshield. Each windshield has an independent RAIN RPLNT button that applies a measured
+        quantity when pressed. The rain repellent is stored in a nitrogen pressurised bottle in the
+        rear cockpit. If the pressure gauge is in the yellow or the REFILL float is visible, the
+        bottle needs replacing. A smell of orange peels in the cockpit may indicate a toxic leak of
+        rain repellent fluid. A smell of pine needles may indicate a non-toxic leak [FCOM
+        3.2.26.6000].</para>
+
+        <para>An external lighted visual ice detector is installed between the two windshields.</para>
+
+        <para>The water drain masts are electrically heated. This heat is reduced when on the
+        ground.</para>
+      </sect2>
     </sect1>
     <sect1>
       <title>Hydraulics</title>
