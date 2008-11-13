@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{txfonts}
 \usepackage[paper=a4paper,twocolumn=true,lmargin=1cm,tmargin=1cm]{geometry}
+\usepackage{setspace}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0em}
@@ -20,6 +21,9 @@
     \end{list}}}
 
 \newcommand{\iitem}{\item\hspace{2em}}
+
+\newcommand{\pitem}[1]{
+\item\hfill\parbox{22em}{\begin{spacing}{0.9}\vspace{0.25em} #1 \vspace{0.8em}\end{spacing}}}
 
 \begin{document}
 
@@ -96,7 +100,7 @@
 \item Max N1 \ref{3.1.49}\dotfill 104\%
 \item Max N2 \ref{3.1.49}\dotfill 105\%
 \item Starter \ref{3.1.49}
-\item\hfill\parbox{20em}{ 4 cycles of max 2 mins with 20 sec pause between each
+\pitem{ 4 cycles of max 2 mins with 20 sec pause between each
   attempt,  then 15 min cooling period.}
 \item Max reverse \ref{3.1.49}\dotfill >70kt
 }
@@ -166,16 +170,7 @@
 \item \hfill(higher with time limits)
 }
 
-\mysec{Autopilot}{
-\item Engagement after TO \ref{3.1.22}\dotfill $>$100ft,$>$5 secs
-\item Cat I min disengage \ref{3.1.22}\dotfill 160ft agl
-\item NPA min disengage \ref{3.1.22}\dotfill MDA
-\item Circling min disengage  \ref{3.1.22}\dotfill MDA$-$100ft
-\item Max autoland headwind \ref{3.1.22}\dotfill 30kt
-\item Max autoland crosswind \ref{3.1.22}\dotfill 20kt
-\item Autoland configurations \ref{3.1.22}\dotfill CONF 3, CONF Full
-\item Autoland rwy conditions \ref{3.1.22}\dotfill Dry,Wet
-}
+
 
 \mysec{Fuel}{
 \item Capacity \ref{1.28.10}
@@ -209,21 +204,30 @@
 \item Accreted ice, wing anti-ice inop \dotfill see FCOM 3.4.30.2000
 }
 
-\mysec{Automatic approach and landing}{
-\item Cat II min DH \ref{3.1.22}\dotfill 100ft
-\item Cat III single min DH \ref{3.1.22}\dotfill 50ft
-\item Cat III w/DH min DH\dotfill 20ft
-\item Cat III wo/DH min RVR \ref{3.1.22}\dotfill 75m
+\mysec{Autopilot}{
+\item Minimum disengagement
+\iitem Cat II \ref{TR 87.1}\dotfill 80ft
+\iitem Cat I \ref{3.1.22}\dotfill 160ft agl
+\iitem NPA \ref{3.1.22}\dotfill MDA
+\iitem Circling \ref{3.1.22}\dotfill MDA$-$100ft
+
+\item Absolute minimas
+\iitem Cat I \dotfill 200ft/550m
+\iitem Cat II \dotfill 100ft/300m
+\iitem Cat IIIA \dotfill 50ft/200m
+\iitem Cat IIIB \dotfill 0ft/75m
+
+\item Autoland limitations
+\iitem Max headwind \ref{3.1.22}\dotfill 30kt
+\iitem Max crosswind \ref{3.1.22}\dotfill 20kt
+\iitem Configurations \ref{3.1.22}\dotfill CONF 3, CONF Full
+\iitem Rwy conditions \ref{3.1.22}\dotfill Dry,Wet
+\iitem Glideslope\dotfill 2.5° to 3.15°
+\iitem Max weight (emergency only)\dotfill 69000kg
+
+\item CDA \ref{EOMB 2.3.19.1}\dotfill MDA+50ft
+\item Engagement after TO \ref{3.1.22}\dotfill $>$100ft,$>$5 secs
 \item Alert height \ref{3.1.22}\dotfill 100ft
-\item Man landing min AP disengage \ref{TR 87.1}\dotfill 80ft
-\item GS capture attitude limits\dotfill -2.5°,+10°
-\item GS capture V/S limits\dotfill +500fpm,-1250fpm
-\item App speed deviation limtits\dotfill -5kt,+10kt
-\item App attitude limits\dotfill -2.5°,+10°
-\item App bank limit\dotfill 7°
-\item App V/S limit\dotfill 1000fpm
-\item Autoland slope\dotfill 2.5° to 3.15°
-\item Max emerg autoland\dotfill 69000kg
 }
 
 \mysec{First Officer Limits}{
@@ -253,25 +257,42 @@
 \iitem Medium/small \dotfill 2mins/3nm
 }
 
-\mysec{Noise Abatement \ref{NTC-146, Jepp ATC}}{
-\item None \dotfill +1000/+1000
-\item NADP 1\dotfill +1000/+3000
-\item NADP 2/ NADP B\dotfill +1000/+1000; Vzf+5 to +3000
-\item NADP A\dotfill +1500/+3000
-\item France\dotfill None
-\item Germany\dotfill +1500/+1500
-\item Italy (most)\dotfill +1500/+3000
-\item Portugal\dotfill NADP B
-\item Spain\dotfill None
-\item Switzerland\dotfill None
-\item UK\dotfill None
-}  
 
 \mysec{Single Engine operations}{
 \item Landing capability\ref{3.1.22}\dotfill Cat III single
 \item Available NPA AP modes\ref{3.1.22}\dotfill HDG/VS;HDG/FPA
 \item\hfill(All modes permitted FD only)
+\item Do not extend full flaps until established on final descent.
+\item Use Conf 3 if a level off is required.
 }
+
+\mysec{Emergency calls to cabin \ref{B2.7.33}}{
+\item Ground ops alert:
+  \pitem{``Attention! Crew at Stations''}
+\item Ground ops alert cancellation:
+  \pitem{``Cabin crew, normal operations''}
+\item Evacuation:
+  \pitem{``Evacuate. Unfasten your seatbelts and get out''}
+\item NITS on flight deck:
+  \pitem{``Senior cabin crew member to the flight deck''}
+\item NITS via interphone:
+  \pitem{``Senior cabin crew member to the interphone'' or 3 double chimes}
+\item Unplanned emergency landing:
+  \pitem{``Attention, Crew! Brace, Brace!''}
+\item Slow decompression:
+  \pitem{``Cabin crew, return to stations. We are commencing a
+  descent - return to your seats and fasten your belts''}
+\item Rapid decompression: 
+  \pitem{``Ladies and gentlemen, this is the Captain speaking. We have
+  lost cabin pressure and are descending to a lower altitude. Put your
+  oxygen masks on and obey the instructions of the cabin crew.''}
+\item Planned emergency landing: 
+  \iitem 2000ft\dotfill ``Cabin crew, take up landing positions''
+  \iitem 500ft\dotfill ``Brace, Brace''
+\item Severe turbulence:
+  \pitem{``Cabin crew and passengers be seated immediately''}
+}
+
 
 \mysec{Single Engine Taxi}{
 \item Prohibited:
@@ -289,26 +310,128 @@
 \item Min warmup\dotfill 2 mins
 }
 
+\mysec{Noise Abatement \ref{NTC-146, Jepp ATC}}{
+\item None \dotfill +1000/+1000
+\item NADP 1\dotfill +1000/+3000
+\item NADP 2/ NADP B\dotfill +1000/+1000; Vzf+5 to +3000
+\item NADP A\dotfill +1500/+3000
+\item France\dotfill None
+\item Germany\dotfill +1500/+1500
+\item Italy (most)\dotfill +1500/+3000
+\item Portugal\dotfill NADP B
+\item Spain\dotfill None
+\item Switzerland\dotfill None
+\item UK\dotfill None
+}  
 
-\section{Approaches}
-\subsection{Circling}
-\begin{list}{$\bullet$}{\setlength\parsep{0pt}\setlength\itemsep{0pt}}
-\item Landing runway in secondary flight plan
-\item Initial approach: Conf 3, gear down, F speed
-\item Push V/S at MDA
-\item Turn 45°
-\item 30 secs from wings level
-\item Descent point 3 secs per 100ft past abeam threshold
-\item Full flap when turning finals
-\end{list}
+\mysec{Flap 3 landing}{
+\item Min LDA \dotfill LDA$_{full}$*1.15
+\item No tailwind
+\item Autobrake LO, do not override
+}
 
-\subsection{Non-precision - Selected vertical}
-\begin{list}{$\bullet$}{\setlength\parsep{0pt}\setlength\itemsep{0pt}}
-\item Insert V$_{APP}$ as a speed constraint at FAF
-\item TRK/FPA when on final track
-\item Conf 3,gear down by D-1nm
-\item At D-0.2nm, select Conf full set and pull FPA
-\end{list}
+\mysec{Double engine failure}{
+\item Range\dotfill 2½nm per 1000ft
+\item Loss of height in hold\dotfill 8000ft
+\item Loss of height in orbit\dotfill 4000ft
+\item Target\dotfill OM at 2x normal height, flap 1, gear up
+}
+
+\mysec{Miscellaneous}{
+\item German corner \dotfill KRH R270/12D
+\item Runway lighting
+\iitem Red and white \dotfill 900m
+\iitem Red \dotfill 300m
+\item Alternate ranges
+\iitem Takeoff \dotfill 360nm
+\iitem Enroute \dotfill 380nm
+\item Approximate corrections for $\ge$-10°
+\iitem 1000ft \dotfill 80ft
+\iitem 2000ft \dotfill 160ft
+
+}
+
+\vfill
+\pagebreak
+
+\section{Procedures}
+\mysec{Procedure turn}{
+\item[$\bullet$] 75 seconds from start of 45° turn
+}
+
+\mysec{Holding}{
+\item Entries
+\iitem Turn anti-holdwise<110° to OT\dotfill Parallel
+\iitem Turn holdwise<70° to OT\dotfill Teardrop
+\item Standard\dotfill Right turns, parallel to airway
+\iitem $\le$14000\dotfill 1 minute
+\iitem >14000\dotfill 1½ minutes 
+\item Max holding speeds (Normal(Turbulent))
+\iitem <14000\dotfill 230kt(280kt)
+\iitem 14000 to 20000\dotfill 240kt(280kt/0.8M)
+\iitem 20000 to 34000\dotfill 265kt(280kt/0.8M)
+\iitem >34000\dotfill 0.83M
+}
+
+\mysec{Circling}{
+\item[$\bullet$] Landing runway in secondary flight plan
+\item[$\bullet$] Initial approach: Conf 3, gear down, F speed
+\item[$\bullet$] Push V/S at MDA
+\item[$\bullet$] Turn 45°
+\item[$\bullet$] 30 secs from wings level
+\item[$\bullet$] Descent point 3 secs per 100ft past abeam threshold
+\item[$\bullet$] Full flap when turning finals
+}
+
+\mysec{Non-precision - Selected vertical and lateral}{
+\item[$\bullet$] Insert V$_{APP}$ as a speed constraint at FAF
+\item[$\bullet$] TRK/FPA when on final track
+\item[$\bullet$] Conf 3,gear down by D-1nm
+\item[$\bullet$] At D-0.2nm, select Conf FULL, set and pull FPA
+}
+
+\mysec{Non-precision - Managed lateral}{
+\item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed
+\item[$\bullet$] Insert V$_{APP}$ as a speed constraint at FAF
+\item[$\bullet$] NAV/FPA when on final track
+\item[$\bullet$] Conf 3,gear down by D-1nm
+\item[$\bullet$] At D-0.2nm, select Conf full set and pull FPA
+}
+
+\mysec{Non-precision - Fully managed}{
+\item[$\bullet$] Min Temp 0°C
+\item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed
+\item[$\bullet$] Do not revise final approach segment
+\item[$\bullet$] Must be established laterally before descent
+\item[$\bullet$] Insert V$_{APP}$ as a speed constraint at FAF
+\item[$\bullet$] Arm Approach. Check FINAL blue, APP NAV
+\item[$\bullet$] Conf 3,gear down by D-1nm
+\item[$\bullet$] At D-0.2nm, check FINAL APP and monitor descent
+\item[$\bullet$] \ref{OEB 188/1} Disengage with APPR button to ensure SRS available
+}
+
+\mysec{LVO takeoff \ref{EOMB 2.4.4}}{
+\item Abs minima\dotfill 125/125/125, 6 lights
+\item Extra calls\dotfill ``Entering runway'', ``Rolling'', ``Airborne''
+}
+
+\mysec{LVO landing}{
+\item[$\bullet$] Check NOTAMS for airport facility downgrades
+\item[$\bullet$] Check minimas, approach ban and LVPs in force
+\item[$\bullet$] Check crew qualification and aircraft capability
+\item[$\bullet$] Check autoland wind and runway condition limits
+\item[$\bullet$] Review failure strategies
+\item[$\bullet$] Extra calls:
+\iitem 350ft, FMA:LAND \dotfill PF:``Land'', PNF:``Checked''
+\iitem 100ft (only with no DH) \dotfill PNF: ``100'', PF: ``Continue''
+\iitem 50ft, FMA:FLARE\dotfill PNF:``Flare''
+\iitem FMA:ROLLOUT\dotfill PNF:``Rollout''
+\iitem As appropriate\dotfill ``On ground'', ``Runway vacated''
+\item[$\bullet$] Select reverse at touchdown
+\item[$\bullet$] Disconnect autopilot at taxi speed
+}
+
+
 
 \vfill
 
