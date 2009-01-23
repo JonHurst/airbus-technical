@@ -757,7 +757,7 @@
           </imageobject>
         </mediaobject>
       </figure>
-      <para>When an IDG must be disengaged, the IDG button whould be pressed and held until the Gen FAULT light comes
+      <para>When an IDG must be disengaged, the IDG button should be pressed and held until the Gen FAULT light comes
       on, but should not be held for more than 3 seconds.</para>
 
       <para>In the event of a generator having out of limit load but continuing to power its AC bus, the amber
