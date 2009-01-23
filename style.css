@@ -1,8 +1,8 @@
 body {font-family:verdana;font-size:0.8em;background-color:white;margin:auto;padding-left:2em;padding-right:2em;max-width:60em;}
-td {font-family:verdana;font-size:0.8em;}
+td {font-family:verdana;}
 h1,h2,h3,h4 {color:darkblue;}
 div.sect4 {margin-left:3em;}
-table {margin:auto; padding 0 2em; border-collapse: collapse;}
+table {font-size:100%; margin:auto; padding 0 2em; border-collapse: collapse;}
 div.mediaobject {text-align:center;}
 div.variablelist {margin-left:2em;}
 td {padding: 1em;}
