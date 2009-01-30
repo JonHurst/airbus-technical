@@ -387,25 +387,31 @@
 }
 
 \mysec{Non-precision - Selected vertical and lateral}{
-\item[$\bullet$] Insert V$_{APP}$ as a speed constraint at FAF
+\item[$\bullet$] AT FAF, insert V$_{APP}$ if DP $<$10nm from runway,
+  otherwise S speed
 \item[$\bullet$] TRK/FPA when on final track
 \item[$\bullet$] Conf 3,gear down by D-1nm
 \item[$\bullet$] At D-0.2nm, select Conf FULL, set and pull FPA
 }
 
 \mysec{Non-precision - Managed lateral}{
+\item[$\bullet$] GPS PRIMARY required
 \item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed
-\item[$\bullet$] Insert V$_{APP}$ as a speed constraint at FAF
+\item[$\bullet$] AT FAF, insert V$_{APP}$ if DP $<$10nm from runway,
+  otherwise S speed
 \item[$\bullet$] NAV/FPA when on final track
 \item[$\bullet$] Conf 3,gear down by D-1nm
 \item[$\bullet$] At D-0.2nm, select Conf full set and pull FPA
 }
 
 \mysec{Non-precision - Fully managed}{
+\item[$\bullet$] GPS PRIMARY required
 \item[$\bullet$] Min Temp 0°C
 \item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed
 \item[$\bullet$] Do not revise final approach segment
 \item[$\bullet$] Must be established laterally before descent
+\item[$\bullet$] AT FAF, insert V$_{APP}$ if DP $<$10nm from runway,
+  otherwise S speed
 \item[$\bullet$] Insert V$_{APP}$ as a speed constraint at FAF
 \item[$\bullet$] Arm Approach. Check FINAL blue, APP NAV
 \item[$\bullet$] Conf 3,gear down by D-1nm
@@ -416,7 +422,9 @@
 
 \mysec{RNAV approach}{
 \item[$\bullet$] Individual approval required (check ABS)
-\item[$\bullet$] Two navigation systems required (2 FMGS + 2 GPS)
+\item[$\bullet$] Two navigation systems required - check RAIM
+  availability \& GPS PRIMARY in both \mbox{MCDUs} before commencing
+  approach
 \item[$\bullet$] Non GPS PRIMARY approach must be available at destination alternate
 \item[$\bullet$] Minimum OAT may apply (check approach plate)
 \item[$\bullet$] LNAV/VNAV minima is a DA not an MDA, so CDA not
@@ -426,11 +434,11 @@
 \item[$\bullet$] Must be established laterally and vertically before
   descent position
 \item[$\bullet$] For LNAV/VNAV, check MAP vertically correct
-\item[$\bullet$] Check RAIM availability \& GPS PRIMARY in both \mbox{MCDUs}
-  before commencing approach
+\item[$\bullet$] AT FAF, insert V$_{APP}$ if DP $<$10nm from runway,
+  otherwise S speed
 \item[$\bullet$] Go around for:
 \iitem FM/GPS POS DISAGREE
-\iitem GPS PRIMARY LOST on both FMGC 
+\iitem GPS PRIMARY LOST on both FMGCs 
 \iitem GPS PRIMARY LOST on ND
 \iitem $>$½ index fly up, $>$ 1 index fly down
 }
