@@ -46,6 +46,7 @@
 \item Max runway altitude \ref{3.1.20}\dotfill 9200ft
 \item Nominal runway width \ref{3.1.20}\dotfill 45m
 \item Min runway width \ref{2.4.60}\dotfill 30m (w/caveats)
+\item Fire fighting category\ref{EOMA-8.1.2.1.1} 6 (4 w/caveats)
 }
 
 \mysec{General speeds}{
@@ -343,8 +344,8 @@
 \item Runway lighting
 \iitem Red and white \dotfill 900m
 \iitem Red \dotfill 300m
-\item Alternate ranges
-\iitem Takeoff \dotfill 360nm
+\item Alternate ranges \ref{EOMB-5.1.1}
+\iitem Takeoff \dotfill 320nm
 \iitem Enroute \dotfill 380nm
 \item Approximate corrections for $\ge$-10°
 \iitem 1000ft \dotfill 80ft
@@ -352,6 +353,10 @@
 \item Power settings, Flap 1 S or Flap full $V_{app}$
 \iitem Two engine \dotfill GW-5
 \iitem Single engine \dotfill GW+10
+\item Flex corrections\ref{EOMB-2.3.10}
+\iitem Anti-ice on \dotfill subtract 5°C
+\iitem QNH reduction \dotfill suptract 1°C/2hPa
+\iitem Flex must remain >ISA+30 and >OAT
 }
 
 \vfill
@@ -450,7 +455,7 @@
 }
 
 \mysec{LVO landing}{
-\item[$\bullet$] Check NOTAMS for airport facility downgrades
+\item[$\bullet$] Check NOTAMS for airport facility downgrades (see EOMA-8.1.3.5.5)
 \item[$\bullet$] Check minimas, approach ban and LVPs in force
 \item[$\bullet$] Check crew qualification and aircraft capability
 \item[$\bullet$] Check autoland wind and runway condition limits
@@ -458,9 +463,11 @@
 \item[$\bullet$] Extra calls:
 \iitem 350ft, FMA:LAND \dotfill PF:``Land'', PNF:``Checked''
 \iitem 100ft (only with no DH) \dotfill PNF: ``100'', PF: ``Continue''
-\iitem 50ft, FMA:FLARE\dotfill PNF:``Flare''
+\iitem 40ft, FMA:FLARE\dotfill PNF:``Flare''
+\iitem 10ft \dotfill Auto callout: ``Retard''
 \iitem FMA:ROLLOUT\dotfill PNF:``Rollout''
 \iitem As appropriate\dotfill ``On ground'', ``Runway vacated''
+\item[$\bullet$] If FLARE not annunciated by 30ft, go around
 \item[$\bullet$] Select reverse at touchdown
 \item[$\bullet$] Disconnect autopilot at taxi speed
 }
