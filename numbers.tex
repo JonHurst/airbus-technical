@@ -363,68 +363,6 @@
 \pagebreak
 
 \section{Procedures}
-\mysec{Procedure turn}{
-\item[$\bullet$] 75 seconds from start of 45° turn
-}
-
-\mysec{Holding}{
-\item Entries
-\iitem Turn anti-holdwise<110° to OT\dotfill Parallel
-\iitem Turn holdwise<70° to OT\dotfill Teardrop
-\item Standard\dotfill Right turns, parallel to airway
-\iitem $\le$14000\dotfill 1 minute
-\iitem >14000\dotfill 1½ minutes 
-\item Max holding speeds (Normal(Turbulent))
-\iitem <14000\dotfill 230kt(280kt)
-\iitem 14000 to 20000\dotfill 240kt(280kt/0.8M)
-\iitem 20000 to 34000\dotfill 265kt(280kt/0.8M)
-\iitem >34000\dotfill 0.83M
-}
-
-\mysec{Circling}{
-\item[$\bullet$] Landing runway in secondary flight plan
-\item[$\bullet$] Initial approach: Conf 3, gear down, F speed
-\item[$\bullet$] Push V/S at least 100ft above circling minima
-\item[$\bullet$] Turn 45°
-\item[$\bullet$] 30 secs from wings level turn downwind
-\item[$\bullet$] Activate secondary when downwind
-\item[$\bullet$] Descent point 3 secs per 100ft past abeam threshold
-\item[$\bullet$] Full flap when turning finals
-}
-
-\mysec{Non-precision - Selected vertical and lateral}{
-\item[$\bullet$] AT FAF, insert V$_{APP}$ if DP $<$10nm from runway,
-  otherwise S speed
-\item[$\bullet$] TRK/FPA when on final track
-\item[$\bullet$] Conf 3,gear down by D-1nm
-\item[$\bullet$] At D-0.2nm, select Conf FULL, set and pull FPA
-}
-
-\mysec{Non-precision - Managed lateral}{
-\item[$\bullet$] GPS PRIMARY required
-\item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed
-\item[$\bullet$] AT FAF, insert V$_{APP}$ if DP $<$10nm from runway,
-  otherwise S speed
-\item[$\bullet$] NAV/FPA when on final track
-\item[$\bullet$] Conf 3,gear down by D-1nm
-\item[$\bullet$] At D-0.2nm, select Conf full set and pull FPA
-}
-
-\mysec{Non-precision - Fully managed}{
-\item[$\bullet$] GPS PRIMARY required
-\item[$\bullet$] Min Temp 0°C
-\item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed
-\item[$\bullet$] Do not revise final approach segment
-\item[$\bullet$] Must be established laterally before descent
-\item[$\bullet$] AT FAF, insert V$_{APP}$ if DP $<$10nm from runway,
-  otherwise S speed
-\item[$\bullet$] Insert V$_{APP}$ as a speed constraint at FAF
-\item[$\bullet$] Arm Approach. Check FINAL blue, APP NAV
-\item[$\bullet$] Conf 3,gear down by D-1nm
-\item[$\bullet$] At D-0.2nm, check FINAL APP and monitor descent
-\item[$\bullet$] \ref{OEB 188/1} Disengage with APPR button to ensure SRS available
-}
-
 
 \mysec{RNAV approach}{
 \item[$\bullet$] Individual approval required (check ABS)
@@ -448,6 +386,72 @@
 \iitem GPS PRIMARY LOST on ND
 \iitem $>$½ index fly up, $>$ 1 index fly down
 }
+
+\mysec{Non-precision - Fully managed}{
+\item[$\bullet$] GPS PRIMARY required
+\item[$\bullet$] Min Temp 0°C
+\item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed
+\item[$\bullet$] Do not revise final approach segment
+\item[$\bullet$] Must be established laterally before descent
+\item[$\bullet$] AT FAF, insert V$_{APP}$ if DP $<$10nm from runway,
+  otherwise S speed
+\item[$\bullet$] Insert V$_{APP}$ as a speed constraint at FAF
+\item[$\bullet$] Arm Approach. Check FINAL blue, APP NAV
+\item[$\bullet$] Conf 3,gear down by D-1nm
+\item[$\bullet$] At D-0.2nm, check FINAL APP and monitor descent
+\item[$\bullet$] \ref{OEB 188/1} Disengage with APPR button to ensure SRS available
+}
+
+\mysec{Non-precision - Managed lateral}{
+\item[$\bullet$] GPS PRIMARY required
+\item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed
+\item[$\bullet$] AT FAF, insert V$_{APP}$ if DP $<$10nm from runway,
+  otherwise S speed
+\item[$\bullet$] NAV/FPA when on final track
+\item[$\bullet$] Conf 3,gear down by D-1nm
+\item[$\bullet$] At D-0.2nm, select Conf full set and pull FPA
+}
+
+\mysec{Non-precision - Selected vertical and lateral}{
+\item[$\bullet$] AT FAF, insert V$_{APP}$ if DP $<$10nm from runway,
+  otherwise S speed
+\item[$\bullet$] TRK/FPA when on final track
+\item[$\bullet$] Conf 3,gear down by D-1nm
+\item[$\bullet$] At D-0.2nm, select Conf FULL, set and pull FPA
+}
+
+\mysec{Circling}{
+\item[$\bullet$] Landing runway in secondary flight plan
+\item[$\bullet$] Initial approach: Conf 3, gear down, F speed
+\item[$\bullet$] Push V/S at least 100ft above circling minima
+\item[$\bullet$] Turn 45°
+\item[$\bullet$] 30 secs from wings level turn downwind
+\item[$\bullet$] Activate secondary when downwind
+\item[$\bullet$] Descent point 3 secs per 100ft past abeam threshold
+\item[$\bullet$] Full flap when turning finals
+}
+
+\vfill
+
+\mysec{Procedure turn}{
+\item[$\bullet$] 75 seconds from start of 45° turn
+}
+
+\mysec{Holding}{
+\item Entries
+\iitem Turn anti-holdwise<110° to OT\dotfill Parallel
+\iitem Turn holdwise<70° to OT\dotfill Teardrop
+\item Standard\dotfill Right turns, parallel to airway
+\iitem $\le$14000\dotfill 1 minute
+\iitem >14000\dotfill 1½ minutes 
+\item Max holding speeds (Normal(Turbulent))
+\iitem <14000\dotfill 230kt(280kt)
+\iitem 14000 to 20000\dotfill 240kt(280kt/0.8M)
+\iitem 20000 to 34000\dotfill 265kt(280kt/0.8M)
+\iitem >34000\dotfill 0.83M
+}
+
+\vfill
 
 \mysec{LVO takeoff \ref{EOMB 2.4.4}}{
 \item Abs minima\dotfill 125/125/125, 6 lights
