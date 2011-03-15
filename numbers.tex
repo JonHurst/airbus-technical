@@ -1,9 +1,10 @@
-\documentclass{article}
+\documentclass[twoside]{article}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{txfonts}
-\usepackage[paper=a4paper,twocolumn=true,lmargin=1cm,tmargin=1cm]{geometry}
+\usepackage[paper=a5paper,lmargin=1cm,tmargin=1cm]{geometry}
 \usepackage{setspace}
+\usepackage{graphics}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0em}
@@ -27,27 +28,91 @@
 
 \begin{document}
 
-\mysec{Weights}{
-\item Max TOW \ref{3.1.20}\dotfill 68000kg
-\item Max taxi weight \ref{3.1.20}\dotfill 68400kg
-\item Max landing weight \ref{3.1.20}\dotfill 61000kg
-\item Max ZFW \ref{3.1.20}\dotfill 57000kg
-\item Min Weight \ref{3.1.20}\dotfill 35400kg
+\vbox{
+\subsection{Weights}
+\begin{center}
+\begin{tabular}{|l|c|c|}\hline
+  Weight & A319 & A320 \\ \hline
+  Max Takeoff \ref{3.1.20} & 68000kg & 77000kg \\
+  Max Taxi \ref{3.1.20} & 68400kg & 77400kg \\
+  Max Landing \ref{3.1.20} & 61000kg & 66000kg \\
+  Max Zero Fuel \ref{3.1.20} & 57000kg & 62500kg \\
+  Minimum \ref{3.1.20} & 35400kg & 37320kg \\ \hline
+\end{tabular}
+\end{center}}
+
+\vfil\vbox{
+\subsection{Dimensions}
+\begin{center}
+\begin{tabular}{|l|c|c|}\hline
+  & A319 & A320 \\\hline
+  Wingspan \ref{1.20.20} & \multicolumn{2}{c|}{34.1m} \\\cline{2-3}
+  Length \ref{1.20.20} & 33.84m & 37.57m\\
+  Min pavement for 180° turn \ref{1.20.20} & 20.64m & 22.9m\\\cline{2-3}
+  Widest sweep \ref{1.20.20} & \multicolumn{2}{c|}{Wing tip} \\\hline
+\end{tabular}
+\end{center}}
+
+
+\vfil\vbox{
+\subsection{Crosswind}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+  Braking & Friction & Equivalent Condition & \multicolumn{2}{c|}{Max component (kt)} \\\cline{4-5}
+  & & & Take-off & Landing \\\hline
+  Good & $\geq$0.4 & Dry, Damp, Wet & 29 gusting 38 & 33 gusting 38 \\\cline{4-5}
+  Medium-good & 0.36 - 0.39 & Dry, Damp, Wet & \multicolumn{2}{c|}{29 gusting 38}\\
+  Medium & 0.30 - 0.35 & Slush, Dry Snow & \multicolumn{2}{c|}{25 including gust}\\
+  Medium-poor & 0.26 - 0.29 & Slush, Dry Snow & \multicolumn{2}{c|}{20 including gust}\\
+  Poor & $\leq$0.25 & Stdg water, Wet snow & \multicolumn{2}{c|}{15 including gust}\\
+  Nil & N/A & Icy, Hydroplaning & \multicolumn{2}{c|}{5 including gust}\\\hline
+\end{tabular}
+\end{center}}
+
+\mysec{Other wind}{
+\item FO max crosswind \ref{EOMB-2.1}\dotfill 15kt
+\item SFO max crosswind \ref{EOMB-2.1}\dotfill 25kt
+\item Max tailwind \ref{3.1.20}\dotfill 10kt
+\item Autoland
+\iitem Max headwind \ref{3.1.22}\dotfill 30kt
+\iitem Max crosswind \ref{3.1.22}\dotfill 20kt
+\item Passenger door operation \ref{3.1.20}\dotfill 65kt
+\item Cargo door operation \ref{3.1.20}\dotfill 40kt (50kt w/caveats)
+\item Cargo door closed before \ref{3.1.20}\dotfill 65kt
 }
 
-\mysec{Dimensions}{
-\item Wingspan \ref{1.20.20}\dotfill 34.1m
-\item Length \ref{1.20.20}\dotfill 33.84m
-\item Min pavement for 180° turn \ref{1.20.20}\dotfill 20.64m
+\mysec{Other First Officer limits}{
+\item Takeoff minimum \ref{EOMB-2.1}\dotfill 400m RVR
+\item ILS/VOR/ADF/SRA minima \ref{EOMB-2.1}\dotfill As published
+\item Circling minima \ref{EOMB-2.1}\dotfill 5000m
+\item Min runway width \ref{EOMB-2.1}\dotfill 45m
+\item No contamination, windshear or autoland \ref{EOMB-2.1}
 }
 
-\mysec{Airport}{
-\item Max slope \ref{3.1.20}\dotfill $\pm$2\%
-\item Max runway altitude \ref{3.1.20}\dotfill 9200ft
-\item Nominal runway width \ref{3.1.20}\dotfill 45m
-\item Min runway width \ref{2.4.60}\dotfill 30m (w/caveats)
-\item Fire fighting category\ref{EOMA-8.1.2.1.1}\dotfill 6 (4 w/caveats)
-}
+\subsection{Wake Turbulence}
+\subsubsection{Final Approach \ref{EOMA 8.3.9}}
+\begin{center}
+  \begin{tabular}{|c|c|}\hline
+    Type & Separation\\\hline
+    A380 & 7nm\\
+    Heavy & 5nm\\
+    Upper Medium (e.g. 757,707) & 4nm (UK only)\\\hline
+  \end{tabular}
+\end{center}
+
+\textbf{Note}: Boeing 757 and Boeing 737-800/900 are classified as heavy for the purposes of final
+approach in some countries.
+
+\subsubsection{Departure \ref{EOM-A 8.39}}
+\begin{center}
+  \begin{tabular}{|c|c|}\hline
+    Type & Separation\\\hline
+    A380 & 3 mins\\
+    Heavy & 2 mins\\\hline
+  \end{tabular}
+\end{center}
+
+\textbf{Note}: Add \textbf{1 minute} if departure is not from the same position
 
 \mysec{General speeds}{
 \item V$_{MO}$ \ref{3.1.20}\dotfill 350kt
@@ -63,13 +128,13 @@
   \iitem $\ge$FL320\dotfill M0.76
 }
 
-\mysec{Wind}{
-\item Max xwind, takeoff \ref{3.1.20}\dotfill 29G38kt
-\item Max xwind, landing \ref{3.1.20}\dotfill 33G38kt
-\item Max tailwind \ref{3.1.20}\dotfill 10kt
-\item Passenger door operation \ref{3.1.20}\dotfill 65kt
-\item Cargo door operation \ref{3.1.20}\dotfill 40kt (50kt w/caveats)
-\item Cargo door closed before \ref{3.1.20}\dotfill 65kt
+
+\mysec{Airport}{
+\item Max slope \ref{3.1.20}\dotfill $\pm$2\%
+\item Max runway altitude \ref{3.1.20}\dotfill 9200ft
+\item Nominal runway width \ref{3.1.20}\dotfill 45m
+\item Min runway width \ref{2.4.60}\dotfill 30m (w/caveats)
+\item Fire fighting category\ref{EOMA-8.1.2.1}\dotfill 6 (less w/caveats)
 }
 
 \mysec{Navigation}{
@@ -78,20 +143,6 @@
 \iitem ADR vs Airfield elevation\dotfill $\pm$25ft
 \iitem ADR vs ADR\dotfill $\pm$20ft
 \iitem ISIS vs ADR\dotfill $\pm$100ft
-}
-
-\mysec{Loading}{
-\item Max LMC \ref{EOMB.7.4}
-\iitem Total \dotfill $±$500kg
-\iitem Passengers\dotfill $±$5
-\iitem Fuel\dotfill $±$500kg
-\iitem CP4\dotfill $±$500kg
-\iitem CP5 or CP1\dotfill $±$100kg
-\item LMC Adjustments \ref{EOMB.7.4}
-\iitem Negative \dotfill ZFW only
-\iitem <250kg increase \dotfill ZFW; subtract 1 from FLEX
-\item\hfill (FLEX must still be >ISA+30 and OAT)
-\iitem >250kg \dotfill Use LPC
 }
 
 \mysec{Engine}{
@@ -188,7 +239,7 @@
 \iitem Center tank \dotfill 6476kg
 \iitem Total \dotfill 18728kg
 \item Temperature (Jet A1) \ref{3.1.28}\dotfill >-43°C;<54°C
-\item Imbalance \ref{3.1.28} 
+\item Imbalance \ref{3.1.28}
 \iitem Fuel in fuller inner tank $<$ 2250 \dotfill No Limitation
 \iitem Max inner tank imbalance \dotfill 1500kg (more w/ caveats)
 \iitem Max outer tank imbalance \dotfill 530kg (w/ caveats)
@@ -240,37 +291,6 @@
 \item Alert height \ref{3.1.22}\dotfill 100ft
 }
 
-\mysec{First Officer Limits}{
-\item Max crosswind (FO) \ref{EOMB-2.1}\dotfill 15kt
-\item Max crosswind (SFO) \ref{EOMB-2.1}\dotfill 25kt
-\item Takeoff minimum \ref{EOMB-2.1}\dotfill 400m RVR
-\item ILS/VOR/ADF/SRA minima \ref{EOMB-2.1}\dotfill As published
-\item Circling minima \ref{EOMB-2.1}\dotfill 5000m
-\item Min runway width \ref{EOMB-2.1}\dotfill 45m
-\item No contamination, windshear or autoland \ref{EOMB-2.1}
-}
-
-\mysec{Wake Turbulence}{
-\item Final Approach\ref{EOMA 8.3.9}
-\iitem Small/medium\dotfill 3nm
-\iitem B757\dotfill 4nm
-\iitem Heavy\dotfill 5nm
-\iitem A380\dotfill 7nm
-\item Departure, same pos \ref{EOMA 8.3.9}
-\iitem Heavy\dotfill 2 mins
-\iitem A380\dotfill 3 mins
-\item Departure, intermediate pos \ref{EOMA 8.3.9}
-\iitem Heavy\dotfill 3 mins
-\iitem A380\dotfill 4 mins
-\item Displaced landing threshold \ref{EOMA 8.3.9}
-\iitem Heavy\dotfill 2 mins
-\iitem A380\dotfill 3 mins
-\item Crossing/ diverging/ parallel runways, flight paths cross\\
-  \ref{EOMA 8.3.9}
-\iitem Medium/small \dotfill 2mins/3nm
-\iitem Heavy\dotfill 3mins/5nm
-\iitem A380\dotfill 5mins/8nm
-}
 
 
 \mysec{Single Engine operations}{
@@ -306,6 +326,20 @@
 \item Loss of height in hold\dotfill 8000ft
 \item Loss of height in orbit\dotfill 4000ft
 \item Target\dotfill OM at 2x normal height, flap 1, gear up
+}
+
+\mysec{Loading}{
+\item Max LMC \ref{EOMB.7.4}
+\iitem Total \dotfill $±$500kg
+\iitem Passengers\dotfill $±$5
+\iitem Fuel\dotfill $±$500kg
+\iitem CP4\dotfill $±$500kg
+\iitem CP5 or CP1\dotfill $±$100kg
+\item LMC Adjustments \ref{EOMB.7.4}
+\iitem Negative \dotfill ZFW only
+\iitem <250kg increase \dotfill ZFW; subtract 1 from FLEX
+\item\hfill (FLEX must still be >ISA+30 and OAT)
+\iitem >250kg \dotfill Use LPC
 }
 
 \mysec{Miscellaneous}{
@@ -344,11 +378,11 @@
 \item Slow decompression:
   \pitem{``Cabin crew, return to stations. We are commencing a
   descent - return to your seats and fasten your belts''}
-\item Rapid decompression: 
+\item Rapid decompression:
   \pitem{``Ladies and gentlemen, this is the Captain speaking. We have
   lost cabin pressure and are descending to a lower altitude. Put your
   oxygen masks on and obey the instructions of the cabin crew.''}
-\item Planned emergency landing: 
+\item Planned emergency landing:
   \iitem 2000ft\dotfill ``Cabin crew, take up landing positions''
   \iitem 500ft\dotfill ``Brace, Brace''
 \item Severe turbulence:
@@ -380,11 +414,13 @@
 \item[$\bullet$] For LNAV/VNAV, check MAP vertically correct
 \item[$\bullet$] AT FAF, insert V$_{APP}$ if DP $<$10nm from runway,
   otherwise S speed
+\item[$\bullet$] If GPS PRIMARY LOST on one FMGC use autopilot associated with good FMGC
 \item[$\bullet$] Go around for:
 \iitem FM/GPS POS DISAGREE
-\iitem GPS PRIMARY LOST on both FMGCs 
+\iitem GPS PRIMARY LOST on both FMGCs
 \iitem GPS PRIMARY LOST on ND
-\iitem $>$½ index fly up, $>$ 1 index fly down
+\iitem $>$¾ index fly up or down
+\iitem HIGH ACCURACY LOST
 }
 
 \mysec{Non-precision - Fully managed}{
@@ -393,10 +429,7 @@
 \item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed
 \item[$\bullet$] Do not revise final approach segment
 \item[$\bullet$] Must be established laterally before descent
-\item[$\bullet$] AT FAF, insert V$_{APP}$ if DP $<$10nm from runway,
-  otherwise S speed
 \item[$\bullet$] Arm Approach. Check FINAL blue, APP NAV
-\item[$\bullet$] Conf 3,gear down by D-1nm
 \item[$\bullet$] At D-0.2nm, check FINAL APP and monitor descent
 \item[$\bullet$] \ref{OEB 188/1} Disengage with APPR button to ensure SRS available
 }
@@ -430,8 +463,6 @@
 \item[$\bullet$] Full flap when turning finals
 }
 
-\vfill
-
 \mysec{Procedure turn}{
 \item[$\bullet$] 75 seconds from start of 45° turn \ref{Jepp AER-91}
 }
@@ -442,7 +473,7 @@
 \iitem Turn holdwise<70° to OT\dotfill Teardrop
 \item Standard\dotfill Right turns, parallel to airway
 \iitem $\le$14000\dotfill 1 minute
-\iitem >14000\dotfill 1½ minutes 
+\iitem >14000\dotfill 1½ minutes
 \item Max holding speeds (Normal(Turbulent))
 \iitem <14000\dotfill 230kt(280kt)
 \iitem 14000 to 20000\dotfill 240kt(280kt/0.8M)
@@ -475,8 +506,8 @@
 \item[$\bullet$] Disconnect autopilot at taxi speed
 }
 
+\pagebreak
 
-
-\vfill
+\vspace*{\fill}{}\resizebox{\textwidth}{!}{\rotatebox{90}{\includegraphics{images/catIII-failures.png}}}\vspace*{\fill}
 
 \end{document}
