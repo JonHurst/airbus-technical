@@ -2,7 +2,7 @@
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{txfonts}
-\usepackage[paper=a5paper,lmargin=1cm,tmargin=1cm]{geometry}
+\usepackage[paper=a5paper,lmargin=0.75cm,tmargin=0.5cm]{geometry}
 \usepackage{setspace}
 \usepackage{graphics}
 \pagestyle{empty}
@@ -28,7 +28,88 @@
 
 \begin{document}
 
-\vbox{
+\vfil\vbox{
+\subsection{Wake Turbulence}
+\subsubsection{Final Approach \ref{EOMA 8.3.9}}
+\begin{center}
+  \begin{tabular}{|c|c|}\hline
+    Type & Separation\\\hline
+    A380 & 7nm\\
+    Heavy & 5nm\\
+    Upper Medium (e.g. 757,707) & 4nm (UK only)\\\hline
+  \end{tabular}
+\end{center}
+
+\textbf{Note}: Boeing 757 and Boeing 737-800/900 are classified as heavy for the purposes of final
+approach in some countries.
+
+\subsubsection{Departure \ref{EOM-A 8.39}}
+\begin{center}
+  \begin{tabular}{|c|c|}\hline
+    Type & Separation\\\hline
+    A380 & 3 mins\\
+    Heavy & 2 mins\\\hline
+  \end{tabular}
+\end{center}
+
+\textbf{Note}: Add \textbf{1 minute} if departure is not from the same position
+}
+
+\vfil\vbox{
+\subsection{Crosswind}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+  Braking & Friction & Equivalent Condition & \multicolumn{2}{c|}{Max component (kt)} \\\cline{4-5}
+  & & & Take-off & Landing \\\hline
+  Good & $\geq$0.4 & Dry, Damp, Wet & 29 gusting 38 & 33 gusting 38 \\\cline{4-5}
+  Medium-good & 0.36 - 0.39 & Dry, Damp, Wet & \multicolumn{2}{c|}{29 gusting 38}\\
+  Medium & 0.30 - 0.35 & Slush, Dry Snow & \multicolumn{2}{c|}{25 including gust}\\
+  Medium-poor & 0.26 - 0.29 & Slush, Dry Snow & \multicolumn{2}{c|}{20 including gust}\\
+  Poor & $\leq$0.25 & Stdg water, Wet snow & \multicolumn{2}{c|}{15 including gust}\\
+  Nil & N/A & Icy, Hydroplaning & \multicolumn{2}{c|}{5 including gust}\\\hline
+  \multicolumn{3}{|l|}{Slippery when wet} & \multicolumn{2}{c|}{20kt}\\
+  \multicolumn{3}{|l|}{Slippery when wet, portions with BA poor/unreported} & \multicolumn{2}{c|}{15kt}\\\hline
+\end{tabular}
+\end{center}}
+
+\mysec{Other wind limits}{
+\item 3* FO \ref{EOMB-2.1}\dotfill no planned tailwind
+\item FO max crosswind \ref{EOMB-2.1}\dotfill 15kt
+\item SFO max crosswind \ref{EOMB-2.1}\dotfill 25kt
+\item Max tailwind \ref{3.1.20}\dotfill 10kt
+\item Autoland
+\iitem Max headwind \ref{3.1.22}\dotfill 30kt
+\iitem Max crosswind \ref{3.1.22}\dotfill 20kt
+\item Passenger door operation \ref{3.1.20}\dotfill 65kt
+\item Cargo door operation \ref{3.1.20}\dotfill 40kt (50kt w/caveats)
+\item Cargo door closed before \ref{3.1.20}\dotfill 65kt
+}
+
+\mysec{First Officer limits}{
+\item Wind \dotfill see ``other wind limits''
+\item Takeoff minimum \ref{EOMB-2.1}\dotfill 400m RVR
+\item ILS/VOR/ADF/SRA minima \ref{EOMB-2.1}\dotfill As published
+\item Circling minima \ref{EOMB-2.1}\dotfill 5000m
+\item Min runway width, no specific training \ref{EOMB-2.1}\dotfill 45m
+\item 3* FO \ref{EOMB-2,1}\dotfill no flap 3 landing
+\item No contamination, windshear or autoland \ref{EOMB-2.1}
+}
+
+\mysec{General speeds}{
+\item V$_{MO}$ \ref{3.1.20}\dotfill 350kt
+\item M$_{MO}$ \ref{3.1.20}\dotfill 0.82M
+\item Max Tire speed \ref{3.1.20}\dotfill 195kt
+\item Max speed for wipers \ref{3.1.20}\dotfill 230kt
+\item Max speed cockpit window open \ref{3.1.20}\dotfill 200kt
+\item V$_{MCA}$ \ref{3.1.20}\dotfill 108kt$-\sim$1kt/1000ft
+\item V$_{MCG}$ \ref{3.1.20}\dotfill 104.5kt@0ft,102.5kt@2000ft
+\item Turbulence speeds \ref{3.4.91}
+  \iitem $<$FL200\dotfill 250kt
+  \iitem $\ge$FL200\dotfill 275kt
+  \iitem $\ge$FL320\dotfill M0.76
+}
+
+\vfil\vbox{
 \subsection{Weights}
 \begin{center}
 \begin{tabular}{|l|c|c|}\hline
@@ -54,96 +135,6 @@
 \end{center}}
 
 
-\vfil\vbox{
-\subsection{Crosswind}
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|}\hline
-  Braking & Friction & Equivalent Condition & \multicolumn{2}{c|}{Max component (kt)} \\\cline{4-5}
-  & & & Take-off & Landing \\\hline
-  Good & $\geq$0.4 & Dry, Damp, Wet & 29 gusting 38 & 33 gusting 38 \\\cline{4-5}
-  Medium-good & 0.36 - 0.39 & Dry, Damp, Wet & \multicolumn{2}{c|}{29 gusting 38}\\
-  Medium & 0.30 - 0.35 & Slush, Dry Snow & \multicolumn{2}{c|}{25 including gust}\\
-  Medium-poor & 0.26 - 0.29 & Slush, Dry Snow & \multicolumn{2}{c|}{20 including gust}\\
-  Poor & $\leq$0.25 & Stdg water, Wet snow & \multicolumn{2}{c|}{15 including gust}\\
-  Nil & N/A & Icy, Hydroplaning & \multicolumn{2}{c|}{5 including gust}\\\hline
-\end{tabular}
-\end{center}}
-
-\mysec{Other wind}{
-\item FO max crosswind \ref{EOMB-2.1}\dotfill 15kt
-\item SFO max crosswind \ref{EOMB-2.1}\dotfill 25kt
-\item Max tailwind \ref{3.1.20}\dotfill 10kt
-\item Autoland
-\iitem Max headwind \ref{3.1.22}\dotfill 30kt
-\iitem Max crosswind \ref{3.1.22}\dotfill 20kt
-\item Passenger door operation \ref{3.1.20}\dotfill 65kt
-\item Cargo door operation \ref{3.1.20}\dotfill 40kt (50kt w/caveats)
-\item Cargo door closed before \ref{3.1.20}\dotfill 65kt
-}
-
-\mysec{Other First Officer limits}{
-\item Takeoff minimum \ref{EOMB-2.1}\dotfill 400m RVR
-\item ILS/VOR/ADF/SRA minima \ref{EOMB-2.1}\dotfill As published
-\item Circling minima \ref{EOMB-2.1}\dotfill 5000m
-\item Min runway width \ref{EOMB-2.1}\dotfill 45m
-\item No contamination, windshear or autoland \ref{EOMB-2.1}
-}
-
-\subsection{Wake Turbulence}
-\subsubsection{Final Approach \ref{EOMA 8.3.9}}
-\begin{center}
-  \begin{tabular}{|c|c|}\hline
-    Type & Separation\\\hline
-    A380 & 7nm\\
-    Heavy & 5nm\\
-    Upper Medium (e.g. 757,707) & 4nm (UK only)\\\hline
-  \end{tabular}
-\end{center}
-
-\textbf{Note}: Boeing 757 and Boeing 737-800/900 are classified as heavy for the purposes of final
-approach in some countries.
-
-\subsubsection{Departure \ref{EOM-A 8.39}}
-\begin{center}
-  \begin{tabular}{|c|c|}\hline
-    Type & Separation\\\hline
-    A380 & 3 mins\\
-    Heavy & 2 mins\\\hline
-  \end{tabular}
-\end{center}
-
-\textbf{Note}: Add \textbf{1 minute} if departure is not from the same position
-
-\mysec{General speeds}{
-\item V$_{MO}$ \ref{3.1.20}\dotfill 350kt
-\item M$_{MO}$ \ref{3.1.20}\dotfill 0.82M
-\item Max Tire speed \ref{3.1.20}\dotfill 195kt
-\item Max speed for wipers \ref{3.1.20}\dotfill 230kt
-\item Max speed cockpit window open \ref{3.1.20}\dotfill 200kt
-\item V$_{MCA}$ \ref{3.1.20}\dotfill 108kt$-\sim$1kt/1000ft
-\item V$_{MCG}$ \ref{3.1.20}\dotfill 104.5kt@0ft,102.5kt@2000ft
-\item Turbulence speeds \ref{3.4.91}
-  \iitem $<$FL200\dotfill 250kt
-  \iitem $\ge$FL200\dotfill 275kt
-  \iitem $\ge$FL320\dotfill M0.76
-}
-
-
-\mysec{Airport}{
-\item Max slope \ref{3.1.20}\dotfill $\pm$2\%
-\item Max runway altitude \ref{3.1.20}\dotfill 9200ft
-\item Nominal runway width \ref{3.1.20}\dotfill 45m
-\item Min runway width \ref{2.4.60}\dotfill 30m (w/caveats)
-\item Fire fighting category\ref{EOMA-8.1.2.1}\dotfill 6 (less w/caveats)
-}
-
-\mysec{Navigation}{
-\item Max latitudes \ref{3.1.34}\dotfill 73°N,60°S
-\item Altimeter tolerances \ref{3.4.34}
-\iitem ADR vs Airfield elevation\dotfill $\pm$25ft
-\iitem ADR vs ADR\dotfill $\pm$20ft
-\iitem ISIS vs ADR\dotfill $\pm$100ft
-}
 
 \mysec{Engine}{
 \item TOGA time \ref{3.1.70}\dotfill 5 mins (10 mins single engine)
@@ -230,8 +221,6 @@ approach in some countries.
 \item \hfill(higher with time limits)
 }
 
-
-
 \mysec{Fuel}{
 \item Capacity \ref{1.28.10}
 \iitem Outer tanks \dotfill 691kg
@@ -265,59 +254,47 @@ approach in some countries.
 \item Accreted ice, wing anti-ice inop \dotfill see FCOM 3.4.30.2000
 }
 
+\mysec{Navigation}{
+\item Max latitudes \ref{3.1.34}\dotfill 73°N,60°S
+\item Altimeter tolerances \ref{3.4.34}
+\iitem ADR vs Airfield elevation\dotfill $\pm$25ft
+\iitem ADR vs ADR\dotfill $\pm$20ft
+\iitem ISIS vs ADR\dotfill $\pm$100ft
+}
+
 \mysec{Autopilot}{
+\item Engagement after TO \ref{3.1.22}\dotfill $>$100ft,$>$5 secs
+
 \item Minimum disengagement
 \iitem Cat II \ref{TR 87.1}\dotfill 80ft
 \iitem Cat I \ref{3.1.22}\dotfill 160ft agl
 \iitem NPA \ref{3.1.22}\dotfill MDA
 \iitem Circling \ref{3.1.22}\dotfill MDA$-$100ft
-
-\item Absolute minimas
-\iitem Cat I \dotfill 200ft/550m
-\iitem Cat II \dotfill 100ft/300m
-\iitem Cat IIIA \dotfill 50ft/200m
-\iitem Cat IIIB \dotfill 0ft/75m
+\item Alert height \ref{3.1.22}\dotfill 100ft
 
 \item Autoland limitations
-\iitem Max headwind \ref{3.1.22}\dotfill 30kt
-\iitem Max crosswind \ref{3.1.22}\dotfill 20kt
+\iitem Wind\dotfill see ``Other Wind limits''
 \iitem Configurations \ref{3.1.22}\dotfill CONF 3, CONF Full
-\iitem Rwy conditions \ref{3.1.22}\dotfill Dry,Wet
+\iitem Rwy conditions for rollout\ref{3.1.22}\dotfill Dry,Wet
 \iitem Glideslope\dotfill 2.5° to 3.15°
 \iitem Max weight (emergency only)\dotfill 69000kg
-
-\item CDA \ref{EOMB 2.3.19.1}\dotfill MDA+50ft
-\item Engagement after TO \ref{3.1.22}\dotfill $>$100ft,$>$5 secs
-\item Alert height \ref{3.1.22}\dotfill 100ft
 }
 
+\mysec{Airport}{
+\item Max slope \ref{3.1.20}\dotfill $\pm$2\%
+\item Max runway altitude \ref{3.1.20}\dotfill 9200ft
+\item Nominal runway width \ref{3.1.20}\dotfill 45m
+\item Min runway width \ref{2.4.60}\dotfill 30m (w/caveats)
+\item Fire fighting category\ref{EOMA-8.1.2.1}\dotfill 6 (less w/caveats)
+}
 
 
 \mysec{Single Engine operations}{
 \item Landing capability\ref{3.1.22}\dotfill Cat III single
-\item Available NPA AP modes\ref{3.1.22}\dotfill HDG/VS;HDG/FPA
+\item Available NPA AP modes\ref{3.1.22}\dotfill LOC/VS;LOC/FPA;HDG/VS;HDG/FPA
 \item\hfill(All modes permitted FD only)
 \item Do not extend full flaps until established on final descent.
 \item Use Conf 3 if a level off is required.
-}
-
-\mysec{Flap 3 landing}{
-\item Min LDA \dotfill LDA$_{full}$*1.15
-\item Autobrake LO, do not override
-}
-
-\mysec{Single Engine Taxi}{
-\item Prohibited:
-\iitem Icing conditions
-\iitem Slippery taxiways
-\iitem LVO
-\iitem Inexperienced crew (first LPC/OPC not completed)
-\iitem APU inop
-\iitem Hydraulic, electric, steering or braking defects
-\item Max time since shutdown\dotfill 6 hours
-\item Max weight\dotfill 64000kg
-\item Max thrust\dotfill 40\%N1
-\item Min warmup\dotfill 2 mins
 }
 
 
@@ -331,7 +308,7 @@ approach in some countries.
 \mysec{Loading}{
 \item Max LMC \ref{EOMB.7.4}
 \iitem Total \dotfill $±$500kg
-\iitem Passengers\dotfill $±$5
+\iitem Passengers\dotfill +5/-10
 \iitem Fuel\dotfill $±$500kg
 \iitem CP4\dotfill $±$500kg
 \iitem CP5 or CP1\dotfill $±$100kg
@@ -361,6 +338,8 @@ approach in some countries.
 \iitem QNH reduction \dotfill subtract 1°C/2hPa
 \iitem Flex must remain >ISA+30 and >OAT
 }
+\vfill
+\pagebreak
 
 \mysec{Emergency calls to cabin \ref{B2.7.33}}{
 \item Ground ops alert:
@@ -391,29 +370,69 @@ approach in some countries.
 
 \vfill
 \pagebreak
+\section{Fuel Saving}
+
+\mysec{Flap 3 landing}{
+\item Min LDA \dotfill LDA$_{full}$*1.15
+\item Autobrake LO, do not override
+}
+
+\mysec{Single Engine Taxi}{
+\item Prohibited:
+\iitem Icing conditions
+\iitem Slippery taxiways
+\iitem LVO
+\iitem Inexperienced crew (first LPC/OPC not completed)
+\iitem APU inop
+\iitem Hydraulic, electric, steering or braking defects
+\item Max time since shutdown\dotfill 6 hours
+\item Max weight\dotfill 64000kg
+\item Max thrust\dotfill 40\%N1
+\item Min warmup\dotfill 2 mins
+}
+
+\vfill
+\pagebreak
+
 
 \section{Procedures}
+
+\mysec{Takeoff with tailwind or crosswind > 20kt}{
+\item[$\bullet$] Set 50\%
+\item[$\bullet$] When engines stable, rapidly set 70\%
+\item[$\bullet$] Select takeoff thrust by 40kt
+\item[$\bullet$] Stick full forward until 80kt, neutral by 100kt
+}
 
 \mysec{General}{
 \item UK Procedure speed limit\ref{AIP ICAO diffs}\dotfill 185kt
 }
 
+\mysec{ILS}{
+\item Absolute minimas
+\iitem Cat I \dotfill 200ft/550m
+\iitem Cat II \dotfill 100ft/300m
+\iitem Cat IIIA \dotfill 50ft/200m
+\iitem Cat IIIB \dotfill 0ft/75m
+}
+
+
 \mysec{RNAV approach}{
-\item[$\bullet$] Not Innsbruck \ref{NTC 286-1}
+\item[$\bullet$] Permitted RNAV approaches may be titled GPS, RNAV (GNSS), RNAV (GPS or DME/
+DME)
 \item[$\bullet$] Two navigation systems required - check RAIM
   availability \& GPS PRIMARY in both \mbox{MCDUs} before commencing
   approach
 \item[$\bullet$] Non GPS PRIMARY approach must be available at destination alternate
-\item[$\bullet$] Minimum OAT may apply (check approach plate)
-\item[$\bullet$] LNAV/VNAV minima is a DA not an MDA, so CDA not
-  required in this case
+\item[$\bullet$] Minimum OAT may apply (check approach plate). If no temperature is specified,
+vertical guidance must not be used if temp $<=$ 0°C.
 \item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed
 \item[$\bullet$] Do not revise final approach segment
 \item[$\bullet$] Must be established laterally and vertically before
   descent position
-\item[$\bullet$] For LNAV/VNAV, check MAP vertically correct
-\item[$\bullet$] AT FAF, insert V$_{APP}$ if DP $<$10nm from runway,
-  otherwise S speed
+\item[$\bullet$] \ref{OEB31}Do not use managed vertical guidance for
+  an approach labelled ``RNV'' on the MCDU unless the MAP is located
+  at the runway threshold (approaches labelled ``GPS'' are always OK)
 \item[$\bullet$] If GPS PRIMARY LOST on one FMGC use autopilot associated with good FMGC
 \item[$\bullet$] Go around for:
 \iitem FM/GPS POS DISAGREE
@@ -431,7 +450,6 @@ approach in some countries.
 \item[$\bullet$] Must be established laterally before descent
 \item[$\bullet$] Arm Approach. Check FINAL blue, APP NAV
 \item[$\bullet$] At D-0.2nm, check FINAL APP and monitor descent
-\item[$\bullet$] \ref{OEB 188/1} Disengage with APPR button to ensure SRS available
 }
 
 \mysec{Non-precision - Managed lateral}{
