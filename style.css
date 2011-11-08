@@ -1,4 +1,19 @@
-body {font-family:verdana;font-size:0.8em;background-color:white;margin:auto;padding-left:2em;padding-right:2em;max-width:60em;}
+body {font-family:verdana;font-size:100%;background-color:gray;;
+}
+div.navheader, div.navfooter, div.sect1 {
+    font-size: 1em;
+    max-width: 40em;
+    background-color: white;
+    padding: 0.5em 3em;
+    margin: 0.5em auto;
+    border: 1px solid black;
+    border-radius: 15px;
+
+}
+div.sect1 {
+    line-height: 1.3em;
+
+}
 td {font-family:verdana;}
 h1,h2,h3,h4 {color:darkblue;}
 div.sect4 {margin-left:3em;}
