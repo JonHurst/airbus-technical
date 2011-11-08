@@ -1,6 +1,6 @@
-body {font-family:verdana;font-size:100%;background-color:gray;;
+body {font-family:verdana;font-size:95%;background-color:gray;;
 }
-div.navheader, div.navfooter, div.sect1 {
+div.navheader, div.navfooter, div.sect1, div.article {
     font-size: 1em;
     max-width: 40em;
     background-color: white;
