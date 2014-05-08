@@ -1,4 +1,4 @@
-all: xhtml
+all: xhtml numbers.pdf
 
 clean:
 	rm -r  html notes.pdf notes.fo
@@ -19,4 +19,6 @@ notes.pdf: notes.fo
 	fop -c fop.xconf -fo notes.fo -pdf notes.pdf
 notes.fo: notes.xml myfo.xsl
 	xsltproc myfo.xsl notes.xml >notes.fo
+numbers.pdf: numbers.tex
+	pdflatex numbers.tex
 
