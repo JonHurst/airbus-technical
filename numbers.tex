@@ -5,6 +5,7 @@
 \usepackage[paper=a5paper,lmargin=0.75cm,tmargin=0.5cm]{geometry}
 \usepackage{setspace}
 \usepackage{graphics}
+\usepackage{paralist}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0em}
@@ -27,6 +28,129 @@
 \item\hfill\parbox{22em}{\begin{spacing}{0.9}\vspace{0.25em} #1 \vspace{0.8em}\end{spacing}}}
 
 \begin{document}
+
+\vfil\vbox{
+\subsection{Crosswind Limits}
+\subsubsection{Runway Width $\geq$45m \ref{EOMB 2.1}}
+\begin{center}
+\begin{tabular}{|l|c|}\hline
+  \parbox{0.5\textwidth}{
+  \begin{center}Condition
+  \end{center}}
+  & Max Crosswind (inc. gust)\\\hline
+  \parbox{0.5\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}
+    \item Dry
+    \item Damp
+    \item Wet
+    \end{compactitem}
+    \vspace{1mm}} & 38kt\\\hline
+  \parbox{0.5\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}
+     \item Frost
+     \item Slush ($\leq$3mm)
+     \item Wet Snow ($\leq$3mm)
+     \item Dry Snow ($\leq$3mm)
+     \item Compacted Snow (OAT$\leq$-15°C)
+    \end{compactitem}
+    \vspace{1mm}} & 29kt\\\hline
+  \parbox{0.5\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}
+     \item Wet Snow ($\leq$30mm)
+     \item Dry Snow ($\leq$130mm)
+     \item Compacted Snow (OAT>-15°C)
+     \item Slippery when wet
+    \end{compactitem}
+    \vspace{1mm}} & 25kt\\\hline
+  \parbox{0.5\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}
+     \item Autoland
+     \item Rollout: No sharklets, dry/damp/wet
+     \item Water ($\leq$12.7mm)
+     \item Slush ($\leq$12.7mm)
+    \end{compactitem}
+    \vspace{1mm}} & 20kt\\\hline
+  \parbox{0.5\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}
+     \item Rollout:  With sharklets, dry/damp/wet
+     \item Ice (cold and dry)
+    \end{compactitem}
+    \vspace{1mm}} & 15kt\\\hline
+  \parbox{0.5\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}
+     \item Ice (wet)
+     \item Water over compacted snow
+     \item Wet or dry snow over ice
+    \end{compactitem}
+    \vspace{1mm}} & Not recommended\\\hline
+\end{tabular}
+\end{center}}
+
+\vfil\vbox{
+\subsubsection{Runway Width $<$45m, $\ge$30m \ref{PRO.SPO.60}}
+\begin{center}
+\begin{tabular}{|l|c|}\hline
+  \parbox{0.5\textwidth}{
+  \begin{center}Condition
+  \end{center}}
+  & Max Crosswind (inc. gust)\\\hline
+  \parbox{0.5\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}
+    \item Dry
+    \end{compactitem}
+    \vspace{1mm}} & 38kt\\\hline
+  \parbox{0.5\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}
+    \item Wet
+    \end{compactitem}
+    \vspace{1mm}} & 33kt\\\hline
+  \parbox{0.5\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}
+    \item Contaminated
+    \end{compactitem}
+    \vspace{1mm}} & 10kt\\\hline
+  \parbox{0.5\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}
+    \item Icy
+    \end{compactitem}
+    \vspace{1mm}} & Not demonstrated\\\hline
+  \parbox{0.5\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}
+    \item Rudder or Rudder Pedal Jam
+    \item Yaw damper system inop
+    \item Rudder travel limiter fault
+    \item Nosewheel steering inop
+    \item One or more brakes inop
+    \end{compactitem}
+    \vspace{1mm}} & Not recommended\\\hline
+
+\end{tabular}
+\end{center}}
+
+
+\mysec{Other wind limits}{
+\item 3* FO \ref{EOMB-2.1}\dotfill no planned tailwind
+\item FO max crosswind \ref{EOMB-2.1}\dotfill 15kt
+\item SFO max crosswind \ref{EOMB-2.1}\dotfill 25kt
+\item Max tailwind \ref{3.1.20}\dotfill 10kt
+\item Autoland
+\iitem Max headwind \ref{3.1.22}\dotfill 30kt
+\iitem Max crosswind \ref{3.1.22}\dotfill 20kt
+\item Passenger door operation \ref{3.1.20}\dotfill 65kt
+\item Cargo door operation \ref{3.1.20}\dotfill 40kt (50kt w/caveats)
+\item Cargo door closed before \ref{3.1.20}\dotfill 65kt
+}
 
 \vfil\vbox{
 \subsection{Wake Turbulence}
@@ -53,36 +177,6 @@ approach in some countries.
 \end{center}
 
 \textbf{Note}: Add \textbf{1 minute} if departure is not from the same position
-}
-
-\vfil\vbox{
-\subsection{Crosswind}
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|}\hline
-  Braking & Friction & Equivalent Condition & \multicolumn{2}{c|}{Max component (kt)} \\\cline{4-5}
-  & & & Take-off & Landing \\\hline
-  Good & $\geq$0.4 & Dry, Damp, Wet & 29 gusting 38 & 33 gusting 38 \\\cline{4-5}
-  Medium-good & 0.36 - 0.39 & Dry, Damp, Wet & \multicolumn{2}{c|}{29 gusting 38}\\
-  Medium & 0.30 - 0.35 & Slush, Dry Snow & \multicolumn{2}{c|}{25 including gust}\\
-  Medium-poor & 0.26 - 0.29 & Slush, Dry Snow & \multicolumn{2}{c|}{20 including gust}\\
-  Poor & $\leq$0.25 & Stdg water, Wet snow & \multicolumn{2}{c|}{15 including gust}\\
-  Nil & N/A & Icy, Hydroplaning & \multicolumn{2}{c|}{5 including gust}\\\hline
-  \multicolumn{3}{|l|}{Slippery when wet} & \multicolumn{2}{c|}{20kt}\\
-  \multicolumn{3}{|l|}{Slippery when wet, portions with BA poor/unreported} & \multicolumn{2}{c|}{15kt}\\\hline
-\end{tabular}
-\end{center}}
-
-\mysec{Other wind limits}{
-\item 3* FO \ref{EOMB-2.1}\dotfill no planned tailwind
-\item FO max crosswind \ref{EOMB-2.1}\dotfill 15kt
-\item SFO max crosswind \ref{EOMB-2.1}\dotfill 25kt
-\item Max tailwind \ref{3.1.20}\dotfill 10kt
-\item Autoland
-\iitem Max headwind \ref{3.1.22}\dotfill 30kt
-\iitem Max crosswind \ref{3.1.22}\dotfill 20kt
-\item Passenger door operation \ref{3.1.20}\dotfill 65kt
-\item Cargo door operation \ref{3.1.20}\dotfill 40kt (50kt w/caveats)
-\item Cargo door closed before \ref{3.1.20}\dotfill 65kt
 }
 
 \mysec{First Officer limits}{
