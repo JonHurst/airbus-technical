@@ -9,8 +9,8 @@
         <table>
           <title>Aircraft dimensions</title>
           <tgroup cols="2">
-            <colspec colwidth="1.5in" align="center"/>
-            <colspec colwidth="1.5in" align="center"/>
+            <colspec align="center"/>
+            <colspec align="center"/>
             <tbody>
               <row><entry>Wingspan</entry><entry>34.1m</entry></row>
               <row><entry>Length</entry><entry>33.84m</entry></row>
@@ -56,7 +56,7 @@
       <title>Auto flight</title>
       <sect2>
         <title>Overview</title>
-        
+
         <para>Main processing is carried out by two identical Flight Management Guidance Computers (FMGC) which
         normally work in tandem. Together they are known as the flight management guidance system (FMGS). The pilots
         provide inputs to the FMGS using two Multipurpose Control and Display Units (MCDUs) on the center pedestal and a
@@ -502,7 +502,7 @@
     </sect1>
     <sect1 id="pressurisation">
       <title>Pressurisation</title>
-      
+
       <figure id="pressurisation-controls">
         <title>Pressurisation controls</title>
         <mediaobject>
@@ -517,7 +517,7 @@
           </imageobject>
         </mediaobject>
       </figure>
-      
+
 
       <para>Pressurisation control is provided by an outflow valve and two safety valves, one to prevent
       over-pressurisation (&gt;8.6 psi), the other to prevent under-pressurisation (&gt;1 psi below ambient).</para>
@@ -608,7 +608,7 @@
       <para>Ventilation of the avionics is primarily provided by two fans, one acting as a blower, the other as an
       extractor. Control is provided by the Avionics Equipment Ventilation Computer (AEVC). The system's normal modes
       are:
-      
+
       <variablelist>
         <varlistentry><term>Close-circuit</term>
         <listitem><para>Used when skin temperature is low. The skin exchange outlet bypass, inlet bypass and isolation
@@ -683,7 +683,7 @@
       </figure>
 
       <para>The electrical system consists of a three phase 115/200V 400Hz AC system and a 28V DC system.</para>
-      
+
       <para>Primary AC supply is from two 90 KVA engine driven integrated drive generators (IDGs). Each IDG has an
       associated generator control unit (GCU) which provides frequency, voltage and generator line contactor (GLC)
       control. A third 90 KVA generator is driven by the APU. This generator, along with ground power, is controlled by
@@ -735,7 +735,7 @@
       available on some aircraft. Manual re-routing is achieved by pressing the AC Ess feed pushbutton. TR1 is lost
       causing the Ess TR to supply the DC Ess bus and, after a 5 second delay, DC bus 2 to provide power to DC bus
       1.</para>
-      
+
       <para>If both main TRs are lost, DC Bus 1, DC Bus 2 and the DC Bat bus are lost. The DC Ess bus is powered by the
       Ess TR.</para>
 
@@ -869,11 +869,11 @@
         <table id="apu-limitations">
           <title>APU limitations</title>
           <tgroup cols="2">
-            <colspec colwidth="3in"/>
-            <colspec colwidth="1in" align="center"/>
+            <colspec colwidth="3*"/>
+            <colspec colwidth="1*" align="center"/>
             <tbody>
               <row><entry>APU bleed air with 2 packs</entry><entry>15,000ft</entry></row>
-              <row><entry>APU bleed air with 1 pack</entry><entry>20,000ft</entry></row>
+              <row><entry>APU bleed air with 1 pack</entry><entry>22,500ft</entry></row>
               <row><entry>Battery restart limit</entry><entry>25,000ft</entry></row>
               <row><entry>Operation and restart ceiling</entry><entry>39,000ft</entry></row>
               <row><entry>APU elec power</entry><entry>39,000ft</entry></row>
@@ -1055,7 +1055,7 @@
         generated from a terrain database to FMGS position data and baro data from the Captain's altimeter. Both
         en-route terrain and runway clearance floor envelopes are provided. The extended functions are inhibited when
         navigation performance is LOW.</para>
-        
+
         <para>The terrain is displayed on the ND when the TERR ON ND putton on the center panel is pressed. Areas not
         included in the database are color coded magenta. Dotted red areas are more than 2000ft above the aircraft,
         dotted orange areas more than 1000ft above the aircraft and amber areas are between 1000ft above and 500ft below
@@ -1138,7 +1138,7 @@
       <title>Ice &amp; rain protection</title>
       <sect2>
         <title>Wing anti-ice</title>
-        
+
         <para>The three outboard slats of each wing are anti-iced using hot bleed air from the
         pneumatic system. APU bleed air must not be used for wing anti-icing. Each wing has a single
         electrically (DC ESS SHED) operated valve that controls flow of air to the slats. Both
@@ -1153,7 +1153,7 @@
 
         <para>If the WING button is pushed on the ground, a 30 second self test of the wing anti-ice
         system is initiated. If left on, the valves will open automatically once airborne.</para>
-        
+
       </sect2>
       <sect2>
         <title>Engine anti-ice</title>
@@ -1553,7 +1553,7 @@
 
         <para>The rudder deflection is limited depending on speed by the rudder travel limiter. The current rudder
         travel limit is shown on the F/CTL ECAM page by white ticks below the rudder scale.</para>
-        
+
       </sect2>
       <sect2>
         <title>Side sticks</title>
@@ -1674,7 +1674,7 @@
           V<subscript>MO</subscript>/M<subscript>MO</subscript>. This can be overridden with sidestick inputs. As in
           normal law, an aural over speed warning is triggerred when
           V<subscript>MO</subscript>/M<subscript>MO</subscript> is exceeded.</para>
-          
+
           <para>According to the failures, it is possible that the stabilities will also be lost. In this case only load
           factor limitation and the stall and overspeed warnings remain.</para>
         </sect3>
@@ -1697,7 +1697,7 @@
           alternate law without the stability enhancements. Once the aircraft is recovered, it stays in alternate law.
           It will not, however, revert to direct law when the gear is deployed.</para>
         </sect3>
-        
+
       </sect2>
     </sect1>
     <sect1>
@@ -1718,7 +1718,7 @@
       </figure>
       <para>Each wing incorporates an inner tank, an outer tank and a vent surge tank. A center tank is incorporated
       into the fuselage.</para>
-      
+
       <para>The outer tanks are used for wing bending and flutter relief. There are two electrical transfer valves
       connecting each outer tank to its associated inner tank. These are controlled by level sensors in the inner
       tanks. Each inner tank has two sensors, and each of these sensors controls a symmetrical pair of transfer
@@ -1797,7 +1797,7 @@
 
       <para>Degradation of a fuel quantity sensor is indicated by two amber dashes across the last two digits of the FOB
       value. On the ECAM FUEL page, the affected tank also shows the dashes on its quantity value.</para>
-      
+
       <para>Fuel temperature exceeding a limitation results in a master caution and the fuel temperature of the affected
       tank being shown in amber on the ECAM FUEL page.</para>
 
@@ -1943,7 +1943,7 @@
         <para>The supply side of the engine oil system consists of an oil supply pump that draws oil from the oil tank and
         passes it through an oil filter to the bearings and gearbox. The oil filter incorporates a by-pass valve in case
         of clogging. Oil pressure and temperature are monitored downstream of the filter.</para>
-        
+
         <para>The scavenge side consists of four scavenge pumps {TODO: inferred from diagram 1.70.50}, through a
         scavenge filter then back to the oil tank via the servo fuel heater and fuel/oil heat exchanger. The scavenge
         filter incorporates a bypass valve in case of clogging.</para>

@@ -1,24 +1,32 @@
-body {font-family:verdana;font-size:95%;background-color:gray;;
+body {font-family:freesans,verdana;;background-color:gray;;
 }
 div.navheader, div.navfooter, div.sect1, div.article {
     font-size: 1em;
     max-width: 40em;
     background-color: white;
     padding: 0.5em 3em;
-    margin: 0.5em auto;
-    border: 1px solid black;
-    border-radius: 15px;
-
+    margin: 0 auto;
 }
+
+div.navfooter {
+    border-radius: 0px 0px 10px 10px;
+}
+div.navheader {
+    border-radius: 10px 10px 0 0;
+}
+
+div.navheader td, div.navfooter td{
+    padding:0;
+}
+
 div.sect1 {
     line-height: 1.3em;
 
 }
-td {font-family:verdana;}
 h1,h2,h3,h4 {color:darkblue;}
 div.sect4 {margin-left:3em;}
-table {font-size:100%; margin:auto; padding 0 2em; border-collapse: collapse;}
-div.mediaobject {text-align:center;}
+table { font-size:100%; margin:auto; padding:0 2em; border-collapse: collapse;}
+div.mediaobject {text-align:center;margin: 1em -3em;}
 div.variablelist {margin-left:2em;}
 td {padding: 1em;}
 table.simplelist {margin-left:3em;}

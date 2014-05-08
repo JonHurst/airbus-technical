@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-<xsl:import href="/usr/share/sgml/docbook/xsl-stylesheets-1.70.1/fo/docbook.xsl"/>
+<xsl:import href="http://docbook.sourceforge.net/release/xsl/current/fo/docbook.xsl"/>
 <xsl:param name="draft.mode" select="'no'"/>
 <xsl:param name="paper.type" select="'A4'"/>
 
@@ -14,12 +14,12 @@
 <xsl:param name="default.table.width" select="'5.5in'"/>
 <xsl:param name="default.image.width">5.5in</xsl:param>
 <xsl:param name="body.start.indent">0.768in</xsl:param>
-<xsl:param name="body.font.family">Times New Roman</xsl:param>
 
-<xsl:attribute-set name="section.title.properties">
-  <xsl:attribute name="font-family">Times New Roman</xsl:attribute>
-</xsl:attribute-set>
-
+<xsl:param name="body.font.family">FreeSerif</xsl:param>
+<xsl:param name="title.font.family">FreeSans</xsl:param>
+<xsl:param name="body.font.master" select="10"/>
+<xsl:param name="symbol.font.family" select="'FreeSerif'"/>
+<xsl:param name="fop1.extensions" select="1"/>
 
 <xsl:attribute-set name="section.level1.properties">
   <xsl:attribute name="break-before">page</xsl:attribute>
