@@ -572,29 +572,30 @@ element
 
 
 \mysec{RNAV approach}{
-\item[$\bullet$] Permitted RNAV approaches may be titled GPS, RNAV (GNSS), RNAV (GPS or DME/
-DME)
-\item[$\bullet$] Two navigation systems required - check RAIM
+\item[$\bullet$] Two navigation systems required\ref{QRH SI.80} - check RAIM
   availability \& GPS PRIMARY in both \mbox{MCDUs} before commencing
-  approach
-\item[$\bullet$] Non GPS PRIMARY approach must be available at destination alternate
-\item[$\bullet$] Minimum OAT may apply (check approach plate). If no temperature is specified,
-vertical guidance must not be used if temp $<=$ 0°C.
-\item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed
-\item[$\bullet$] Do not revise final approach segment
+  approach\ref{EOMB 2.3.18.1.2}
+\item[$\bullet$] Non GPS PRIMARY approach must be available at alternates\ref{EOMB 2.3.18.1.2}
+\item[$\bullet$] A minimum procedure temperature may be promulgated on
+  the approach chart; default is -10°C. \ref{EOMB 2.3.18.1.2,
+    EOMA 8.4.4.2, EOMA 8.1.1.3.1}
+
+  \iitem $\bullet$ Above this temperature, an APV may be flown with
+  uncorrected VNAV DA.
+
+  \iitem $\bullet$ Below this temperature, use corrected LNAV DA and fly
+  corrected glidepath.
+\item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed\ref{EOMB 2.3.18.1.2}
+\item[$\bullet$] Do not revise final approach segment\ref{EOMB 2.3.18.1.2}
 \item[$\bullet$] Must be established laterally and vertically before
-  descent position
-\item[$\bullet$] \ref{OEB31}Do not use managed vertical guidance for
-  an approach labelled ``RNV'' on the MCDU unless the MAP is located
-  at the runway threshold (approaches labelled ``GPS'' are always OK)
-\item[$\bullet$] If GPS PRIMARY LOST on one FMGC use autopilot associated with good FMGC
-\item[$\bullet$] Go around for:
-\iitem FM/GPS POS DISAGREE
-\iitem GPS PRIMARY LOST on both FMGCs
-\iitem GPS PRIMARY LOST on ND
+  descent position\ref{EOMB 2.3.18.1.2}
+\item[$\bullet$] Go around for: \ref{EOMB 2.3.18.1.2}
 \iitem $>$¾ index fly up or down
-\iitem HIGH ACCURACY LOST
-}
+\iitem HIGH accuracy lost (= NAV ACCUR DOWNGRAD)
+\iitem FMS1/FMS2 POS DIFF message
+\iitem FM/GPS POS DISAGREE ECAM
+\iitem GPS PRIMARY LOST reported by both FMGCs.
+\item If GPS PRIMARY LOST is reported by a single FMGC continue with the unaffected FMGC.}
 
 \mysec{Non-precision - Fully managed}{
 \item[$\bullet$] GPS PRIMARY required
