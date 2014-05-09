@@ -543,6 +543,24 @@ reverse only
 \item Procedure turn \ref{LIDO RAR.5.4.1.2} \dotfill 75 seconds from start of 45° turn
 }
 
+
+\mysec{PRNAV SID/STAR \ref{EOMB 2.4.51.2}}{
+\item[$\bullet$] Check minimum required equipment \dotfill QRH SI.90
+\item[$\bullet$] If GPS is specified as an additional requirement, check RAIM availability.\ref{EOMA 8.3.2.9}
+\item[$\bullet$] If GPS is not specified as an additional requirement
+  and GPS PRIMARY is not available, check RNP 1 is set and crosscheck FM
+  with raw data.
+\item[$\bullet$] Request reclearance if:
+\iitem NAV ACCUR DOWNGRAD on both sides
+\iitem FMS1/FMS2 POS DIFF message
+\iitem CHECK IRS 1(2)(3)/FM POSITION (on MCDU)\ref{PRO.SPO.51}
+\iitem FM/GPS POS DISAGREE ECAM
+\iitem Additional restriction (e.g. Dual FMC, GPS) no longer met
+\item If NAV ACCUR DOWNGRAD affects a single FMGC, continue using the
+  unaffected one.
+}
+
+
 \mysec{ILS approach}{
 \item Standard coverage \ref{LIDO GEN.NAV.3.2}:
   \iitem Localiser ±10° \dotfill 25nm (FAA 18nm)
