@@ -17,7 +17,7 @@
 \renewcommand{\ref}[1]{{\color{blue}\scriptsize [#1]}}
 
 \newcommand{\mysec}[2]{
-  \vfil\vbox{
+  \vbox{
     \subsection{#1}
     \begin{list}{}{\setlength\parsep{0pt}\setlength\itemsep{0pt}}
     #2
@@ -29,9 +29,8 @@
 \item\hfill\parbox{22em}{\begin{spacing}{0.9}\vspace{0.25em} #1 \vspace{0.8em}\end{spacing}}}
 
 \begin{document}
-
-\vfil\vbox{
-\subsection{Crosswind Limits}
+\raggedbottom
+\vbox{\small\subsection{Crosswind Limits}
 \subsubsection{Runway Width $\geq$45m \ref{EOMB 2.1, LIM.22.20, EOMB 4.12.4}}
 \begin{center}
 \begin{tabular}{|l|c|}\hline
@@ -69,7 +68,7 @@
     \vspace{1mm}
     \begin{compactitem}
      \item Autoland
-     \item Rollout: No sharklets, dry/damp/wet
+     \item\raggedright Rollout: No sharklets, dry/damp/wet
      \item Water (>3mm, $\leq$12.7mm)
      \item Slush (>3mm, $\leq$12.7mm)
     \end{compactitem}
@@ -77,9 +76,9 @@
   \parbox{0.5\textwidth}{
     \vspace{1mm}
     \begin{compactitem}
-     \item Rollout:  With sharklets, dry/damp/wet
+     \item\raggedright Rollout: Sharklets, dry/damp/wet
      \item Ice (cold and dry)
-     \item Slippery when wet including portions of poor/unreported
+     \item\raggedright Slippery when wet including portions of poor/unreported
        braking action
     \end{compactitem}
     \vspace{1mm}} & 15kt\\\hline
@@ -92,9 +91,7 @@
     \end{compactitem}
     \vspace{1mm}} & Not recommended\\\hline
 \end{tabular}
-\end{center}}
-
-\vfil\vbox{
+\end{center}
 \subsubsection{Runway Width $<$45m, $\ge$30m \ref{PRO.SPO.60}}
 \begin{center}
 \begin{tabular}{|l|c|}\hline
@@ -136,9 +133,9 @@
     \item Autoland
     \end{compactitem}
     \vspace{1mm}} & Not recommended\\\hline
-
 \end{tabular}
-\end{center}}
+\end{center}
+}
 
 
 \mysec{Other wind limits}{
@@ -149,7 +146,18 @@
 \item Cargo door closed before \ref{LIM.12}\dotfill 65kt
 }
 
-\vfil\vbox{
+\mysec{First Officer limits}{
+\item 3* FO \ref{EOMB 2.1}\dotfill No planned tailwind
+\item Max crosswind \ref{EOMB 2.1}\dotfill 20kt
+\item Takeoff minimum \ref{EOMB 2.1}\dotfill 400m RVR
+\item ILS/VOR/ADF/SRA minima \ref{EOMB 2.1}\dotfill As published
+\item Circling minima \ref{EOMB 2.1}\dotfill 5000m
+\item Min runway width, no specific training \ref{EOMB 2.1}\dotfill 45m
+\item 3* FO \ref{EOMB 2.1}\dotfill no flap 3 landing
+\item No contamination, windshear or autoland \ref{EOMB 2.1}
+}
+
+\vbox{
 \subsection{Wake Turbulence}
 \subsubsection{Final Approach \ref{EOMA 8.3.9}}
 \begin{center}
@@ -176,17 +184,6 @@ approach in some countries.
 \textbf{Note}: Add \textbf{1 minute} if departure is not from the same position
 }
 
-\mysec{First Officer limits}{
-\item 3* FO \ref{EOMB 2.1}\dotfill No planned tailwind
-\item Max crosswind \ref{EOMB 2.1}\dotfill 20kt
-\item Takeoff minimum \ref{EOMB 2.1}\dotfill 400m RVR
-\item ILS/VOR/ADF/SRA minima \ref{EOMB 2.1}\dotfill As published
-\item Circling minima \ref{EOMB 2.1}\dotfill 5000m
-\item Min runway width, no specific training \ref{EOMB 2.1}\dotfill 45m
-\item 3* FO \ref{EOMB 2.1}\dotfill no flap 3 landing
-\item No contamination, windshear or autoland \ref{EOMB 2.1}
-}
-
 \mysec{General speeds}{
 \item V$_{MO}$ \ref{LIM.13}\dotfill 350kt
 \item M$_{MO}$ \ref{LIM.13}\dotfill 0.82M
@@ -201,7 +198,7 @@ approach in some countries.
   \iitem $\ge$FL320\dotfill M0.76
 }
 
-\vfil\vbox{
+\vbox{
 \subsection{Weights \ref{LIM.11}}
 \begin{center}
 \begin{tabular}{|l|c|c|}\hline
@@ -215,7 +212,7 @@ approach in some countries.
 \end{center}}
 
 
-\vfil\vbox{
+\vbox{
 \subsection{Cargo bay weight limits \ref{PER.LOD.CGO}}
 \begin{center}
 \begin{tabular}{|l|c|c|l|c|}\cline{1-2}\cline{4-5}
@@ -229,13 +226,13 @@ Compartment 5 & 1497kg & & Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5}
 \end{center}}
 
 
-\vfil\vbox{
+\vbox{
 \subsection{Dimensions \ref{DSC.20.20}}
 \begin{center}
 \begin{tabular}{|l|c|c|c|}\hline
   & \parbox{.15\textwidth}{\centering A319}
-  & \parbox{.15\textwidth}{\centering A320 (no sharklets)}
-  & \parbox{.15\textwidth}{\centering A320 (sharklets)}\\\hline
+  & \parbox{.15\textwidth}{\centering A320 \small(no sharklets)}
+  & \parbox{.15\textwidth}{\centering A320 \small(sharklets)}\\\hline
   Wingspan  & \multicolumn{2}{c|}{34.1m} & 35.8m\\\cline{2-4}
   Length  & 33.84m & \multicolumn{2}{c|}{37.57m}\\\cline{3-4}
   Min pavement for 180° turn  & 20.64m & 22.9m & 22.8m\\\cline{2-4}
@@ -281,6 +278,9 @@ Compartment 5 & 1497kg & & Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5}
 \item Approximate fuel burn \ref{EOMB 5.1} \dotfill 2kg/min
 }
 
+\mysec{Hydraulics}{
+\item Normal pressure \ref{LIM.29}\dotfill 3000$\pm$200psi
+}
 
 \mysec{Flaps/slats}{
 \item Conf 1 \ref{LIM.13}\dotfill 230kt
@@ -290,7 +290,6 @@ Compartment 5 & 1497kg & & Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5}
 \item Conf Full \ref{LIM.13}\dotfill 177kt
 \item Max flaps/slats altitude \ref{LIM.27}\dotfill 20000ft
 }
-
 
 \mysec{Gear}{
 \item Extend \ref{LIM.13}\dotfill 250kt
@@ -302,18 +301,6 @@ Compartment 5 & 1497kg & & Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5}
 \item Max steering angle, both tyres deflated \ref{LIM.32}\dotfill 30°
 \item Max brake temp for takeoff \ref{LIM.32}\dotfill 300°
 }
-
-
-\mysec{Hydraulics}{
-\item Normal pressure \ref{LIM.29}\dotfill 3000$\pm$200psi
-}
-
-
-\mysec{Electrical}{
-\item Max generator continuous load \ref{LIM.24}\dotfill 100\%(90 KVA)
-\item Max TR continuous load \ref{LIM.24}\dotfill 200A
-}
-
 
 \mysec{Pressurisation}{
 \item Max pos diff \ref{LIM.21.20}\dotfill 8.6psi
@@ -333,6 +320,11 @@ Compartment 5 & 1497kg & & Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5}
 \item Max OAT with EXTRACT OVRD and Packs Off \ref{PRO.SUP.30}\dotfill
   39°C
 \item \hfill(higher with time limits)
+}
+
+\mysec{Electrical}{
+\item Max generator continuous load \ref{LIM.24}\dotfill 100\%(90 KVA)
+\item Max TR continuous load \ref{LIM.24}\dotfill 200A
 }
 
 
@@ -516,7 +508,6 @@ reverse only
   \pitem{``Cabin crew and passengers be seated immediately''}
 }
 
-\vfill
 \pagebreak
 
 \section{Procedures}
@@ -553,7 +544,7 @@ reverse only
 
 \mysec{PRNAV SID/STAR \ref{EOMB 2.4.51.2}}{
 \item[$\bullet$] Check minimum required equipment \dotfill QRH SI.90
-\item[$\bullet$] If GPS is specified as an additional requirement, check RAIM availability.\ref{EOMA 8.3.2.9}
+\item[$\bullet$] \ref{EOMA 8.3.2.9} If GPS is specified as an additional requirement, check RAIM availability.
 \item[$\bullet$] If GPS is not specified as an additional requirement
   and GPS PRIMARY is not available, check RNP 1 is set and crosscheck FM
   with raw data.
@@ -681,7 +672,6 @@ element
   descent to landing.
 }
 
-\vfill
 \pagebreak
 
 \mysec{LVO takeoff \ref{EOMB 2.4.4}}{
@@ -709,7 +699,6 @@ element
 \item[$\bullet$] Select reverse at touchdown
 \item[$\bullet$] Disconnect autopilot at taxi speed
 }
-\vfill
 \pagebreak
 
 \vspace*{\fill}{}\resizebox{\textwidth}{!}{\rotatebox{90}{\includegraphics{images/catIII-failures.png}}}\vspace*{\fill}
