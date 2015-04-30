@@ -1723,9 +1723,10 @@
       connecting each outer tank to its associated inner tank. These are controlled by level sensors in the inner
       tanks. Each inner tank has two sensors, and each of these sensors controls a symmetrical pair of transfer
       valves. When any sensor detects the fuel level in an inner tank falling below approximately 750kg, it opens its
-      pair of transfer valves, allowing the outer tank fuel to transfer simultaneously to the inner tanks. This event is
-      indicated by the E/WD memo "OUTER TK FUEL XFRD" and green triangles appearing in the outer tanks on the ECAM FUEL
-      page. The transfer valves, once open, remain open until the next refueling operation.</para>
+      symmetrical pair of transfer valves (i.e. one for each wing), allowing all outer tank fuel to transfer
+      simultaneously to the inner tanks. This event is indicated by the E/WD memo "OUTER TK FUEL XFRD" and green
+      triangles appearing in the outer tanks on the ECAM FUEL page. The transfer valves, once open, remain open until
+      the next refueling operation.</para>
 
       <para>The outer tanks are also connected to the inner tanks by a spill pipe. This allows fuel returned to the
       outer tanks by the fuel recirculation system (see below) to flow to the inner tanks if the outer tanks are already
@@ -2347,4 +2348,3 @@
       </para>
     </sect1>
 </article>
-
