@@ -4,7 +4,7 @@ div.navheader, div.navfooter, div.sect1, div.article {
     font-size: 1em;
     max-width: 40em;
     background-color: white;
-    padding: 0.5em 3em;
+    padding: 0.5em 6em;
     margin: 0 auto;
 }
 
@@ -21,7 +21,6 @@ div.navheader td, div.navfooter td{
 
 div.sect1 {
     line-height: 1.3em;
-
 }
 h1,h2,h3,h4 {color:darkblue;}
 div.sect4 {margin-left:3em;}
