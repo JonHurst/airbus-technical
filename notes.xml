@@ -1412,7 +1412,7 @@
       fault is detected.</para>
 
       <para>The anti-skid system determines wheel slip ratio by comparing aircraft speed from the ADIRUs with tyre speed
-      from tachometers on the wheel. When tyre speed resuces to 0.87 of aircraft speed, a servo valve is actuated to
+      from tachometers on the wheel. When tyre speed reduces to 0.87 of aircraft speed, a servo valve is actuated to
       release the brakes. If all ADIRUs have failed, the maximum main gear speed may be used to approximate aircraft
       speed. The anti-skid will be unavailable with complete BSCU failure or when yellow and green hydraulic sytems are
       both lost. It may also be turned off with the ASKID &amp; NW STRG switch. If the anti-skid system is not
