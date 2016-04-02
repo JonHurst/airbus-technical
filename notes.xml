@@ -423,7 +423,7 @@
         from 80% to 120%. If only one pack is in use or the APU is supplying bleed air, the system will deliver high
         flow regardless of this selection.</para>
 
-        <para>Each pack consist of an air cycle machine and a ram air duct for the heat exchangers. The air cycle
+        <para>Each pack consists of an air cycle machine and a ram air duct for the heat exchangers. The air cycle
         machine turbine also drives a cooling fan that draws cool air over the heat exchangers. Temperature in the pack
         is regulated by bypassing air around the air cycle machine via a turbine by-pass valve and by modulating the ram
         air intake flaps. These flaps are closed during take-off (take-off power set, main gear struts compressed) and
@@ -1532,7 +1532,7 @@
         Flap Control Computers (SFCC). Each SFCC has two channels, one for the slats and one for the flaps. The SFCCs
         are redundant, but a system associated with a failed channel will move at half speed.</para>
         <para>When flaps are selected, both ailerons are dropped by about 5°. This is indicated on the ECAM F/CTL page
-        by the aileron position indicatord pointing to a boxed position on the scale rather than there normal double
+        by the aileron position indicator pointing to a boxed position on the scale rather than there normal double
         dashed position.</para>
 
         <para>The flaps have an auto retract function. In configuration 1+F, the flaps will automatically retract when
