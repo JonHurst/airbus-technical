@@ -594,21 +594,32 @@ reverse only
 }
 
 
-\mysec{PRNAV SID/STAR \ref{EOMB 2.4.51.2}}{
-\item[$\bullet$] Check minimum required equipment \dotfill QRH SI.90
-\item[$\bullet$] \ref{EOMA 8.3.2.9} If GPS is specified as an additional requirement, check RAIM availability.
-\item[$\bullet$] If GPS is not specified as an additional requirement
-  and GPS PRIMARY is not available, check RNP 1 is set and crosscheck FM
-  with raw data.
+\mysec{PRNAV (RNP 1) SID/STAR \ref{PRO.SPO.51, EOMA 8.3.3.9, EOMB 2.4.51.2}}{
+\item[$\bullet$] \textbf{Minimum required equipment:}\\
+  1 FMGC; 1 MCDU; 1 GPS or 2 DMEs; 2 IRS; 1 FD; PFD and ND on PF side; 1
+  EFIS display on PM side. Additional procedure specific restrictions may
+  be published. Check RNP 1.
+\item[$\bullet$] If GNSS is used as primary navigation source, check
+  RAIM availability. If GNSS is not required and GPS PRIMARY is not
+  available, carry out a navigational reasonableness check prior to
+  IAWP.\ref{EOMA 8.3.3.9}
+  \item[$\bullet$] Database procedure should not be changed except for
+    the addition of missing altitude or speed constraints. ATC ``direct
+    to'' instructions may be accepted when above MSA.
+\item[$\bullet$] If GPS PRIMARY LOST or NAV ACCUR DOWNGRAD on one ND/MCDU
+  continue with the unaffected one.
+\item[$\bullet$] Use raw data to identify and continue with FMGC that
+  provides the correct position in case of:
+  \iitem GPS PRIMARY lost on both NDs/MCDUs
+  \iitem CHECK IRS 1(2)(3)/FM POSITION (on MCDU)
+  \iitem CHECK A/C POSITION
 \item[$\bullet$] Request reclearance if:
-\iitem NAV ACCUR DOWNGRAD on both sides
-\iitem FMS1/FMS2 POS DIFF message
-\iitem CHECK IRS 1(2)(3)/FM POSITION (on MCDU)\ref{PRO.SPO.51}
-\iitem FM/GPS POS DISAGREE ECAM
-\iitem Additional restriction (e.g. Dual FMC, GPS) no longer met
-\item If NAV ACCUR DOWNGRAD affects a single FMGC, continue using the
-  unaffected one.
+  \iitem FM/GPS POS DISAGREE ECAM\footnotemark[1]
+  \iitem FMS1/FMS2 POS DIFF message\footnotemark[1]
+  \iitem NAV ACCUR DOWNGRAD on both sides
+  \iitem Additional restriction (e.g. Dual FMC, GPS) no longer met
 }
+\footnotetext[1]{EOM-B overrides FCOM for these messages}
 
 
 \mysec{ILS approach}{
@@ -640,44 +651,40 @@ element
 }
 
 
-\mysec{RNAV approach}{
-\item[$\bullet$] Two navigation systems required\ref{QRH SI.80} - check RAIM
-  availability \& GPS PRIMARY in both \mbox{MCDUs} before commencing
-  approach\ref{EOMB 2.3.18.1.2}
-\item[$\bullet$] Non GPS PRIMARY approach must be available at alternates\ref{EOMB 2.3.18.1.2}
+\mysec{RNAV or FINAL APP Non-Precision overlay approach}{
+\item[$\bullet$] \textbf{Minimum required equipment:}\\ 1 FMS in GPS
+  PRIMARY; 1 MCDU; 1 FD; 1 PFD; ND on PF side; 2 FCU
+  channels. Underlying navigation source must be available. Check RNP:
+  0.3nm. \ref{EOMA 8.4.5.2, EOMB 2.3.18.3.2, PRO.SPO.51}
+\item[$\bullet$] RNP AR APCH (entitled RNAV(RNP)) not authorised.\ref{EOMA 8.4.5.2}
+\item[$\bullet$] Check RAIM availability for ETA$\pm$15 mins.\ref{EOMA 8.4.5.2}
+\item[$\bullet$] Conventional approach must be available at alternate.\ref{EOMA 8.4.5.2}
 \item[$\bullet$] A minimum procedure temperature may be promulgated on
   the approach chart; default is -10°C. \ref{EOMB 2.3.18.1.2,
     EOMA 8.4.4.2, EOMA 8.1.1.3.1}
 
-  \iitem $\bullet$ Above this temperature, an APV may be flown with
+  \iitem $\bullet$ Above this temp, an APV may be flown with
   uncorrected VNAV DA.
 
-  \iitem $\bullet$ Below this temperature, use corrected LNAV DA and fly
+  \iitem $\bullet$ Below this temp, use corrected LNAV DA and fly
   corrected glidepath.
-\item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed\ref{EOMB 2.3.18.1.2}
-\item[$\bullet$] Do not revise final approach segment\ref{EOMB 2.3.18.1.2}
-\item[$\bullet$] Must be established laterally and vertically before
-  descent position\ref{EOMB 2.3.18.1.2}
-\item[$\bullet$] Go around for: \ref{EOMB 2.3.18.1.2}
+\item[$\bullet$] Modifications to FMC database procedure prohibited with
+  the exception of temperature corrections to minimum
+  altitudes.\ref{EOMA 8.4.5.2}
+\item[$\bullet$] Chart vs. database \ref{EOMB 2.3.18.3.2}:
+  \iitem Max vertical path difference \dotfill 0.1°
+  \iitem Max lateral track difference \dotfill APV: 1°; Overlay: 3°
+\item[$\bullet$] \textbf{RNAV approach:} Go around for: \ref{EOMB 2.3.18.3.2}
 \iitem $>$¾ index fly up or down (APV only)
-\iitem XTK error > 0.3nm \ref{EOMB 2.3.18.3.2}
+\iitem XTK error > 0.3nm
 \iitem NAV ACCUR DOWNGRAD reported by both FMGCs
-\iitem FMS1/FMS2 POS DIFF message
 \iitem FM/GPS POS DISAGREE ECAM
 \iitem GPS PRIMARY LOST reported by both FMGCs.
 \item If GPS PRIMARY LOST or NAV ACCUR DOWNGRAD is reported by a single
-  FMGC continue with the unaffected FMGC. \ref{EOMB 2.3.18.3.2}}
-
-\mysec{Non-precision Overlay – Fully managed \ref{EOMB 2.3.18.1.2}}{
-\item[$\bullet$] GPS PRIMARY required
-\item[$\bullet$] Min Temp -10°C
-\item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed
-\item[$\bullet$] Do not revise final approach segment
-\item[$\bullet$] Must be established laterally before descent
-\item[$\bullet$] Arm Approach. Check FINAL blue, APP NAV
-\item[$\bullet$] At D-0.2nm, check FINAL APP activation
-\item[$\bullet$] Monitor raw data. If GPS PRIMARY LOST, the approach may
-  continue to be flown in FINAL APP if raw data checks out.}
+  FMGC continue with the unaffected FMGC.
+\item[$\bullet$] \textbf{Overlay approach:} FINAL APP may continue to be
+  used unless raw data indicates flight path deviation.\ref{EOMB 2.3.18.3.2}
+}
 
 
 \mysec{Non-precision Overlay - Managed lateral \ref{EOMB 2.3.18.1.2}}{
