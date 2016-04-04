@@ -732,15 +732,16 @@ element
 \pagebreak
 
 \mysec{LVO takeoff \ref{EOMB 2.4.4}}{
-\item Absolute minima \ref{EOMA 8.1.3.3} \dotfill 125/125/125
+\item[$\bullet$] Absolute minima \ref{EOMA 8.1.3.3} \dotfill 125/125/125
 \iitem Reported RVR of initial part of Takeoff run can be replaced by
   pilot assessment.
 \iitem Only relevant RVRs must be considered.
-\item Extra calls \ref{???} \dotfill ``Entering runway'', ``Rolling'', ``Airborne''
+\item[$\bullet$] All passenger PEDS must be turned off.\ref{EOMA 8.3.23.2}
 }
 
 \mysec{LVO landing \ref{EOMB 2.3.18.3.1.1}}{
-\item[$\bullet$] Check NOTAMS for airport facility downgrades (see EOMA-8.1.3.10)
+\item[$\bullet$] All passenger PEDS must be turned off.\ref{EOMA 8.3.23.2}
+\item[$\bullet$] Check NOTAMS for airport facility downgrades (see EOMA-8.1.3.5)
 \item[$\bullet$] Check minimas, approach ban and LVPs in force
 \item[$\bullet$] Check crew qualification and aircraft capability
 \item[$\bullet$] Check autoland wind and runway condition limits
@@ -751,11 +752,27 @@ element
 \iitem 40ft, FMA:FLARE\dotfill PNF:``Flare''
 \iitem 10ft \dotfill Auto callout: ``Retard''
 \iitem FMA:ROLLOUT\dotfill PNF:``Rollout''
-\iitem As appropriate \ref{???}\dotfill ``On ground'', ``Runway vacated''
-\item[$\bullet$] If FLARE not annunciated by 30ft, go around
+\item[$\bullet$] Data Lock: Below 700ft RA, changes to V$_\textrm{app}$,
+  Wind, course, and ILS Freq inhibited.
+\item[$\bullet$] No action on FCU will disengage LAND mode
+\item[$\bullet$] At 30ft check FLARE and THR IDLE annunciated; if not,
+  go around.
 \item[$\bullet$] Select reverse at touchdown
 \item[$\bullet$] Disconnect autopilot at taxi speed
 }
+
+\mysec{Autoland Warning Light \ref{DSC.22.30.80.30}}{
+\item[$\bullet$] RA<200ft and
+\item[$\bullet$] one or more autopilots engaged and
+\item[$\bullet$] LAND or FLARE annunciated and
+\item[$\bullet$] one or more of:
+  \iitem Both autopilots disconnect (N.B. RA NCD case)
+  \iitem RA>15ft and localiser signal lost or deviation >¼ dot
+  \iitem RA>100ft and glideslope signal lost or deviation >1 dot
+  \iitem Difference between rad alt > 15ft
+  \iitem Long flare detected (newer aircraft only)
+}
+
 \pagebreak
 
 \vspace*{\fill}{}\resizebox{\textwidth}{!}{\rotatebox{90}{\includegraphics{images/catIII-failures.png}}}\vspace*{\fill}
