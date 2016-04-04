@@ -654,9 +654,9 @@ element
 }
 
 
-\mysec{RNAV or FINAL APP Non-Precision overlay approach}{
-\item[$\bullet$] \textbf{Minimum required equipment:}\\ 1 FMS in GPS
-  PRIMARY; 1 MCDU; 1 FD; 1 PFD; ND on PF side; 2 FCU
+\mysec{RNAV or Non-Precision overlay approach}{
+\item[$\bullet$] \textbf{Minimum required equipment:}\\ 1 FMS (with GPS
+  PRIMARY for RNAV(GNSS)); 1 MCDU; 1 FD; 1 PFD; ND on PF side; 2 FCU
   channels. Underlying navigation source must be available. Check RNP:
   0.3nm. \ref{EOMA 8.4.5.2, EOMB 2.3.18.3.2, PRO.SPO.51}
 \item[$\bullet$] RNP AR APCH (entitled RNAV(RNP)) not authorised.\ref{EOMA 8.4.5.2}
@@ -674,9 +674,11 @@ element
 \item[$\bullet$] Modifications to FMC database procedure prohibited with
   the exception of temperature corrections to minimum
   altitudes.\ref{EOMA 8.4.5.2}
+  \item[$\bullet$] Fly a stabilised approach if using FPA. Set and pull FPA
+    0.3nm before descent point.\ref{EOMC 2.3.18.3.3}
 \item[$\bullet$] Chart vs. database \ref{EOMB 2.3.18.3.2}:
-  \iitem Max vertical path difference \dotfill 0.1°
-  \iitem Max lateral track difference \dotfill APV: 1°; Overlay: 3°
+  \iitem Max vertical path difference (APV only)\dotfill 0.1°
+  \iitem Max lateral track difference \dotfill RNAV: 1°; Overlay: 3°
 \item[$\bullet$] \textbf{RNAV approach:} Go around for: \ref{EOMB 2.3.18.3.2}
 \iitem $>$¾ index fly up or down (APV only)
 \iitem XTK error > 0.3nm
@@ -690,20 +692,11 @@ element
 }
 
 
-\mysec{Non-precision Overlay - Managed lateral \ref{EOMB 2.3.18.1.2}}{
-\item[$\bullet$] GPS PRIMARY required
-\item[$\bullet$] PI-CF leg (PROC-T on MCDU) not allowed
-\item[$\bullet$] Consider CONF 3, gear down,  F speed by D-1nm \ref{EOMB 2.3.18.1.5}
-\item[$\bullet$] NAV/FPA when on final track
-\item[$\bullet$] At D-0.2nm, set and pull FPA
-\item[$\bullet$] Monitor raw data. If GPS PRIMARY LOST, the approach may
-  continue to be flown in NAV if raw data checks out.}
-
-
-\mysec{Non-precision - Selected vertical and lateral \ref{EOMB 2.3.18.1.2}}{
-\item[$\bullet$] Consider CONF 3, gear down, F speed by D-1nm \ref{EOMB 2.3.18.1.5}
-\item[$\bullet$] TRK/FPA when on final track
-\item[$\bullet$] At D-0.2nm, set and pull FPA
+\mysec{Non-Precision Approach - Selected vertical and lateral \ref{EOMB 2.3.18.3.3}}{
+\item[$\bullet$] Fly a stabilised approach
+\item[$\bullet$] If NAV ACCURACY is LOW at least one NS in ROSE LS/VOR \ref{2.3.18.2.1}
+\item[$\bullet$] 0.3nm before descent point, set and pull FPA
+\item[$\bullet$] 1°FPA modifies descent profile by 100ft for each nm
 }
 
 \mysec{Circling \ref{EOMB 2.3.18.3.4}}{
