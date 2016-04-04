@@ -2,12 +2,12 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{txfonts}
-\usepackage[paper=a5paper,lmargin=0.75cm,tmargin=0.5cm]{geometry}
+\usepackage[paper=a5paper,lmargin=0.75cm,tmargin=0.5cm,bmargin=0.5cm,includefoot]{geometry}
 \usepackage{setspace}
 \usepackage{graphics}
 \usepackage{color}
 \usepackage{paralist}
-\pagestyle{empty}
+\pagestyle{plain}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0em}
 \title{Airbus numbers}
@@ -15,12 +15,13 @@
 \setcounter{secnumdepth}{0}
 
 \renewcommand{\ref}[1]{{\color{blue}\scriptsize [#1]}}
-
-\newcommand{\mysec}[2]{
+\newcommand{\secref}[1]{\vspace{-3mm}\ref{#1}}
+\newcommand{\mysec}[3][]{
   \vbox{
-    \subsection{#1}
+    \subsection{#2}
+    #1
     \begin{list}{}{\setlength\parsep{0pt}\setlength\itemsep{0pt}}
-    #2
+    #3
     \end{list}}}
 
 \newcommand{\iitem}{\item\hspace{2em}}
@@ -30,9 +31,11 @@
 
 \begin{document}
 \raggedbottom
+\setcounter{tocdepth}{2}
+\tableofcontents
 \vbox{\small\subsection{Crosswind Limits}
-\subsubsection{Runway Width $\geq$45m \ref{EOMB 2.1, LIM.22.20,
-    EOMB 4.12.4, NTC Tech 6/16}}
+  \subsubsection{Runway Width $\geq$45m}
+  \secref{EOMB 2.1, LIM.22.20, EOMB 4.12.4, NTC Tech 6/16}
 \begin{center}
 \begin{tabular}{|l|c|}\hline
   \parbox{0.5\textwidth}{
@@ -98,7 +101,8 @@
     \vspace{1mm}} & Not recommended\\\hline
 \end{tabular}
 \end{center}
-\subsubsection{Runway Width $<$45m, $\ge$30m \ref{PRO.SPO.60}}
+\subsubsection{Runway Width $<$45m, $\ge$30m}
+\secref{PRO.SPO.60}
 \begin{center}
 \begin{tabular}{|l|c|}\hline
   \parbox{0.5\textwidth}{
@@ -160,7 +164,8 @@
 
 \vbox{
 \subsection{Wake Turbulence}
-\subsubsection{Final Approach \ref{EOMA 8.3.10}}
+\subsubsection{Final Approach}
+\secref{EOMA 8.3.10}
 \begin{center}
   \begin{tabular}{|c|c|}\hline
     Type & Separation\\\hline
@@ -173,7 +178,8 @@
 \textbf{Note}: Boeing 757 and Boeing 737-800/900 are classified as heavy for the purposes of final
 approach in some countries.
 
-\subsubsection{Departure \ref{EOMA 8.3.10}}
+\subsubsection{Departure}
+\secref{EOMA 8.3.10}
 \begin{center}
   \begin{tabular}{|c|c|}\hline
     Type & Separation\\\hline
@@ -187,7 +193,8 @@ approach in some countries.
 
 
 \vbox{
-\subsection{Dimensions \ref{DSC.20.20}}
+  \subsection{Dimensions}
+  \secref{DSC.20.20}
 \begin{center}
 \begin{tabular}{|l|c|c|c|}\hline
   & \parbox{.15\textwidth}{\centering A319}
@@ -202,7 +209,8 @@ approach in some countries.
 
 
 \vbox{
-\subsection{Weights \ref{LIM.11}}
+  \subsection{Weight Limits}
+  \secref{LIM.11, PER.LOD.CGO}
 \begin{center}
 \begin{tabular}{|l|c|c|}\hline
   Weight & A319 & A320 \\ \hline
@@ -212,24 +220,17 @@ approach in some countries.
   Max Zero Fuel & 57000kg & 62500kg \\
   Minimum & 35400kg & 37230kg \\ \hline
 \end{tabular}
-\end{center}}
-
-
-\vbox{
-\subsection{Cargo bay weight limits \ref{PER.LOD.CGO}}
+\end{center}
 \begin{center}
 \begin{tabular}{|l|c|c|l|c|}\cline{1-2}\cline{4-5}
 \multicolumn{2}{|c|}{A319} & &
 \multicolumn{2}{|c|}{A320}\\\cline{1-2}\cline{4-5}
-Compartment 1 & 2268kg & & Compartment 1 & 3402kg\\
-Section 41 & 1326kg & & Compartment 3 & 2426kg\\
-Section 42 & 1695kg & & Compartment 4 & 2110kg\\
-Compartment 5 & 1497kg & & Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5}
+Max Compartment 1 & 2268kg & & Max Compartment 1 & 3402kg\\
+Max Section 41 & 1326kg & & Max Compartment 3 & 2426kg\\
+Max Section 42 & 1695kg & & Max Compartment 4 & 2110kg\\
+Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5}
 \end{tabular}
-\end{center}}
-
-
-\vbox{
+\end{center}
 }
 
 
@@ -526,7 +527,7 @@ reverse only
 }
 
 
-\mysec{Double engine failure  \ref{QRH ABN.70}}{
+\mysec[\secref{QRH ABN.70}]{Double engine failure}{
 \item Target\dotfill 4nm, 2400AAL, S Speed, Flap 1, Gear up
 \item Range
   \iitem 300kt \dotfill 2nm per 1000ft
@@ -583,7 +584,7 @@ reverse only
 }
 
 
-\mysec{Takeoff with tailwind or crosswind > 20kt \ref{EOMB 2.3.12}}{
+\mysec[\secref{EOMB 2.3.12}]{Takeoff with tailwind or crosswind > 20kt}{
 \item[$\bullet$] Set 50\%
 \item[$\bullet$] When engines stable, rapidly set 70\%
 \item[$\bullet$] Select takeoff thrust by 40kt
@@ -591,7 +592,7 @@ reverse only
 }
 
 
-\mysec{PRNAV (RNP 1) SID/STAR \ref{PRO.SPO.51, EOMA 8.3.3.9, EOMB 2.4.51.2}}{
+\mysec[\secref{PRO.SPO.51, EOMA 8.3.3.9, EOMB 2.4.51.2}]{PRNAV (RNP 1) SID/STAR}{
 \item[$\bullet$] \textbf{Minimum required equipment:}\\
   1 FMGC; 1 MCDU; 1 GPS or 2 DMEs; 2 IRS; 1 FD; PFD and ND on PF side; 1
   EFIS display on PM side. Additional procedure specific restrictions may
@@ -619,7 +620,7 @@ reverse only
 \footnotetext[1]{EOM-B overrides FCOM for these messages}
 
 
-\mysec{Holding \ref{LIDO RAR.5.7}}{
+\mysec[\secref{LIDO RAR.5.7}]{Holding}{
 \item Joining
 \iitem Turn anti-holdwise<110° to Outbound track \dotfill Parallel entry
 \iitem Turn holdwise<70° to Outbound track \dotfill Teardrop entry
@@ -635,7 +636,7 @@ reverse only
 }
 
 
-\mysec{Visual Approach \ref{EOMB 2.3.18.3.6}}{
+\mysec[\secref{EOMB 2.3.18.3.6}]{Visual Approach}{
 \item[$\bullet$] Minimas: \ref{EOMA 8.1.3.6}
   \iitem Visibility \dotfill 5km
   \iitem Cloud ceiling \dotfill 2500ft aal
@@ -649,7 +650,7 @@ reverse only
 }
 
 
-\mysec{Circling \ref{EOMB 2.3.18.3.4}}{
+\mysec[\secref{EOMB 2.3.18.3.4}]{Circling}{
 \item[$\bullet$] If OEI, check weight (QRH ABN.80)
 \item[$\bullet$] Protected circling radius \ref{LIDO RAR.5.5} \dotfill
   4.2nm from all RWY THR
@@ -665,7 +666,7 @@ reverse only
 }
 
 
-\mysec{Non-Precision Approach - Selected vertical and lateral \ref{EOMB 2.3.18.3.3}}{
+\mysec[\secref{EOMB 2.3.18.3.3}]{Non-Precision Approach - Selected vertical and lateral}{
 \item[$\bullet$] Fly a stabilised approach
 \item[$\bullet$] If NAV ACCURACY is LOW at least one NS in ROSE LS/VOR \ref{EOMB 2.3.18.2.1}
 \item[$\bullet$] 0.3nm before descent point, set and pull FPA
@@ -743,7 +744,7 @@ element
 }
 
 
-\mysec{Autoland Warning Light \ref{DSC.22.30.80.30}}{
+\mysec[\secref{DSC.22.30.80.30}]{Autoland Warning Light}{
 \item[$\bullet$] RA<200ft and
 \item[$\bullet$] one or more autopilots engaged and
 \item[$\bullet$] LAND or FLARE annunciated and
@@ -756,7 +757,7 @@ element
 }
 
 
-\mysec{LVO takeoff \ref{EOMA 8.1.3.3}}{
+\mysec[\secref{EOMA 8.1.3.3}]{LVO takeoff}{
 \item[$\bullet$] Absolute minima \dotfill 125/125/125
 \item[$\bullet$] Reported RVR of initial part of Takeoff run can be replaced by
   pilot assessment.
@@ -764,7 +765,7 @@ element
 \item[$\bullet$] All passenger PEDS must be turned off. \ref{EOMA 8.3.23.2}
 }
 
-\mysec{LVO landing \ref{EOMB 2.3.18.3.1.1}}{
+\mysec[\secref{EOMB 2.3.18.3.1.1}]{LVO landing}{
 \item[$\bullet$] All passenger PEDS must be turned off.\ref{EOMA 8.3.23.2}
 \item[$\bullet$] Check NOTAMS for airport facility downgrades (see EOMA-8.1.3.5)
 \item[$\bullet$] Check minimas, approach ban and LVPs in force
