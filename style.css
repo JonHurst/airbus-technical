@@ -1,4 +1,4 @@
-body {font-family:freesans,verdana;;background-color:gray;;
+body {font-family:freesans,verdana; color: black; background-color:white;
 }
 div.navheader, div.navfooter, div.sect1, div.article {
     font-size: 1em;
@@ -8,12 +8,6 @@ div.navheader, div.navfooter, div.sect1, div.article {
     margin: 0 auto;
 }
 
-div.navfooter {
-    border-radius: 0px 0px 10px 10px;
-}
-div.navheader {
-    border-radius: 10px 10px 0 0;
-}
 
 div.navheader td, div.navfooter td{
     padding:0;

@@ -21,4 +21,3 @@ notes.fo: notes.xml myfo.xsl
 	xsltproc myfo.xsl notes.xml >notes.fo
 numbers.pdf: numbers.tex
 	pdflatex -halt-on-error numbers.tex
-
