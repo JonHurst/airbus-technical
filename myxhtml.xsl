@@ -11,4 +11,9 @@
 <xsl:param name="generate.section.toc.level" select="1"/>
 <xsl:param name="toc.max.depth" select="1"/>
 
+<xsl:param name="make.clean.html" select="1"/>
+<xsl:template name="user.head.content">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</xsl:template>
+
 </xsl:stylesheet>

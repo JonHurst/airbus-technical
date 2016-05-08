@@ -1,27 +1,60 @@
-body {font-family:freesans,verdana; color: black; background-color:white;
-}
-div.navheader, div.navfooter, div.sect1, div.article {
-    font-size: 1em;
-    max-width: 40em;
+body {
     background-color: white;
-    padding: 0.5em 6em;
-    margin: 0 auto;
+    color: black;
+    font-family: sans-serif;
+    padding: 1px;
 }
 
-
-div.navheader td, div.navfooter td{
-    padding:0;
+body > div {
+    margin:auto;
+    max-width:45em;
 }
 
-div.sect1 {
-    line-height: 1.3em;
+h1,h2,h3,h4 {
+    color:darkblue;
 }
-h1,h2,h3,h4 {color:darkblue;}
-div.sect4 {margin-left:3em;}
-table { font-size:100%; margin:auto; padding:0 2em; border-collapse: collapse;}
-div.mediaobject {text-align:center;margin: 1em -3em;}
-div.variablelist {margin-left:2em;}
+
+table {
+    margin:1em auto;
+    padding 0 2em;
+    border-collapse: collapse;
+}
+
 td {padding: 1em;}
-table.simplelist {margin-left:3em;}
-table.simplelist td {padding:0.5em;}
 dt {font-weight:bold;}
+
+div.mediaobject {
+    padding: 1em 0;
+    text-align:center;
+}
+
+.mediaobject, .table-contents, div.informaltable {
+    overflow-x: auto;
+}
+
+span.underline{text-decoration:underline;}
+.multicite{color:#303030; font-size:0.8em;}
+sup {vertical-align:top; font-size:0.75em;position:relative; top:-0.25em;}
+
+@media (max-width: 30em) {
+    h1 {
+        font-size: 130%;
+    }
+    h2, h3 {
+        font-size: 115%;
+    }
+    ol, ul {
+        padding-left:1.5em;
+    }
+   /*footer navigation table doesn't work well on very narrow screens*/
+    .navfooter tbody tr:last-child {
+        display: none;
+    }
+}
+
+@media screen and (orientation:landscape) {
+img {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
