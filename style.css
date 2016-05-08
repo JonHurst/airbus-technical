@@ -28,15 +28,12 @@ div.mediaobject {
     text-align:center;
 }
 
-.mediaobject, .table-contents, div.informaltable {
-    overflow-x: auto;
-}
 
 span.underline{text-decoration:underline;}
 .multicite{color:#303030; font-size:0.8em;}
 sup {vertical-align:top; font-size:0.75em;position:relative; top:-0.25em;}
 
-@media (max-width: 30em) {
+@media (max-width: 480px) {
     h1 {
         font-size: 130%;
     }
@@ -46,13 +43,17 @@ sup {vertical-align:top; font-size:0.75em;position:relative; top:-0.25em;}
     ol, ul {
         padding-left:1.5em;
     }
+    .mediaobject, .table-contents, div.informaltable {
+        overflow-x: auto;
+    }
    /*footer navigation table doesn't work well on very narrow screens*/
     .navfooter tbody tr:last-child {
         display: none;
     }
 }
 
-@media screen and (orientation:landscape) {
+/* scale images if 480px<viewport width<actual width */
+@media (min-width: 480px) {
 img {
     height: auto;
     width: auto;
