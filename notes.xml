@@ -1911,7 +1911,7 @@
           <title>Simplified schematic of engine fuel system</title>
           <mediaobject>
             <imageobject role="fo">
-              <imagedata align="center" width="100%" fileref="images/engine-fuel-system-schematic.svg"/>
+              <imagedata align="center" width="90%" fileref="images/engine-fuel-system-schematic-opt.svg"/>
             </imageobject>
             <imageobject role="html">
               <imagedata format="PNG" fileref="../images/engine-fuel-system-schematic.png"/>
