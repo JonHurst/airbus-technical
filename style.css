@@ -3,6 +3,11 @@ body {
     color: black;
     font-family: sans-serif;
     padding: 1px;
+    line-height: 1.4;
+}
+
+sup, sub {
+    line-height: 0;
 }
 
 body > div {
@@ -31,7 +36,7 @@ div.mediaobject {
 
 span.underline{text-decoration:underline;}
 .multicite{color:#303030; font-size:0.8em;}
-sup {vertical-align:top; font-size:0.75em;position:relative; top:-0.25em;}
+/* sup {vertical-align:top; font-size:0.75em;position:relative; top:-0.25em;} */
 
 @media (max-width: 480px) {
     h1 {
