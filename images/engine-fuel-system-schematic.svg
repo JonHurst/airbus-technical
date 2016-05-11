@@ -48,7 +48,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="152.07885"
+     inkscape:cx="250.72024"
      inkscape:cy="38.342267"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -84,7 +84,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -95,7 +95,8 @@
      transform="translate(-142.37446,31.629481)">
     <g
        transform="matrix(0,0.2526221,-0.2526221,0,301.37074,-77.528456)"
-       id="g2845">
+       id="g2845"
+       style="">
       <path
          d="m 317,406.86218 c 0,24.02439 -19.47561,43.5 -43.5,43.5 -24.02439,0 -43.5,-19.47561 -43.5,-43.5 0,-24.02439 19.47561,-43.5 43.5,-43.5 24.02439,0 43.5,19.47561 43.5,43.5 z"
          transform="matrix(0.908057,0,0,0.908057,186.6465,37.90804)"
@@ -115,7 +116,8 @@
     </g>
     <g
        transform="matrix(0,0.2526221,-0.2526221,0,687.60994,-77.528456)"
-       id="g4392">
+       id="g4392"
+       style="">
       <path
          d="m 317,406.86218 c 0,24.02439 -19.47561,43.5 -43.5,43.5 -24.02439,0 -43.5,-19.47561 -43.5,-43.5 0,-24.02439 19.47561,-43.5 43.5,-43.5 24.02439,0 43.5,19.47561 43.5,43.5 z"
          transform="matrix(0.908057,0,0,0.908057,186.6465,37.90804)"
@@ -190,7 +192,8 @@
        y="132.04523" />
     <g
        transform="matrix(-0.2526221,0,0,-0.2526221,372.99915,247.27084)"
-       id="g4718">
+       id="g4718"
+       style="">
       <path
          d="m 317,406.86218 c 0,24.02439 -19.47561,43.5 -43.5,43.5 -24.02439,0 -43.5,-19.47561 -43.5,-43.5 0,-24.02439 19.47561,-43.5 43.5,-43.5 24.02439,0 43.5,19.47561 43.5,43.5 z"
          transform="matrix(0.908057,0,0,0.908057,186.6465,37.90804)"
@@ -216,7 +219,8 @@
        inkscape:connector-curvature="0" />
     <g
        transform="matrix(0.2534958,0,0,0.2535684,194.39442,-70.821216)"
-       id="g2833">
+       id="g2833"
+       style="">
       <path
          d="m 317,406.86218 c 0,24.02439 -19.47561,43.5 -43.5,43.5 -24.02439,0 -43.5,-19.47561 -43.5,-43.5 0,-24.02439 19.47561,-43.5 43.5,-43.5 24.02439,0 43.5,19.47561 43.5,43.5 z"
          transform="matrix(0.908057,0,0,0.908057,21.64633,37.40783)"
@@ -248,7 +252,8 @@
        y="22.362183" />
     <g
        transform="matrix(0.2534958,0,0,0.2535684,387.51402,-70.821216)"
-       id="g4380">
+       id="g4380"
+       style="">
       <path
          d="m 317,406.86218 c 0,24.02439 -19.47561,43.5 -43.5,43.5 -24.02439,0 -43.5,-19.47561 -43.5,-43.5 0,-24.02439 19.47561,-43.5 43.5,-43.5 24.02439,0 43.5,19.47561 43.5,43.5 z"
          transform="matrix(0.908057,0,0,0.908057,21.64633,37.40783)"
@@ -287,7 +292,7 @@
        y="22.362183" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="198.3934"
        y="-17.533524"
        id="text4402"
@@ -306,7 +311,7 @@
          id="tspan4408">valve</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="160.07446"
        y="22.642944"
        id="text4410"
@@ -325,7 +330,7 @@
          id="tspan3627">tank</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="709.53442"
        y="30.142944"
        id="text4418"
@@ -340,7 +345,7 @@
          id="tspan4422">nozzles</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="262.46021"
        y="-5.3386993"
        id="text4626"
@@ -355,7 +360,7 @@
          id="tspan4630">Pump</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="327.1337"
        y="-20.514481"
        id="text4632"
@@ -374,7 +379,7 @@
          id="tspan4638">exchanger</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="391.1319"
        y="12.466476"
        id="text4640"
@@ -385,7 +390,7 @@
          y="12.466476">Filter</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="455.72983"
        y="-5.3386993"
        id="text4644"
@@ -400,7 +405,7 @@
          id="tspan4648">pump</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="520.1839"
        y="-17.533524"
        id="text4650"
@@ -419,7 +424,7 @@
          id="tspan4656">valve</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="584.63263"
        y="-17.533524"
        id="text4658"
@@ -438,7 +443,7 @@
          id="tspan4664">valve</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="648.96973"
        y="-17.533524"
        id="text4666"
@@ -457,7 +462,8 @@
          id="tspan4672">sensor</tspan></text>
     <g
        transform="matrix(0.2526221,0,0,0.2526221,371.93026,-33.04649)"
-       id="g4696">
+       id="g4696"
+       style="">
       <path
          d="m 317,406.86218 c 0,24.02439 -19.47561,43.5 -43.5,43.5 -24.02439,0 -43.5,-19.47561 -43.5,-43.5 0,-24.02439 19.47561,-43.5 43.5,-43.5 24.02439,0 43.5,19.47561 43.5,43.5 z"
          transform="matrix(0.908057,0,0,0.908057,186.6465,37.90804)"
@@ -550,7 +556,7 @@
        y="97.362183" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="274.1622"
        y="208.86218"
        id="text4746"
@@ -561,7 +567,7 @@
          y="208.86218">To fuel tank</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="663.57446"
        y="111.86218"
        id="text4750"
@@ -572,7 +578,7 @@
          y="111.86218">To servos</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="585.75867"
        y="137.10361"
        id="text4754"
@@ -591,7 +597,7 @@
          id="tspan4758">Heater</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="534.91284"
        y="136.9205"
        id="text4760"
@@ -606,7 +612,7 @@
          id="tspan4764">filter</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="369.2023"
        y="137.10361"
        id="text4766"
@@ -621,17 +627,17 @@
          id="tspan4770">cooler</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="443.5629"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="441.5629"
        y="67.642937"
        id="text4772"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4774"
-         x="443.5629"
+         x="441.5629"
          y="67.642937">By-pass</tspan><tspan
          sodipodi:role="line"
-         x="443.5629"
+         x="441.5629"
          y="82.642937"
          id="tspan4776">valve</tspan></text>
     <path
@@ -642,26 +648,27 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="225.79227"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="223.79227"
        y="134.78888"
        id="text4780"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4782"
-         x="225.79227"
+         x="223.79227"
          y="134.78888">Fuel</tspan><tspan
          sodipodi:role="line"
-         x="225.79227"
+         x="223.79227"
          y="149.78888"
          id="tspan4784">return</tspan><tspan
          sodipodi:role="line"
-         x="225.79227"
+         x="223.79227"
          y="164.78888"
          id="tspan4786">valve</tspan></text>
     <g
        transform="matrix(-0.2526221,0,0,-0.2526221,395.54907,247.41678)"
-       id="g2287">
+       id="g2287"
+       style="">
       <path
          d="m 317,406.86218 c 0,24.02439 -19.47561,43.5 -43.5,43.5 -24.02439,0 -43.5,-19.47561 -43.5,-43.5 0,-24.02439 19.47561,-43.5 43.5,-43.5 24.02439,0 43.5,19.47561 43.5,43.5 z"
          transform="matrix(0.908057,0,0,0.908057,186.6465,37.90804)"
