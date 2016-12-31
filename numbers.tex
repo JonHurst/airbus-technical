@@ -635,7 +635,7 @@ reverse only
   \item[$\bullet$] Database procedure should not be changed except for
     the addition of missing altitude or speed constraints. ATC ``direct
     to'' instructions may be accepted when above MSA. Max allowable XTK Error on
-    RF leg is 0.5nm.\ref{EJ ppt}
+    RF\footnotemark[1] leg is 0.5nm.\ref{EJ ppt}
 \item[$\bullet$] If GPS PRIMARY LOST or NAV ACCUR DOWNGRAD on one ND/MCDU
   continue with the unaffected one.
 \item[$\bullet$] Use raw data to identify and continue with FMGC that
@@ -644,12 +644,13 @@ reverse only
   \iitem CHECK IRS 1(2)(3)/FM POSITION (on MCDU)
   \iitem CHECK A/C POSITION
 \item[$\bullet$] Request reclearance if:
-  \iitem FM/GPS POS DISAGREE ECAM\footnotemark[1]
-  \iitem FMS1/FMS2 POS DIFF message\footnotemark[1]
+  \iitem FM/GPS POS DISAGREE ECAM\footnotemark[2]
+  \iitem FMS1/FMS2 POS DIFF message\footnotemark[2]
   \iitem NAV ACCUR DOWNGRAD on both sides
   \iitem Additional restriction (e.g. Dual FMC, GPS) no longer met
 }
-\footnotetext[1]{EOM-B overrides FCOM for these messages}
+\footnotetext[1]{Radius to Fix}
+\footnotetext[2]{EOM-B overrides FCOM for these messages}
 
 
 \mysec[\secref{LIDO RAR.5.7}]{Holding}{
