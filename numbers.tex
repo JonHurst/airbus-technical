@@ -7,6 +7,7 @@
 \usepackage{graphics}
 \usepackage{color}
 \usepackage{paralist}
+\usepackage{array}
 \pagestyle{plain}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0em}
@@ -16,18 +17,32 @@
 
 \renewcommand{\ref}[1]{{\color{blue}\scriptsize [#1]}}
 \newcommand{\secref}[1]{\vspace{-3mm}\ref{#1}}
+
+\newcommand{\mylist}[1]{
+  \begin{list}{}{\setlength\parsep{0pt}\setlength\itemsep{0pt}}
+    #1
+\end{list}}
+
 \newcommand{\mysec}[3][]{
   \vbox{
     \subsection{#2}
     #1
-    \begin{list}{}{\setlength\parsep{0pt}\setlength\itemsep{0pt}}
-    #3
-    \end{list}}}
+    \mylist{#3}
+}}
 
 \newcommand{\iitem}{\item\hspace{2em}}
 
 \newcommand{\pitem}[1]{
 \item\hfill\parbox{22em}{\begin{spacing}{0.9}\vspace{0.25em} #1 \vspace{0.8em}\end{spacing}}}
+
+\newcommand{\rwstate}[1]{
+  \parbox{0.45\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}
+      #1
+    \end{compactitem}
+    \vspace{1mm}}}
+
 
 \begin{document}
 \pagenumbering{roman}
@@ -42,149 +57,116 @@
 \end{center}
 \pagebreak
 \pagenumbering{arabic}
-\vbox{\small\subsection{Crosswind Limits}
-  \subsubsection{Runway Width $\geq$45m}
-  \secref{EOMB 2.1, LIM.22.20, EOMB 4.12.4}
-\label{windlimits}
+\vbox{
+  \subsection{Takeoff and Landing Wind Limits}
+  \subsubsection{Takeoff or Manual Landing, Runway Width $\geq$45m}
+  \mylist{
+  \item Max Headwind\dotfill No limit
+  \item Max Tailwind\dotfill 10kt
+  }
+
   \begin{center}
-\begin{tabular}{|l|c|}\hline
-  \parbox{0.55\textwidth}{
-  \centering Condition}
-  & Max Crosswind\\
-  ~ & (including gust)\\\hline
-
-  \parbox{0.55\textwidth}{
+  \begin{tabular}{|l|c|}\hline
+  \multicolumn{1}{|c|}{Runway Condition}
+  & Max Crosswind\\  ~ & (including gust)\\\hline
+  \rwstate{
+    \item Dry
+    \item Damp
+    \item Wet ($\leq$3mm water)
+    \item Slush ($\leq$3mm)
+    \item Snow ($\leq$3mm, dry or wet)
+    \item Frost
+    \item $\leq$25\% contamination} &
+  \parbox{0.35\textwidth}{
     \vspace{1mm}
-    \begin{compactitem}
-     \item Runway: Wet ice
-     \item Runway: Water over compacted snow
-     \item Runway: Snow over ice
+    \begin{compactitem}[]
+    \item A320NEO Takeoff\dotfill 35kt
+    \item Otherwise\dotfill 38kt
     \end{compactitem}
-    \vspace{1mm}} & Not recommended\\\hline
-
-  \parbox{0.55\textwidth}{
     \vspace{1mm}
-    \begin{compactitem}
-     \item Autoland: A319 OEI
-    \end{compactitem}
-    \vspace{1mm}} & 10kt\\\hline
+  }\\\hline
 
-  \parbox{0.55\textwidth}{
-    \vspace{1mm}
-    \begin{compactitem}
-     \item\raggedright Rollout: Sharklets
-     \item Runway: Ice (cold and dry)
-     \item\raggedright Runway: Slippery when wet including portions of poor/unreported
-       braking action
-    \end{compactitem}
-    \vspace{1mm}} & 15kt\\\hline
+  \rwstate{\item Compacted Snow (OAT$\leq$-15°C)} & 29kt\\\hline
 
-  \parbox{0.55\textwidth}{
-    \vspace{1mm}
-    \begin{compactitem}
-     \item Autoland: Other
-     \item Rollout: Other
-     \item Runway: Water (>3mm, $\leq$12.7mm)
-     \item Runway: Slush (>3mm, $\leq$12.7mm)
-    \end{compactitem}
-    \vspace{1mm}} & 20kt\\\hline
+  \rwstate{
+  \item Dry Snow (>3mm, $\leq$100mm)
+  \item Wet Snow (>3mm, $\leq$30mm)
+  \item Compacted Snow (OAT>-15°C)
+  \item Dry Snow over Compacted Snow
+  \item Wet Snow over Compacted Snow
+  \item Slippery when wet} & 25kt\\\hline
 
-  \parbox{0.55\textwidth}{
-    \vspace{1mm}
-    \begin{compactitem}
-     \item Runway: Wet Snow (>3mm, $\leq$30mm)
-     \item Runway: Dry Snow (>3mm, $\leq$100mm)
-     \item Runway: Compacted Snow (OAT>-15°C)
-     \item Runway: Slippery when wet
-    \end{compactitem}
-    \vspace{1mm}} & 25kt\\\hline
+  \rwstate{
+  \item Water (>3mm, $\leq$12.7mm)
+  \item Slush (>3mm, $\leq$12.7mm)} &20kt\\\hline
 
-  \parbox{0.55\textwidth}{
-    \vspace{1mm}
-    \begin{compactitem}
-     \item Runway: Frost
-     \item Runway: Slush ($\leq$3mm)
-     \item Runway: Snow (Wet or Dry, $\leq$3mm)
-     \item Runway: Compacted Snow (OAT$\leq$-15°C)
-    \end{compactitem}
-    \vspace{1mm}} & 29kt\\\hline
+  \rwstate{\item Ice (cold and dry)} & 15kt\\\hline
 
-  \parbox{0.5\textwidth}{
-    \vspace{1mm}
-    \begin{compactitem}
-    \item Runway: Other
-    \end{compactitem}
-    \vspace{1mm}} & 38kt\\\hline
-
-\end{tabular}
-\end{center}
-\subsubsection{Runway Width $<$45m, $\ge$30m}
-\secref{PRO.SPO.60}
-\begin{center}
-\begin{tabular}{|l|c|}\hline
-
-  \parbox{0.55\textwidth}{
-  \centering Condition}
-  & Max Crosswind\\
-  ~ & (including gust)\\\hline
-
-  \parbox{0.55\textwidth}{
-    \vspace{1mm}
-    \begin{compactitem}
-    \item Failure: Rudder or Rudder Pedal Jam
-    \item Failure: Yaw damper system inop
-    \item Failure: Rudder travel limiter fault
-    \item Failure: Nosewheel steering inop
-    \item Failure: One or more brakes inop
-    \item Autoland
-    \end{compactitem}
-    \vspace{1mm}} & Not recommended\\\hline
-
-  \parbox{0.55\textwidth}{
-    \vspace{1mm}
-    \begin{compactitem}
-    \item Runway: Icy
-    \end{compactitem}
-    \vspace{1mm}} & Not demonstrated\\\hline
-
-  \parbox{0.55\textwidth}{
-    \vspace{1mm}
-    \begin{compactitem}
-    \item Runway: Contaminated
-    \end{compactitem}
-    \vspace{1mm}} & 10kt\\\hline
-
-  \parbox{0.55\textwidth}{
-    \vspace{1mm}
-    \begin{compactitem}
-    \item Runway: Wet (≤3mm water)
-    \end{compactitem}
-    \vspace{1mm}} & 33kt\\\hline
-
-  \parbox{0.55\textwidth}{
-    \vspace{1mm}
-    \begin{compactitem}
-    \item Runway: Dry
-    \end{compactitem}
-    \vspace{1mm}} & 38kt\\\hline
-
-\end{tabular}
-\end{center}
+  \end{tabular}
+  \end{center}
 }
 
+  \subsubsection{Takeoff or Manual Landing, Runway Width $<$45m, $\ge$30m}
+  \mylist{
+  \item Max Headwind\dotfill No limit
+  \item Max Tailwind\dotfill 10kt
+  }
+  \begin{center}
+  \begin{tabular}{|l|c|}\hline
+  \multicolumn{1}{|c|}{Runway Condition}
+  & Max Crosswind\\  ~ & (including gust)\\\hline
 
-\mysec{Headwind limits}{
-  \item Autoland: A319 OEI \ref{LIM.22.20}\dotfill 15kt
-  \item Autoland: A319 AEO\ref{LIM.22.20}\dotfill 20kt
-  \item Autoland: A320 \ref{LIM.22.20}\dotfill 30kt
-  \item otherwise \dotfill No limit
-}
+  \rwstate{\item Dry} &
+  \parbox{0.35\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}[]
+    \item A320NEO Takeoff\dotfill 35kt
+    \item Otherwise\dotfill 38kt
+    \end{compactitem}
+    \vspace{1mm}}\\\hline
 
+  \rwstate{\item Wet ($\leq$3mm water)} & 33kt\\\hline
 
-\mysec{Tailwind limits}{
-  \item Autoland: A319 \ref{NTC OPS 44/16}\dotfill 10kt
-  \item otherwise \ref{LIM.12}\dotfill 10kt
-}
+  \rwstate{\item Contaminated (not icy)} & 10kt\\\hline
+
+  \end{tabular}
+  \end{center}
+
+  \vbox{
+  \label{autoland_wind_limits}
+  \subsubsection{Autoland without automatic rollout}
+  \mylist{
+  \item Headwind
+    \iitem A319 OEI\dotfill 15kt
+    \iitem A319 AEO\dotfill 20kt
+    \iitem Otherwise\dotfill 30kt
+  \item Tailwind
+    \iitem A319 CONF3\dotfill 5kt
+    \iitem Otherwise\dotfill 10kt
+  \item Crosswind
+    \iitem A319 OEI\dotfill 10kt
+    \iitem Otherwise\dotfill 20kt
+  \item Crosswind must not be greater than that for manual landing.
+  }}
+
+  \vbox{
+  \subsubsection{Autoland with automatic rollout}
+  \mylist{
+  \item Headwind
+    \iitem A319 OEI\dotfill 15kt
+    \iitem A319 AEO\dotfill 20kt
+    \iitem Otherwise\dotfill 30kt
+  \item Tailwind
+    \iitem A319 CONF3\dotfill 5kt
+    \iitem Otherwise\dotfill 10kt
+  \item Crosswind
+    \iitem A319 OEI\dotfill 10kt
+    \iitem A320 CEO with sharklets\dotfill 15kt
+    \iitem A320 NEO with inop thrust reverser\dotfill 15kt
+    \iitem\hfill (idle reverse used on remaining reverser)
+    \iitem Otherwise\dotfill 20kt
+  \item Crosswind must not be greater than that for manual landing.
+  }}
 
 
 \mysec{Other wind limits}{
@@ -316,7 +298,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \item Max Altitudes \ref{LIM.49.20}
 \iitem Two packs \dotfill 15000ft
 \iitem One pack \dotfill 22500ft
-\iitem Eng start \dotfill 20000ft
+
 \iitem Battery start (emerg elec config) \dotfill 25000ft
 \iitem Restart and operation \dotfill 39000ft
 \iitem  Air bleed for wing anti-icing \dotfill Not permitted
@@ -441,6 +423,12 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 
 
 \mysec{Contaminated Runway Operations}{
+\item Takeoff is not recommended with:
+  \begin{compactitem}
+  \item Wet ice
+  \item  Water on top of compacted snow
+  \item Dry Snow or Wet Snow over Ice
+  \end{compactitem}
   \item Damp runway \ref{EOMB 4.5.1/4.12.1} \dotfill Use Wet performance
   \item Contamination $<$ 25\% of runway area \ref{EOMB 4.6.2} \dotfill
     Use Wet performance
@@ -455,6 +443,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
     \iitem Takeoff \dotfill EOMB 4.5.7
     \iitem Landing \dotfill EOMB 4.14.5
 }
+
 
 
 \mysec{Airport}{
@@ -485,18 +474,23 @@ agl
 \iitem Other phases \dotfill 500ft
 
 \item Alert height \ref{LIM.22.20} \dotfill 100ft
+}
 
-\item Autoland limitations \ref{LIM.22.20}
-\iitem Wind\dotfill see page \pageref{windlimits}
-\iitem Approved configurations \dotfill CONF 3, CONF Full
-\iitem \hfill (CONF 3 not approved for A320 engine out autoland)
-\iitem Rwy conditions for rollout \dotfill Dry, Wet
-\iitem Glideslope \dotfill 2.5° to 3.15°
-\iitem Min pressure altitude (some airframes) \dotfill -1000ft
-\iitem Sharklet auto rollout with one reverser inop \ref{LIM.22.20}\dotfill Idle
-reverse only
-\iitem
-\iitem Max weight (emergency only, only some airframes)\dotfill 69000kg
+
+\mysec[\secref{LIM.22.20}]{Autoland}{
+\item Wind\dotfill see page \pageref{autoland_wind_limits}
+\item Approved configurations
+  \iitem A320CEO OEI\dotfill CONF FULL only
+  \iitem Otherwise\dotfill CONF 3, CONF Full
+\item Rwy conditions for automatic rollout \dotfill Dry, Wet
+\item Glideslope \dotfill 2.5° to 3.15°
+\item Max airport elevation\dotfill A320NEO:5750ft, A320CEO:2500ft, A319:9200ft
+\item Min pressure altitude\dotfill A320NEO:-2000ft; Otherwise:-1000ft
+\item Auto rollout with one reverser inop\dotfill Idle
+  reverse only
+  \item\hfill (except A320CEO without sharklets)
+\item A319 Max weight (emergency only)\dotfill 69000kg
+\item A320NEO Min weight\dotfill 44000kg
 }
 
 
