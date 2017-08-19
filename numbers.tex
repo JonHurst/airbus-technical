@@ -268,24 +268,31 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 }
 
 
-\mysec{Engine}{
-\item TOGA time \ref{LIM.70}\dotfill 5 mins (10 mins single engine)
-\item EGT \ref{LIM.70}
+\mysec[\secref{LIM.70}]{Engine}{
+\item TOGA time \dotfill 5 mins (10 mins single engine)
+\item EGT
 \iitem TOGA \dotfill 950°C
 \iitem MCT \dotfill 915°C
 \iitem Start \dotfill 725°C
 \item Oil
 \iitem Min quantity \ref{EOMB 2.3.4.3}\dotfill 9.5qt+0.5qt/hr
-\iitem Max cont temp \ref{LIM.70}\dotfill 140°C
-\iitem Max trans temp \ref{LIM.70}\dotfill 155°C
-\iitem Min start temp \ref{LIM.70}\dotfill -40°C
-\iitem Min takeoff temp \ref{LIM.70}\dotfill -10°C
-\item Max N1 \ref{LIM.70}\dotfill 104\%
-\item Max N2 \ref{LIM.70}\dotfill 105\%
-\item Starter \ref{LIM.70}
-\pitem{ 4 cycles of max 2 mins with 20 sec pause between each
-  attempt,  then 15 min cooling period.}
-\item Max reverse \ref{LIM.70}\dotfill >70kt
+\iitem Max cont temp \dotfill 140°C
+\iitem Max trans temp \dotfill 155°C
+\iitem Min start temp \dotfill -40°C
+\iitem Min takeoff temp \dotfill -10°C
+\item Max N1 \dotfill 104\%
+\item Max N2 \dotfill 105\%
+\item CFM56 Starter
+  \iitem No running engagement when N2>20\%
+  \iitem 4 cycles of max 2 mins
+  \iitem Pause between start attempts\dotfill 20 sec
+  \iitem Cooling period after 4 attempts\dotfill 15min
+\item LEAP-1A Starter
+  \iitem No running engagement when N2>59\%
+  \iitem 1 auto-start cycle consists of three start attempts
+  \iitem Pause between cycles\dotfill 60 sec
+  \iitem Cooling period after 3 cycles\dotfill 15min
+\item Max reverse \dotfill >70kt
 }
 
 
