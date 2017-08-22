@@ -49,6 +49,8 @@
 \raggedbottom
 \setcounter{tocdepth}{2}
 \tableofcontents
+
+
 \pagebreak
 \vspace*{5cm}
 
@@ -56,7 +58,62 @@
   Intentionally blank
 \end{center}
 \pagebreak
+
+
 \pagenumbering{arabic}
+\vbox{
+\subsection{Wake Turbulence}
+\subsubsection{Final Approach}
+\secref{EOMA 8.3.10}
+\begin{center}
+  \begin{tabular}{|c|c|}\hline
+    Type & Separation\\\hline
+    A380 & 7nm\\
+    Heavy & 5nm\\
+    Upper Medium (e.g. 757,707) & 4nm (UK only)\\\hline
+  \end{tabular}
+\end{center}
+
+\textbf{Note}: Boeing 757 and Boeing 737-800/900 are classified as heavy for the purposes of final
+approach in some countries.
+
+\subsubsection{Departure}
+\secref{EOMA 8.3.10}
+\begin{center}
+  \begin{tabular}{|c|c|}\hline
+    Type & Separation\\\hline
+    A380 & 3 mins\\
+    Heavy & 2 mins\\\hline
+  \end{tabular}
+\end{center}
+
+\textbf{Note}: Add \textbf{1 minute} if departure is not from the same position
+}
+
+
+\mysec{Contaminated Runway Operations}{
+\item Takeoff is not recommended with:
+  \begin{compactitem}
+  \item Wet ice
+  \item  Water on top of compacted snow
+  \item Dry Snow or Wet Snow over Ice
+  \end{compactitem}
+  \item Damp runway \ref{EOMB 4.5.1/4.12.1} \dotfill Use Wet performance
+  \item Contamination $<$ 25\% of runway area \ref{EOMB 4.6.2} \dotfill
+    Use Wet performance
+  \item Contamination $<$3mm \ref{EOMB 4.6.2} \dotfill Use Wet performance
+  \item Takeoff condition assessment matrix \dotfill EFB “More” pages
+  \item Landing condition assessment matrix \dotfill QRH PER-C.3
+  \item Minimum cleared width \ref{WIH 8.2.6} \dotfill 30m (check
+    snowbanks: EOMB 4.6.10)
+    \iitem $\leq$45m does not need to be
+    treated as a narrow runway for V$_1$ etc. \ref{WIH 8.3}
+  \item ``Slippery when wet''
+    \iitem Takeoff \dotfill EOMB 4.5.7
+    \iitem Landing \dotfill EOMB 4.14.5
+}
+
+
 \vbox{
   \subsection{Takeoff and Landing Wind Limits}
   \subsubsection{Takeoff or Manual Landing, Runway Width $\geq$45m}
@@ -106,7 +163,8 @@
   \end{center}
 }
 
-  \subsubsection{Takeoff or Manual Landing, Runway Width $<$45m, $\ge$30m}
+
+\subsubsection{Takeoff or Manual Landing, Runway Width $<$45m, $\ge$30m}
   \mylist{
   \item Max Headwind\dotfill No limit
   \item Max Tailwind\dotfill 10kt
@@ -178,57 +236,47 @@
 }
 
 
-\mysec{Contaminated Runway Operations}{
-\item Takeoff is not recommended with:
-  \begin{compactitem}
-  \item Wet ice
-  \item  Water on top of compacted snow
-  \item Dry Snow or Wet Snow over Ice
-  \end{compactitem}
-  \item Damp runway \ref{EOMB 4.5.1/4.12.1} \dotfill Use Wet performance
-  \item Contamination $<$ 25\% of runway area \ref{EOMB 4.6.2} \dotfill
-    Use Wet performance
-  \item Contamination $<$3mm \ref{EOMB 4.6.2} \dotfill Use Wet performance
-  \item Takeoff condition assessment matrix \dotfill EFB “More” pages
-  \item Landing condition assessment matrix \dotfill QRH PER-C.3
-  \item Minimum cleared width \ref{WIH 8.2.6} \dotfill 30m (check
-    snowbanks: EOMB 4.6.10)
-    \iitem $\leq$45m does not need to be
-    treated as a narrow runway for V$_1$ etc. \ref{WIH 8.3}
-  \item ``Slippery when wet''
-    \iitem Takeoff \dotfill EOMB 4.5.7
-    \iitem Landing \dotfill EOMB 4.14.5
+  \mysec[\secref{LIM.22.20}]{Other Autoland limitations}{
+\item Alert height \dotfill 100ft
+\item Approved configurations
+  \iitem A320CEO OEI\dotfill CONF FULL only
+  \iitem Otherwise\dotfill CONF 3, CONF Full
+\item Rwy conditions for automatic rollout \dotfill Dry, Wet
+\item Glideslope \dotfill 2.5° to 3.15°
+\item Max airport elevation\dotfill A320NEO:5750ft, A320CEO:2500ft, A319:9200ft
+\item Min pressure altitude\dotfill A320NEO:-2000ft; Otherwise:-1000ft
+\item Auto rollout with one reverser inop\dotfill Idle
+  reverse only
+  \item\hfill (no limitation for A320CEO without sharklets)
+\item A319 Max weight (emergency only)\dotfill 69000kg
+\item A320NEO Min weight\dotfill 44000kg
 }
 
 
-\vbox{
-\subsection{Wake Turbulence}
-\subsubsection{Final Approach}
-\secref{EOMA 8.3.10}
-\begin{center}
-  \begin{tabular}{|c|c|}\hline
-    Type & Separation\\\hline
-    A380 & 7nm\\
-    Heavy & 5nm\\
-    Upper Medium (e.g. 757,707) & 4nm (UK only)\\\hline
-  \end{tabular}
-\end{center}
-
-\textbf{Note}: Boeing 757 and Boeing 737-800/900 are classified as heavy for the purposes of final
-approach in some countries.
-
-\subsubsection{Departure}
-\secref{EOMA 8.3.10}
-\begin{center}
-  \begin{tabular}{|c|c|}\hline
-    Type & Separation\\\hline
-    A380 & 3 mins\\
-    Heavy & 2 mins\\\hline
-  \end{tabular}
-\end{center}
-
-\textbf{Note}: Add \textbf{1 minute} if departure is not from the same position
+\mysec{First Officer limits}{
+\item 3* FO \ref{EOMB 2.1}\dotfill No planned tailwind
+\item Max crosswind \ref{EOMB 2.1}\dotfill 20kt
+\item Takeoff minimum \ref{EOMB 2.1}\dotfill 400m RVR
+\item ILS/VOR/ADF/SRA minima \ref{EOMB 2.1}\dotfill As published
+\item Circling minima \ref{EOMB 2.1}\dotfill 5000m
+\item Min runway width, no specific training \ref{EOMB 2.1}\dotfill 45m
+\item 3* FO \ref{EOMB 2.1}\dotfill no flap 3 landing
+\item No contamination, windshear or autoland \ref{EOMB 2.1}
 }
+
+\mysec{Airport limitations}{
+\item Max slope \ref{LIM.12} \dotfill $\pm$2\%
+\item Max runway altitude \ref{LIM.12} \dotfill 9200ft
+\item Nominal runway width \ref{LIM.12} \dotfill 45m
+\item Min runway width (narrow runway procedures) \ref{PRO.SPO.60}\dotfill 30m
+\item Min planning fire fighting category \ref{EOMA 8.1.2.1}
+  \iitem Departure/Destination  \dotfill 6 (5 or 4 with caveats)
+  \iitem Alternates \dotfill UK: 5; Non-UK: 4
+\item Runway lighting
+\iitem Red and white \dotfill 900m
+\iitem Red \dotfill 300m
+}
+
 
 
 \vbox{
@@ -259,10 +307,10 @@ approach in some countries.
   Max Zero Fuel & 57000kg & 62500kg & 62800kg\\
   Minimum & 35400kg & 37230kg & 40600kg\\ \hline
 \end{tabular}
-\vspace*{1mm}\\
+\vspace*{1.5mm}\\
 \begin{tabular}{|l|c|c|l|c|}\cline{1-2}\cline{4-5}
 \multicolumn{2}{|c|}{A319} & &
-\multicolumn{2}{|c|}{A320}\\\cline{1-2}\cline{4-5}
+\multicolumn{2}{c|}{A320}\\\cline{1-2}\cline{4-5}
 Max Compartment 1 & 2268kg & & Max Compartment 1 & 3402kg\\
 Max Section 41 & 1326kg & & Max Compartment 3 & 2426kg\\
 Max Section 42 & 1695kg & & Max Compartment 4 & 2110kg\\
@@ -290,6 +338,31 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \iitem New paperwork required for -20/+10 passengers
 %\item A320 Standard CG \ref{EOMB 4.9.4} \dotfill CG > 27\%MAC
 \item A320 Forward CG \ref{EOMB 4.9.4} \dotfill CG < 27\%MAC
+}
+
+
+\mysec{General speeds}{
+\item V$_{MO}$ \ref{LIM.13}\dotfill 350kt
+\item M$_{MO}$ \ref{LIM.13}\dotfill 0.82M
+\item Max Tire speed \ref{LIM.13}\dotfill 195kt
+\item Max speed for wipers \ref{LIM.13}\dotfill 230kt
+\item Max speed cockpit window open \ref{LIM.13}\dotfill 200kt
+\item V$_{MCA}$ (rounded up)\ref{LIM.13}
+  \iitem A319\dotfill 0ft:108kt; 2000ft:106kt
+  \iitem A320CEO\dotfill 0ft:110kt; 2000ft:108kt
+  \iitem A320NEO\dotfill 0ft:114kt; 2000ft:114kt
+\item V$_{MCG}$ CONF 1+F (rounded up)\ref{LIM.13}
+  \iitem A319\dotfill 0ft:105kt; 2000ft:103kt
+  \iitem A320CEO\dotfill 0ft:111kt; 2000ft:109kt
+  \iitem A320NEO\dotfill 0ft:116kt; 2000ft:116kt
+\item CFM56 Turbulence speeds \ref{PRO.SUP.91.10}
+  \iitem $<$FL200\dotfill 250kt
+  \iitem $\ge$FL200\dotfill 275kt
+  \iitem $\ge$FL320\dotfill M0.76
+\item LEAP-1A Turbulence speeds \ref{PRO.SUP.91.10}
+  \iitem $<$FL200\dotfill 260kt
+  \iitem $\ge$FL200\dotfill 280kt
+  \iitem $\ge$FL310\dotfill M0.76
 }
 
 
@@ -469,20 +542,6 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 
 
 
-\mysec{Airport}{
-\item Max slope \ref{LIM.12} \dotfill $\pm$2\%
-\item Max runway altitude \ref{LIM.12} \dotfill 9200ft
-\item Nominal runway width \ref{LIM.12} \dotfill 45m
-\item Min runway width (narrow runway procedures) \ref{PRO.SPO.60}\dotfill 30m
-\item Min planning fire fighting category \ref{EOMA 8.1.2.1}
-  \iitem Departure/Destination  \dotfill 6 (5 or 4 with caveats)
-  \iitem Alternates \dotfill UK: 5; Non-UK: 4
-\item Runway lighting
-\iitem Red and white \dotfill 900m
-\iitem Red \dotfill 300m
-}
-
-
 \mysec{Autopilot}{
 \item Engagement after TO \ref{LIM.22.10}\dotfill $>$100ft,$>$5 secs
 
@@ -496,61 +555,6 @@ agl
 \iitem Go-around \dotfill 100ft
 \iitem Other phases \dotfill 500ft
 
-\item Alert height \ref{LIM.22.20} \dotfill 100ft
-}
-
-
-\mysec[\secref{LIM.22.20}]{Autoland}{
-\item Wind limits\dotfill see page \pageref{autoland_wind_limits}
-\item Approved configurations
-  \iitem A320CEO OEI\dotfill CONF FULL only
-  \iitem Otherwise\dotfill CONF 3, CONF Full
-\item Rwy conditions for automatic rollout \dotfill Dry, Wet
-\item Glideslope \dotfill 2.5° to 3.15°
-\item Max airport elevation\dotfill A320NEO:5750ft, A320CEO:2500ft, A319:9200ft
-\item Min pressure altitude\dotfill A320NEO:-2000ft; Otherwise:-1000ft
-\item Auto rollout with one reverser inop\dotfill Idle
-  reverse only
-  \item\hfill (no limitation for A320CEO without sharklets)
-\item A319 Max weight (emergency only)\dotfill 69000kg
-\item A320NEO Min weight\dotfill 44000kg
-}
-
-
-\mysec{General speeds}{
-\item V$_{MO}$ \ref{LIM.13}\dotfill 350kt
-\item M$_{MO}$ \ref{LIM.13}\dotfill 0.82M
-\item Max Tire speed \ref{LIM.13}\dotfill 195kt
-\item Max speed for wipers \ref{LIM.13}\dotfill 230kt
-\item Max speed cockpit window open \ref{LIM.13}\dotfill 200kt
-\item V$_{MCA}$ (rounded up)\ref{LIM.13}
-  \iitem A319\dotfill 0ft:108kt; 2000ft:106kt
-  \iitem A320CEO\dotfill 0ft:110kt; 2000ft:108kt
-  \iitem A320NEO\dotfill 0ft:114kt; 2000ft:114kt
-\item V$_{MCG}$ CONF 1+F (rounded up)\ref{LIM.13}
-  \iitem A319\dotfill 0ft:105kt; 2000ft:103kt
-  \iitem A320CEO\dotfill 0ft:111kt; 2000ft:109kt
-  \iitem A320NEO\dotfill 0ft:116kt; 2000ft:116kt
-\item CFM56 Turbulence speeds \ref{PRO.SUP.91.10}
-  \iitem $<$FL200\dotfill 250kt
-  \iitem $\ge$FL200\dotfill 275kt
-  \iitem $\ge$FL320\dotfill M0.76
-\item LEAP-1A Turbulence speeds \ref{PRO.SUP.91.10}
-  \iitem $<$FL200\dotfill 260kt
-  \iitem $\ge$FL200\dotfill 280kt
-  \iitem $\ge$FL310\dotfill M0.76
-}
-
-
-\mysec{First Officer limits}{
-\item 3* FO \ref{EOMB 2.1}\dotfill No planned tailwind
-\item Max crosswind \ref{EOMB 2.1}\dotfill 20kt
-\item Takeoff minimum \ref{EOMB 2.1}\dotfill 400m RVR
-\item ILS/VOR/ADF/SRA minima \ref{EOMB 2.1}\dotfill As published
-\item Circling minima \ref{EOMB 2.1}\dotfill 5000m
-\item Min runway width, no specific training \ref{EOMB 2.1}\dotfill 45m
-\item 3* FO \ref{EOMB 2.1}\dotfill no flap 3 landing
-\item No contamination, windshear or autoland \ref{EOMB 2.1}
 }
 
 
