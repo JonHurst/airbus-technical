@@ -250,7 +250,7 @@ approach in some countries.
   \item\hfill (no limitation for A320CEO without sharklets)
 \item A319 Max weight (emergency only)\dotfill 69000kg
 \item A320NEO Min weight\dotfill 44000kg
-}
+}\label{other_autoland_limits}
 
 
 \mysec{First Officer limits}{
@@ -813,7 +813,7 @@ element
 \iitem Cat IIIA \dotfill 3 consecutive lights
 \iitem Cat IIIB with DH \dotfill 1 centre-line light
 \iitem Cat IIIB No DH \dotfill None
-}
+}\label{ils}
 
 
 \mysec[\secref{DSC.22.30.80.30}]{Autoland Warning Light}{
@@ -838,12 +838,19 @@ element
 }
 
 \mysec[\secref{EOMB 2.3.18.3.1.1}]{LVO landing}{
-\item[$\bullet$] All passenger PEDS must be turned off.\ref{EOMA 8.3.23.2}
+\item[$\bullet$] All passenger PEDS must be turned off \ref{EOMA 8.3.23.2}
 \item[$\bullet$] Check NOTAMS for airport facility downgrades (see EOMA-8.1.3.5)
-\item[$\bullet$] Check minimas, approach ban and LVPs in force
-\item[$\bullet$] Check crew qualification and aircraft capability
-\item[$\bullet$] Check autoland wind and runway condition limits
-\item[$\bullet$] Review failure strategies
+\item[$\bullet$] Check LVPs in force
+\item[$\bullet$] Check crew qualification
+\item[$\bullet$] Check aircraft capability (ECAM status page, ADDs, QRH
+  Operational Data)
+\item[$\bullet$] Check minimas and approach ban (see page \pageref{ils}
+  and LIDO approach chart)
+\item[$\bullet$] Check autoland wind limits (see page
+  \pageref{autoland_wind_limits})
+\item[$\bullet$] Check runway condition limits (see page
+  \pageref{other_autoland_limits})
+\item[$\bullet$] Review failure strategies (see page \pageref{failure-strategies})
 \item[$\bullet$] Extra calls: \ref{EOMB 2.3.18.3.1.2}
 \iitem 350ft, FMA:LAND \dotfill PF:``Land'', PNF:``Checked''
 \iitem 100ft (only with no DH) \dotfill PNF: ``100'', PF: ``Continue''
@@ -861,6 +868,6 @@ element
 
 \pagebreak
 
-\vspace*{\fill}{}\resizebox{\textwidth}{!}{\rotatebox{90}{\includegraphics{images/catIII-failures.png}}}\vspace*{\fill}
+\vspace*{\fill}{}\resizebox{\textwidth}{!}{\rotatebox{90}{\includegraphics{images/catIII-failures.png}}}\label{failure-strategies}\vspace*{\fill}
 
 \end{document}
