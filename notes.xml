@@ -119,7 +119,7 @@
         altitude knob and is never dashed. Pushing the knob engages a managed mode which guides the aircraft to the
         target altitude while adhering to altitude constraints set in the FMGS. Pulling the knob gives a selected mode
         that disregards these FMGS altitude constraints.</para>
-        <para>The VS/FPA knob differs from the other three in that there is no associated managed mode. Pulling this
+        <para>The VS/FPA knob differs from the other three in that there is no associated managed mode. Pushing this
         knob commands an immediate level off. Negative indications on the FPA/VS display on the FCU indicate
         descent.</para>
         <para>The "EXPED" button temporarily sets speed to best climb or best descent speed in order to expedite towards
