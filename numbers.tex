@@ -15,6 +15,7 @@
 \author{Jon Hurst}
 \setcounter{secnumdepth}{0}
 
+%% * Macros
 \renewcommand{\ref}[1]{{\color{blue}\scriptsize [#1]}}
 \newcommand{\secref}[1]{\vspace{-3mm}\ref{#1}}
 
@@ -43,7 +44,7 @@
     \end{compactitem}
     \vspace{1mm}}}
 
-
+%% * START
 \begin{document}
 \pagenumbering{roman}
 \raggedbottom
@@ -61,6 +62,8 @@
 
 
 \pagenumbering{arabic}
+%% * Limitations
+%% ** Wake Turbulence
 \vbox{
 \subsection{Wake Turbulence}
 \subsubsection{Final Approach}
@@ -90,7 +93,7 @@ approach in some countries.
 \textbf{Note}: Add \textbf{1 minute} if departure is not from the same position
 }
 
-
+%% ** Contaminated runway ops
 \mysec{Contaminated Runway Operations}{
 \item Takeoff is not recommended with:
   \begin{compactitem}
@@ -113,7 +116,7 @@ approach in some countries.
     \iitem Landing \dotfill EOMB 4.14.5
 }
 
-
+%% ** Wind limits
 \vbox{
   \subsection{Takeoff and Landing Wind Limits}
   \subsubsection{Takeoff or Manual Landing, Runway Width $\geq$45m}
@@ -235,8 +238,8 @@ approach in some countries.
 \item Cargo door closed before \ref{LIM.12}\dotfill 65kt
 }
 
-
-  \mysec[\secref{LIM.22.20}]{Other Autoland limitations}{
+%% ** Other Autoland limits
+\mysec[\secref{LIM.22.20}]{Other Autoland limitations}{
 \item Alert height \dotfill 100ft
 \item Approved configurations
   \iitem A320CEO OEI\dotfill CONF FULL only
@@ -252,7 +255,7 @@ approach in some countries.
 \item A320NEO Min weight\dotfill 44000kg
 }\label{other_autoland_limits}
 
-
+%% ** First Officer limits
 \mysec{First Officer limits}{
 \item 3* FO \ref{EOMB 2.1}\dotfill No planned tailwind
 \item Max crosswind \ref{EOMB 2.1}\dotfill 20kt
@@ -278,7 +281,7 @@ approach in some countries.
 }
 
 
-
+%% ** Dimensons
 \vbox{
   \subsection{Dimensions}
   \secref{DSC.20.20}
@@ -294,7 +297,7 @@ approach in some countries.
 \end{tabular}
 \end{center}}
 
-
+%% ** Weight limits
 \vbox{
   \subsection{Weight Limits}
   \secref{LIM.11, PER.LOD.CGO}
@@ -319,7 +322,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \end{center}
 }
 
-
+%% ** Loading
 \mysec{Loading}{
   \item \textbf{A319 Protocol:}\ref{GHM 2.4.1}
     \iitem Up to 150 bags to Section 41/42;
@@ -340,7 +343,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \item A320 Forward CG \ref{EOMB 4.9.4} \dotfill CG < 27\%MAC
 }
 
-
+%% ** General speeds
 \mysec{General speeds}{
 \item V$_{MO}$ \ref{LIM.13}\dotfill 350kt
 \item M$_{MO}$ \ref{LIM.13}\dotfill 0.82M
@@ -365,7 +368,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
   \iitem $\ge$FL310\dotfill M0.76
 }
 
-
+%% ** Engine limitations
 \mysec[\secref{LIM.70}]{Engine}{
 \item TOGA time \dotfill 5 mins (10 mins single engine)
 \item EGT
@@ -400,7 +403,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \item Max reverse \dotfill >70kt
 }
 
-
+%% ** APU limitations
 \mysec{APU}{
 \item Ops with ``Low Oil Level'' ECAM \ref{LIM.49.10}\dotfill 10hrs
 \item Starter duty  \ref{LIM.49.10}\dotfill 3 cycles then 60 mins
@@ -417,10 +420,12 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \item Approximate fuel burn \ref{EOMB 5.1} \dotfill 2kg/min
 }
 
+%% ** Hydraulics limitations
 \mysec{Hydraulics}{
 \item Normal pressure \ref{LIM.29}\dotfill 3000$\pm$200psi
 }
 
+%% ** Flaps/slats limitations
 \mysec{Flaps/slats}{
 \item Conf 1 \ref{LIM.13}\dotfill 230kt
 \item Conf 1+F \ref{LIM.13}\dotfill 215kt
@@ -430,6 +435,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \item Max flaps/slats altitude \ref{LIM.27}\dotfill 20000ft
 }
 
+%% ** Gear limitations
 \mysec{Gear}{
 \item Extend \ref{LIM.13}\dotfill 250kt
 \item Retract \ref{LIM.13}\dotfill 220kt
@@ -441,6 +447,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \item Max brake temp for takeoff \ref{LIM.32}\dotfill 300°
 }
 
+%% ** Pressurisation limitations
 \mysec{Pressurisation}{
 \item Max pos diff \ref{LIM.21.20}\dotfill 9.0psi
 \item Max neg diff \ref{LIM.21.20}\dotfill -1psi
@@ -450,6 +457,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \item Ram air max diff \ref{LIM.21.10}\dotfill 1psi
 }
 
+%% ** Air conditioning / Ventilation limitations
 \mysec{Air conditioning / Ventilation}{
 \item Max LP ground unit airflow \ref{LIM.21.10}\dotfill 1.2kg/s
 \item\hfill (do not simultaneously use packs)
@@ -461,6 +469,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \item \hfill(higher with time limits)
 }
 
+%% ** Electrical limitations
 \mysec{Electrical}{
 \item Max generator continuous load \ref{LIM.24}\dotfill 100\%(90 KVA)
 \item Max TR continuous load \ref{LIM.24}\dotfill 200A
@@ -469,7 +478,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
     within 10s
 }
 
-
+%% ** Fuel limitations
 \mysec{Fuel}{
 \item Approximate Capacity (varies by airframe) \ref{DSC.28.10.20}
 \iitem Outer tanks \dotfill 2 x 700kg
@@ -487,7 +496,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \item Min qty for takeoff \ref{LIM.28}\dotfill 1500kg
 }
 
-
+%% ** Oxygen limitations
 \mysec[\secref{LIM.35}]{Oxygen}{
 \item A319/A320CEO Min oxygen pressure (ref temp 40°)
 \iitem 3 crew\dotfill 1024psi
@@ -502,7 +511,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \iitem 8000ft\dotfill 15mins
 }
 
-
+%% ** Navigation limitations
 \mysec{Navigation}{
 \item Max IRS latitudes \ref{LIM.34}\dotfill 73°N,60°S
 \item Altimeter tolerances \ref{PRO.SUP.34}
@@ -512,7 +521,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \item Altimeter temperature corrections \dotfill QRH SI.10
 }
 
-
+%% ** Ice protection limitations
 \mysec{Ice protection}{
 \item Icing conditions \ref{PRO.SUP.30}\dotfill OAT(grd)|TAT(flt)$\le$10°C
 \item\hfill (\& visible moisture or ground contamination)
@@ -540,7 +549,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 }
 
 
-
+%% ** Autopilot limitations
 \mysec{Autopilot}{
 \item Engagement after TO \ref{LIM.22.10}\dotfill $>$100ft,$>$5 secs
 
@@ -557,7 +566,7 @@ agl
 
 }
 
-
+%% ** Miscellaneous
 \mysec{Miscellaneous}{
 \item German corner \dotfill KRH R270/12D
 \item Alternate ranges \ref{EOMB 5.1.1}
@@ -576,6 +585,8 @@ agl
 
 \pagebreak
 
+%% * Engine failure
+%% ** Single engine operations
 \mysec{Single Engine operations}{
 \item Avoid reducing below V$_\mathrm{LS}$ (including GPWS/Windshear) \ref{FCOM PRO.ABN.70}
 \item Autoland capability \ref{LIM.22.20}\dotfill Cat III single (A320: Conf
@@ -590,7 +601,7 @@ agl
 \item Sharklet automatic rollout \ref{LIM.22.20} \dotfill Idle reverse only
 }
 
-
+%% ** Dual engine failure
 \mysec[\secref{QRH ABN.70}]{Double engine failure}{
 \item Target\dotfill 4nm, 2400AAL, S Speed, Flap 1, Gear up
 \item Range
@@ -611,7 +622,7 @@ agl
 \item V$_\mathrm{app}$\dotfill Greater of V$_\mathrm{ref}$+25kt, 150kt
 }
 
-
+%% * Emergency calls
 \mysec{Emergency calls to cabin}{
 \item Ground ops alert \ref{EOMB 2.3.90.10}:
   \pitem{``Attention! Crew at Stations''}
@@ -637,15 +648,16 @@ agl
 }
 
 \pagebreak
-
+%% * Procedures
 \section{Procedures}
 
+%% ** General
 \mysec{General}{
 \item UK Procedure default speed limit \ref{UKAIP GEN.1.7}\dotfill 185kt
 \item Procedure turn \ref{LIDO RAR.5.4.1.2} \dotfill 75 seconds from start of 45° turn
 }
 
-
+%% ** Tailwind / strong crosswind takeoff
 \mysec{Takeoff with tailwind or crosswind > 20kt}{
   \item A319/A320CEO\ref{EOMB 2.3.12}
     \iitem $\bullet$ Set 50\% N1
@@ -659,7 +671,7 @@ agl
     \iitem $\bullet$ When GS>15kt set FLX or TOGA
 }
 
-
+%% ** PRNAV SID/STAR
 \mysec[\secref{PRO.SPO.51, EOMA 8.3.3.9, EOMB 2.4.51.2}]{PRNAV (RNP 1) SID/STAR}{
 \item[$\bullet$] \textbf{Minimum required equipment:}\\
   1 FMGC; 1 MCDU; 1 GPS or 2 DMEs; 2 IRS; 1 FD; PFD and ND on PF side; 1
@@ -689,7 +701,7 @@ agl
 \footnotetext[1]{Radius to Fix}
 \footnotetext[2]{EOM-B overrides FCOM for these messages}
 
-
+%% ** Holding
 \mysec[\secref{LIDO RAR.5.7}]{Holding}{
 \item Joining
 \iitem Turn anti-holdwise<110° to Outbound track \dotfill Parallel entry
@@ -705,7 +717,7 @@ agl
 \iitem >34000\dotfill 0.83M
 }
 
-
+%% ** Visual Approach
 \mysec[\secref{EOMB 2.3.18.3.6}]{Visual Approach}{
 \item[$\bullet$] Minimas: \ref{EOMA 8.1.3.6}
   \iitem Visibility \dotfill 5km
@@ -719,7 +731,7 @@ agl
   descent to landing.
 }
 
-
+%% ** Circling
 \mysec[\secref{EOMB 2.3.18.3.4}]{Circling}{
 \item[$\bullet$] If OEI, check weight (QRH ABN.80)
 \item[$\bullet$] Protected circling radius \ref{LIDO RAR.5.5} \dotfill
@@ -735,7 +747,7 @@ agl
 \item[$\bullet$] Full flap when turning finals
 }
 
-
+%% ** Non-precision approach
 \mysec[\secref{EOMB 2.3.18.3.3}]{Non-Precision Approach - Selected vertical and lateral}{
 \item[$\bullet$] Fly a stabilised approach
 \item[$\bullet$] If NAV ACCURACY is LOW at least one ND in ROSE LS/VOR \ref{EOMB 2.3.18.2.1}
@@ -743,7 +755,7 @@ agl
 \item[$\bullet$] 1°FPA modifies descent profile by 100ft for each nm
 }
 
-
+%% ** RNAV / Overlay approach
 \mysec{RNAV or Non-Precision overlay approach}{
 \item[$\bullet$] \textbf{Minimum required equipment:}\\ 1 FMS (with GPS
   PRIMARY for RNAV(GNSS)); 1 MCDU; 1 FD; 1 PFD; ND on PF side; 2 FCU
@@ -782,7 +794,7 @@ agl
   used unless raw data indicates flight path deviation.\ref{EOMB 2.3.18.3.2}
 }
 
-
+%% ** ILS approach
 \mysec{ILS approach}{
 \item Standard coverage \ref{LIDO GEN.NAV.3.2}:
   \iitem Localiser ±10° \dotfill 25nm (FAA 18nm)
@@ -828,7 +840,7 @@ element
   \iitem Long flare detected (newer aircraft only)
 }
 
-
+%% ** LVO takeoff
 \mysec[\secref{EOMA 8.1.3.3}]{LVO takeoff}{
 \item[$\bullet$] Absolute minima \dotfill 125/125/125
 \item[$\bullet$] Reported RVR of initial part of Takeoff run can be replaced by
@@ -837,6 +849,8 @@ element
 \item[$\bullet$] All passenger PEDS must be turned off. \ref{EOMA 8.3.23.2}
 }
 
+
+%% ** LVO Landing
 \mysec[\secref{EOMB 2.3.18.3.1.1}]{LVO landing}{
 \item[$\bullet$] All passenger PEDS must be turned off \ref{EOMA 8.3.23.2}
 \item[$\bullet$] Check NOTAMS for airport facility downgrades (see EOMA-8.1.3.5)
@@ -866,10 +880,12 @@ element
 \item[$\bullet$] Disconnect autopilot at taxi speed
 }
 
+%% *** LVO Failure handling graphic
 \pagebreak
 
 \vspace*{\fill}{}\resizebox{\textwidth}{!}{\rotatebox{90}{\includegraphics{images/catIII-failures.png}}}\label{failure-strategies}\vspace*{\fill}
 
+%% * END
 \pagebreak
 \vspace*{5cm}
 
