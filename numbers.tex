@@ -1,8 +1,8 @@
-\documentclass[twoside]{article}
+\documentclass[twoside,10pt]{article}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{txfonts}
-\usepackage[paper=a5paper,lmargin=0.75cm,tmargin=0.5cm,bmargin=0.5cm,includefoot]{geometry}
+\usepackage[paper=a5paper,inner=2cm,outer=1.25cm,tmargin=1.25cm,bmargin=1.25cm,includefoot]{geometry}
 \usepackage{setspace}
 \usepackage{graphics}
 \usepackage{color}
@@ -52,12 +52,12 @@
 \tableofcontents
 
 
-\pagebreak
-\vspace*{5cm}
+% \pagebreak
+% \vspace*{5cm}
 
-\begin{center}
-  Intentionally blank
-\end{center}
+% \begin{center}
+%   Intentionally blank
+% \end{center}
 \pagebreak
 
 
@@ -166,34 +166,7 @@ approach in some countries.
   \end{center}
 }
 
-
-\subsubsection{Takeoff or Manual Landing, Runway Width $<$45m, $\ge$30m}
-  \mylist{
-  \item Max Headwind\dotfill No limit
-  \item Max Tailwind\dotfill 10kt
-  }
-  \begin{center}
-  \begin{tabular}{|l|c|}\hline
-  \multicolumn{1}{|c|}{Runway Condition}
-  & Max Crosswind\\  ~ & (including gust)\\\hline
-
-  \rwstate{\item Dry} &
-  \parbox{0.35\textwidth}{
-    \vspace{1mm}
-    \begin{compactitem}[]
-    \item A320NEO Takeoff\dotfill 35kt
-    \item Otherwise\dotfill 38kt
-    \end{compactitem}
-    \vspace{1mm}}\\\hline
-
-  \rwstate{\item Wet ($\leq$3mm water)} & 33kt\\\hline
-
-  \rwstate{\item Contaminated (not icy)} & 10kt\\\hline
-
-  \end{tabular}
-  \end{center}
-
-  \vbox{
+\vbox{
   \label{autoland_wind_limits}
   \subsubsection{Autoland without automatic rollout}
   \secref{LIM.22}
@@ -229,6 +202,35 @@ approach in some countries.
     \iitem\hfill (idle reverse used on remaining reverser)
     \iitem Otherwise\dotfill 20kt
   }}
+
+\vbox{
+\subsubsection{Takeoff or Manual Landing, Runway Width $<$45m, $\ge$30m}
+  \mylist{
+  \item Max Headwind\dotfill No limit
+  \item Max Tailwind\dotfill 10kt
+  }
+  \begin{center}
+  \begin{tabular}{|l|c|}\hline
+  \multicolumn{1}{|c|}{Runway Condition}
+  & Max Crosswind\\  ~ & (including gust)\\\hline
+
+  \rwstate{\item Dry} &
+  \parbox{0.35\textwidth}{
+    \vspace{1mm}
+    \begin{compactitem}[]
+    \item A320NEO Takeoff\dotfill 35kt
+    \item Otherwise\dotfill 38kt
+    \end{compactitem}
+    \vspace{1mm}}\\\hline
+
+  \rwstate{\item Wet ($\leq$3mm water)} & 33kt\\\hline
+
+  \rwstate{\item Contaminated (not icy)} & 10kt\\\hline
+
+  \end{tabular}
+  \end{center}
+}
+
 
 
   \mysec{Other wind limits}{
@@ -267,6 +269,8 @@ approach in some countries.
 \item No contamination, windshear or autoland \ref{EOMB 2.1}
 }
 
+
+%% ** Airport limits
 \mysec{Airport limitations}{
 \item Max slope \ref{LIM.12} \dotfill $\pm$2\%
 \item Max runway altitude \ref{LIM.12} \dotfill 9200ft
@@ -403,27 +407,56 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \item Max reverse \dotfill >70kt
 }
 
-%% ** APU limitations
-\mysec{APU}{
-\item Ops with ``Low Oil Level'' ECAM \ref{LIM.49.10}\dotfill 10hrs
-\item Starter duty  \ref{LIM.49.10}\dotfill 3 cycles then 60 mins
-\item Maximum N \ref{LIM.49.10}\dotfill 107\%
-\item Max EGT  \ref{LIM.49.10}\dotfill 675°C
-\item Max start EGT  \ref{LIM.49.10}\dotfill <35000ft: 1090°C, >35000ft 1120°C
-\item Max Altitudes \ref{LIM.49.20}
-\iitem Two packs \dotfill 15000ft
-\iitem One pack \dotfill 22500ft
-\iitem Eng start \dotfill 20000ft
-\iitem Battery start (emerg elec config) \dotfill 25000ft
-\iitem Restart and operation \dotfill 39000ft
-\iitem  Air bleed for wing anti-icing \dotfill Not permitted
-\item Approximate fuel burn \ref{EOMB 5.1} \dotfill 2kg/min
-}
-
 %% ** Hydraulics limitations
 \mysec{Hydraulics}{
 \item Normal pressure \ref{LIM.29}\dotfill 3000$\pm$200psi
 }
+
+%% ** Fuel limitations
+\mysec{Fuel}{
+\item Approximate Capacity (varies by airframe) \ref{DSC.28.10.20}
+\iitem Outer tanks \dotfill 2 x 700kg
+\iitem Inner tanks \dotfill 2 x 5500kg
+\iitem Center tank \dotfill 6500kg
+\iitem Total \dotfill 18900kg
+\item Allowable temperature (Jet A1) \ref{LIM.28}\dotfill ≥-43°C, ≤54°C
+\item Max imbalance \ref{LIM.28}
+\iitem Fuel in fuller inner tank $<$ 2250kg (outer tanks balanced) \dotfill No Limitation
+\iitem Max inner tank imbalance (outer tanks balanced)\dotfill 1500kg
+\iitem \hfill(more w/ caveats)
+\iitem Max outer tank imbalance (sides balanced)\dotfill 1 full, 1 empty
+\iitem Max takeoff imbalance with sharklets \dotfill inners: 500kg, outers:  370kg
+\iitem \hfill(more w/ caveats)
+\item Min qty for takeoff \ref{LIM.28}\dotfill 1500kg
+}
+
+%% ** Ice protection limitations
+\mysec{Ice protection}{
+\item Icing conditions \ref{PRO.SUP.30}\dotfill OAT(grd)|TAT(flt)$\le$10°C
+\item\hfill (\& visible moisture or ground contamination)
+\item Eng anti-ice not rqd \ref{PRO.SUP.30}\dotfill climb/cruise,
+  SAT<-40°C, no CBs in vicinity
+\item Accreted ice  \ref{PRO.SUP.30}
+  \iitem Min speed, Conf Full \dotfill V$_{\mathrm{LS}}$ + 5kt
+  \iitem Min Speed, < Conf Full \dotfill V$_{\mathrm{LS}}$ + 10kt
+  \iitem Check landing performance \dotfill QRH PER-C
+\item Accreted ice, wing anti-ice inop \ref{PRO.SUP.30}
+  \iitem Min speed\dotfill V$_{\mathrm{LS}}$ + 10kt/ G DOT
+  \iitem Check landing performance \dotfill QRH PER-C
+\item Avoid extended flight in icing conditions with slats extended
+  \ref{PRO.SUP.30}
+\item CFM56 Fan ice shedding: \ref{EOMB 2.4.91}
+  \iitem Icing conditions > 30 mins \dotfill 70\%N1 for 30 secs every 30
+  mins
+  \iitem Freezing rain/dizzle/fog, heavy snow \dotfill 70\%N1 momentary
+  every 10 mins
+  \iitem Before takeoff \dotfill 70\%N1 for 30 secs
+\item LEAP-1A Fan ice shedding: \ref{NEO OLL}
+  \iitem Icing conditions > 60 mins\dotfill 70\% for at least 5 seconds
+  \iitem Ground fog icing conditions > 120 mins\dotfill Engineering
+  inspection rqd
+}
+
 
 %% ** Flaps/slats limitations
 \mysec{Flaps/slats}{
@@ -478,22 +511,21 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
     within 10s
 }
 
-%% ** Fuel limitations
-\mysec{Fuel}{
-\item Approximate Capacity (varies by airframe) \ref{DSC.28.10.20}
-\iitem Outer tanks \dotfill 2 x 700kg
-\iitem Inner tanks \dotfill 2 x 5500kg
-\iitem Center tank \dotfill 6500kg
-\iitem Total \dotfill 18900kg
-\item Allowable temperature (Jet A1) \ref{LIM.28}\dotfill ≥-43°C, ≤54°C
-\item Max imbalance \ref{LIM.28}
-\iitem Fuel in fuller inner tank $<$ 2250kg (outer tanks balanced) \dotfill No Limitation
-\iitem Max inner tank imbalance (outer tanks balanced)\dotfill 1500kg
-\iitem \hfill(more w/ caveats)
-\iitem Max outer tank imbalance (sides balanced)\dotfill 1 full, 1 empty
-\iitem Max takeoff imbalance with sharklets \dotfill inners: 500kg, outers:  370kg
-\iitem \hfill(more w/ caveats)
-\item Min qty for takeoff \ref{LIM.28}\dotfill 1500kg
+%% ** APU limitations
+\mysec{APU}{
+\item Ops with ``Low Oil Level'' ECAM \ref{LIM.49.10}\dotfill 10hrs
+\item Starter duty  \ref{LIM.49.10}\dotfill 3 cycles then 60 mins
+\item Maximum N \ref{LIM.49.10}\dotfill 107\%
+\item Max EGT  \ref{LIM.49.10}\dotfill 675°C
+\item Max start EGT  \ref{LIM.49.10}\dotfill <35000ft: 1090°C, >35000ft 1120°C
+\item Max Altitudes \ref{LIM.49.20}
+\iitem Two packs \dotfill 15000ft
+\iitem One pack \dotfill 22500ft
+\iitem Eng start \dotfill 20000ft
+\iitem Battery start (emerg elec config) \dotfill 25000ft
+\iitem Restart and operation \dotfill 39000ft
+\iitem  Air bleed for wing anti-icing \dotfill Not permitted
+\item Approximate fuel burn \ref{EOMB 5.1} \dotfill 2kg/min
 }
 
 %% ** Oxygen limitations
@@ -521,34 +553,6 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 1497kg\\\cline{1-2}\cline{4-5
 \item Altimeter temperature corrections \dotfill QRH SI.10
 }
 
-%% ** Ice protection limitations
-\mysec{Ice protection}{
-\item Icing conditions \ref{PRO.SUP.30}\dotfill OAT(grd)|TAT(flt)$\le$10°C
-\item\hfill (\& visible moisture or ground contamination)
-\item Eng anti-ice not rqd \ref{PRO.SUP.30}\dotfill climb/cruise,
-  SAT<-40°C, no CBs in vicinity
-\item Accreted ice  \ref{PRO.SUP.30}
-  \iitem Min speed, Conf Full \dotfill V$_{\mathrm{LS}}$ + 5kt
-  \iitem Min Speed, < Conf Full \dotfill V$_{\mathrm{LS}}$ + 10kt
-  \iitem Check landing performance \dotfill QRH PER-C
-\item Accreted ice, wing anti-ice inop \ref{PRO.SUP.30}
-  \iitem Min speed\dotfill V$_{\mathrm{LS}}$ + 10kt/ G DOT
-  \iitem Check landing performance \dotfill QRH PER-C
-\item Avoid extended flight in icing conditions with slats extended
-  \ref{PRO.SUP.30}
-\item CFM56 Fan ice shedding: \ref{EOMB 2.4.91}
-  \iitem Icing conditions > 30 mins \dotfill 70\%N1 for 30 secs every 30
-  mins
-  \iitem Freezing rain/dizzle/fog, heavy snow \dotfill 70\%N1 momentary
-  every 10 mins
-  \iitem Before takeoff \dotfill 70\%N1 for 30 secs
-\item LEAP-1A Fan ice shedding: \ref{NEO OLL}
-  \iitem Icing conditions > 60 mins\dotfill 70\% for at least 5 seconds
-  \iitem Ground fog icing conditions > 120 mins\dotfill Engineering
-  inspection rqd
-}
-
-
 %% ** Autopilot limitations
 \mysec{Autopilot}{
 \item Engagement after TO \ref{LIM.22.10}\dotfill $>$100ft,$>$5 secs
@@ -564,6 +568,18 @@ agl
 \iitem RNAV visual approach \dotfill 500ft
 \iitem Other phases \dotfill 500ft
 
+}
+
+\mysec[\secref{DSC.22.30.80.30}]{Autoland Warning Light}{
+\item[$\bullet$] RA<200ft and
+\item[$\bullet$] one or more autopilots engaged and
+\item[$\bullet$] LAND or FLARE annunciated and
+\item[$\bullet$] one or more of:
+  \iitem Both autopilots disconnect (N.B. RA NCD case)
+  \iitem RA>15ft and localiser signal lost or deviation >¼ dot
+  \iitem RA>100ft and glideslope signal lost or deviation >1 dot
+  \iitem Difference between rad alt > 15ft
+  \iitem Long flare detected (newer aircraft only)
 }
 
 %% ** Miscellaneous
@@ -651,12 +667,6 @@ agl
 %% * Procedures
 \section{Procedures}
 
-%% ** General
-\mysec{General}{
-\item UK Procedure default speed limit \ref{UKAIP GEN.1.7}\dotfill 185kt
-\item Procedure turn \ref{LIDO RAR.5.4.1.2} \dotfill 75 seconds from start of 45° turn
-}
-
 %% ** Tailwind / strong crosswind takeoff
 \mysec{Takeoff with tailwind or crosswind > 20kt}{
   \item A319/A320CEO\ref{EOMB 2.3.12}
@@ -669,6 +679,28 @@ agl
     \iitem $\bullet$ Release brakes
     \iitem $\bullet$ Set 70\% N1
     \iitem $\bullet$ When GS>15kt set FLX or TOGA
+}
+
+%% ** General
+\mysec{General}{
+\item UK Procedure default speed limit \ref{UKAIP GEN.1.7}\dotfill 185kt
+\item Procedure turn \ref{LIDO RAR.5.4.1.2} \dotfill 75 seconds from start of 45° turn
+}
+
+%% ** Holding
+\mysec[\secref{LIDO RAR.5.7}]{Holding}{
+\item Joining
+\iitem Turn anti-holdwise<110° to Outbound track \dotfill Parallel entry
+\iitem Turn holdwise<70° to Outbound track \dotfill Teardrop entry
+\iitem Otherwise \dotfill Direct entry
+\item Standard\dotfill Right turns, parallel to airway
+\iitem $\le$14000\dotfill 1 minute
+\iitem >14000\dotfill 1½ minutes
+\item Max holding speeds (Normal(Turbulent))
+\iitem ≤14000\dotfill 230kt(280kt)
+\iitem >14000, ≤20000\dotfill 240kt(280kt/0.8M)
+\iitem >20000, ≤34000\dotfill 265kt(280kt/0.8M)
+\iitem >34000\dotfill 0.83M
 }
 
 %% ** PRNAV SID/STAR
@@ -701,23 +733,8 @@ agl
 \footnotetext[1]{Radius to Fix}
 \footnotetext[2]{EOM-B overrides FCOM for these messages}
 
-%% ** Holding
-\mysec[\secref{LIDO RAR.5.7}]{Holding}{
-\item Joining
-\iitem Turn anti-holdwise<110° to Outbound track \dotfill Parallel entry
-\iitem Turn holdwise<70° to Outbound track \dotfill Teardrop entry
-\iitem Otherwise \dotfill Direct entry
-\item Standard\dotfill Right turns, parallel to airway
-\iitem $\le$14000\dotfill 1 minute
-\iitem >14000\dotfill 1½ minutes
-\item Max holding speeds (Normal(Turbulent))
-\iitem ≤14000\dotfill 230kt(280kt)
-\iitem >14000, ≤20000\dotfill 240kt(280kt/0.8M)
-\iitem >20000, ≤34000\dotfill 265kt(280kt/0.8M)
-\iitem >34000\dotfill 0.83M
-}
-
 %% ** Visual Approach
+\pagebreak
 \mysec[\secref{EOMB 2.3.18.3.6}]{Visual Approach}{
 \item[$\bullet$] Minimas: \ref{EOMA 8.1.3.6}
   \iitem Visibility \dotfill 5km
@@ -828,19 +845,8 @@ element
 }\label{ils}
 
 
-\mysec[\secref{DSC.22.30.80.30}]{Autoland Warning Light}{
-\item[$\bullet$] RA<200ft and
-\item[$\bullet$] one or more autopilots engaged and
-\item[$\bullet$] LAND or FLARE annunciated and
-\item[$\bullet$] one or more of:
-  \iitem Both autopilots disconnect (N.B. RA NCD case)
-  \iitem RA>15ft and localiser signal lost or deviation >¼ dot
-  \iitem RA>100ft and glideslope signal lost or deviation >1 dot
-  \iitem Difference between rad alt > 15ft
-  \iitem Long flare detected (newer aircraft only)
-}
-
 %% ** LVO takeoff
+\pagebreak
 \mysec[\secref{EOMA 8.1.3.3}]{LVO takeoff}{
 \item[$\bullet$] Absolute minima \dotfill 125/125/125
 \item[$\bullet$] Reported RVR of initial part of Takeoff run can be replaced by
@@ -880,6 +886,7 @@ element
 \item[$\bullet$] Disconnect autopilot at taxi speed
 }
 
+
 %% *** LVO Failure handling graphic
 \pagebreak
 
@@ -887,9 +894,9 @@ element
 
 %% * END
 \pagebreak
-\vspace*{5cm}
+% \vspace*{5cm}
 
-\begin{center}
-  Intentionally blank
-\end{center}
+% \begin{center}
+%   Intentionally blank
+% \end{center}
 \end{document}
