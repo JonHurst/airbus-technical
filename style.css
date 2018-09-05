@@ -15,6 +15,11 @@ body > div {
     max-width:45em;
 }
 
+div.user_header {
+    text-align:right;
+    margin-bottom:1em;
+}
+
 h1,h2,h3,h4 {
     color:darkblue;
 }
