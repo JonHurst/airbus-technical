@@ -445,22 +445,51 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 }
 
 %% ** Fuel limitations
-\mysec{Fuel}{
-\item Approximate Capacity (varies by airframe) \ref{DSC.28.10.20}
+\mysec[\secref{FCOM DSC.28.10.20}]{Fuel Capacity}{
+\item A319/A320 (approximate -- varies slightly between airframes)
 \iitem Outer tanks \dotfill 2 x 700kg
 \iitem Inner tanks \dotfill 2 x 5500kg
 \iitem Center tank \dotfill 6500kg
 \iitem Total \dotfill 18900kg
-\item Allowable temperature (Jet A1) \ref{LIM.28}\dotfill ≥-43°C, ≤54°C
-\item Max imbalance \ref{LIM.28}
-\iitem Fuel in fuller inner tank $<$ 2250kg (outer tanks balanced) \dotfill No Limitation
-\iitem Max inner tank imbalance (outer tanks balanced)\dotfill 1500kg
-\iitem \hfill(more w/ caveats)
-\iitem Max outer tank imbalance (sides balanced)\dotfill 1 full, 1 empty
-\iitem Max takeoff imbalance with sharklets \dotfill inners: 500kg, outers:  370kg
-\iitem \hfill(more w/ caveats)
-\item Min qty for takeoff \ref{LIM.28}\dotfill 1500kg
+\item A321
+\iitem Wing tanks \dotfill 2 x 6000kg
+\iitem Center tank \dotfill 6500kg
+\iitem Total \dotfill 18500kg
 }
+
+\mysec[\secref{FCOM LIM.FUEL}]{Fuel Limitations}{
+\item Min qty for takeoff \dotfill 1500kg
+
+  \subsubsection{Temperature}
+\item Jet A1, minimum \dotfill -43°C
+\item Jet A1, maximum \dotfill CEO:54°C; NEO:55°C
+  \subsubsection{A319/A320 fuel imbalance}
+\item Takeoff
+  \iitem Outer tanks balanced\dotfill 500kg\footnotemark
+  \iitem Inner tanks balanced\dotfill 370kg
+
+\item In-flight, outer tanks balanced
+\iitem One inner tank full\dotfill 1500kg
+\iitem Fuller inner tank 4300kg\dotfill 1600kg
+\iitem Fuller inner tank $<$ 2250kg\dotfill No Limitation
+\item In-flight, max outer tank imbalance OK if sides are balanced\footnotemark
+  \subsubsection{A321 fuel imbalance}
+\item Takeoff\dotfill 400kg\footnotemark
+\item In-flight
+  \iitem One wing tank full\dotfill 1320kg
+  \iitem Fuller wing tank 4000kg\dotfill 1450kg
+  \iitem Fuller wing tank $\leq$2350kg\dotfill No limitation
+}
+
+\footnotetext[\numexpr\value{footnote}-2]{This is the figure for the heavier
+  inner tank being full, which is the worst case. Check the FCOM if this is too
+  limiting.}
+
+\footnotetext[\numexpr\value{footnote}-1]{Also OK if lighter outer tank, and the heavier inner tank are on
+  the same side, with the difference between the inner tanks $\leq$3000kg.}
+
+\footnotetext{This is the figure for the worst case scenario where the heavier wing tank has
+  $geq$3000kg. Check the FCOM if this is too limiting.}
 
 %% ** Ice protection limitations
 \mysec{Ice protection}{
