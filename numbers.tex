@@ -402,7 +402,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 }
 
 %% ** Engine limitations
-\mysec[\secref{LIM.70}]{Engine}{
+\mysec[\secref{FCOM LIM.ENG}]{Engine}{
 \item TOGA time \dotfill 5 mins (10 mins single engine)
 \item EGT
 \iitem TOGA \dotfill CFM56:950°C; LEAP-1A:1060°C
@@ -411,11 +411,12 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \iitem LEAP-1A Air Starting\dotfill 875°C
 \iitem LEAP-1A Ground Starting\dotfill 750°C
 \item Oil
-  \iitem CFM56 min quantity\ref{EOMB 2.3.4.3}\dotfill 9.5qt+0.5qt/hr
-  \iitem LEAP-1A min quantity\ref{NEO QRG}\dotfill 10.6qt+0.45qt/hr
+  \iitem CFM56 min quantity\ref{EOMB 2.3.4.5}\dotfill 9.5qt+0.5qt/hr
+  \iitem LEAP-1A min quantity\ref{EOMB 2.3.4.5}\dotfill 10.6qt+0.45qt/hr\footnotemark
+
 \iitem Max cont temp \dotfill 140°C
 \iitem Max trans temp \dotfill 155°C
-\iitem Min start temp \dotfill CFM56:-40°C; LEAP-1A:-29°C
+\iitem Min start temp \dotfill -40°C
 \iitem Min takeoff temp \dotfill CFM56:-10°C; LEAP-1A:19°C
 \iitem LEAP-1A Min Oil Pressure\dotfill 17.4psi
 \iitem LEAP-1A Max Oil Pressure (oil temp < 50°C)\dotfill 130.5psi
@@ -423,18 +424,18 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 
 \item Max N1 \dotfill CFM56:104\%; LEAP-1A:101\%
 \item Max N2 \dotfill CFM56:105\%; LEAP-1A:116.5\%
-\item CFM56 Starter
+\item CFM56 Starter\footnotemark
   \iitem No running engagement when N2>20\%
-  \iitem 4 cycles of max 2 mins
-  \iitem Pause between start attempts\dotfill 20 sec
-  \iitem Cooling period after 4 attempts\dotfill 15min
-\item LEAP-1A Starter
-  \iitem No running engagement when N2>59\%
-  \iitem 1 auto-start cycle consists of three start attempts
+  \iitem Pause between cycles\dotfill 20 sec
+  \iitem Cooling period after 4 failed cycles\dotfill 15min
+\item LEAP-1A Starter\footnotemark[\value{footnote}]
+  \iitem No running engagement when N2>63\%
   \iitem Pause between cycles\dotfill 60 sec
-  \iitem Cooling period after 3 cycles\dotfill 15min
+  \iitem Cooling period after 3 failed cycles\dotfill 15min
 \item Max reverse \dotfill >70kt
 }
+\footnotetext[\numexpr\value{footnote}-1]{If engines have been shut down for >60min, decrease requirement by 3qt}
+\footnotetext{An automatic start that includes up to three start attempts is considered one cycle}
 
 %% ** Hydraulics limitations
 \mysec{Hydraulics}{
