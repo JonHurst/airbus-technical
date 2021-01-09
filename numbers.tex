@@ -595,20 +595,24 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 }
 
 %% ** Oxygen limitations
-\mysec[\secref{LIM.35}]{Oxygen}{
-\item A319/A320CEO Min oxygen pressure (ref temp 40°)
+\mysec[\secref{FCOM LIM.OXY}]{Oxygen}{
+  \subsubsection{Minimum Dispatch Oxygen Pressure}
+\item A319/A320CEO, ref temp 40°\footnotemark
 \iitem 3 crew\dotfill 1024psi
 \iitem 2 crew\dotfill 781psi
-\item A320NEO Min oxygen pressure (ref temp 40°)
+\item A320NEO/A321NEO ref temp 40°\footnotemark[\value{footnote}]
 \iitem 3 crew\dotfill CAPT:780psi, FO:550psi
 \iitem 2 crew\dotfill CAPT:550psi, FO:550psi
-\item Minimum Endurance, emergency descent (reg normal)
-\iitem Descent, 3 crew\dotfill A319/A320CEO:13 mins; A320NEO:15mins
-\iitem Cruise at FL100, 2 crew \dotfill A319/A320CEO:107mins; A320NEO:105mins
-\item Minimum Endurance, fire (reg 100\%)
-\iitem 8000ft\dotfill 15mins
+\subsubsection{Minimum Endurance}
+\item Emergency Descent (reg normal), 3 crew
+  \iitem A319/A320CEO\dotfill 13 mins
+  \iitem A320NEO/A321NEO\dotfill 15mins
+\item Cruise at FL100 (reg normal), 2 crew
+  \iitem A319/A320CEO\dotfill 107mins
+  \iitem A320NEO/A321NEO\dotfill 105mins
+\item Fire (reg 100\%), 8000ft\dotfill, all crew\dotfill 15mins
 }
-
+\footnotetext{On ground, ref temp is average of OAT and cockpit temp.}
 %% ** Navigation limitations
 \mysec{Navigation}{
 \item Max IRS latitudes \ref{LIM.34}\dotfill 73°N,60°S
