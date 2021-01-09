@@ -11,6 +11,7 @@
 \usepackage{paralist}
 \usepackage{array}
 \usepackage[bottom]{footmisc}
+\usepackage[hidelinks]{hyperref}
 \pagestyle{plain}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0em}
@@ -19,8 +20,8 @@
 \setcounter{secnumdepth}{0}
 
 %% * Macros
-\renewcommand{\ref}[1]{{\color{blue}\scriptsize [#1]}}
-\newcommand{\secref}[1]{\vspace{-3mm}\ref{#1}}
+\newcommand{\extref}[1]{{\color{blue}\scriptsize [#1]}}
+\newcommand{\secref}[1]{\vspace{-3mm}\extref{#1}}
 
 \newcommand{\mylist}[1]{
   \begin{list}{}{\setlength\parsep{0pt}\setlength\itemsep{0pt}}
@@ -97,21 +98,21 @@ approach in some countries.
 
 %% ** Contaminated runway ops
 \mysec{Contaminated Runway Operations}{
-\item Takeoff or landing is not permitted with: \ref{EOMB 2.1}
+\item Takeoff or landing is not permitted with: \extref{EOMB 2.1}
   \begin{compactitem}
   \item Wet ice
   \item  Water on top of compacted snow
   \item Dry Snow or Wet Snow over Ice
   \end{compactitem}
 
-  \item Damp runway \ref{EOMB 4.5.1/4.12.1} \dotfill Use Wet performance
-  \item Contamination $<$ 25\% of runway area \ref{EOMB 4.6.2} \dotfill
+  \item Damp runway \extref{EOMB 4.5.1/4.12.1} \dotfill Use Wet performance
+  \item Contamination $<$ 25\% of runway area \extref{EOMB 4.6.2} \dotfill
     Use Wet performance
-  \item Contamination $<$3mm \ref{EOMB 4.6.2} \dotfill Use Wet performance
+  \item Contamination $<$3mm \extref{EOMB 4.6.2} \dotfill Use Wet performance
   \item Takeoff/Ldg Dispatch condition assessment matrix \dotfill EFB “More” pages
   \item Landing condition assessment matrix \dotfill QRH PER-A
-  \item Ldg Dispatch, wet ice and layered contaminants \ref{EOMB 2.1}\dotfill 2 alternates rqd
-  \item Minimum cleared width \ref{EOMB 2.1} \dotfill 30m (check
+  \item Ldg Dispatch, wet ice and layered contaminants \extref{EOMB 2.1}\dotfill 2 alternates rqd
+  \item Minimum cleared width \extref{EOMB 2.1} \dotfill 30m (check
     snowbanks: EOMB 4.6.8)
     \iitem $\leq$45m does not need to be
     treated as a narrow runway for V$_1$ etc.
@@ -265,10 +266,10 @@ approach in some countries.
 
 %% ** Other wind limits
   \mysec{Other wind limits}{
-    \item LEAP-1A starting max crosswind \ref{FCOM LIM.EBG}\dotfill 45kt
-\item Passenger door operation \ref{FCOM LIM.AG.OPS}\dotfill 65kt
-\item Cargo door operation \ref{FCOM LIM.AG.OPS}\dotfill 40kt (50kt w/caveats)
-\item Cargo door closed before \ref{FCOM LIM.AG.OPS}\dotfill 65kt
+    \item LEAP-1A starting max crosswind \extref{FCOM LIM.EBG}\dotfill 45kt
+\item Passenger door operation \extref{FCOM LIM.AG.OPS}\dotfill 65kt
+\item Cargo door operation \extref{FCOM LIM.AG.OPS}\dotfill 40kt (50kt w/caveats)
+\item Cargo door closed before \extref{FCOM LIM.AG.OPS}\dotfill 65kt
 }
 
 %% ** First Officer limits
@@ -284,11 +285,11 @@ approach in some countries.
 
 %% ** Airport limits
 \mysec{Airport limitations}{
-\item Max slope \ref{FCOM LIM.AG.OPS} \dotfill $\pm$2\%
-\item Max runway altitude \ref{FCOM LIM.AG.OPS} \dotfill 9200ft
-\item Nominal runway width \ref{FCOM LIM.AG.OPS} \dotfill 45m
-\item Minimum runway width \ref{FCOM LIM.AG.OPS} \dotfill 30m
-\item Min planning fire fighting category \ref{EOMA 8.1.2.1}
+\item Max slope \extref{FCOM LIM.AG.OPS} \dotfill $\pm$2\%
+\item Max runway altitude \extref{FCOM LIM.AG.OPS} \dotfill 9200ft
+\item Nominal runway width \extref{FCOM LIM.AG.OPS} \dotfill 45m
+\item Minimum runway width \extref{FCOM LIM.AG.OPS} \dotfill 30m
+\item Min planning fire fighting category \extref{EOMA 8.1.2.1}
   \iitem Departure/Destination  \dotfill A321:7, A319/A320: 6\footnotemark
   \iitem Alternates \dotfill UK: 5; Non-UK: 4
 }
@@ -338,28 +339,28 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 
 %% ** Loading
 \mysec{Loading}{
-  \item \textbf{A319 Protocol:}\ref{GHM 5.4.1.2}
+  \item \textbf{A319 Protocol:}\extref{GHM 5.4.1.2}
     \iitem Up to 150 bags to Section 41/42;
     \iitem then up to 50 in  Compartment 5;
     \iitem overspill to Compartment 1.
 
-  \item\textbf{A320 Protocol:}\ref{GHM 5.4.1.2}
+  \item\textbf{A320 Protocol:}\extref{GHM 5.4.1.2}
     \iitem Fill Compartment 1 ($\approx$85 bags);
     \iitem remainder to Compartment  4 and if necessary, Compartment 3.
     \iitem No planned usage of Compartment 5.
 
-  \item\textbf{A321 Protocol:}\ref{GHM 5.4.1.2}
+  \item\textbf{A321 Protocol:}\extref{GHM 5.4.1.2}
     \iitem First 100 bags in Compartment 3
     \iitem Next 50 bags in Compartment 4
     \iitem Overspill in Compartment 2
 
-\item LMCs \ref{EOMB.7.4}
+\item LMCs \extref{EOMB.7.4}
 \iitem Negative LMC, $\Delta$CG < 2\% \dotfill No action required
 \iitem Positive LMC < 250kg, $\Delta$CG < 2\% \dotfill Subtract 1 from FLEX\footnotemark
 \iitem Other cases \dotfill Recalculate performance
 \iitem New paperwork required for -20/+10 passengers
-%\item A320 Standard CG \ref{EOMB 4.9.4} \dotfill CG > 27\%MAC
-\item A320 Forward CG \ref{EOMB 4.9.1.1} \dotfill CG < 27\%MAC
+%\item A320 Standard CG \extref{EOMB 4.9.4} \dotfill CG > 27\%MAC
+\item A320 Forward CG \extref{EOMB 4.9.1.1} \dotfill CG < 27\%MAC
 }
 \footnotetext{FLEX temperature must always be greater than OAT and TREF (A319:ISA+30; A320:ISA+29; A321:ISA+15)}
 
@@ -408,8 +409,8 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \iitem LEAP-1A Air Starting\dotfill 875°C
 \iitem LEAP-1A Ground Starting\dotfill 750°C
 \item Oil
-  \iitem CFM56 min quantity\ref{EOMB 2.3.4.5}\dotfill 9.5qt+0.5qt/hr
-  \iitem LEAP-1A min quantity\ref{EOMB 2.3.4.5}\dotfill 10.6qt+0.45qt/hr\footnotemark
+  \iitem CFM56 min quantity\extref{EOMB 2.3.4.5}\dotfill 9.5qt+0.5qt/hr
+  \iitem LEAP-1A min quantity\extref{EOMB 2.3.4.5}\dotfill 10.6qt+0.45qt/hr\footnotemark
 
 \iitem Max cont temp \dotfill 140°C
 \iitem Max trans temp \dotfill 155°C
@@ -491,8 +492,8 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 
 %% ** Electrical limitations
 \mysec{Electrical}{
-\item Prelim prep min battery voltage \ref{EOMB 2.3.4.2} \dotfill $>$25.5V
-\item Battery check \ref{EOMB 2.3.6.2} \dotfill charge current<60A within 10s
+\item Prelim prep min battery voltage \extref{EOMB 2.3.4.2} \dotfill $>$25.5V
+\item Battery check \extref{EOMB 2.3.6.2} \dotfill charge current<60A within 10s
 }
 
 %% ** Pressurisation limitations
@@ -502,7 +503,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \item Safety valve \dotfill 8.6psi
 \item Max norm cabin alt \dotfill 8000ft
 \item Cab alt warning \dotfill 9550ft$\pm$350ft
-\item Ram air max diff \ref{FCOM DSC.12.10.20}\dotfill 1psi
+\item Ram air max diff \extref{FCOM DSC.12.10.20}\dotfill 1psi
 }
 
 %% ** Air conditioning / Ventilation limitations
@@ -517,9 +518,9 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 
 %% ** Ice protection limitations
 \mysec{Ice protection}{
-\item Ground icing conditions \ref{EOMB 2.3.9}\dotfill OAT$\le$10°C + vis moist | gnd contam
-\item Flight icing conditions \ref{EOMB 2.3.9}\dotfill TAT$\le$10°C + vis moist
-\item Eng anti-ice not rqd \ref{EOMB 2.3.13}\dotfill climb/cruise,
+\item Ground icing conditions \extref{EOMB 2.3.9}\dotfill OAT$\le$10°C + vis moist | gnd contam
+\item Flight icing conditions \extref{EOMB 2.3.9}\dotfill TAT$\le$10°C + vis moist
+\item Eng anti-ice not rqd \extref{EOMB 2.3.13}\dotfill climb/cruise,
   SAT<-40°C, no CBs
   \subsubsection{Accreted ice \secref{FCOM PRO.NOR.SUP.ADVWXR}}
   \item Wing anti-ice operative
@@ -563,13 +564,13 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 
 %% ** Gear limitations
 \mysec{Gear}{
-\item Extend \ref{LIM.AG.SPD}\dotfill 250kt
-\item Retract \ref{LIM.AG.SPD}\dotfill 220kt
-\item Extended \ref{LIM.AG.SPD}\dotfill 280kt/M.67
-\item Max taxi speed, single tyre deflated \ref{LIM.LG}\dotfill 7kt
-\item Max taxi speed, both tyres deflated \ref{LIM.LG}\dotfill 3kt
-\item Max steering angle, both tyres deflated \ref{LIM.LG}\dotfill 30°
-\item Max brake temp for takeoff \ref{LIM.LG}\dotfill 300°
+\item Extend \extref{LIM.AG.SPD}\dotfill 250kt
+\item Retract \extref{LIM.AG.SPD}\dotfill 220kt
+\item Extended \extref{LIM.AG.SPD}\dotfill 280kt/M.67
+\item Max taxi speed, single tyre deflated \extref{LIM.LG}\dotfill 7kt
+\item Max taxi speed, both tyres deflated \extref{LIM.LG}\dotfill 3kt
+\item Max steering angle, both tyres deflated \extref{LIM.LG}\dotfill 30°
+\item Max brake temp for takeoff \extref{LIM.LG}\dotfill 300°
 }
 
 %% ** APU limitations
@@ -586,14 +587,14 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \iitem Battery start (emerg elec config) \dotfill $<$25000ft
 \iitem Normal start \dotfill $<$41000ft
 \iitem  Air bleed for wing anti-icing \dotfill Not permitted
-\item Approximate fuel burn \ref{EOMB 5.1} \dotfill 2kg/min
-\item Ops with ``Low Oil Level'' ECAM \ref{FCOM.PRO.ABN.ADV} \dotfill 10hrs
+\item Approximate fuel burn \extref{EOMB 5.1} \dotfill 2kg/min
+\item Ops with ``Low Oil Level'' ECAM \extref{FCOM.PRO.ABN.ADV} \dotfill 10hrs
 }
 
 %% ** Navigation limitations
 \mysec{Navigation}{
-\item Max IRS latitudes \ref{FCOM LIM.NAV}\dotfill 73°N,60°S\footnotemark
-\item Altimeter tolerances \ref{EOMB 2.3.6.11}
+\item Max IRS latitudes \extref{FCOM LIM.NAV}\dotfill 73°N,60°S\footnotemark
+\item Altimeter tolerances \extref{EOMB 2.3.6.11}
 \iitem ADR vs Airfield elevation\dotfill $\pm$75ft
 \iitem ADR vs ADR\dotfill $\pm$20ft
 \iitem ISIS vs ADR\dotfill $\pm$100ft
@@ -631,7 +632,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \iitem FINAL APP, V/S or FPA mode \dotfill 250ft agl
 \iitem PAR \dotfill 250ft agl
 \iitem ILS, CAT1 diplayed on FMA \dotfill 160ft agl
-\iitem Cat II approach, manual landing \ref{FCOM LIM.AFS.20} \dotfill 80ft agl
+\iitem Cat II approach, manual landing \extref{FCOM LIM.AFS.20} \dotfill 80ft agl
 \\\iitem Other phases A319/A320 \dotfill 500ft agl
 \iitem Other phases A321 \dotfill 900ft agl
 }
@@ -650,7 +651,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 }
 %% ** Airport lighting
 \mysec{Airport lighting}{
-\item Runway lighting \ref{LIDO GEN-1.3.1.6}
+\item Runway lighting \extref{LIDO GEN-1.3.1.6}
 \iitem Red and white \dotfill 900m
 \iitem Red \dotfill 300m
 }
@@ -658,14 +659,14 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 %% ** Miscellaneous
 \mysec{Miscellaneous}{
 \item German corner \dotfill KRH R270/12D
-\item Alternate ranges \ref{EOMB 5.1}
+\item Alternate ranges \extref{EOMB 5.1}
 \iitem Takeoff \dotfill 320nm
 \iitem Enroute \dotfill A319:380nm; A320/A321:400nm
 \item Approx Power settings
 \iitem Two engine approach, V$_{app}$ \dotfill 50\% N1
 \iitem Single engine approach, V$_{app}$ \dotfill 70\% N1
 \iitem Two engine cruise \dotfill (50 + Altitude/1000)\% N1
-\item Flex corrections \ref{EOMB 2.3.10}
+\item Flex corrections \extref{EOMB 2.3.10}
 \iitem Anti-ice on \dotfill subtract 5°C\footnotemark
 \iitem QNH reduction \dotfill subtract 1°C/2hPa\footnotemark[\value{footnote}]
 
@@ -677,16 +678,16 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 %% * Engine failure
 %% ** Single engine operations
 \mysec{Single Engine operations}{
-\item Avoid reducing below V$_\mathrm{LS}$ (including GPWS/Windshear) \ref{FCOM PRO.ABN.ENG}
-\item Autoland capability \ref{FCOM LIM.AFS.20}\dotfill Cat III single (A320CEO $\Rightarrow$ Conf
+\item Avoid reducing below V$_\mathrm{LS}$ (including GPWS/Windshear) \extref{FCOM PRO.ABN.ENG}
+\item Autoland capability \extref{FCOM LIM.AFS.20}\dotfill Cat III single (A320CEO $\Rightarrow$ Conf
   Full)
-\item Available NPA Autopilot modes \ref{FCOM LIM.AFS.10}
+\item Available NPA Autopilot modes \extref{FCOM LIM.AFS.10}
   \iitem A320/A321 \dotfill All
   \iitem A319 \dotfill LOC/VS, LOC/FPA, HDG/VS, TRK/FPA\footnotemark
-\item Do not extend full flaps until established on final descent. \ref{FCOM PRO.ABN.ENG}
-\item Use Conf 3 if a level off is required. \ref{FCOM PRO.ABN.ENG}
+\item Do not extend full flaps until established on final descent. \extref{FCOM PRO.ABN.ENG}
+\item Use Conf 3 if a level off is required. \extref{FCOM PRO.ABN.ENG}
 \item Check QRH ABN.ENG.OEI Circling Approach if circling required
-\item Sharklet automatic rollout \ref{FCOM LIM.AFS} \dotfill Idle reverse only
+\item Sharklet automatic rollout \extref{FCOM LIM.AFS} \dotfill Idle reverse only
 }
 \footnotetext{All modes are permitted Flight Director only}
 
@@ -727,7 +728,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
   \pitem{``Senior cabin crew member to the interphone'' or 3 double chimes}
 \item Unplanned emergency landing :
   \pitem{``Attention, Crew! Brace, Brace!''}
-\item Rapid decompression \ref{EOMB 3.80.2}:
+\item Rapid decompression \extref{EOMB 3.80.2}:
   \pitem{Auto announcement from CIDS/PRAM. No Flight Crew PA required.}
 \item Planned emergency landing :
   \iitem 2000ft\dotfill ``Cabin crew, take up landing positions''
@@ -751,7 +752,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 
 %% ** General
 \mysec{General}{
-\item Procedure turn \ref{LIDO GEN.1.5.5.6.1.2} \dotfill 75 seconds from start of 45° turn
+\item Procedure turn \extref{LIDO GEN.1.5.5.6.1.2} \dotfill 75 seconds from start of 45° turn
 }
 
 
@@ -784,7 +785,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
   \item[$\bullet$] Database procedure should not be changed except for
     the addition of missing altitude or speed constraints. ATC ``direct
     to'' instructions may be accepted when above MSA. Max allowable XTK Error on
-    RF\footnotemark[1] leg is 0.5nm.\ref{EJ ppt}
+    RF\footnotemark[1] leg is 0.5nm.\extref{EJ ppt}
 \item[$\bullet$] If GPS PRIMARY LOST or NAV ACCUR DOWNGRAD on one ND/MCDU
   continue with the unaffected one.
 \item[$\bullet$] Use raw data to identify and continue with FMGC that
@@ -804,7 +805,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 %% ** Visual Approach
 \pagebreak
 \mysec[\secref{EOMB 2.3.18.3.7}]{Visual Approach}{
-\item[$\bullet$] Minimas: \ref{EOMA 8.1.3.6}
+\item[$\bullet$] Minimas: \extref{EOMA 8.1.3.6}
   \iitem Visibility \dotfill 5km
   \iitem Cloud ceiling \dotfill 2500ft aal
 \item[$\bullet$] Downwind at Flap 1, S speed
@@ -817,7 +818,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 %% ** Circling
 \mysec[\secref{EOMB 2.3.18.3.5}]{Circling}{
 \item[$\bullet$] If OEI, check weight (QRH ABN.19)
-\item[$\bullet$] Protected circling radius \ref{LIDO GEN.1.5.5.6.2.5} \dotfill
+\item[$\bullet$] Protected circling radius \extref{LIDO GEN.1.5.5.6.2.5} \dotfill
   4.2nm from all RWY THR
 \item[$\bullet$] Landing runway in secondary flight plan
 \item[$\bullet$] Initial approach: Conf 3, gear down, F speed
@@ -840,12 +841,12 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 %% ** RNAV / Overlay approach
 \mysec[\secref{EOMB 2.3.18.3.2}]{RNAV or Non-Precision overlay approach}{
 \item[$\bullet$] \textbf{Minimum required equipment:}\\ 1 FMS; 1 GPS; 2 IRS;
-  1 MCDU; 1 FD; 1 PFD (on PF side); 2 ND (tmp display OK); 2 FCU channels. \ref{PRO.SPO.51}
+  1 MCDU; 1 FD; 1 PFD (on PF side); 2 ND (tmp display OK); 2 FCU channels. \extref{PRO.SPO.51}
   \item[$\bullet$] Max acceptable difference between altimeters \dotfill 100ft
-\item[$\bullet$] RNP(AR)\footnotemark approaches are not yet authorised. \ref{EOMA 8.3.2.6}
-%% \item[$\bullet$] Check RAIM availability for ETA$\pm$15 mins. \ref{EOMA 8.4.5.2}
+\item[$\bullet$] RNP(AR)\footnotemark approaches are not yet authorised. \extref{EOMA 8.3.2.6}
+%% \item[$\bullet$] Check RAIM availability for ETA$\pm$15 mins. \extref{EOMA 8.4.5.2}
 %% \item[$\bullet$] Conventional approach must be available at destination
-%%   or alternate. \ref{EOMA 8.4.5.2}
+%%   or alternate. \extref{EOMA 8.4.5.2}
 \item[$\bullet$] A minimum procedure temperature may be promulgated on
   the approach chart; default is -10°C:
 
@@ -853,9 +854,9 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
   \iitem $\bullet$ Below this temp \dotfill corrected gp, NAV/FPA, corrected LNAV DA
 \item[$\bullet$] Modifications to FMC database procedure prohibited with
   the exception of temperature corrections to minimum
-  altitudes. \ref{EOMA 8.4.5.2}
+  altitudes. \extref{EOMA 8.4.5.2}
   \item[$\bullet$] Fly a stabilised approach if using FPA. Set and pull FPA
-    0.3nm before descent point. \ref{EOMB 2.3.18.3.4}
+    0.3nm before descent point. \extref{EOMB 2.3.18.3.4}
 \item[$\bullet$] Chart vs. database:
   \iitem Max vertical path difference (fully managed only)\dotfill 0.1°
   \iitem Max lateral track difference \dotfill 3°
@@ -873,12 +874,12 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \footnotetext{LIDO chart update is in progress. May be titled RNAV(RNP) until completed.}
 %% ** ILS approach
 \mysec{ILS approach}{
-\item Standard coverage \ref{LIDO GEN.NAV.3.2}:
+\item Standard coverage \extref{LIDO GEN.NAV.3.2}:
   \iitem Localiser ±10° \dotfill 25nm (FAA 18nm)
   \iitem Localiser ±35° \dotfill 17nm (FAA 10nm)
   \iitem Glideslope ±8° \dotfill 10nm
-\item Approach Ban \ref{EOMA 8.4.3} \dotfill 1000ft aal  or DA if greater
-\item Absolute minimas (DH/TDZ RVR) \ref{EOMA 8.1.3.9.3}:
+\item Approach Ban \extref{EOMA 8.4.3} \dotfill 1000ft aal  or DA if greater
+\item Absolute minimas (DH/TDZ RVR) \extref{EOMA 8.1.3.9.3}:
 \iitem Cat I \dotfill 200ft/550m
 \iitem LTS Cat I \dotfill 200ft/400m
 \iitem Cat II \dotfill 100ft/300m
@@ -890,10 +891,10 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \iitem $\bullet$ Required stop end RVR is always 75m.
 \iitem $\bullet$  Required mid point RVR is also 75m if rollout is used,
 else it is 125m.
-\item LIDO ``Company'' minimas \ref{EOMA 8.1.5.3}
+\item LIDO ``Company'' minimas \extref{EOMA 8.1.5.3}
   \iitem Cat IIIB \dotfill No DH
   \iitem Cat IIIA \dotfill 50ft RA
-\item Required visual references: \ref{EOMA 8.4.6/10/11}
+\item Required visual references: \extref{EOMA 8.4.6/10/11}
 \iitem Cat I \dotfill Elements of ALS, PAPIS or THR/TDZ
 markings/lights
 \iitem Cat I LTS, Cat II \dotfill 3 consecutive lights plus a lateral
@@ -912,13 +913,13 @@ element
 \item[$\bullet$] Reported RVR of initial part of Takeoff run can be replaced by
   pilot assessment.
 \item[$\bullet$] Only relevant RVRs must be considered.
-\item[$\bullet$] All passenger PEDS must be turned off. \ref{EOMA 8.3.23.2}
+\item[$\bullet$] All passenger PEDS must be turned off. \extref{EOMA 8.3.23.2}
 }
 
 
 %% ** LVO Landing
 \mysec[\secref{EOMB 2.3.18.3.1.1}]{LVO landing}{
-\item[$\bullet$] All passenger PEDS must be turned off \ref{EOMA 8.3.23.2}
+\item[$\bullet$] All passenger PEDS must be turned off \extref{EOMA 8.3.23.2}
 \item[$\bullet$] Check NOTAMS for airport facility downgrades (see EOMA-8.1.3.5)
 \item[$\bullet$] Check LVPs in force
 \item[$\bullet$] Check crew qualification
@@ -931,7 +932,7 @@ element
 \item[$\bullet$] Check runway condition limits (see page
   \pageref{other_autoland_limits})
 \item[$\bullet$] Review failure strategies (see page \pageref{failure-strategies})
-\item[$\bullet$] Extra calls: \ref{EOMB 2.3.18.3.1.2}
+\item[$\bullet$] Extra calls: \extref{EOMB 2.3.18.3.1.2}
 \iitem 350ft, FMA:LAND \dotfill PF:``Land'', PNF:``Checked''
 \iitem 100ft (only with no DH) \dotfill PNF: ``100'', PF: ``Continue''
 \iitem 40ft, FMA:FLARE\dotfill PNF:``Flare''
