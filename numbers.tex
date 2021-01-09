@@ -615,14 +615,16 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \footnotetext{On ground, ref temp is average of OAT and cockpit temp.}
 %% ** Navigation limitations
 \mysec{Navigation}{
-\item Max IRS latitudes \ref{LIM.34}\dotfill 73°N,60°S
+\item Max IRS latitudes \ref{FCOM LIM.NAV}\dotfill 73°N,60°S\footnotemark
 \item Altimeter tolerances \ref{EOMB 2.3.6.11}
-%% \iitem ADR vs Airfield elevation\dotfill $\pm$25ft
+\iitem ADR vs Airfield elevation\dotfill $\pm$75ft
 \iitem ADR vs ADR\dotfill $\pm$20ft
-\iitem ISIS vs ADR\dotfill $\pm$60ft
-\item Altimeter temperature corrections \dotfill QRH SI.10
+\iitem ISIS vs ADR\dotfill $\pm$100ft
+\item Altimeter temperature corrections \dotfill QRH SI
 }
-
+\footnotetext{This is worst case assuming all ADIRUs have the same magnetic variation table. Some
+  aircraft are able to fly to 82°N for some longitudes. If one ADIRU has a different table check the
+  FCOM for more limiting maximum latitudes.}
 %% ** Autopilot limitations
 \mysec{Autopilot}{
 \item Engagement after TO \ref{LIM.22.10}\dotfill $>$100ft,$>$5 secs
