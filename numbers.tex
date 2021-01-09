@@ -292,16 +292,11 @@ approach in some countries.
   \iitem Departure/Destination  \dotfill A321:7, A319/A320: 6\footnotemark
   \iitem Alternates \dotfill UK: 5; Non-UK: 4
 }
-\mysec{Airport lighting}{
-\item Runway lighting \ref{LIDO GEN-1.3.1.6}
-\iitem Red and white \dotfill 900m
-\iitem Red \dotfill 300m
-}
 \footnotetext{Up to 2 categories less is OK with caveats -- see EOM-A}
 
 %% ** Dimensons
 \vbox{
-  \subsection{Dimensions}
+  \subsection{Aircraft Dimensions}
   \secref{FCOM DSC.20.20}
 \begin{center}
 \begin{tabular}{|l|c|c|c|c|}\hline
@@ -439,19 +434,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \footnotetext[\numexpr\value{footnote}-1]{If engines have been shut down for >60min, decrease requirement by 3qt}
 \footnotetext{An automatic start that includes up to three start attempts is considered one cycle}
 
-%% ** Fuel limitations
-\mysec[\secref{FCOM DSC.28.10.20}]{Fuel Capacity}{
-\item A319/A320 (approximate -- varies slightly between airframes)
-\iitem Outer tanks \dotfill 2 x 700kg
-\iitem Inner tanks \dotfill 2 x 5500kg
-\iitem Center tank \dotfill 6500kg
-\iitem Total \dotfill 18900kg
-\item A321
-\iitem Wing tanks \dotfill 2 x 6000kg
-\iitem Center tank \dotfill 6500kg
-\iitem Total \dotfill 18500kg
-}
-
+%% ** Fuel limitaions
 \mysec[\secref{FCOM LIM.FUEL}]{Fuel Limitations}{
 \item Min qty for takeoff \dotfill 1500kg
 
@@ -486,12 +469,51 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \footnotetext{This is the figure for the worst case scenario where the heavier wing tank has
   $\geq$3000kg. Check the FCOM if this is too limiting.}
 
+%% ** Fuel capacity
+\mysec[\secref{FCOM DSC.28.10.20}]{Fuel Capacity}{
+\item A319/A320 (approximate -- varies slightly between airframes)
+\iitem Outer tanks \dotfill 2 x 700kg
+\iitem Inner tanks \dotfill 2 x 5500kg
+\iitem Center tank \dotfill 6500kg
+\iitem Total \dotfill 18900kg
+\item A321
+\iitem Wing tanks \dotfill 2 x 6000kg
+\iitem Center tank \dotfill 6500kg
+\iitem Total \dotfill 18500kg
+}
+
 %% ** Hydraulics limitations
 \mysec[\secref{FCOM DSC.29.10}]{Hydraulics}{
 \item Normal pressure\dotfill 3000psi
 \item RAT only pressure\dotfill 2500psi
 \item Green/Yellow differential for PTU activation\dotfill 500psi
 }
+
+%% ** Electrical limitations
+\mysec{Electrical}{
+\item Prelim prep min battery voltage \ref{EOMB 2.3.4.2} \dotfill $>$25.5V
+\item Battery check \ref{EOMB 2.3.6.2} \dotfill charge current<60A within 10s
+}
+
+%% ** Pressurisation limitations
+\mysec[\secref{FCOM LIM.AIR}]{Pressurisation}{
+\item Max pos diff \dotfill 9.0psi
+\item Max neg diff \dotfill -1psi
+\item Safety valve \dotfill 8.6psi
+\item Max norm cabin alt \dotfill 8000ft
+\item Cab alt warning \dotfill 9550ft$\pm$350ft
+\item Ram air max diff \ref{FCOM DSC.12.10.20}\dotfill 1psi
+}
+
+%% ** Air conditioning / Ventilation limitations
+\mysec[\secref{FCOM LIM.AIR, FCOM PRO.NOR.SUP.ADVWXR}]{Air conditioning / Ventilation}{
+  \item Passengers on board without Air Con\dotfill Max 20mins
+\item Do not simultaneously use packs and ground LP Air Conditioning Unit.
+\item Do not use HP ground unit when APU is supplying bleed air.
+\item Max OAT for norm avionics ventilation \dotfill 49°C\footnotemark
+\item Max OAT with EXTRACT OVRD and Packs Off \dotfill  39°C\footnotemark[\value{footnote}]
+}
+\footnotetext{Higher temperatures are allowable with a time limit -- see FCOM}
 
 %% ** Ice protection limitations
 \mysec{Ice protection}{
@@ -550,32 +572,6 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \item Max brake temp for takeoff \ref{LIM.LG}\dotfill 300°
 }
 
-%% ** Pressurisation limitations
-\mysec[\secref{FCOM LIM.AIR}]{Pressurisation}{
-\item Max pos diff \dotfill 9.0psi
-\item Max neg diff \dotfill -1psi
-\item Safety valve \dotfill 8.6psi
-\item Max norm cabin alt \dotfill 8000ft
-\item Cab alt warning \dotfill 9550ft$\pm$350ft
-\item Ram air max diff \ref{FCOM DSC.12.10.20}\dotfill 1psi
-}
-
-%% ** Air conditioning / Ventilation limitations
-\mysec[\secref{FCOM LIM.AIR, FCOM PRO.NOR.SUP.ADVWXR}]{Air conditioning / Ventilation}{
-  \item Passengers on board without Air Con\dotfill Max 20mins
-\item Do not simultaneously use packs and ground LP Air Conditioning Unit.
-\item Do not use HP ground unit when APU is supplying bleed air.
-\item Max OAT for norm avionics ventilation \dotfill 49°C\footnotemark
-\item Max OAT with EXTRACT OVRD and Packs Off \dotfill  39°C\footnotemark[\value{footnote}]
-}
-\footnotetext{Higher temperatures are allowable with a time limit -- see FCOM}
-
-%% ** Electrical limitations
-\mysec{Electrical}{
-\item Prelim prep min battery voltage \ref{EOMB 2.3.4.2} \dotfill $>$25.5V
-\item Battery check \ref{EOMB 2.3.6.2} \dotfill charge current<60A within 10s
-}
-
 %% ** APU limitations
 \mysec[\secref{FCOM LIM.APU}]{APU}{
 \item Starter duty  \dotfill 3 cycles then 60 mins
@@ -594,6 +590,18 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \item Ops with ``Low Oil Level'' ECAM \ref{FCOM.PRO.ABN.ADV} \dotfill 10hrs
 }
 
+%% ** Navigation limitations
+\mysec{Navigation}{
+\item Max IRS latitudes \ref{FCOM LIM.NAV}\dotfill 73°N,60°S\footnotemark
+\item Altimeter tolerances \ref{EOMB 2.3.6.11}
+\iitem ADR vs Airfield elevation\dotfill $\pm$75ft
+\iitem ADR vs ADR\dotfill $\pm$20ft
+\iitem ISIS vs ADR\dotfill $\pm$100ft
+\item Altimeter temperature corrections \dotfill QRH SI
+}
+\footnotetext{This is worst case assuming all ADIRUs have the same magnetic variation table. Some
+  aircraft are able to fly to 82°N for some longitudes. If one ADIRU has a different table check the
+  FCOM for more limiting maximum latitudes.}
 %% ** Oxygen limitations
 \mysec[\secref{FCOM LIM.OXY}]{Oxygen}{
   \subsubsection{Minimum Dispatch Oxygen Pressure}
@@ -613,18 +621,6 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \item Fire (reg 100\%), 8000ft, all crew\dotfill 15mins
 }
 \footnotetext{On ground, ref temp is average of OAT and cockpit temp.}
-%% ** Navigation limitations
-\mysec{Navigation}{
-\item Max IRS latitudes \ref{FCOM LIM.NAV}\dotfill 73°N,60°S\footnotemark
-\item Altimeter tolerances \ref{EOMB 2.3.6.11}
-\iitem ADR vs Airfield elevation\dotfill $\pm$75ft
-\iitem ADR vs ADR\dotfill $\pm$20ft
-\iitem ISIS vs ADR\dotfill $\pm$100ft
-\item Altimeter temperature corrections \dotfill QRH SI
-}
-\footnotetext{This is worst case assuming all ADIRUs have the same magnetic variation table. Some
-  aircraft are able to fly to 82°N for some longitudes. If one ADIRU has a different table check the
-  FCOM for more limiting maximum latitudes.}
 %% ** Autopilot limitations
 \mysec[\secref{LIM.AFS}]{Autopilot}{
 \item Engagement after TO \dotfill $>$100ft agl and $>$5 secs
@@ -651,6 +647,12 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
   \iitem RA>100ft and glideslope signal lost or deviation >1 dot
   \iitem Difference between rad alt > 15ft
   \iitem Long or untimely flare detected (newer aircraft only)
+}
+%% ** Airport lighting
+\mysec{Airport lighting}{
+\item Runway lighting \ref{LIDO GEN-1.3.1.6}
+\iitem Red and white \dotfill 900m
+\iitem Red \dotfill 300m
 }
 
 %% ** Miscellaneous
@@ -753,6 +755,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \item UK Procedure default speed limit \ref{UKAIP GEN.1.7}\dotfill 185kt
 \item Procedure turn \ref{LIDO RAR.5.4.1.2} \dotfill 75 seconds from start of 45° turn
 }
+
 
 %% ** Holding
 \mysec[\secref{LIDO RAR.5.7}]{Holding}{
