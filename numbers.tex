@@ -577,20 +577,21 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 }
 
 %% ** APU limitations
-\mysec{APU}{
-\item Ops with ``Low Oil Level'' ECAM \ref{LIM.49.10}\dotfill 10hrs
-\item Starter duty  \ref{LIM.49.10}\dotfill 3 cycles then 60 mins
-\item Maximum N \ref{LIM.49.10}\dotfill 107\%
-\item Max EGT  \ref{LIM.49.10}\dotfill 675°C
-\item Max start EGT  \ref{LIM.49.10}\dotfill <35000ft: 1090°C, >35000ft 1120°C
-\item Max Altitudes \ref{LIM.49.20}
-\iitem Two packs \dotfill 15000ft
-\iitem One pack \dotfill 22500ft
-\iitem Eng start \dotfill 20000ft
-\iitem Battery start (emerg elec config) \dotfill 25000ft
-\iitem Restart and operation \dotfill 39000ft
+\mysec[\secref{FCOM LIM.APU}]{APU}{
+\item Starter duty  \dotfill 3 cycles then 60 mins
+\item Maximum N \dotfill 107\%
+\item Max start EGT  \dotfill <35000ft: 1090°C, >35000ft 1120°C
+\item Max running EGT  \dotfill 675°C
+\item Max Altitudes
+\iitem Two packs \dotfill $<$15000ft
+\iitem Engine start \dotfill $<$20000ft
+\iitem One pack \dotfill $<$22500ft
+\iitem Electrical power \dotfill $<$41000ft
+\iitem Battery start (emerg elec config) \dotfill $<$25000ft
+\iitem Normal start \dotfill $<$41000ft
 \iitem  Air bleed for wing anti-icing \dotfill Not permitted
 \item Approximate fuel burn \ref{EOMB 5.1} \dotfill 2kg/min
+\item Ops with ``Low Oil Level'' ECAM \ref{FCOM.PRO.ABN.ADV} \dotfill 10hrs
 }
 
 %% ** Oxygen limitations
