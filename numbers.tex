@@ -772,7 +772,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 }
 
 %% ** PRNAV SID/STAR
-\mysec[\secref{PRO.SPO.51, EOMA 8.3.3.9, EOMB 2.4.51.2}]{PRNAV (RNP 1) SID/STAR}{
+\mysec[\secref{FCOM PRO.SPO.51}]{PRNAV (RNP 1) SID/STAR}{
 \item[$\bullet$] \textbf{Minimum required equipment:}\\
   1 FMGC; 1 MCDU; 1 GPS or 2 DMEs; 2 IRS; 1 FD; PFD and ND on PF side; 1
   EFIS display on PM side. Additional procedure specific restrictions may
@@ -790,16 +790,16 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 \item[$\bullet$] Use raw data to identify and continue with FMGC that
   provides the correct position in case of:
   \iitem GPS PRIMARY lost on both NDs/MCDUs
+  \iitem FMS1/FMS2 POS DIFF message
   \iitem CHECK IRS 1(2)(3)/FM POSITION (on MCDU)
   \iitem CHECK A/C POSITION
+  \iitem FM/GPS POS DISAGREE ECAM
 \item[$\bullet$] Request reclearance if:
-  \iitem FM/GPS POS DISAGREE ECAM\footnotemark[2]
-  \iitem FMS1/FMS2 POS DIFF message\footnotemark[2]
   \iitem NAV ACCUR DOWNGRAD on both sides
   \iitem Additional restriction (e.g. Dual FMC, GPS) no longer met
 }
 \footnotetext[1]{Radius to Fix}
-\footnotetext[2]{EOM-B overrides FCOM for these messages}
+
 
 %% ** Visual Approach
 \pagebreak
