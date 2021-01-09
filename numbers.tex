@@ -559,16 +559,14 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 }
 
 %% ** Air conditioning / Ventilation limitations
-\mysec{Air conditioning / Ventilation}{
-\item Max LP ground unit airflow \ref{LIM.21.10}\dotfill 1.2kg/s
-\item\hfill (do not simultaneously use packs)
-\item Do not use HP ground unit when APU is supplying bleed air. \ref{LIM.21.10}
-\item Max OAT for norm avionics ventilation \ref{LIM.21.30}\dotfill 49°C
-\item \hfill(higher with time limits)
-\item Max OAT with EXTRACT OVRD and Packs Off \ref{PRO.SUP.30}\dotfill
-  39°C
-\item \hfill(higher with time limits)
+\mysec[\secref{FCOM LIM.AIR, FCOM PRO.NOR.SUP.ADVWXR}]{Air conditioning / Ventilation}{
+  \item Passengers on board without Air Con\dotfill Max 20mins
+\item Do not simultaneously use packs and ground LP Air Conditioning Unit.
+\item Do not use HP ground unit when APU is supplying bleed air.
+\item Max OAT for norm avionics ventilation \dotfill 49°C\footnotemark
+\item Max OAT with EXTRACT OVRD and Packs Off \dotfill  39°C\footnotemark[\value{footnote}]
 }
+\footnotetext{Higher temperatures are allowable with a time limit -- see FCOM}
 
 %% ** Electrical limitations
 \mysec{Electrical}{
