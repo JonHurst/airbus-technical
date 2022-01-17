@@ -750,7 +750,7 @@
             <imagedata width="5in" fileref="images/electrical-controls-overhead.png"/>
           </imageobject>
           <imageobject role="fo">
-            <imagedata width="5in" align="center" fileref="images/electrical-controls-overhead.png"/>
+            <imagedata width="4.5in" align="center" fileref="images/electrical-controls-overhead.png"/>
           </imageobject>
           <imageobject role="html">
             <imagedata format="PNG" fileref="../images/electrical-controls-overhead-lowres.png"/>
@@ -1021,12 +1021,12 @@
         </itemizedlist>
         </para>
         <para>The basic GPWS has no forward looking capability - it mainly monitors RA1 for potentially hazerdous
-        values or trends. The warnigs and alerts provided are:
+        values or trends. The warnings and alerts provided are:
         <informaltable>
           <tgroup cols="3">
-            <colspec colwidth="2in"/>
-            <colspec colwidth="1.5in"/>
-            <colspec colwidth="1.5in"/>
+            <colspec colwidth="37mm"/>
+            <colspec colwidth="37mm"/>
+            <colspec colwidth="37mm"/>
             <thead>
               <row><entry>Condition</entry><entry>Alert</entry><entry>Warning</entry></row>
             </thead>
@@ -1709,7 +1709,7 @@
             <imagedata fileref="images/fuel-system-schematic.eps"/>
           </imageobject>
           <imageobject role="fo">
-            <imagedata width="14cm" align="center" fileref="images/fuel-system-schematic.svg"/>
+            <imagedata width="11.5cm" align="center" fileref="images/fuel-system-schematic.svg"/>
           </imageobject>
           <imageobject role="html">
             <imagedata format="PNG" fileref="../images/fuel-system-schematic.png"/>

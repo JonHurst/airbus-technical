@@ -35,13 +35,13 @@ the location of this file.
   <base>.</base>
 
   <!-- Source resolution in dpi (dots/pixels per inch) for determining the size of pixels in SVG and bitmap images, default: 72dpi -->
-  <source-resolution>72</source-resolution>
+  <source-resolution>300</source-resolution>
   <!-- Target resolution in dpi (dots/pixels per inch) for specifying the target resolution for generated bitmaps, default: 72dpi -->
-  <target-resolution>72</target-resolution>
+  <target-resolution>300</target-resolution>
 
   <!-- Default page-height and page-width, in case
        value is specified as auto -->
-  <default-page-settings height="297mm" width="210mm"/>
+  <!-- <default-page-settings height="297mm" width="210mm"/> -->
 
   <!-- Information for specific renderers -->
   <!-- Uses renderer mime type for renderers -->
@@ -95,8 +95,9 @@ the location of this file.
         </font>
         -->
         <!-- register all the fonts found in a directory -->
-        <!-- <directory>/usr/share/fonts/corefonts</directory> -->
         <!-- <directory recursive="true">/usr/share/fonts/truetype</directory> -->
+        <!-- <directory recursive="true">/usr/share/fonts/type1</directory> -->
+        <!-- <directory recursive="true">/usr/share/fonts/X11/Type1</directory> -->
         <directory>/usr/share/fonts/truetype/msttcorefonts</directory>
         <directory>/usr/share/fonts/truetype/freefont</directory>
 
@@ -105,7 +106,7 @@ the location of this file.
         <!--directory recursive="true">C:\MyFonts2</directory> -->
 
         <!-- automatically detect operating system installed fonts -->
-        <!-- auto-detect/ -->
+        <!-- <auto-detect/> -->
       </fonts>
 
       <!-- This option lets you specify additional options on an XML handler -->
