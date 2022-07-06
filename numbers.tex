@@ -1,3 +1,5 @@
+%% -*- outline-regexp: "%% [*]+"; -*-
+
 \documentclass[twoside,10pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage{txfonts}
@@ -854,7 +856,7 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 }
 
 %% ** RNAV / Overlay approach
-\mysec[\secref{EOMB 2.3.18.3.2}]{RNAV or Non-Precision overlay approach}{
+\mysec[\secref{EOMB 2.3.18.3.2/4}]{RNAV or Non-Precision overlay approach}{
 \item[$\bullet$] \textbf{Minimum required equipment:}\\ 1 FMS; 1 GPS; 2 IRS;
   1 MCDU; 1 FD; 1 PFD (on PF side); 2 ND (temporary display OK); 2 FCU channels. \extref{PRO.SPO.51}
   \item[$\bullet$] Max acceptable difference between altimeters \dotfill 100ft
@@ -862,8 +864,8 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
 %% \item[$\bullet$] Check RAIM availability for ETA$\pm$15 mins. \extref{EOMA 8.4.5.2}
 %% \item[$\bullet$] Conventional approach must be available at destination
 %%   or alternate. \extref{EOMA 8.4.5.2}
-\item[$\bullet$] A minimum procedure temperature may be promulgated on
-  the approach chart; default is -10°C:
+\item[$\bullet$] A minimum procedure temperature will be promulgated on
+  the approach chart:
 
   \iitem $\bullet$ Above this temp \dotfill fully managed, uncorrected VNAV DA
   \iitem $\bullet$ Below this temp \dotfill corrected gp, NAV/FPA, corrected LNAV DA
@@ -871,10 +873,17 @@ Max Compartment 5 & 1497kg & & Max Compartment 5 & 500kg & 500kg\\\cline{1-2}\cl
   the exception of temperature corrections to minimum
   altitudes. \extref{EOMA 8.4.5.2}
   \item[$\bullet$] Fly a stabilised approach if using FPA. Set and pull FPA
-    0.3nm before descent point. \extref{EOMB 2.3.18.3.4}
+    0.3nm before descent point.
 \item[$\bullet$] Chart vs. database:
   \iitem Max vertical path difference (fully managed only)\dotfill 0.1°
-  \iitem Max lateral track difference \dotfill 3°
+\item[$\bullet$] For 3D approaches only, flight directors may remain on for
+  landing if the glidepath is correctly coded to the threshold.
+
+\item[$\bullet$] APPR must be armed at least 2nm prior to final descent
+  waypoint. It should be armed in the segment between the final descent waypoint
+  and previous waypoint unless this segment is too short, in which case arm when
+  level at final descent altitude.
+
 \item[$\bullet$] \textbf{RNAV approach:} Go around for:
 \iitem $>$¾ index fly up or down (fully managed only)
 \iitem XTK error > 0.3nm
