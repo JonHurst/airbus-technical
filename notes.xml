@@ -2132,8 +2132,10 @@
         <title>EFIS</title>
         <sect3>
           <title>Overview</title>
-          <para>Data from the ADIRS and FMGC is fed directly into three display management computers (DMCs). Normally
-          DMC1 supplies the Captain's EFIS and DMC2 supplies the FO's EFIS, with DMC3 being used as a backup.</para>
+          <para>Data from the ADIRS and FMGC is fed directly into three display management computers
+          (DMCs). Normally DMC1 supplies the Captain's EFIS and the ECAM DUs and DMC2 supplies the
+          FO's EFIS, with DMC3 being used as a selectable backup. DMC2 will automatically take over
+          the ECAM DUs if required. </para>
         </sect3>
         <sect3>
           <title>PFD</title>
