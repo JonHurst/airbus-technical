@@ -963,38 +963,37 @@ element
 %% ** LVO Landing
 \mysec[\secref{EOMB 2.3.18.3.1, QRH SI.20}]{LVO landing}{
 \item[$\bullet$] All passenger PEDS must be turned off \extref{EOMA 8.3.21}
-\item[$\bullet$] Check NOTAMS for airport facility downgrades (see LIDO 1.5.7.9.2)
+\item[$\bullet$] Check NOTAMS for airport facility downgrades (see LIDO 1.5.7.16.2)
 \item[$\bullet$] Check LVPs in force
-\item[$\bullet$] Check crew qualification
 \item[$\bullet$] Check aircraft capability (Status page, ADDs, QRH
   Operational Data)
-\item[$\bullet$] Check minimas (including downgrades)  and approach ban (see page \pageref{ils}
-  and LIDO approach chart)
+\item[$\bullet$] Check minimas (including downgrades)  and approach ban
 \item[$\bullet$] Check autoland wind limits (see page
   \pageref{autoland_wind_limits})
 \item[$\bullet$] Check runway condition limits (see page
   \pageref{other_autoland_limits})
-\item[$\bullet$] Review failure strategies (see page \pageref{failure-strategies})
+\item[$\bullet$] Failure strategies
+  \iitem >1000ft aal\dotfill Resolve by 1000ft, inc.\ amend DH $\Rightarrow$ can continue
+  \iitem <1000ft, >AH\dotfill Downgrade of landing capability $\Rightarrow$ go-around
+  \iitem 350ft\dotfill Incorrect selected course $\Rightarrow$ go-around
+  \iitem <200ft\dotfill Autoland warning light $\Rightarrow$ go-around
+  \iitem <AH\dotfill Only go around for autoland warning light
+  \iitem 30ft\dotfill FLARE and/or THR IDLE not annunciated $\Rightarrow$ go-around
 \item[$\bullet$] Extra calls:
 \iitem 350ft, FMA:LAND \dotfill PF:``Land'', PNF:``Checked''
 \iitem 100ft (only with no DH) \dotfill PNF: ``100'', PF: ``Continue''
 \iitem 40ft, FMA:FLARE\dotfill PNF:``Flare''
 \iitem 10ft \dotfill Auto callout: ``Retard''
 \iitem FMA:ROLLOUT\dotfill PNF:``Rollout''
-\item[$\bullet$] Data Lock: Below 700ft RA, changes to V$_\textrm{app}$,
-  Wind, course, and ILS Freq inhibited.
-\item[$\bullet$] No action on FCU will disengage LAND mode
-\item[$\bullet$] At 30ft check FLARE and THR IDLE annunciated; if not,
-  go around.
+
 \item[$\bullet$] Select reverse at touchdown
 \item[$\bullet$] Disconnect autopilot at taxi speed
-}
+\item[$\bullet$] Notes:
+  \iitem Data Lock\dotfill <700ft RA
 
+  \iitem\quad\quad (changes to V$_\textrm{app}$, Wind, Course, and ILS Freq inhibited.)
 
-%% *** LVO Failure handling graphic
-\pagebreak
-
-\vspace*{\fill}{}\resizebox{\textwidth}{!}{\rotatebox{90}{\includegraphics{images/catIII-failures.png}}}\label{failure-strategies}\vspace*{\fill}
+  \iitem No action on FCU will disengage LAND mode }
 
 %% * END
 %% \pagebreak
